@@ -46,6 +46,18 @@ Open questions the operator has flagged but not settled:
 - **Location.** This repo for now, given the deliberate beatcode scoping;
   extractable later if a general framework emerges.
 
+## Interim scripts
+
+`tools/gen-index.py` and `tools/export-thread.py` exist now, in Python,
+and are disposable. They are in the repo for one reason: the doctrine
+asserts that views are derived and never hand-edited (§8), and a claim
+whose only executable form lives in a scratch directory is not a claim.
+
+They do a fraction of the list above — index regeneration, thread export
+with redaction applied before publication rather than after. They do not
+validate schemas, allocate IDs, check transitions, resolve links, detect
+cycles, or verify hashes. Nothing depends on them being kept.
+
 ## Why this is not built yet
 
 The MVP line is file · query · cannot corrupt. The collection is small

@@ -5,7 +5,7 @@ okf_version: 0.2
 # Matters
 
 Derived from the frontmatter of every file in this directory.
-**Do not hand-edit** — regenerate. See [m0008](/m0008-matter-tooling.md).
+**Do not hand-edit** — run `tools/gen-index.py`. See [m0008](/m0008-matter-tooling.md).
 
 ## executed
 

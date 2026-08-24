@@ -17,6 +17,8 @@ repo would consume it, but stays its own repo.
 doctrine/matters.md     the normative process definition
 matters/                flat collection, one file per matter
 matters/index.md        derived listing — regenerate, never hand-edit
+threads/                verbatim transcripts of the sessions behind matters
+tools/                  interim scripts; the real tooling is m0008
 ```
 
 The collection is an [OKF](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md)
