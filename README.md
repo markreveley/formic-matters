@@ -17,8 +17,9 @@ transport and merge mechanics; its comment surface is unused.
 
 **Status:** awaiting ratification of
 [m0001](matters/m0001-matter-system.md) (doctrine §6, §14). This is the
-second bootstrap; the first was audited and archived unmerged (PR #1),
-and nothing here depends on it.
+second bootstrap; the first was audited and archived unmerged (PR #1).
+No text here derives from it; the rulings carried from its sessions are
+marked in [m0001](matters/m0001-matter-system.md)'s rulings ledger.
 
 ## Layout
 

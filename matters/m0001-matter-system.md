@@ -580,3 +580,32 @@ is not re-asserted.
   one that touches the ratification act itself and is worth settling
   before the operator reads; the rest are vetting-scale text edits and
   none blocks continued vetting.
+
+### Round 2 addendum — 2026-08-25 — operator-directed
+
+Two items, recorded because both deviate from the round's own terms.
+
+- **W3 applied by the reviewer, on operator instruction ("proceed with
+  fix").** The doctrine header now scopes its source claim to the
+  thread *plus* the ledger's marked rows, and `README.md`'s status
+  paragraph carries the same scoping the doctrine and m0001 already
+  had. Deviation recorded: under the convention in
+  [the thread](../threads/2026-08-24-audit-and-adjudication.md), a
+  reviewer states findings and the author applies them; here the
+  operator directed the reviewer to apply. Two sentences of prose, no
+  normative change, and the round's other eleven findings are left as
+  findings.
+- **W2 disposition, at the operator's delegation.** Patching the
+  ledger preamble is the wrong repair. The †/‡ apparatus, the
+  carry-forward ruling, the witness affirmation, V1 and W2 all exist
+  to substitute testimony for evidence the tree could simply contain:
+  the archived first attempt's **design session** is not in `threads/`.
+  Exporting it there — the archive is kept, not expunged (doctrine
+  §14), and threads are the primary source for rulings (§9.2) —
+  retires every one of them: each † row becomes checkable by any
+  reviewer against a primary source in the tree, the affirmation stops
+  being load-bearing, and the provenance sentences become true rather
+  than scoped. The anchoring argument that kept the archive out
+  (thread:495) was about re-*authoring*; authoring is finished, and
+  reading is what remains. Recommended as a `spec` matter against §9.2
+  rather than applied here.

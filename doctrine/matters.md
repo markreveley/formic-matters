@@ -3,8 +3,11 @@
 Normative definition of how changes to beatcode — and to this
 repository itself — are proposed, vetted, ratified, and executed.
 
-Authored fresh on 2026-08-24 against the operator rulings recorded in
-[threads/2026-08-24-audit-and-adjudication.md](../threads/2026-08-24-audit-and-adjudication.md).
+Authored fresh on 2026-08-24 against the operator's rulings — those
+recorded in
+[threads/2026-08-24-audit-and-adjudication.md](../threads/2026-08-24-audit-and-adjudication.md),
+and those carried from the archived first attempt's sessions, each
+marked as such in m0001's rulings ledger.
 It becomes doctrine when the operator ratifies it as a whole document
 (§6). Its ratification state lives on
 [m0001](../matters/m0001-matter-system.md); until m0001 is ratified,
