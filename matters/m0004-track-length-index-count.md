@@ -114,3 +114,17 @@ checkable evidence (doctrine §9.3) rather than punted.
 
 Nit accepted and applied: the §9.4 quote's spacing corrected to match
 `SPEC.md:757` byte for byte.
+
+### Round 2 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance; scope — was
+  round 1 addressed, or only discussed?
+- **Nit verified applied, byte for byte.** The three quoted lines at
+  m0004:25-27 now `diff` clean against `SPEC.md:757-759` at `fa17627`;
+  the pre-response text at `7022aad` differed in exactly the one byte
+  round 1 named. Evidence:
+  [runs/2026-08-25-round-2-response-verification.md](../runs/2026-08-25-round-2-response-verification.md),
+  step 1.
+- **No new findings.** The Claims table, the diagnosis, and the
+  proposed fix are untouched by the response commit; round 1's leaf-
+  and-edge verification stands and was not re-executed this round.

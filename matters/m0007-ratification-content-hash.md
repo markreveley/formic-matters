@@ -82,3 +82,28 @@ the working file (finding 1), and no doctrine edit remains to be made
 from inside this `feature` matter at execution time (finding 2). The
 implementation bullet here is rewritten to consume §6's definition
 rather than defer it.
+
+### Round 2 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance; scope — was
+  round 1 addressed, or only discussed?
+- **Both findings verified resolved.** Doctrine §6:165-170 now defines
+  the ratified region up front — body minus frontmatter minus
+  `## Vetting`/`## Execution` — so the recording act no longer moves
+  the hashed bytes and the check at m0007:28-29 can pass against the
+  working file (finding 1). The bullet at m0007:34-38 consumes that
+  definition instead of deferring it, so no normative doctrine edit
+  remains inside this `feature` matter (finding 2). Both are real text
+  changes, not a disposition.
+- **Finding (new, LOW): the fix does not reach m0001, the one matter
+  whose hash is already pinned.** §6:168-170 carves out matters whose
+  proposed text is a separate document: for m0001 the hash is
+  `doctrine/matters.md`'s **whole file**, which has no excluded region
+  at all. So the "implementable against the working file" property
+  this matter now claims holds for every matter except the bootstrap
+  one — any later `spec` matter amending the doctrine (m0010 already
+  promises a §11 amendment) moves that hash. §14 shortens the exposure
+  to almost nothing, since m0001 goes `ratified → executed`
+  immediately; but the check this matter builds should say which of the
+  two regimes it is verifying, and the whole-file regime is the one
+  that can drift.

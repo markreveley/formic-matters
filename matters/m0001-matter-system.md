@@ -353,3 +353,230 @@ operator instruction ("apply", recorded in
   rather than as an append-only `runs/` file (§9.1). The evidence
   stands; the next run record follows §9.1, and the round-2 prompt
   should restate the requirement.
+
+### Round 2 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance. Inputs: this
+  branch at `981b2a6`, the diff `7022aad..981b2a6`, and
+  `ob6to8/beatcode` at `fa17627` (seed `91188a5`); the archived first
+  attempt not read, per operator instruction.
+- **Scope:** one question — were round 1's findings actually
+  addressed, or only discussed? Each V1–V9 disposition and each
+  matter-local response claim checked against the text as it now
+  stands, plus anything the response edits newly broke. Re-verification
+  evidence is in
+  [runs/2026-08-25-round-2-response-verification.md](../runs/2026-08-25-round-2-response-verification.md),
+  per §9.1 and the deviation round 1's response recorded (m0001:351).
+
+**Applied, verified against the text:**
+
+- **V1 — applied.** All ten flagged rows now carry † (m0001:64, 65, 69,
+  70, 74, 75, 76, 78, 79, 90); the affirmation is real and in the
+  thread (thread:828-842), quoting an operator turn for each of the
+  ten. Provenance scoped to text at doctrine:13-18 and m0001:41-43.
+  Two residues: W2, W3.
+- **V2 — applied.** Rows 84, 88, 89 separate ruling from mechanism; ‡
+  defined at m0001:56-59; all three ‡ clauses appear in doctrine §15.
+  See W11 for the timing note's wording.
+- **V3 — applied.** Six rows added (m0001:91-96), one per finding
+  (a)-(f). Each Landed target checked and contains what its row says,
+  with the exception noted in W10(a).
+- **V4 — applied in part.** m0010:53-57 now cites the archived ruling
+  under †, and the affirmation carries it (thread:839). The other half
+  of the finding is untouched: W3.
+- **V5 — applied.** doctrine:358-382 lists all four defaults V5 named
+  plus two more, for confirmation at the ratification read. Framing nit:
+  W12.
+- **V6 — applied, (a)-(h) each have text.** (a) owners for
+  `rejected`/`withdrawn`/`superseded` at doctrine:99-104. (b)
+  proposed-only terminals, and `ratified → proposed` clearing the
+  ratification fields into the record (doctrine:96-102). (c) "or
+  amended" gone from §5 (doctrine:140-142) — but see W5. (d) licensed
+  exceptions stated at doctrine:107-110. (e) half-landed disposal in
+  the failure record (doctrine:91-95). (f) earlier-ratification
+  precedence (doctrine:144-147). (g) enforcement added to m0008:36-37
+  — see W6. (h) §11 refusal path (doctrine:269-270), m0009 aligned.
+- **V7 — applied.** README claimed at m0001:117; the Execution list now
+  covers every path in the tree.
+- **V8 — applied; both beatcode-facing fixes verified against the
+  source.** m0003's two nits and m0004's byte are correct at `fa17627`
+  (run record, steps 1-3). m0007's rewrite genuinely resolves both its
+  findings (see the m0007 note). m0010 and m0011 applied, each with a
+  residue recorded on the matter.
+- **V9 — no action was possible and none was claimed;** but the run
+  file promised alongside it did not ship: W11(b).
+
+**Findings, ranked by severity:**
+
+**W1 · MEDIUM — the ratification pin the operator is holding is stale,
+and nothing in the tree says so.** The thread hands the operator a pin
+to ratify against: "`doctrine/matters.md` at commit `44d6be0`, sha256
+`034d46bf…c7f0ef` … ready when you are" (thread:627). That hash is
+correct for `44d6be0`, `7022aad` and `1347af3`, and the response
+commit rewrote §3, §5, §6, §11 and §15: at `981b2a6` the doctrine
+hashes `67fada5c…7bad0` (run record, step 6). The stale pin is still
+the only pin in the primary source, the response entry does not
+mention it, and §6 makes ratification an act over exact text at a
+named commit. This is the archived attempt's failure mode with the
+polarity reversed — not text changed after ratification, but a
+ratification target quoted before it. Suggested: state the current
+commit and hash where the operator will look, or say in-thread that
+the pin moved.
+
+**W2 · MEDIUM — one † row's affirmation is not where the preamble says
+it is, and it is outside the ratified region.** The Sources paragraph
+(m0001:51-60) says of every † row that it "was affirmed … by the
+auditing agent" and that "Both the delegation and the affirmation are
+recorded in [the thread]". The affirmation (thread:828-842) covers
+exactly V1's ten rows plus the risk-tiers deferral. Row 73
+(lenses/dry-rounds → m0006) carries a † and appears in it nowhere. Its
+only in-tree support is an operator quote the author supplied inside
+this file's own round 1 response (m0001:316-320) — a `## Vetting`
+append, which under the §6 the same commit wrote sits *outside* the
+ratified region, so the operator ratifying the ledger is not ratifying
+the evidence for that row. Note also that row 73 was not one of V1's
+ten: the response marked it † on its own initiative and sourced it
+with fresh archive-derived testimony. That is a new archive dependency
+introduced by the fix for an archive-dependency finding, not a
+correction of one.
+
+**W3 · MEDIUM — V1's third named site was not edited, a fourth keeps
+the flagged wording, and V4's "ledger is incomplete" branch is
+unresolved.** (a) V1 named three overstatements; two were fixed.
+doctrine:6-7 — "Authored fresh on 2026-08-24 against the operator
+rulings recorded in [the thread]" — is byte-identical to its
+pre-response text. It is now *nearly* true, rescued by the affirmation
+`981b2a6` appended to the thread, and it still fails for row 73 (W2).
+(b) `README.md:21` still reads "the first was audited and archived
+unmerged (PR #1), and nothing here depends on it" — the exact clause
+V1 flagged, unscoped, in the one file this same commit added to the
+Execution list for V7. (c) V4 offered two branches — incomplete ledger,
+or wrong attribution. The response took neither: it kept the
+attribution and sourced it to the archive, leaving no risk-tiers row in
+a ledger whose preamble still claims "Every operator proposal and
+ruling from the 2026-08-24 sessions" (m0001:47, unedited) while the
+affirmation it now cites quotes the operator deferring tiers
+(thread:839). m0010:56-57 compounds it by pointing the reader at
+"m0001's ledger, † convention" for a ruling that has no row there.
+Recorded matter-locally on m0010 as well.
+
+**W4 · MEDIUM-LOW — the m0010 fix re-creates the §2 boundary problem
+the same commit removed from m0007.** Detail on m0010; noted here
+because it is the collection's only remaining instance of the pattern
+round 1 objected to.
+
+**W5 · LOW-MEDIUM — V6(c) is half-applied.** §5 no longer names
+amendment (doctrine:140-142), but m0008:40-41 still specifies the
+validator against "the supersession/amendment link (doctrine §5)" — a
+check written against a mechanism the doctrine no longer defines. The
+same commit edited m0008 four lines above. Recorded on m0008.
+
+**W6 · LOW-MEDIUM — V6(g)'s fix put a normative rule in a tooling
+matter.** The transition-time `depends_on` rule ("a matter cannot be
+staged or executed while a dependency is unexecuted") exists only at
+m0008:36-37; §7:183 still describes `depends_on` as an
+"execution-order constraint" with no transition rule, so the validator
+is specified to enforce something the doctrine does not say. The rule
+also has no §11 exception: the retroactive path is for work that
+"cannot wait" (doctrine:264) and reaches `executed` without ever being
+`staged`, so a retroactive matter carrying a `depends_on` would be
+blocked by the validator on the one path designed to bypass gates.
+Recorded on m0008.
+
+**W7 · LOW — the new §6 region and the new §11 leave a retroactive
+matter's hashed text undefined.** §6:165-170 excludes `## Vetting` and
+`## Execution` from the ratified region. §11:264-270 now routes
+retroactive matters `proposed → executed` on the operator's
+acknowledgment, and §3.1 requires the `## Execution` section — what
+actually landed, and deviations — to enter `executed`. For a
+retroactive matter the acknowledgment *is* the ratifying act, and the
+record of what is being acknowledged sits in the section the hash
+excludes. Neither section says what `ratified_sha256` covers in that
+case. Both halves are new in this commit; the interaction is not.
+
+**W8 · LOW — the thread's header was edited to settle a finding, the
+response record does not say so, and the edited sentence is now false.**
+Detail on m0011.
+
+**W9 · LOW — three residues in the ledger fixes.** (a) The new
+housekeeping row's Landed column is "executed at build" (m0001:94) — a
+disposition with no in-tree target, the same shape V1 objected to on
+row 90, and unreachable by round 1's clean check that "every ledger
+Landed target exists and contains what the row says landed there": its
+subject is PR #1, which reviewers are instructed not to read. (b) The
+proposals-become-matters row (m0001:95) gives "m0006, m0010, m0011" as
+bare text where every other matter reference in the ledger is a
+relative link. (c) The preamble says † rows "were ruled in the archived
+first attempt's design session", but row 90's own text says its
+disposition is "derived … never contradicted", and the affirmation is
+explicit that this row is a derivation and not a verbatim ruling
+(thread:840). The blanket sentence contradicts the row it covers.
+
+**W10 · LOW — two response-entry claims are looser than the record.**
+(a) The V2 timing note (m0001:323-327) says the export update "now
+shows the §6 mechanism being presented to the operator, so V2's 'first
+presentation' clause is historical". The turn `1347af3` appended is the
+build-report turn, which announces the bundle as already built and
+pushed at `44d6be0` (thread:623-627) — so the tree did precede the
+presentation; what changed is that the tree is no longer the *only*
+presentation. The entry's own concession ("its substance … stands")
+is what carries the bullet. (b) The thread promised that the
+post-apply re-verification "will ship as a proper run file"
+(thread:844); `981b2a6` adds no `runs/` file, and the entry's V9
+bullet promises only "the next run record" (m0001:349-350). The §9.1
+deviation is therefore still open at HEAD — this round's run record is
+the first to close it.
+
+**W11 · LOW — §15's framing does not fit one of the six it lists.**
+doctrine:366-369 says the six defaults were "presented to the operator
+in the thread but not ruled before authoring". The ratified-region
+definition (bullet 2) did not exist at authoring; it was written in
+this response, answering m0007. What the operator saw before saying
+"apply" was "§6's body-only hash definition (whole file for the
+doctrine, which has no frontmatter)" (thread:806, 848); what landed
+also excludes `## Vetting` and `## Execution`. The landed text is the
+better text and m0001's response entry describes it accurately — the
+drift is between the apply plan and the apply, not between the entry
+and the tree.
+
+**Checks passed clean:**
+
+- **Every V1-V9 disposition corresponds to real text.** No finding was
+  answered by discussion alone; the nine bullets in the response entry
+  each name an edit that exists at `981b2a6`. Nothing was silently
+  dropped and nothing was disputed-without-saying-so.
+- **The ledger was extended, not rewritten.** 27 rows at `7022aad`, 33
+  at `981b2a6`; every original row survives, six are added, three are
+  reworded exactly as the V2 bullet says, eleven carry †.
+- **The affirmation is genuine and specific.** Ten of eleven bullets
+  quote an operator turn; the eleventh (org/assertions) declares itself
+  a derivation rather than a quote. It is not a bare attestation.
+- **Append-only discipline held for the vetting record.** No round 1
+  entry was edited; every response is a new `### Round 1 response`
+  section under the existing round.
+- **Derived views and links survive.** `tools/gen-index.py`
+  regenerates `matters/index.md` byte-identically at `981b2a6`; all 58
+  relative links resolve and none uses the leading-slash form (run
+  record, steps 4-5).
+- **The two beatcode-facing fixes are correct at the source.** m0004's
+  quote is byte-identical to `SPEC.md:757-759`; m0003's "two of the
+  ten" and its `SPEC.md:38` pointer are exact (run record, steps 1-3).
+- **§12 conformance is undisturbed:** the response changed no
+  frontmatter on any matter, which is also why the index diff is empty.
+
+Not checked: PR #1 and the archived design session (unread, per
+instruction) — so every † row's *content* remains unverifiable in-tree
+by construction, exactly as round 1 said; the affirmation changes who
+attests, not what can be checked. beatcode's render reproduction was
+not re-executed this round; round 1's result stands unchallenged and
+is not re-asserted.
+
+- **Disposition:** round 1's findings were addressed, not merely
+  discussed — all nine produced text, and the two fixes checkable
+  against beatcode are exact. What remains is a residue at the edges of
+  the fixes: one stale ratification pin (W1), one over-claimed
+  provenance chain (W2), two sites V1 named or matched that were not
+  edited (W3), and a handful of consistency leftovers. W1 is the only
+  one that touches the ratification act itself and is worth settling
+  before the operator reads; the rest are vetting-scale text edits and
+  none blocks continued vetting.

@@ -89,3 +89,41 @@ the archived ruling under the † convention with the operator's words
 quoted in m0001's response entry; the Feature section states outright
 that the tier-0 gate entails an explicit §11 amendment vetted with
 this matter.
+
+### Round 2 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance; scope — was
+  round 1 addressed, or only discussed?
+- **Both findings produced text.** m0010:53-57 replaces the bare
+  "Deferred by the operator" with the archived-session citation, the
+  operator's words, and the † convention; the affirmation backing it is
+  real and in the thread — "your '5. same thoughts as 4,' i.e. file as
+  a feature matter rather than build now"
+  ([thread:839](../threads/2026-08-24-audit-and-adjudication.md)).
+  m0010:35-39 states the §11 widening outright, as finding 2 asked.
+- **Finding 1 (MEDIUM-LOW): the citation points at a ledger row that
+  does not exist.** m0010:56-57 sends the reader to "m0001's ledger, †
+  convention" for this deferral, and m0001's ledger has no risk-tiers
+  row — the response added six rows for V3 and none for this one.
+  Round 1's V4 offered two branches, incomplete ledger or wrong
+  attribution; the response took a third, keeping the attribution and
+  sourcing it outside the ledger, which leaves the first branch open:
+  m0001:47 still claims the ledger holds "Every operator proposal and
+  ruling from the 2026-08-24 sessions", and the affirmation it now
+  cites quotes the operator deferring tiers. Either the row is added or
+  the pointer stops naming the ledger. Also recorded on m0001 as W3(c).
+- **Finding 2 (MEDIUM-LOW): the new paragraph re-creates the §2
+  boundary problem the same commit removed from m0007.** m0007's round
+  1 finding 2 was a doctrine edit planned from inside a `feature`
+  matter; the response resolved it by moving the edit into §6 now, so
+  nothing normative ships from m0007. m0010:35-39 goes the other way:
+  "Ratifying this matter therefore includes an explicit §11 amendment
+  widening its charter — a `spec`-typed change vetted with this matter,
+  not a footnote to it." This matter is `type: feature`, and type is
+  immutable (§2); the sentence does not say whether the amendment is a
+  separate `spec` matter that this one `depends_on` — m0007's
+  resolution — or normative text carried inside a `feature` matter,
+  which is m0007's defect. The wording came from round 1's own
+  suggested disposition, so this is an inherited fix rather than an
+  invented one; it is still the collection's only unreconciled
+  instance of the pattern. Also recorded on m0001 as W4.

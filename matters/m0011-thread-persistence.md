@@ -95,3 +95,38 @@ written into Form, making the thread header's citation valid; the
 Recursion bullet records that the first export's bring-current timing
 is a per-instance header choice, with the policy default still open
 here.
+
+### Round 2 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance; scope — was
+  round 1 addressed, or only discussed?
+- **Finding 1 verified fixed.** The joining convention is now written
+  into Form (m0011:36-39, "consecutive agent messages within one turn
+  joined once that traffic is removed"), so the thread header's
+  citation at
+  [threads/2026-08-24-audit-and-adjudication.md:8-9](../threads/2026-08-24-audit-and-adjudication.md)
+  points at a rule that exists.
+- **Finding 2 addressed in both places — but only one of them is
+  reported.** The Recursion bullet gained its parenthetical
+  (m0011:56-59) as the response entry says. The header was also
+  rewritten, in `1347af3`: "The export is brought current after
+  ratification" became "the reply to the final human message is the
+  turn that brought this export current. Ratification and later
+  exchanges are appended when they happen." That is an edit to a
+  primary source (§9.2) prompted by a vetting finding, and neither this
+  matter's response entry (m0011:91-97) nor m0001's mentions it. The
+  two texts do now agree, which is what the finding asked for; the
+  record of how they came to agree is missing.
+- **Finding (new, LOW): the rewritten header sentence is false at
+  HEAD.** It was true at `1347af3`, whose export ended at the human
+  turn "also, have you committed everything?" — the reply to that turn
+  is the one that brought the export current. `981b2a6` appended 79
+  more lines, ending at the human turn "apply"
+  ([thread:854](../threads/2026-08-24-audit-and-adjudication.md));
+  the reply to *that* turn is the round 1 response commit, not an
+  export-current turn. This is precisely the Recursion problem this
+  matter holds open (m0011:56-59): a header sentence that names its own
+  last turn has to be re-checked on every append. Worth a clause in
+  Open, since a policy that says "brought current as exchanges land"
+  needs to say what the header asserts between landings. Recorded on
+  m0001 as W8.

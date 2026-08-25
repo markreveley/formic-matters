@@ -77,3 +77,39 @@ The MVP line is file · query · cannot corrupt. The collection is small
 enough to hold by hand, and the schema is freshly authored — code
 written against it before the doctrine is ratified would be rewritten
 after the first review round.
+
+## Vetting
+
+### Round 2 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance; scope — was
+  round 1 addressed, or only discussed? Round 1 filed no finding on
+  this matter; both entries below are consequences of round 1 fixes
+  applied elsewhere in `7022aad..981b2a6`.
+- **Finding 1 (LOW-MEDIUM): the validator is specified against a
+  mechanism the doctrine no longer defines.** m0008:40-41 still reads
+  "conflict-rule link check — a ratification that contradicts a
+  ratified matter carries the supersession/**amendment** link (doctrine
+  §5)". The response commit dropped "or amended" from §5
+  (doctrine:140-142) in answer to round 1's V6(c) — which found exactly
+  this: amendment names nothing defined anywhere. §5 is now clean and
+  this line is the last carrier of the dangling term, four lines below
+  a bullet the same commit edited. Recorded on m0001 as W5.
+- **Finding 2 (LOW-MEDIUM): a normative rule arrived here that belongs
+  in the doctrine, and it is unreconciled with §11.** The response
+  answered V6(g) by adding transition-time `depends_on` enforcement to
+  this list (m0008:36-37, "a matter cannot be staged or executed while
+  a dependency is unexecuted"). Doctrine §7:183 still calls
+  `depends_on` an "execution-order constraint" with no transition rule
+  and §3 names no dependency gate, so the validator is specified to
+  enforce a rule the normative text does not state — the inverse of
+  doctrine §10, which reserves code for what doctrine has decided. The
+  rule also has no §11 exception: the retroactive path exists for work
+  that "cannot wait" (doctrine:264) and reaches `executed` without ever
+  passing through `staged`, so a retroactive matter carrying a
+  `depends_on` would be blocked by the validator on the one path
+  designed to bypass gates. Recorded on m0001 as W6.
+- **Verified clean:** the rest of the response's edit here — splitting
+  the acyclicity and claims-DAG bullets apart (m0008:36-39) — is
+  faithful to the V6(g) bullet in m0001's response entry and breaks
+  nothing else in the list.

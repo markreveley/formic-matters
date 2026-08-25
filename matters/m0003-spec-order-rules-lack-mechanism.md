@@ -109,3 +109,22 @@ deliverable. Execution re-derives from this matter as ratified.
 Both nits accepted and applied: §1.4 characterization softened to
 "mostly without" with the two inline exceptions named; the pipeline
 diagram marked as abbreviated with a pointer to the full line.
+
+### Round 2 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance; scope — was
+  round 1 addressed, or only discussed?
+- **Both nits verified applied, and verified correct at the source.**
+  §1.4 at `fa17627` splits into exactly ten semicolon-joined rules, of
+  which exactly two carry a parenthetical reason — clause 1 (libm:
+  "lower to platform libm and vary by platform") and clause 6
+  (`HashMap`: "iteration order is randomized per process"); the other
+  eight are bare. m0003:54-57's "mostly without … two of the ten"
+  is exact. `SPEC.md:38` reads `grid (exact rationals) → swing →
+  time-lane → humanize → performed_s (f64, clamped ≥ 0)`, so the new
+  "abbreviated here" parenthetical (m0003:26) and its pointer are
+  accurate. Evidence:
+  [runs/2026-08-25-round-2-response-verification.md](../runs/2026-08-25-round-2-response-verification.md),
+  steps 2-3.
+- **No new findings.** Nothing else in this matter was touched by the
+  response commit.
