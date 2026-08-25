@@ -161,3 +161,40 @@ Both findings accepted and applied.
   the collection whose only purpose is to serve another that may never
   exist. The ordering constraint is what matters and it is now written
   down.
+
+### Round 3 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance; first round with
+  the archived first attempt readable.
+- **Both round 2 findings verified applied.** m0010:58-68 cites
+  [design:304](../threads/2026-08-24-matter-system.md) directly, in a
+  thread now in this tree, and the risk-tiers row exists in m0001's
+  ledger (m0001:77), so the pointer resolves and the † convention is out
+  of the path (W3(c)). m0010:36-45 now sends the §11 amendment out as a
+  separate `spec` matter named in this one's `depends_on` before either
+  is ratified, which is m0007's resolution rather than m0007's defect
+  (W4). Both are real text.
+- **Finding 1 (HIGH, matter-local half of m0001's X1): 77% of the
+  archived m0010 survives in this file.** 1097 of 1427 characters of
+  `matters/m0010-risk-tiers.md` at `c11956d` reappear here in matching
+  runs of forty characters or more (run record
+  [runs/2026-08-25-vetting-round-3.md](../runs/2026-08-25-vetting-round-3.md),
+  step 5). The tier table is 276 characters of it — arguably convergence
+  on the same design — but 220 characters are not: m0010:49-52 against
+  archive m0010:36-39, "A process that makes small changes expensive
+  gets bypassed for small changes, and a bypassed process ends up
+  covering only the work that was already being done carefully." That is
+  authorial prose, and doctrine:18-19, `README.md`:21-22 and m0001:43-45
+  each say no matter text was reused. This file and m0006 are the two
+  worst instances.
+- **Finding 2 (LOW): the deferral row is cited but the ordering
+  constraint is not.** m0010:40-42 says the §11 amendment is "added to
+  this matter's `depends_on` before either is ratified"; the frontmatter
+  carries `depends_on: [m0008]` only. The response explains why the
+  `spec` matter is not filed yet (m0010:158-162) and the reasoning is
+  sound. Noted only so that §7's new transition-time gate
+  (doctrine:200-206) is read against it: the gate keys off `depends_on`,
+  and the constraint that actually blocks this matter lives in prose.
+- **Verified clean:** frontmatter conforms to §12; `threads:` resolves
+  to the imported design session; both matter links resolve; the tier
+  design itself is unchanged this round and was not re-reviewed.

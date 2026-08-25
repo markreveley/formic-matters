@@ -135,3 +135,31 @@ doctrine §6, not here: for that path the hashed region also covers
 `## Retroactive` and `## Execution` at the acknowledged commit. That
 is a third regime this matter's check must distinguish, and the new
 bullet's requirement covers it.
+
+### Round 3 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance; scope — the
+  doctrine changes the round 2 response made, which nobody had reviewed.
+- **Finding 1 (MEDIUM): "§6 defines two" is false against the §6 the
+  same commit wrote, and the correction is outside the ratified
+  region.** m0007:39 reads "the check names the regime it verified. §6
+  defines two: …". §6 now defines three — the ratified region
+  (doctrine:167-175), the whole-file regime for a matter whose proposed
+  text is a separate document (doctrine:172-175), and the retroactive
+  regime added at doctrine:177-182 by commit `7357244`, the same commit
+  that wrote this bullet. The round 2 response entry above (m0007:131-137)
+  states the third regime correctly — but a `## Vetting` append is
+  outside the ratified region under §6:169-170, so the text the operator
+  ratifies says two while the text they do not ratify says three. This
+  is the shape of round 2's W2 recurring inside the commit that retired
+  it. One word: "two" → "three", plus the retroactive regime in the
+  list. Also recorded on m0001 as X6.
+- **Related, not a finding here (m0001 X8):** §6's retroactive region is
+  defined over `## Execution` "as it stands at the acknowledged commit",
+  while §11:288-291 does not require that section at filing and §3.1
+  makes it a precondition of the transition the acknowledgment causes.
+  The check this matter builds cannot verify a regime whose region is
+  not guaranteed to exist; the fix belongs in §11, not here.
+- **Verified clean:** the round 2 finding was genuinely applied — the
+  regime-naming requirement exists at m0007:39-46 and is not merely
+  promised; frontmatter conforms; both links resolve.

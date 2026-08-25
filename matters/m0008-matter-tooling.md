@@ -132,3 +132,42 @@ Both findings accepted and applied.
   instead. §11 carries the pointer. This bullet now cites §7 rather
   than stating the rule, so the validator enforces a decision the
   doctrine made.
+
+### Round 3 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance; scope — the
+  round 2 response's edits here and the doctrine rule they now cite.
+- **Both round 2 findings verified applied.** m0008:41-42 reads
+  "supersession link" with the dangling "amendment" gone (W5). The
+  normative half of the `depends_on` rule moved into doctrine §7:200-206
+  (W6), and this bullet now attributes it — "the transition-time gate
+  doctrine §7 states" — rather than legislating.
+- **Finding 1 (LOW-MEDIUM, matter-local half of m0001's X7): the
+  validator is now specified to enforce an exemption with nothing to key
+  on.** m0008:36-38 requires the tool to check the gate "with the §11
+  retroactive path exempt". A matter is on that path only by carrying a
+  `## Retroactive` section — §12's frontmatter schema, which states it
+  lists "every field that may appear", has no marker for it. So the
+  deterministic check §10 promises reduces to section-heading presence,
+  which §12 does not define, and the exemption is self-declared: any
+  matter clears the gate by adding the section. §11's older "the
+  validator flags retroactive matters" had the same gap but only gated
+  *review*; §7 now gates a transition. Either §12 gains the field or
+  §7/§11 states that section presence is the marker.
+- **Finding 2 (LOW): the gate has no exit, and the validator would be
+  the thing enforcing the deadlock.** doctrine:200-201 blocks staging
+  and execution while a dependency is unexecuted; a dependency that ends
+  `rejected`, `withdrawn` or `superseded` never becomes `executed`, and
+  §5 keeps superseded matters forever. Four matters in this collection
+  — m0006, m0007, m0009 and m0010 — `depends_on: [m0008]` today. Whatever
+  release rule the doctrine adopts, this list is where it gets checked.
+- **Finding 3 (LOW): the response entry overstates one edit.** m0008:132-134
+  says "This bullet now cites §7 rather than stating the rule"; the
+  bullet cites §7 *and* restates it inline. Harmless as a gloss, but two
+  copies of a normative sentence in two files is the drift the move was
+  meant to prevent.
+- **Verified clean:** m0008:35's link-integrity bullet is unaffected by
+  the round 2 response's re-scoping of the *link* check to authored
+  files — this bullet is about frontmatter references, all ten of which
+  resolve. The interim generator it describes regenerates
+  `matters/index.md` byte-identically at `7357244`.

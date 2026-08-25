@@ -904,3 +904,400 @@ from a reviewer. They are the most checkable claims in the file — every
 one is a line citation — but they have not been reviewed by anyone.
 Round 3's fidelity check should start there, and it can, which is the
 whole point of the import.
+
+### Round 3 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance — neither the
+  round 2 reviewer nor the round 2 response's author. Inputs: this
+  branch at `7357244`, the diff `25d2e16..7357244`, both threads, and —
+  for the first time in this collection's review history — the archived
+  first attempt: PR #1, the branch `m0001-matter-system` at `c11956d`,
+  and its matters. `ob6to8/beatcode` was not cloned; nothing in the diff
+  bears on m0002–m0005 beyond two response entries that apply nothing,
+  so rounds 1 and 2 own those verdicts and none is re-asserted here.
+- **Scope:** the four checks the round 2 response makes possible or
+  newly needs — fidelity of the rulings ledger against *both* threads
+  row by row; whether W1–W11 were addressed or only discussed, and what
+  the response newly broke; the doctrine text this response wrote,
+  which nobody has reviewed; and the standing consistency and scope
+  invariants. Evidence is in
+  [runs/2026-08-25-vetting-round-3.md](../runs/2026-08-25-vetting-round-3.md),
+  per §9.1.
+
+**Findings, ranked by severity:**
+
+**X1 · HIGH — "none of its doctrine or matter text was reused" is
+false, and this response deleted the hedge that had been protecting
+it.** The claim stands in the ratified region of three files:
+doctrine:18-19, `README.md`:21-22, m0001:43-45. Its ancestor is the
+build agent's undertaking at
+[adjudication:499](../threads/2026-08-24-audit-and-adjudication.md) —
+"Nothing textual carries. No doctrine text, no matter texts."
+Measured against `c11956d` (run record, step 5): 45% of the archived
+doctrine, 55% of the archived README, 43% of archived m0008, and
+**77–78% of archived m0006 and m0010** survive into this tree in
+matching runs of forty characters or more. The longest runs are not
+convergence on facts, table scaffolding, or the operator's own wording
+— they are authorial prose reproduced intact:
+
+- 315 ch, m0006:21-25 ↔ archive m0006:16-20 — "…round three restates
+  round one, producing the appearance of scrutiny rather than
+  scrutiny."
+- 220 ch, m0010:49-52 ↔ archive m0010:36-39 — "A process that makes
+  small changes expensive gets bypassed for small changes, and a
+  bypassed process ends up covering only the work that was already
+  being done carefully."
+- 205 ch, m0001:20-25 ↔ archive m0001:19-24 — this matter's own
+  Diagnosed reason opening.
+- 173 ch, m0008:51-52 ↔ archive m0008:33 — "Not mechanizable, and not
+  to be faked: whether a diagnosis is correct, whether a plan is good,
+  whether scope is right, ratification itself."
+- 168 ch, `README.md`:1-5 ↔ archive README:1-5 — the repository's
+  opening sentence.
+- 255 ch, doctrine:57-59 ↔ archive doctrine:31-33; 264 ch,
+  doctrine:46-53 ↔ archive doctrine:20-25; 160 ch, doctrine:131-134 ↔
+  archive doctrine:66-68.
+
+Two things make this worse than a stale sentence. First, **it is the
+one claim the isolation line made uncheckable**, and this response
+retired that line (`README.md`:42-63) while leaving the claim
+unchecked — the round that gained the ability to test it is the round
+that should have tested it, and this is that round. Second, the
+response **strengthened** the claim rather than testing it: m0001:702-708
+records that the provenance sentences "got simpler rather than more
+carefully scoped … That hedge is gone — the claim is simply true now."
+Round 1's V1 and the round 2 addendum had both scoped these sentences
+to *text, not provenance*; the scoping was removed on the theory that
+the import made the plain claim true. The import made it checkable, and
+it is false. Note also that fresh authoring was chosen at
+[adjudication:495](../threads/2026-08-24-audit-and-adjudication.md)
+specifically to defeat **anchoring** — "the new author copy-editing the
+old text's framing instead of thinking" — so the reused runs are
+evidence about the method, not only about a sentence. The remedy is the
+operator's to choose and larger than a word: either the sentences are
+rewritten to what is true (no *ratified* text carried; the collection
+was re-authored by an agent that had read the archive, and passages
+survive), or the passages are rewritten. Recorded matter-locally on
+m0006 and m0010, the two worst.
+
+**X2 · MEDIUM-HIGH — the import reverses a ruling that is in the tree,
+and the operator directions authorizing this round's three biggest
+moves have no primary source.** (a)
+[adjudication:571](../threads/2026-08-24-audit-and-adjudication.md), Q3,
+states as a premise of both its options: "The original design
+conversation stays archive-side either way." The operator ruled it
+"1-5 yes" at
+[adjudication:601](../threads/2026-08-24-audit-and-adjudication.md), and
+row 92 of this ledger cites Q3 as landed doctrine. The design session is
+now in `threads/`. That may well be the right call — the response
+argues it cogently at m0001:728-740 — but the argument never mentions
+that a ruled premise was reversed, no ledger row records the reversal,
+and §9.4 has this collection asserting immutable references while its
+own record now contradicts one. (b) Three operator directions are
+asserted with no citation into either thread, which ends at "apply"
+([adjudication:854](../threads/2026-08-24-audit-and-adjudication.md)):
+`"proceed with fix"` (m0001:603), the addendum-2 instruction
+(m0001:630), and "The operator directed the import" (m0001:729,
+repeated at m0011:74-75). Under §8 the operator's channel is committed
+file edits and "agents read rulings from the tree"; under §9.2 threads
+are the primary source for rulings. In the commit whose entire thesis
+is that a citation beats a witness — m0001:692-695, "Where a reviewer
+previously had a marker meaning 'you cannot check this, take the
+witness's word', there is a link to the operator's sentence" — the
+import itself rests on the witness's word. Recorded matter-locally on
+m0011.
+
+**X3 · MEDIUM — §15's "Six choices … are the authoring agent's" is a
+completeness claim, and the same commit falsified it.** doctrine:391-400.
+W11's fix changed a loose statement ("Six choices … were adopted by the
+authoring agent as defaults — presented to the operator in the thread
+but not ruled before authoring") into an assertive one ("Six choices in
+this document and the collection are the authoring agent's, adopted
+without an operator ruling"), then added the machinery for admitting
+late additions: bullet 2 is listed precisely because it "was written
+later, in the round 1 response, answering a finding on m0007." By that
+standard the list is short by at least six:
+
+- **doctrine:200-206**, §7's transition-time `depends_on` gate and its
+  §11 exemption — written in *this* response, answering W6, no operator
+  ruling;
+- **doctrine:177-182**, §6's hashed region for the retroactive path —
+  written in *this* response, answering W7, no operator ruling;
+- **doctrine:285-299**, §11's retroactive path design — the agent's, at
+  [adjudication:445](../threads/2026-08-24-audit-and-adjudication.md),
+  offered under the operator's "suggest matter corrections"
+  ([adjudication:304](../threads/2026-08-24-audit-and-adjudication.md))
+  and never agreed to; the archived attempt's own agent listed the
+  retroactive path as explicitly *unruled*
+  ([design:509](../threads/2026-08-24-matter-system.md));
+- **doctrine:143-150**, §5's earlier-ratification precedence, and
+  **doctrine:99-108**, §3's terminal owners — same origin, written in
+  the round 1 response answering V6;
+- **doctrine:134**, §4's "Completeness is therefore a checklist on the
+  matter, not a state" — the operator was asked to rule on exactly this
+  (R1,
+  [adjudication:380](../threads/2026-08-24-audit-and-adjudication.md))
+  and **declined**: "do i even need to pick?"
+  ([adjudication:463](../threads/2026-08-24-audit-and-adjudication.md)),
+  "same with ruling needed"
+  ([adjudication:465](../threads/2026-08-24-audit-and-adjudication.md)),
+  with the agent answering that R1's substance "gets settled by whatever
+  state machine the fresh author proposes and you ratify as a whole
+  document"
+  ([adjudication:506](../threads/2026-08-24-audit-and-adjudication.md)).
+  That is the clearest confirm-at-ratification item in the collection
+  and it is not on the list.
+
+The point of §15 is that ratifying confirms these deliberately rather
+than silently. A list that names six while the doctrine holds at least
+twelve does the opposite of what the section is for.
+
+**X4 · MEDIUM — the ledger's one derived row, and the Scope section
+rewritten around it this round, present the agent's reasoning as the
+operator's.** Row 83 (m0001:83) says org/assertions was "raised as a
+matter, then withdrawn once identified as the operator's global
+CLAUDE.md". The operator did not withdraw it and did not identify it:
+at [design:457](../threads/2026-08-24-matter-system.md) they *ask* —
+"regarding the claude.md, i misunderstood and thought this was the repo
+claude.md - this is my local global claude.md?" Under §3, `withdrawn`
+means "retracted by its author before a decision"; that did not happen.
+The identification, and the whole out-of-scope derivation, are the
+agent's, in the very next turn
+([design:467](../threads/2026-08-24-matter-system.md)): "So the
+`org/assertions` question is cross-repo by definition, which — per your
+own 'don't mix concerns across repos' — drops off the beatcode-scoped
+worklist rather than becoming m-something here." The operator never
+answers it. The Scope section (m0001:111-122), rewritten this round on
+the author's own initiative and reviewed by nobody, reconstructs that
+derivation out of design:318, design:457 and design:450 and calls it
+"readable end to end" and "now the most [checkable]" — while omitting
+design:467, the single turn that actually contains it and the one that
+shows whose it is. W9(c) is not moot; the blanket sentence went and the
+misattribution moved into prose. Fix is small and honest: cite
+design:467 and say the disposition is the agent's, unanswered.
+
+**X5 · MEDIUM — six operator rulings and proposals are missing from a
+ledger that says "Every".** m0001:51. Verified by extracting every
+`## ▸ Mark` turn from both threads and reading it against the table (run
+record, step 4):
+
+- **[design:459](../threads/2026-08-24-matter-system.md)**, "agree to
+  draft and execute m0001" — the operator's authorization for the
+  bootstrap, answering the agent's bootstrap-exception proposal at
+  [design:437-443](../threads/2026-08-24-matter-system.md) ("make
+  `m0001` the exception on purpose … That exception should be recorded
+  *in* `m0001`"). §14 is one of the two exceptions §1 names, §3 licenses
+  m0001 alone to jump `ratified → executed` on it, and the ruling that
+  grants it has no row. Row 89's §14 landing covers the archive half
+  only.
+- **[adjudication:473](../threads/2026-08-24-audit-and-adjudication.md)**,
+  "agree on okf direction" — the ruling that actually adopted OKF,
+  answering the agent's "keep it, as a documented dialect, not a
+  certification"
+  ([adjudication:394](../threads/2026-08-24-audit-and-adjudication.md)),
+  which is where §12's framing and its "when OKF fights a real need the
+  doctrine wins" rule come from. So does the operator's scepticism at
+  [adjudication:310](../threads/2026-08-24-audit-and-adjudication.md)
+  ("this to me makes okf suspect … unless the conformity brings enough
+  wins to offset the adoption"), which is why the dialect is hedged at
+  all. Row 82 cites neither — only design:453 ("should consider google's
+  okf format") and design:486.
+- **[design:486](../threads/2026-08-24-matter-system.md)**'s second
+  clause — "do not persist un-ratified 'facts' to repo, just what we
+  discuss". The turn is cited on row 82 but the row states only the
+  memory-files half. This is the direct ancestor of §15's whole
+  existence — the archived agent read it that way in terms
+  ([design:509](../threads/2026-08-24-matter-system.md), "That's my read
+  of 'do not persist un-ratified facts'") — and it has no row and no
+  named landing.
+- **[design:449](../threads/2026-08-24-matter-system.md)**, "4/5 -
+  agree", is cited on row 76 but not on row 78, though it is the turn
+  that settles the superset question the operator raised at design:301
+  and thereby licenses §7's "no containers" and the
+  `implements`/`depends_on` pair
+  ([design:381-390](../threads/2026-08-24-matter-system.md)). Row 78
+  cites the question and not the answer.
+- **Row 92** cites the agent's Q3 at adjudication:571 with no
+  answering turn, where sibling rows 90, 91 and 96 all cite
+  adjudication:601.
+- **[adjudication:290](../threads/2026-08-24-audit-and-adjudication.md)**,
+  "operator will trigger execution by launching a dev agent. propose
+  the matter that will enable this" — row 70 cites design:173 only.
+  Minor, same content; noted for completeness because the row's second
+  clause ("as its own matter") appears in neither cited turn.
+
+**X6 · MEDIUM — m0007's Feature section now contradicts the doctrine
+the same commit wrote, and the correction sits outside the ratified
+region.** m0007:39 states "§6 defines two" hash regimes. §6 now defines
+three: the ratified region, the whole-file regime, and — added by this
+same commit at doctrine:177-182 — the retroactive regime. m0007's own
+response entry says so explicitly (m0007:131-137, "That is a third
+regime this matter's check must distinguish"), but that is a `## Vetting`
+append, which under §6:169-170 is outside the ratified region. So the
+text the operator would ratify says two and the text they would not
+ratify says three. This is precisely the shape W2 identified — evidence
+for a ratified claim parked in an append — recurring in the commit that
+retired it. Recorded matter-locally on m0007.
+
+**X7 · LOW-MEDIUM — §7's new gate has no exit and no marker.**
+(a) doctrine:200-201 blocks staging and execution "while a dependency is
+unexecuted". A dependency that ends `rejected`, `withdrawn` or
+`superseded` can never become `executed` — §5 keeps superseded matters
+forever — so every dependent is permanently blocked, and neither §5 nor
+§7 provides a re-pointing or release rule. This is live today:
+m0006, m0007, m0009 and m0010 all `depends_on: [m0008]`.
+(b) doctrine:201-206 exempts "the retroactive path", which is
+identifiable only by the presence of a `## Retroactive` section. §12's
+schema claims to list "every field that may appear" and has no marker
+for it, so m0008's "the validator checks both" (m0008:36-38) has nothing
+deterministic to key on — and the exemption is self-declared: adding the
+section clears the gate. §11's older "the validator flags retroactive
+matters" had the same gap, but it flagged for review; §7 now makes it a
+transition gate. Recorded matter-locally on m0008.
+
+**X8 · LOW-MEDIUM — §6's new retroactive hashed region assumes a
+section §11 does not require at filing.** doctrine:177-182 hashes
+`## Retroactive` and `## Execution` "as they stand at the acknowledged
+commit". §3.1 requires `## Execution` to *enter* `executed`, and on this
+path entering is what the acknowledgment causes; §11:288-291 lists what
+must be filed — evidence, and a `## Retroactive` section — and does not
+require `## Execution`. Either §11 must require the execution record
+complete before acknowledgment, or the hash covers a section that did
+not exist at the commit the operator named. W7's fix defined the region
+without closing the ordering it depends on.
+
+**X9 · LOW — the new run record's verdict undercounts its own
+evidence.** `runs/2026-08-25-archive-thread-import.md`:280 says "all 65
+line citations resolve"; step 2 of the same file (line 84) reports
+`citations: 75`. Re-executing that file's own script at `7357244`
+reproduces 75 (run record, step 2). Run files are never edited (§9.1);
+recorded here.
+
+**X10 · LOW — the response's numbering note fixes m0001 line drift and
+leaves doctrine line drift.** m0001:676-679 warns that every `m0001:NNN`
+in the round 2 entry now describes the file at `25d2e16`. The same
+commit also moved §11 down about twenty lines, so round 2's
+`doctrine:264` (W6, m0001:496) and `§11:264-270` (W7, m0001:503) now
+land inside §9.3. m0007:98's `Doctrine §6:165-170` survives only because
+the §6 insert went in below it.
+
+**X11 · LOW — `README.md`:46-59 says the recorded prompt "stands except
+for one line", then amends a second.** The same section re-scopes step
+1's fidelity check to both threads, which is a second change; and the
+prompt as recorded at
+[thread:646-671](../threads/2026-08-24-audit-and-adjudication.md) names
+branch `claude/beatcode-pr1-audit-1t400g`, not this one. "Stands except
+for one line" is three changes described as one.
+
+**X12 · LOW — the link check's re-scoping is honest, but it is written
+down outside the normative text.** Independently confirmed (run record,
+step 7): 165 relative links tree-wide, 164 in authored files, all
+resolving, none leading-slash; exactly one hit, at
+[design:475](../threads/2026-08-24-matter-system.md), inside a
+four-row table where the agent *quotes* OKF's bundle-absolute form to
+the operator. Editing it would edit a primary source, which §9.2
+forbids; nothing else hides behind the re-scoping. The scope statement
+lives only at m0001:881-893 — a `## Vetting` append — and in a run
+record. If it is a standing invariant it belongs in m0008's link bullet
+(m0008:35) or §12.
+
+**X13 · LOW — §8 requires branch names prefixed with the matter ID and
+no branch in this repository is.** doctrine:225. The carve-out exists
+only as an agent turn in a thread
+([adjudication:640](../threads/2026-08-24-audit-and-adjudication.md),
+"branch-name matter prefixes start with the next matter, per the
+bootstrap exception"); §14 does not mention it.
+
+**Checks passed clean:**
+
+- **The import is exactly what it claims.** `c11956d`'s
+  `threads/2026-08-24-matter-system.md` and this tree's are
+  byte-identical, digest
+  `50022f11…9816a` — the published hash, independently reproduced (run
+  record, step 1). It is a move, not a re-export.
+- **Every "Ruled in" citation resolves.** 35 rows, 46 citations, all
+  landing on non-blank turns; 75 citations and 150 endpoints tree-wide,
+  none dangling (run record, steps 2-3). Speaker-checked: 40 of the 46
+  land in operator turns and 6 in agent turns, and five of those six are
+  paired with the operator's answering turn in the same row.
+- **Both rows the author added on its own initiative check out.**
+  "describe, do not fix" is carried by design:146 and design:287, both
+  operator turns, quoted accurately, and it does land in doctrine §1:37-39
+  and this matter's Diagnosed reason. The state spine's re-sourcing to
+  design:280 is verbatim — and is a real correction: at `25d2e16` that
+  row was unmarked, which under the old preamble's "Unmarked rows are
+  ruled in the thread directly" attributed it to the adjudication
+  session, where it does not appear.
+- **Retiring † was right for a reason the response did not claim.** The
+  old marking was wrong in *both* directions. W2 caught one over-marked
+  row; six unmarked rows were in fact design-sourced — the state spine
+  (design:280), vetting by fresh agents and execution by a dev agent
+  (design:173), the flat collection (design:175), deterministic code
+  (design:177), and PRs citing matter IDs (design:317). All six now
+  carry correct citations. A marker nobody could check had drifted; a
+  citation anybody can check cannot.
+- **W1–W11 all produced text or a recorded dispute; none was answered
+  by discussion alone.** Each disposition was checked against the tree:
+  W1 closed structurally at doctrine:184-189 plus `README.md`:65-102,
+  with no pin computed anywhere in the commit; W2 by the import, with †
+  gone from the table and row 75 citing design:298 inside the ratified
+  region; W3(c) by the new risk-tiers row; W4 and W5 on m0010 and
+  m0008; W6 in §7; W7 in §6; W8 on m0011 with the header rewritten
+  3-for-3 lines, file length 856 → 856, so no `thread:NNN` citation
+  moved; W9(a)(b) in the ledger; W10(a) corrected in the new entry
+  rather than in the old one, which is correct under §6; W11 in §15.
+- **The W2 dispute was right to make.** The author disputes the round's
+  "a new archive dependency introduced by the fix for an
+  archive-dependency finding" *as a description of the marking*, while
+  conceding it as a description of the evidence. design:298 now settles
+  it: the operator did defer the lenses machinery, in those words, so
+  the claim was not manufactured — only its support was out of reach.
+  Conceding the remedy while contesting the characterization is the
+  narrowest possible dispute and it is correct on the merits.
+- **The numbering note is accurate.** All four off-by-one
+  cross-references verified: "Framing nit: W12" (m0001:404) is ranked
+  W11; "See W11" (m0001:395) is W10; "W10(a)" (m0001:398) is W9(a);
+  "W4-W12" (m0001:654) is W4–W11. There is no W12.
+- **Consistency.** `tools/gen-index.py` (Python 3.11.15, PyYAML 6.0.1)
+  regenerates `matters/index.md` byte-identically with a clean tree.
+  Every frontmatter field used across the eleven matters is defined in
+  §12, subkeys included; every timestamp is ISO 8601 with an explicit
+  UTC offset; the only state used is `proposed`, which §3 defines; the
+  §12 status derivation holds on all eleven.
+- **Append-only held for the vetting record.** The response's 57
+  deletions on this file are all inside the ratified region — frontmatter
+  line, supersession note, Sources paragraph, the 33-row table, Scope,
+  Execution. No `## Vetting` text was removed here or on any other
+  matter.
+- **Scope: nothing in the tree is unclaimed.** The tree is `README.md`,
+  `doctrine/matters.md`, `matters/index.md`, m0001–m0011, three files in
+  `runs/`, two in `threads/`, and `tools/gen-index.py`. The Execution
+  section (m0001:124-134) claims each of them by name, including the
+  imported design session and the interim generator. "Nothing else is in
+  the tree" holds.
+- **Git citation (§8).** One commit for the round, subject
+  `m0001: vetting round 2 response`, `Matter: m0001` trailer; all eight
+  commits on the branch carry the trailer.
+
+**Not checked:** `ob6to8/beatcode` — not cloned, and the render
+reproduction not re-executed, because nothing in `25d2e16..7357244`
+bears on it: m0002 and m0005 are untouched and m0003 and m0004 gained
+only response entries applying nothing. Rounds 1 and 2 own those
+verdicts and this round neither challenges nor re-asserts them. The
+archived collection was read for the text-reuse comparison (X1) and for
+the design session's provenance, not audited on its own merits — it is
+closed and unmerged.
+
+- **Disposition:** X1 is the one finding that should reach the operator
+  before the ratification read, because it is about a sentence in the
+  ratified region of three files and about the method the whole second
+  bootstrap was justified by; it is also the finding the retired
+  isolation line was hiding, which is an argument that retiring it was
+  correct. X2 and X3 are the next two, both concerning what the operator
+  is being asked to confirm: a ruled premise quietly reversed, and a
+  confirm-at-ratification list that is short. X4 and X5 are fidelity
+  corrections to the ledger and Scope, now cheap because the sources are
+  in the tree. X6–X8 are holes in normative text this commit wrote and
+  nobody had reviewed. X9–X13 are consistency residue. None blocks
+  continued vetting; nothing found in the ledger's citations, the
+  import, the derived views, or the scope claim failed.

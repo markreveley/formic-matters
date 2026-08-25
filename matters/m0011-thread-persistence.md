@@ -172,3 +172,58 @@ here.
   [runs/2026-08-25-archive-thread-import.md](../runs/2026-08-25-archive-thread-import.md)).
   Import of an existing export is a third mechanism, and this matter's
   Mechanism question did not name it.
+
+### Round 3 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance; scope — the
+  import as a thread-policy event, and the round 2 response's header
+  work.
+- **Round 2 verified applied.** The unrecorded `1347af3` header edit is
+  recorded at m0011:150-155; the header sentence is rewritten to a form
+  that survives an append (`threads/2026-08-24-audit-and-adjudication.md`:18-20),
+  and the edit is length-neutral — 3 lines replacing 3, file 856 lines
+  before and after — so no `thread:NNN` citation in the vetting record
+  moved (independently reproduced, run record step 1 environment and
+  `git diff --numstat`). Open gained the general question at m0011:62-68.
+  Notes gained the import as a third mechanism at m0011:77-82.
+- **Finding 1 (MEDIUM, matter-local half of m0001's X2): this matter now
+  records two thread events as "by operator instruction" with no
+  citation, and the second reverses a ruling that is in the tree.**
+  m0011:74-75 says the first export "ran ahead of this policy, by
+  operator instruction"; m0011:77-82 records the design session's import
+  the same way, and m0001:729 states "The operator directed the import".
+  Neither thread contains either instruction — the adjudication export
+  ends at "apply"
+  ([adjudication:854](../threads/2026-08-24-audit-and-adjudication.md)).
+  Meanwhile Q3
+  ([adjudication:571](../threads/2026-08-24-audit-and-adjudication.md)),
+  ruled "1-5 yes" at
+  [adjudication:601](../threads/2026-08-24-audit-and-adjudication.md) and
+  carried as row 92 of m0001's ledger, states as a premise of both its
+  options: "The original design conversation stays archive-side either
+  way." Under §8 the operator's channel is committed file edits and
+  agents read rulings from the tree; under §9.2 threads are the primary
+  source for rulings. The import may well be right — the argument at
+  m0001:728-740 is a good one — but a thread policy whose own two
+  exercises both rest on uncited instruction is the gap this matter
+  exists to close. Open should carry it: **what record an
+  export-or-import event itself requires**, given that the instruction
+  authorizing it typically arrives after the last exported turn.
+- **Finding 2 (LOW): the two threads' headers now state different
+  bring-current policies, and this matter calls that per-instance.**
+  `threads/2026-08-24-audit-and-adjudication.md`:18-20 says the export
+  "is brought current as exchanges land";
+  `threads/2026-08-24-matter-system.md`:9 says "The thread necessarily
+  ends mid-turn: the reply to the final human message is not in the
+  file, because that message is what produced the export." The second is
+  a frozen archive copy and must not be edited (§9.2), so the divergence
+  is unavoidable — but m0011:60-62's "per-instance choice" framing was
+  written for one header and now covers two files with different
+  provenance (agent export vs. import). Worth naming in Mechanism
+  alongside the import.
+- **Verified clean:** frontmatter conforms to §12; both `threads:`
+  entries resolve; the standing operator proposals at m0011:38-47 are
+  each supported by a cited turn —
+  [design:567](../threads/2026-08-24-matter-system.md),
+  [design:660](../threads/2026-08-24-matter-system.md),
+  [adjudication:264](../threads/2026-08-24-audit-and-adjudication.md).
