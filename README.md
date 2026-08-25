@@ -18,9 +18,12 @@ transport and merge mechanics; its comment surface is unused.
 **Status:** awaiting ratification of
 [m0001](matters/m0001-matter-system.md) (doctrine §6, §14). This is the
 second bootstrap; the first was audited and archived unmerged (PR #1).
-None of its doctrine or matter text was reused, and its design session
-is exported into [`threads/`](threads/2026-08-24-matter-system.md) —
-so every row of
+Nothing in it was ratified, and this bundle was re-authored rather than
+derived — but by an agent that had read the archive, and passages of the
+archived text survive here
+([runs/2026-08-25-vetting-round-3.md](runs/2026-08-25-vetting-round-3.md)).
+Its design session is exported into
+[`threads/`](threads/2026-08-24-matter-system.md), so every row of
 [m0001](matters/m0001-matter-system.md)'s rulings ledger cites the turn
 it came from, in a file in this tree.
 

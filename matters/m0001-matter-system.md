@@ -41,8 +41,13 @@ this matter is ratifying that document at a specific commit (doctrine
 ## What this supersedes
 
 Nothing in this collection — it is the first matter. The archived first
-attempt is referenced, not superseded: none of its doctrine or matter
-text was reused. Its design session is exported into
+attempt is referenced, not superseded: nothing in it was ratified, so
+nothing carried a ratification into this collection, and it was
+re-authored rather than derived. It was re-authored by an agent that had
+read it, though, and passages of its text survive here, measured file by
+file in
+[runs/2026-08-25-vetting-round-3.md](../runs/2026-08-25-vetting-round-3.md).
+Its design session is exported into
 [`threads/`](../threads/2026-08-24-matter-system.md) as a primary
 source, so the rulings it carries are read here rather than attested to.
 
@@ -1301,3 +1306,56 @@ closed and unmerged.
   nobody had reviewed. X9–X13 are consistency residue. None blocks
   continued vetting; nothing found in the ledger's citations, the
   import, the derived views, or the scope claim failed.
+
+### Round 3 addendum — 2026-08-25 — operator-directed
+
+Two findings applied by the reviewer on operator instruction ("proceed
+with fixes"), deliberately bounded to the two that bear on the
+ratification read itself. Everything else round 3 filed — X2, X4–X13 —
+is left as findings.
+
+- **X1 applied, at all three sites.** doctrine's header, `README.md`'s
+  status paragraph and this matter's supersession note no longer say
+  "none of its doctrine or matter text was reused". Each now states what
+  is true and checkable: nothing in the archive was ratified, so nothing
+  carried a ratification; the bundle was re-authored rather than
+  derived; it was re-authored by an agent that had read the archive, and
+  passages survive, with the measurement cited to
+  [runs/2026-08-25-vetting-round-3.md](../runs/2026-08-25-vetting-round-3.md).
+  The doctrine header also states the distinction the adjudication
+  session drew and the tree had lost — fresh authoring as a *method*,
+  not claimed as a pedigree
+  ([adjudication:514](../threads/2026-08-24-audit-and-adjudication.md)).
+- **X3 applied, in §15.** The list is six → twelve, grouped by how each
+  choice came to be unruled: five presented before authoring and left
+  unruled; six written later by an author answering a vetting finding
+  (§6's ratified region, §3's terminal owners and re-open, §5's
+  precedence rule, §11's retroactive path, §7's `depends_on` gate, §6's
+  retroactive hashed region); and one — §4's completeness-as-checklist
+  and the absent `draft` state — that was put to the operator as R1 and
+  expressly not ruled on
+  ([adjudication:463-465](../threads/2026-08-24-audit-and-adjudication.md),
+  answered at
+  [adjudication:506](../threads/2026-08-24-audit-and-adjudication.md)).
+  The section gains no rule; it enumerates. That is the one kind of
+  addition §15 exists to make.
+
+**What was deliberately not applied, and why.** X6 — m0007:39's "§6
+defines two" regimes, now three — is a one-word factual error and was
+left alone: m0007 is a separate `proposed` matter, outside the
+ratification read this fix serves, and correcting it is the author's
+move. The same reasoning holds for X2, X4, X5 and X7–X13. The scoping is
+itself a response to what these rounds have been doing: the diagnosis
+round 3 reached is that findings answered by writing new normative text
+generate the next round's findings, so this commit adds no rule to the
+doctrine — X1 replaces a false sentence with a true one, X3 lengthens a
+list whose function is to be complete.
+
+**Deviation, recorded.** Under the convention at
+[adjudication:750](../threads/2026-08-24-audit-and-adjudication.md) a
+reviewer states findings and the author applies them; here the operator
+directed the reviewer to apply. This is the same deviation round 2
+recorded twice (m0001:599-612, m0001:628-657), and it has the same
+consequence: the ratification read should treat this file's round 3
+reviewer and the author of these four edits as the same instance, and
+therefore not independent for the three X1 sites and §15's list.

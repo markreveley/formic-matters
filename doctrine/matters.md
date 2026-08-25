@@ -14,11 +14,16 @@ it as a whole document (§6). Its ratification state lives on
 this text is a candidate.
 
 Provenance, in one line: this is the second bootstrap. The first was
-audited, adjudicated, and archived unmerged (PR #1 of this repository);
-none of its doctrine or matter text was reused here. Its design session
-is not archive-side — it is exported into `threads/`, because the
-rulings in it govern this document and a reviewer must be able to read
-them.
+audited, adjudicated, and archived unmerged (PR #1 of this repository).
+Nothing in it was ratified, so nothing carried a ratification here. But
+this bundle was re-authored, not derived, by an agent that had read the
+archive in full, and passages of the archived text survive — 45% of its
+doctrine and 77–78% of two of its matters, measured in
+[runs/2026-08-25-vetting-round-3.md](../runs/2026-08-25-vetting-round-3.md).
+Fresh authoring was the method; it is not claimed as a pedigree. Its
+design session is not archive-side — it is exported into `threads/`,
+because the rulings in it govern this document and a reviewer must be
+able to read them.
 
 ---
 
@@ -388,21 +393,15 @@ language (m0008), risk tiers (m0010), thread policy scope and mechanism
 (m0011). Anything appearing in neither this document nor a matter is
 not doctrine.
 
-Six choices in this document and the collection are the authoring
-agent's, adopted without an operator ruling. Five were presented to the
-operator in the adjudication thread before authoring and left unruled.
-One of them — the ratified-region definition, second in the list below
-— was written later, in the round 1 response, answering a finding on
-[m0007](../matters/m0007-ratification-content-hash.md); what the
-operator saw before saying "apply" was the narrower "body-only hash"
-form, and what landed also excludes `## Vetting` and `## Execution`.
-Ratifying this document confirms all six; they are listed here so the
-confirmation is deliberate, not silent:
+Twelve choices in this document and the collection are the authoring
+agent's, adopted without an operator ruling. Ratifying this document
+confirms all twelve; they are listed here, grouped by how each came to
+be unruled, so the confirmation is deliberate rather than silent.
+
+**Presented to the operator before authoring, and left unruled.**
 
 - the ratification recording mechanism of §6 — operator reads and
   states, agent computes and records the hash;
-- the ratified-region definition of §6 (body minus frontmatter and
-  record sections);
 - the single interspersed ID sequence over both targets (§1), and the
   ID restart at m0001 with the archive as a separate closed collection
   (§12);
@@ -411,3 +410,35 @@ confirmation is deliberate, not silent:
   over threads derived from frontmatter (§9.2);
 - bundle-first sequencing: m0002–m0005 filed `proposed`, ratified after
   this document (implicit in the collection's state).
+
+**Written later, by an author answering a vetting finding.** These did
+not exist when the operator last saw this document as a whole, and no
+ruling covers them; "apply" was an instruction to address findings, not
+a decision on the text each fix produced.
+
+- the ratified-region definition of §6 (body minus frontmatter and
+  record sections) — round 1, answering
+  [m0007](../matters/m0007-ratification-content-hash.md). What the
+  operator saw before saying "apply" was the narrower "body-only hash"
+  form; what landed also excludes `## Vetting` and `## Execution`;
+- §3's owners for the terminal transitions, and the `ratified →
+  proposed` re-open that clears the ratification fields into the record
+  — round 1;
+- §5's earlier-ratification precedence for conflicts discovered after
+  the fact — round 1;
+- §11's retroactive path: its original shape, offered under the
+  operator's "suggest matter corrections" and never separately agreed,
+  and its round 1 redesign to `proposed → executed` on acknowledgment;
+- §7's transition-time `depends_on` gate and its §11 exemption —
+  round 2;
+- §6's hashed region for the retroactive path (`## Retroactive` and
+  `## Execution` at the acknowledged commit) — round 2.
+
+**Put to the operator and expressly not ruled on.**
+
+- §4's "completeness is a checklist on the matter, not a state", and
+  the absence of a `draft` state. This was the adjudication session's
+  R1; the operator declined to settle it — "do i even need to pick?" —
+  and the answer given was that R1's substance "gets settled by whatever
+  state machine the fresh author proposes and you ratify as a whole
+  document". This is that ratification.
