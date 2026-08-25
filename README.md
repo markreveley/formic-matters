@@ -35,3 +35,42 @@ tools/                  interim scripts; the real tooling is m0008
 The collection is markdown with YAML frontmatter — OKF v0.2 as a
 documented dialect (doctrine §12): readable with no tooling, links as
 plain relative paths, one concept per file.
+
+## Ratifying, and checking a ratification
+
+Ratification is an act over exact text at an exact commit (doctrine
+§6). The commit and hash are recorded *after* the act, from the commit
+you name — a pin offered in advance is not the record, because the text
+moves under it whenever the matter is revised.
+
+To ratify, in your checkout:
+
+```
+git pull                                  # the text you are about to read
+git rev-parse HEAD                        # the commit you are reading at
+$EDITOR doctrine/matters.md               # read it
+```
+
+then state ratification naming that commit. The recording agent writes
+`verified`, `ratified_commit` and `ratified_sha256` onto the matter.
+
+To check a ratification afterwards — or any hash an agent quotes — three
+commands, none of which require trusting the agent:
+
+```
+# does the recorded hash actually belong to the recorded commit?
+git show <ratified_commit>:doctrine/matters.md | sha256sum
+
+# is the file in front of me the file that was ratified?
+sha256sum doctrine/matters.md
+
+# what changed since, if anything?
+git diff <ratified_commit>..HEAD -- doctrine/matters.md
+```
+
+The first two agreeing means the pin is honest and current. The first
+agreeing while the second differs means the text has moved since
+ratification — which is what m0007 exists to catch mechanically. For a
+matter rather than the doctrine, the hash covers the ratified region
+(body minus frontmatter, `## Vetting` and `## Execution`), so compare
+against that region, not the whole file.

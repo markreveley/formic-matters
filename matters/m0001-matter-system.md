@@ -609,3 +609,34 @@ Two items, recorded because both deviate from the round's own terms.
   (thread:495) was about re-*authoring*; authoring is finished, and
   reading is what remains. Recommended as a `spec` matter against §9.2
   rather than applied here.
+
+### Round 2 addendum 2 — 2026-08-25 — operator-directed
+
+W1 closed at the source, on operator instruction.
+
+- **Doctrine §6 gains one rule:** "The pin follows the act, never
+  precedes it." The commit and hash are recorded *after* the operator
+  states ratification, from the commit the operator names; a pin
+  computed in advance and offered as ready is never the ratification
+  record, because the text moves under it the moment the matter is
+  revised. This makes W1 structurally impossible rather than
+  corrected: a pin derived from the operator's act cannot be stale
+  before that act. It is a normative change to §6 and belongs in the
+  operator's ratification read.
+- **README gains "Ratifying, and checking a ratification":** the three
+  commands that let the operator verify any quoted hash without
+  trusting the agent that quoted it — recompute the hash at the
+  recorded commit, hash the working file, diff the two. Placed in the
+  README rather than the doctrine because it is operator procedure,
+  not normative rule.
+- **Deviation, recorded — third and last.** This is the third
+  operator-directed edit applied by the round-2 reviewer (W3's two
+  prose sites, then this). Applying findings is the author's move
+  under the convention in
+  [the thread](../threads/2026-08-24-audit-and-adjudication.md); a
+  reviewer that keeps applying its own findings stops being a
+  reviewer. The remaining round-2 findings — W2's archive-thread
+  export, W4-W12 — are deliberately left unapplied for an author
+  round, and the ratification read should treat this file's reviewer
+  and the doctrine's author as no longer fully independent for §6 and
+  the two prose sites named above.

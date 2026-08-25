@@ -173,7 +173,12 @@ separate document (m0001 → this doctrine, which has no frontmatter),
 the hash is that document's whole file at the same commit. The hash is
 agent-computed and independently verifiable — anyone can recompute it
 from the named commit at any time; the operator computes nothing.
-Detecting post-ratification drift mechanically is
+
+**The pin follows the act, never precedes it.** The commit and hash are
+recorded *after* the operator states ratification, from the commit the
+operator names; a pin computed in advance and offered as ready is never
+the ratification record, because the text moves under it the moment the
+matter is revised. Detecting post-ratification drift mechanically is
 [m0007](../matters/m0007-ratification-content-hash.md).
 
 ## 7 · Composition — no containers
