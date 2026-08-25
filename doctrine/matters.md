@@ -29,20 +29,24 @@ able to read them.
 
 ## 1 · What a matter is
 
-A matter is one proposed change, persisted as one markdown file in
+A matter is one proposed change ->[to a system], persisted as one markdown file in
 `matters/`, vetted before the change is made.
 
 There are two targets, named by the `target` field:
+-> [my sense is that we already from init should think of this as a framework that should be consumed. i have 10 other repos i could drop it into. i would like to ratify this change now. as a result this document should strictly be a formal spec for the framework, which I would like to name "Formic Ascent". this repo will be renamed to that, and a new repo beatcode-dev will be created to consume the framework and contain the relevant matters, for both beatcode and beatcode-dev itself. however, since beatcode-dev should be a strict consumer of Formic ascent, 
 
 - `beatcode` — the instrument.
 - `beatcode-dev` — this repository: the doctrine, the tooling, the
   process itself. The system is self-hosting: its own evolution goes
   through it.
+-> [per above, redacted]
 
-Nothing lands in either target that did not begin as a matter, with two
-defined exceptions: the bootstrap (§14) and the retroactive path (§11).
+Nothing lands in either ->[any] target that did not begin as a matter, with two
+defined exceptions: ->[redacted] the bootstrap (§14) and the retroactive path (§11).
 The proposal is the unit of work, not the commit.
+-> [should it be that the MATTER is the unit of work, not the 'proposal'? if not, where is proposal defined?]
 
+-> [edit below to conform]
 There is one collection and one ID sequence; matters for both targets
 are interspersed. "All beatcode matters" is a query over `target`,
 never a directory. IDs deliberately encode nothing — not type, not
@@ -120,6 +124,7 @@ at the bootstrap (§14).
 A `branch` field is present exactly while a dev agent is working the
 matter. Its presence is what distinguishes in-flight from queued, and
 staleness checks key off it.
+->[are in-flight and queued explicit states for a matter? if so that should be included in the state enum. or - should this be an additional property, such as 'dev-state'?]
 
 ### 3.1 The execution record
 
@@ -127,16 +132,19 @@ Entering `executed` requires a final `## Execution` section on the
 matter: what actually landed (commits, PR), deviations from the
 ratified plan, date, actor. A matter ends as plan and reality side by
 side; the next reader learns where the plan was wrong.
+-->[technically, shouldn't 'deviations' from the plan actually land as proposed changes to the plan which need to be ratified before proceeding? or does this invite an endless loop?]
 
 ## 4 · Cheap to file, expensive to ratify
 
 The required sections in §2 gate **ratification**, not filing. A matter
+-->[i believe you are using 'filing' in the way you have also used 'proposed' - correct me if wrong. if wrong 'filing' needs to be specified]
 may be filed as a single sentence: a defect can be reported before it
 is understood, and producing the diagnosis is what vetting is for — it
 may take several rounds. No matter reaches `ratified` without its
 type's required sections complete.
 
 Completeness is therefore a checklist on the matter, not a state.
+-->[is exectuted not then the completed state?]
 
 ## 5 · Supersession, splitting, and conflict
 
@@ -250,6 +258,7 @@ omitted, redaction applied before publication. Threads are never
 derived or summarized in place; every view over them (indexes,
 matter-to-thread maps) is derived from frontmatter. Which sessions are
 exported, and by what mechanism, is
+->[need to account for the scenario like this where operator and agent interact within a document via comments - options i see are to either make a note to check a document with a pointer to the git commit, or persist a duplicate copy at the state the commit was made]
 [m0011](../matters/m0011-thread-persistence.md).
 
 ### 9.3 Claims DAGs
@@ -353,6 +362,7 @@ ratified_commit: <sha>                  # §6; written at ratification
 ratified_sha256: <hash>                 # §6; whole-file, agent-computed
 ```
 
+->[i would propose, per earlier, that 'target' would be unecessary for the framework spec. the target will be whatever client repo has installed the framework]
 `index.md` and `log.md` are reserved by OKF and are derived artifacts.
 **Views are derived.** The flat collection is the only source of truth;
 every listing, worklist, and rollup is regenerated
@@ -363,9 +373,11 @@ every listing, worklist, and rollup is regenerated
 One repository governs itself and beatcode (§1). The doctrine is
 latently general, and deliberately not yet extracted: a framework with
 one consumer teaches its boundary by being used, not by being split.
+->[again, i feel we are already past this point and am ratifying the abstraction now]
 
 The process moves to its own framework repository when any of these
 fires: a second consumer repository actually adopts it; the tooling
+->[triggered - i have 5 which can adopt it]
 matures into a released binary wanting its own cadence; doctrine
 changes start being motivated by non-beatcode needs. Until then, no
 split. Extraction stays mechanical because the collection is flat and
@@ -405,11 +417,13 @@ be unruled, so the confirmation is deliberate rather than silent.
 - the single interspersed ID sequence over both targets (§1), and the
   ID restart at m0001 with the archive as a separate closed collection
   (§12);
+  ->[propose the removal of target making this moot]
 - the extraction tripwire's specific conditions (§13);
 - the extension of "views are derived" to threads — maps and indexes
   over threads derived from frontmatter (§9.2);
 - bundle-first sequencing: m0002–m0005 filed `proposed`, ratified after
   this document (implicit in the collection's state).
+->[others are ratified]
 
 **Written later, by an author answering a vetting finding.** These did
 not exist when the operator last saw this document as a whole, and no
@@ -433,6 +447,7 @@ a decision on the text each fix produced.
   round 2;
 - §6's hashed region for the retroactive path (`## Retroactive` and
   `## Execution` at the acknowledged commit) — round 2.
+  ->[i will need plainspeak breakdowns of what these are and what the implications of each are]
 
 **Put to the operator and expressly not ruled on.**
 
@@ -442,3 +457,4 @@ a decision on the text each fix produced.
   and the answer given was that R1's substance "gets settled by whatever
   state machine the fresh author proposes and you ratify as a whole
   document". This is that ratification.
+  ->[need clarity here too]
