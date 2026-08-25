@@ -18,8 +18,11 @@ transport and merge mechanics; its comment surface is unused.
 **Status:** awaiting ratification of
 [m0001](matters/m0001-matter-system.md) (doctrine §6, §14). This is the
 second bootstrap; the first was audited and archived unmerged (PR #1).
-No text here derives from it; the rulings carried from its sessions are
-marked in [m0001](matters/m0001-matter-system.md)'s rulings ledger.
+None of its doctrine or matter text was reused, and its design session
+is exported into [`threads/`](threads/2026-08-24-matter-system.md) —
+so every row of
+[m0001](matters/m0001-matter-system.md)'s rulings ledger cites the turn
+it came from, in a file in this tree.
 
 ## Layout
 
@@ -35,6 +38,29 @@ tools/                  interim scripts; the real tooling is m0008
 The collection is markdown with YAML frontmatter — OKF v0.2 as a
 documented dialect (doctrine §12): readable with no tooling, links as
 plain relative paths, one concept per file.
+
+## Running a vetting round
+
+A round is a fresh session prompted against this branch. The prompt is
+recorded verbatim in the adjudication thread
+([thread:646-671](threads/2026-08-24-audit-and-adjudication.md)), and
+it stands except for one line, now retired:
+
+> The first attempt is archived unmerged (PR #1): do not read it, its
+> matters, or its thread.
+
+That line kept a fresh reviewer from anchoring on the archived attempt
+while this one was being authored — the risk was re-*authoring* against
+old text. Authoring is finished; what is left is reading. Meanwhile the
+line cost two rounds real coverage: round 1's V1 and round 2's W2 both
+report ledger rows a reviewer could not check, because the session that
+ruled them was out of reach. It is now in `threads/`, so a reviewer
+should read the archive — PR #1, its matters, and both threads — and
+the fidelity check in step 1 covers both threads rather than one.
+
+What the retired line was standing in for survives as the narrower
+rule: review the text as it stands here; never carry archived wording
+into this tree.
 
 ## Ratifying, and checking a ratification
 

@@ -3,22 +3,22 @@
 Normative definition of how changes to beatcode — and to this
 repository itself — are proposed, vetted, ratified, and executed.
 
-Authored fresh on 2026-08-24 against the operator's rulings — those
-recorded in
-[threads/2026-08-24-audit-and-adjudication.md](../threads/2026-08-24-audit-and-adjudication.md),
-and those carried from the archived first attempt's sessions, each
-marked as such in m0001's rulings ledger.
-It becomes doctrine when the operator ratifies it as a whole document
-(§6). Its ratification state lives on
+Authored fresh on 2026-08-24 against the operator's rulings, recorded
+verbatim in the two threads this repository carries — the
+[design session](../threads/2026-08-24-matter-system.md) and the
+[adjudication session](../threads/2026-08-24-audit-and-adjudication.md)
+— and compiled row by row in m0001's rulings ledger, each row citing
+the turn it comes from. It becomes doctrine when the operator ratifies
+it as a whole document (§6). Its ratification state lives on
 [m0001](../matters/m0001-matter-system.md); until m0001 is ratified,
 this text is a candidate.
 
 Provenance, in one line: this is the second bootstrap. The first was
 audited, adjudicated, and archived unmerged (PR #1 of this repository);
-no text here derives from it. Rulings carried from its sessions reach
-this tree through the operator's carry-forward ruling and the witness
-affirmation, both recorded in the thread named above and marked as such
-in m0001's rulings ledger.
+none of its doctrine or matter text was reused here. Its design session
+is not archive-side — it is exported into `threads/`, because the
+rulings in it govern this document and a reviewer must be able to read
+them.
 
 ---
 
@@ -174,6 +174,13 @@ the hash is that document's whole file at the same commit. The hash is
 agent-computed and independently verifiable — anyone can recompute it
 from the named commit at any time; the operator computes nothing.
 
+A matter that enters `executed` by the retroactive path (§11) is
+acknowledged rather than ratified in advance, and what the operator
+acknowledges includes what already landed. For that path alone the
+hashed region additionally covers `## Retroactive` and `## Execution`
+as they stand at the acknowledged commit; nothing leaves `executed`
+(§3), so those sections do not move afterwards.
+
 **The pin follows the act, never precedes it.** The commit and hash are
 recorded *after* the operator states ratification, from the commit the
 operator names; a pin computed in advance and offered as ready is never
@@ -189,6 +196,14 @@ the goal *is*, plus metadata on the members:
 
 - `implements: m0001` — this matter serves that spec
 - `depends_on: [m0007, m0008]` — execution-order constraint
+
+`depends_on` is enforced at transition time: a matter cannot be staged
+or executed while a dependency is unexecuted. The retroactive path
+(§11) is exempt — it exists for work that cannot wait and never passes
+through `staged`; a retroactive matter names its unexecuted
+dependencies in its `## Retroactive` section instead of being blocked
+by them. The validator checks both
+([m0008](../matters/m0008-matter-tooling.md)).
 
 A worklist ("what is left before X is operational") is a filter plus a
 topological sort over `depends_on` — derived, never authored. Container
@@ -274,8 +289,10 @@ the backfilling of decisions already made. The path: act, then file the
 matter as `proposed` with the evidence attached (commits, runs) and a
 `## Retroactive` section stating why this path was used. Explicit
 operator acknowledgment, recorded in `verified`, moves it directly to
-`executed` (§3). If the operator declines, the matter is `rejected` and
-a new matter is opened to unwind what landed. The validator flags
+`executed` (§3), over a hashed region that includes what landed (§6).
+The `depends_on` gate of §7 does not apply on this path. If the
+operator declines, the matter is `rejected` and a new matter is opened
+to unwind what landed. The validator flags
 retroactive matters so they are reviewed, late but always.
 This path is already needed by
 [m0009](../matters/m0009-spec-gaps-to-matters.md) and
@@ -371,10 +388,16 @@ language (m0008), risk tiers (m0010), thread policy scope and mechanism
 (m0011). Anything appearing in neither this document nor a matter is
 not doctrine.
 
-Six choices in this document and the collection were adopted by the
-authoring agent as defaults — presented to the operator in the thread
-but not ruled before authoring. Ratifying this document confirms them;
-they are listed here so the confirmation is deliberate, not silent:
+Six choices in this document and the collection are the authoring
+agent's, adopted without an operator ruling. Five were presented to the
+operator in the adjudication thread before authoring and left unruled.
+One of them — the ratified-region definition, second in the list below
+— was written later, in the round 1 response, answering a finding on
+[m0007](../matters/m0007-ratification-content-hash.md); what the
+operator saw before saying "apply" was the narrower "body-only hash"
+form, and what landed also excludes `## Vetting` and `## Execution`.
+Ratifying this document confirms all six; they are listed here so the
+confirmation is deliberate, not silent:
 
 - the ratification recording mechanism of §6 — operator reads and
   states, agent computes and records the hash;

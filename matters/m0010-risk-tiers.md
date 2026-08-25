@@ -9,6 +9,7 @@ target: beatcode-dev
 implements: m0001
 depends_on: [m0008]
 tags: [process]
+threads: [threads/2026-08-24-matter-system.md]
 generated:
   by: claude-code/2026-08-24
   at: 2026-08-24T22:33:00Z
@@ -33,10 +34,15 @@ Derivation from path globs is mechanical
 ([m0008](m0008-matter-tooling.md)), so escalation cannot be forgotten.
 
 The tier-0 gate would make doctrine §11's retroactive path routine for
-low-risk changes, where §11 frames itself as exceptional. Ratifying
-this matter therefore includes an explicit §11 amendment widening its
-charter — a `spec`-typed change vetted with this matter, not a
-footnote to it.
+low-risk changes, where §11 frames itself as exceptional. Widening it
+is a change to normative text, which §2 types as `spec`; this matter is
+`type: feature` and type is immutable, so it ships no normative text
+itself. The §11 amendment is therefore a separate `spec` matter, filed
+and vetted alongside this one and added to this matter's `depends_on`
+before either is ratified — tiers cannot be ratified while §11 still
+reads as exceptional. Same resolution as
+[m0007](m0007-ratification-content-hash.md)'s: the doctrine edit leaves
+the `feature` matter rather than riding inside it.
 
 ## Why this matters beyond convenience
 
@@ -51,13 +57,15 @@ not propose would be tier 3.
 
 ## Why this is not built yet
 
-Deferred by the operator in the archived first attempt's design
-session — "same thoughts as 4", i.e. file as a feature matter rather
-than build now — carried by the carry-forward ruling and affirmed in
-[the thread](../threads/2026-08-24-audit-and-adjudication.md) (m0001's
-ledger, † convention). Same felt-pain reasoning as
-[m0006](m0006-review-lenses-and-dry-rounds.md). Filed so the design is
-ready when it is.
+Deferred by the operator in the design session —
+[design:304](../threads/2026-08-24-matter-system.md), "same thoughts as
+4", i.e. file as a feature matter rather than build now, on the same
+felt-pain reasoning they gave for
+[m0006](m0006-review-lenses-and-dry-rounds.md) six lines earlier
+([design:298](../threads/2026-08-24-matter-system.md)). That session is
+now a thread in this tree, and the deferral carries its own row in
+[m0001](m0001-matter-system.md)'s ledger. Filed so the design is ready
+when it is.
 
 ## Vetting
 
@@ -127,3 +135,29 @@ this matter.
   suggested disposition, so this is an inherited fix rather than an
   invented one; it is still the collection's only unreconciled
   instance of the pattern. Also recorded on m0001 as W4.
+
+### Round 2 response — 2026-08-25 — claude-code/2026-08-25 (author)
+
+Both findings accepted and applied.
+
+- **Finding 1 (also W3(c)).** Round 1's V4 offered two branches and the
+  round 1 response took neither. This response takes the first: the
+  deferral now has its own row in
+  [m0001](m0001-matter-system.md)'s ledger, so the pointer resolves and
+  the ledger's "every operator proposal and ruling" is true of it. The
+  citation here no longer routes through the ledger's retired †
+  convention either — it names the turn,
+  [design:304](../threads/2026-08-24-matter-system.md), in a thread that
+  is now in this tree. Anyone can read the operator saying "same
+  thoughts as 4" six lines below the ruling it refers to.
+- **Finding 2 (also W4).** The §2 boundary is resolved the way m0007's
+  was: the doctrine edit leaves the `feature` matter. The §11 widening
+  is now stated as a separate `spec` matter, filed and vetted alongside
+  this one and added to this matter's `depends_on` before either is
+  ratified, with tiers explicitly unratifiable while §11 still reads as
+  exceptional. The `spec` matter is not filed yet — this one is
+  `proposed` and may not survive vetting in this shape, and allocating
+  an ID for a dependency of an unratified matter would put a matter in
+  the collection whose only purpose is to serve another that may never
+  exist. The ordering constraint is what matters and it is now written
+  down.

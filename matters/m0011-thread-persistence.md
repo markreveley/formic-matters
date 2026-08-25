@@ -8,7 +8,9 @@ status: draft
 target: beatcode-dev
 implements: m0001
 tags: [process, provenance]
-threads: [threads/2026-08-24-audit-and-adjudication.md]
+threads:
+  - threads/2026-08-24-matter-system.md
+  - threads/2026-08-24-audit-and-adjudication.md
 generated:
   by: claude-code/2026-08-24
   at: 2026-08-24T22:33:00Z
@@ -57,7 +59,13 @@ re-litigation; ratifying this matter adopts them:
 - **Recursion.** An export cannot contain the turn that produces it;
   when and how a thread is brought current afterward. (The first
   export's header declares a per-instance choice — brought current as
-  exchanges land; no policy default is set here.)
+  exchanges land; no policy default is set here.) Open with it: what a
+  header may assert *between* landings. A sentence that names the
+  export's own last turn is false on the next append — that is round
+  2's W8, and the header has been rewritten to a form that survives an
+  append rather than re-checked after each one. Whether
+  append-invariance is the policy, or per-append re-checking is, is not
+  settled here.
 - **Concept status.** Thread files sit outside the `matters/` bundle
   and carry no `type`; whether they should become OKF concepts is open.
 
@@ -66,7 +74,12 @@ re-litigation; ratifying this matter adopts them:
 This collection's first thread export ran ahead of this policy, by
 operator instruction, under the standing proposals above — recorded
 here rather than left tacit, since under the doctrine a change to this
-repository should originate as a matter.
+repository should originate as a matter. The second thread
+([the design session](../threads/2026-08-24-matter-system.md)) did the
+same in round 2's response: it was not re-exported but copied verbatim
+from the archive branch, byte-identical, which is a third mechanism
+this policy's Mechanism question does not yet name — import of an
+existing export.
 
 ## Vetting
 
@@ -130,3 +143,32 @@ here.
   Open, since a policy that says "brought current as exchanges land"
   needs to say what the header asserts between landings. Recorded on
   m0001 as W8.
+
+### Round 2 response — 2026-08-25 — claude-code/2026-08-25 (author)
+
+- **Finding 1** — verified fixed by the round, nothing to apply.
+- **Finding 2 — accepted; the missing record is made here.** Commit
+  `1347af3` rewrote the thread header's bring-current sentence in
+  answer to round 1's finding 2, and neither response entry said so.
+  It is said now: a vetting finding caused an edit to a file in
+  `threads/`, in the header rather than the transcript, and it went
+  unrecorded.
+- **New finding — accepted and applied.** The rewritten sentence was
+  false at HEAD, as the round says. It has been rewritten again, to a
+  form that no longer names its own last turn: the export "is brought
+  current as exchanges land: it ends wherever the last export run
+  reached, and the reply to the final human turn shown may already
+  exist outside the file." That is true after any append. The edit is
+  three lines replacing three lines, deliberately: every `thread:NNN`
+  citation in this tree's vetting entries points into this file, and a
+  header that changed length would have silently moved all of them.
+- **Open gains the general case.** The Recursion bullet now asks what a
+  header may assert *between* landings — append-invariance as policy,
+  or per-append re-checking — rather than leaving it to be rediscovered
+  each round.
+- **Notes gains the second thread.** The design session was not
+  re-exported but copied verbatim from the archive branch,
+  byte-identical (`50022f11…9816a`, verified in
+  [runs/2026-08-25-archive-thread-import.md](../runs/2026-08-25-archive-thread-import.md)).
+  Import of an existing export is a third mechanism, and this matter's
+  Mechanism question did not name it.

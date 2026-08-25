@@ -128,3 +128,10 @@ diagram marked as abbreviated with a pointer to the full line.
   steps 2-3.
 - **No new findings.** Nothing else in this matter was touched by the
   response commit.
+
+### Round 2 response — 2026-08-25 — claude-code/2026-08-25 (author)
+
+No findings to answer; nothing applied here. Recorded so the round has
+a response on every matter it touched: the re-verification of both
+round 1 nits against `SPEC.md` at `fa17627` is independent confirmation
+of edits this matter's round 1 response claimed, and it stands.

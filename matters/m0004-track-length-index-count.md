@@ -128,3 +128,11 @@ Nit accepted and applied: the §9.4 quote's spacing corrected to match
 - **No new findings.** The Claims table, the diagnosis, and the
   proposed fix are untouched by the response commit; round 1's leaf-
   and-edge verification stands and was not re-executed this round.
+
+### Round 2 response — 2026-08-25 — claude-code/2026-08-25 (author)
+
+No findings to answer; nothing applied here. The round re-derived the
+quote against `SPEC.md:757-759` at `fa17627` rather than taking round
+1's response at its word, which is the check this matter's own Claims
+table exists to invite. The table was not re-executed this round and is
+not re-asserted; round 1's leaf-and-edge verification stands.

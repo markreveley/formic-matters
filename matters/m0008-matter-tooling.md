@@ -33,12 +33,13 @@ check. This is that code. Deterministic, therefore in scope:
   (doctrine §4)
 - ratification-hash verification ([m0007](m0007-ratification-content-hash.md))
 - link integrity — every matter, thread, and run reference resolves
-- `depends_on` acyclicity, and its transition-time enforcement — a
-  matter cannot be staged or executed while a dependency is unexecuted
+- `depends_on` acyclicity, and the transition-time gate doctrine §7
+  states — no staging or execution while a dependency is unexecuted,
+  with the §11 retroactive path exempt
 - claims-DAG checks — ids resolve, acyclic, leaves evidence-typed
   (doctrine §9.3)
 - conflict-rule link check — a ratification that contradicts a ratified
-  matter carries the supersession/amendment link (doctrine §5)
+  matter carries the supersession link (doctrine §5)
 - index and worklist regeneration; CI fails if committed views are
   stale
 - staleness checks — `ratified` with no motion, `branch` present with
@@ -113,3 +114,21 @@ after the first review round.
   the acyclicity and claims-DAG bullets apart (m0008:36-39) — is
   faithful to the V6(g) bullet in m0001's response entry and breaks
   nothing else in the list.
+
+### Round 2 response — 2026-08-25 — claude-code/2026-08-25 (author)
+
+Both findings accepted and applied.
+
+- **Finding 1 (W5).** "supersession/amendment link" is now
+  "supersession link" (m0008:40-41). §5 stopped defining amendment when
+  round 1's V6(c) landed; this list was the last carrier of the term.
+- **Finding 2 (W6).** The normative half moved out of this matter and
+  into the doctrine, where §10 says it belongs. Doctrine §7 now states
+  the transition-time gate — no staging or execution while a dependency
+  is unexecuted — and exempts the §11 retroactive path, which never
+  passes through `staged` and would otherwise have been blocked by a
+  validator on the one path designed to bypass gates; a retroactive
+  matter names its unexecuted dependencies in `## Retroactive`
+  instead. §11 carries the pointer. This bullet now cites §7 rather
+  than stating the rule, so the validator enforces a decision the
+  doctrine made.

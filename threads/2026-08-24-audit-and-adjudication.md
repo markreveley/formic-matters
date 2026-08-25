@@ -15,9 +15,9 @@ The redaction policy (absolute local paths to `~`, project slugs to
 `<project>`) was applied on the way out; no such strings occurred, so
 nothing was redacted.
 
-The thread necessarily ends mid-turn: the reply to the final human
-message is the turn that brought this export current. Ratification and
-later exchanges are appended when they happen.
+The export is brought current as exchanges land: it ends wherever the
+last export run reached, and the reply to the final human turn shown
+may already exist outside the file.
 
 Speaker headings are marked `▸` because turns contain their own `##`
 headings; the marker keeps turn boundaries machine-parseable.

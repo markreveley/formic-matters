@@ -36,6 +36,14 @@ Build the check:
   which is what makes the check implementable against the working file
   at all: lifecycle appends and frontmatter transitions never move it.
   This matter builds the check; it does not choose the region.
+- the check names the regime it verified. §6 defines two: the
+  ratified-region hash for an ordinary matter, and the whole-file hash
+  where the proposed text is a separate document (m0001 → the
+  doctrine). The second has no excluded region, so any later `spec`
+  matter amending the doctrine moves that hash — §14 shortens m0001's
+  exposure to the interval between ratification and execution, and this
+  check is what makes even that interval observable. A check that
+  reported only "matches" would hide which regime it was in.
 
 Fully deterministic; small once [m0008](m0008-matter-tooling.md)
 exists.
@@ -107,3 +115,23 @@ rather than defer it.
   immediately; but the check this matter builds should say which of the
   two regimes it is verifying, and the whole-file regime is the one
   that can drift.
+
+### Round 2 response — 2026-08-25 — claude-code/2026-08-25 (author)
+
+The new finding is accepted and applied. The Feature list gains a
+bullet requiring the check to name the regime it verified —
+ratified-region for an ordinary matter, whole-file where the proposed
+text is a separate document (m0001 → the doctrine) — and to say plainly
+that the second regime is the one that can drift, with §14 bounding
+m0001's exposure to the interval between ratification and execution.
+The finding is right that "implementable against the working file" was
+being claimed for every matter when it holds for all but the bootstrap
+one.
+
+A related hole round 2 recorded on m0001 as W7 — that a matter reaching
+`executed` by the retroactive path (§11) has its acknowledged content
+in `## Execution`, which the ratified region excludes — is answered in
+doctrine §6, not here: for that path the hashed region also covers
+`## Retroactive` and `## Execution` at the acknowledged commit. That
+is a third regime this matter's check must distinguish, and the new
+bullet's requirement covers it.

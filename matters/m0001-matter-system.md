@@ -7,7 +7,9 @@ state: proposed
 status: draft
 target: beatcode-dev
 tags: [doctrine, bootstrap]
-threads: [threads/2026-08-24-audit-and-adjudication.md]
+threads:
+  - threads/2026-08-24-matter-system.md
+  - threads/2026-08-24-audit-and-adjudication.md
 generated:
   by: claude-code/2026-08-24
   at: 2026-08-24T22:33:00Z
@@ -39,61 +41,62 @@ this matter is ratifying that document at a specific commit (doctrine
 ## What this supersedes
 
 Nothing in this collection — it is the first matter. The archived first
-attempt is referenced, not superseded. No text here derives from it;
-rulings carried from its sessions are sourced per the ledger below.
+attempt is referenced, not superseded: none of its doctrine or matter
+text was reused. Its design session is exported into
+[`threads/`](../threads/2026-08-24-matter-system.md) as a primary
+source, so the rulings it carries are read here rather than attested to.
 
 ## Rulings ledger
 
 Every operator proposal and ruling from the 2026-08-24 sessions, and
 where it landed. This table is what the fidelity review checks the
-doctrine against, alongside the thread itself.
+doctrine against, alongside the threads themselves.
 
-Sources. Rows marked **†** were ruled in the archived first attempt's
-design session; they reach this collection through the operator's
-carry-forward ruling, and each was affirmed — at the operator's
-delegation — by the auditing agent, which read that session in full.
-Both the delegation and the affirmation are recorded in
-[the thread](../threads/2026-08-24-audit-and-adjudication.md). Clauses
+Both sessions are in this tree: the
+[design session](../threads/2026-08-24-matter-system.md) and the
+[adjudication session](../threads/2026-08-24-audit-and-adjudication.md).
+**Ruled in** cites the turn, so every row is checkable here. Clauses
 marked **‡** are authoring-agent mechanisms adopted to satisfy a
-ruling, not rulings; they are listed in doctrine §15 for deliberate
-confirmation at ratification. Unmarked rows are ruled in the thread
-directly.
+ruling, not rulings; doctrine §15 lists them for confirmation at
+ratification.
 
-| Operator proposal / ruling | Landed |
-|---|---|
-| † three change kinds as matter types; "proposal" not a type; types moved up one level | doctrine §2 |
-| † per-type required content (fix: diagnosis + fix; feature: spec + plan; refactor: reason + plan) | doctrine §2 |
-| state spine `proposed → ratified → staged → executed` | doctrine §3 |
-| vetting by fresh agent reviews until the operator ratifies | doctrine §6 |
-| execution by a dev agent launched by the operator; orchestration later, as its own matter | doctrine §3 |
-| † cheap to file, expensive to ratify; diagnosis may arrive over several turns but precedes ratification | doctrine §4 |
-| † split functions as supersession routing to offshoots | doctrine §5 |
-| flat collection, metadata-sortable, all views derived | doctrine §1, §7, §12 |
-| deterministic code wherever possible | doctrine §10 |
-| † lenses/dry-round review machinery deferred as premature, filed as a matter | [m0006](m0006-review-lenses-and-dry-rounds.md) |
-| † ratification content hash deferred unless MVP-required; record now, tooling later | doctrine §6 + [m0007](m0007-ratification-content-hash.md) |
-| † "matter system operational" as a derived worklist view | doctrine §7 |
-| † SPEC-GAPS broken out into matters, landed and otherwise; `spec` as a real type | [m0009](m0009-spec-gaps-to-matters.md), doctrine §2 |
-| PRs cite matter IDs | doctrine §8 (commit trailer, branch/PR title prefix) |
-| † process/system code kept separate from the instrument | [m0008](m0008-matter-tooling.md) |
-| † consider OKF; keep the useful shape, no memory files in the repo | doctrine §12 (documented dialect) |
-| thread persistence: verbatim human and agent turns, reasoning and tool traffic dropped, redact before publication | doctrine §9.2 + [m0011](m0011-thread-persistence.md) |
-| runs directory documenting verification runs with environment specs | doctrine §9.1 |
-| claims-DAG in the matter itself, visualization derived, nodes are not matters | doctrine §9.3 |
-| retire PR comments; keep GitHub and PRs as transport and merge mechanics; operator responds by local file edits | doctrine §8 |
-| one repo, self-hosting explicit, no framework split; extraction tripwire's specific conditions are ‡ | doctrine §1, §13 |
-| archive the first attempt, do not expunge; fresh authoring, nothing textual carried | doctrine §14, this matter |
-| landed/execution record required to enter `executed` | doctrine §3.1 |
-| git citation convention (trailer + prefixes) | doctrine §8 |
-| threads primary reference; adjudication thread exported into this tree; derived-views-over-threads formalization is ‡ | doctrine §9.2, [threads/2026-08-24-audit-and-adjudication.md](../threads/2026-08-24-audit-and-adjudication.md) |
-| ratification gate over the exact text; operator prefers not to compute hashes locally; the recording mechanism (agent computes and records) is ‡ | doctrine §6 |
-| † org/assertions raised; out-of-scope disposition derived from the operator's cross-repo separation ruling, never contradicted | noted under Scope below |
-| vetting rounds recorded on the matter as appended entries | doctrine §6 |
-| matters assert immutable references; no undated mutable-state claims | doctrine §9.4 |
-| one-line provenance pointer to the archive | doctrine header + §14 |
-| housekeeping: PR #1 closed unmerged, archive branch kept, planning drafts absorbed, directory names | executed at build |
-| unprocessed operator proposals become matters | m0006, m0010, m0011 |
-| relative links | doctrine §12 |
+| Operator proposal / ruling | Landed | Ruled in |
+|---|---|---|
+| describe, do not fix: nothing lands on sight, and work already applied is rolled back and filed as matters to be ratified | doctrine §1, and this matter's Diagnosed reason | [design:146](../threads/2026-08-24-matter-system.md), [design:287](../threads/2026-08-24-matter-system.md) |
+| three change kinds as matter types; "proposal" not a type; types moved up one level | doctrine §2 | [design:280-284](../threads/2026-08-24-matter-system.md) |
+| per-type required content (fix: diagnosis + fix; feature: spec + plan; refactor: reason + plan) | doctrine §2 | [design:169-171](../threads/2026-08-24-matter-system.md) |
+| state spine `proposed → ratified → staged → executed` | doctrine §3 | [design:280](../threads/2026-08-24-matter-system.md) |
+| vetting by fresh agent reviews until the operator ratifies | doctrine §6 | [design:173](../threads/2026-08-24-matter-system.md) |
+| execution by a dev agent launched by the operator; orchestration later, as its own matter | doctrine §3 | [design:173](../threads/2026-08-24-matter-system.md) |
+| cheap to file, expensive to ratify; diagnosis may arrive over several turns but precedes ratification | doctrine §4 | [design:287](../threads/2026-08-24-matter-system.md) |
+| split functions as supersession routing to offshoots | doctrine §5 | [design:307](../threads/2026-08-24-matter-system.md) |
+| flat collection, metadata-sortable, all views derived | doctrine §1, §7, §12 | [design:175](../threads/2026-08-24-matter-system.md) |
+| deterministic code wherever possible | doctrine §10 | [design:177](../threads/2026-08-24-matter-system.md) |
+| lenses/dry-round review machinery deferred as premature, filed as a matter | [m0006](m0006-review-lenses-and-dry-rounds.md) | [design:298](../threads/2026-08-24-matter-system.md) |
+| ratification content hash deferred unless MVP-required; record now, tooling later | doctrine §6 + [m0007](m0007-ratification-content-hash.md) | [design:301](../threads/2026-08-24-matter-system.md), [design:449](../threads/2026-08-24-matter-system.md) |
+| risk tiers deferred on the same reasoning — "same thoughts as 4" | [m0010](m0010-risk-tiers.md) | [design:304](../threads/2026-08-24-matter-system.md) |
+| "matter system operational" as a derived worklist view | doctrine §7 | [design:301](../threads/2026-08-24-matter-system.md) |
+| SPEC-GAPS broken out into matters, landed and otherwise; `spec` as a real type | [m0009](m0009-spec-gaps-to-matters.md), doctrine §2 | [design:316](../threads/2026-08-24-matter-system.md), [design:456](../threads/2026-08-24-matter-system.md) |
+| PRs cite matter IDs | doctrine §8 (commit trailer, branch/PR title prefix) | [design:317](../threads/2026-08-24-matter-system.md) |
+| process/system code kept separate from the instrument | [m0008](m0008-matter-tooling.md) | [design:310](../threads/2026-08-24-matter-system.md), [design:450](../threads/2026-08-24-matter-system.md) |
+| consider OKF; keep the useful shape, no memory files in the repo | doctrine §12 (documented dialect) | [design:453](../threads/2026-08-24-matter-system.md), [design:486](../threads/2026-08-24-matter-system.md) |
+| org/assertions raised as a matter, then withdrawn once identified as the operator's global CLAUDE.md; the out-of-scope disposition is derived from the cross-repo separation ruling and was never contradicted | noted under Scope below | [design:318](../threads/2026-08-24-matter-system.md), [design:450](../threads/2026-08-24-matter-system.md), [design:457](../threads/2026-08-24-matter-system.md) |
+| thread persistence: verbatim human and agent turns, reasoning and tool traffic dropped, redact before publication | doctrine §9.2 + [m0011](m0011-thread-persistence.md) | [design:567](../threads/2026-08-24-matter-system.md), [design:660](../threads/2026-08-24-matter-system.md), [adjudication:264](../threads/2026-08-24-audit-and-adjudication.md) |
+| runs directory documenting verification runs with environment specs | doctrine §9.1 | [adjudication:260](../threads/2026-08-24-audit-and-adjudication.md) |
+| claims-DAG in the matter itself, visualization derived, nodes are not matters | doctrine §9.3 | [adjudication:270](../threads/2026-08-24-audit-and-adjudication.md) |
+| retire PR comments; keep GitHub and PRs as transport and merge mechanics; operator responds by local file edits | doctrine §8 | [adjudication:471](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:553](../threads/2026-08-24-audit-and-adjudication.md) |
+| one repo, self-hosting explicit, no framework split; extraction tripwire's specific conditions are ‡ | doctrine §1, §13 | [adjudication:479](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:555](../threads/2026-08-24-audit-and-adjudication.md) |
+| archive the first attempt, do not expunge; fresh authoring, nothing textual carried | doctrine §14, this matter | [adjudication:551](../threads/2026-08-24-audit-and-adjudication.md) |
+| landed/execution record required to enter `executed` | doctrine §3.1 | [adjudication:565](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:601](../threads/2026-08-24-audit-and-adjudication.md) |
+| git citation convention (trailer + prefixes) | doctrine §8 | [adjudication:568](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:601](../threads/2026-08-24-audit-and-adjudication.md) |
+| threads primary reference; adjudication thread exported into this tree; derived-views-over-threads formalization is ‡ | doctrine §9.2, [threads/2026-08-24-audit-and-adjudication.md](../threads/2026-08-24-audit-and-adjudication.md) | [adjudication:467](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:557](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:571](../threads/2026-08-24-audit-and-adjudication.md) |
+| ratification gate over the exact text; operator prefers not to compute hashes locally; the recording mechanism (agent computes and records) is ‡ | doctrine §6 | [adjudication:284](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:602](../threads/2026-08-24-audit-and-adjudication.md) |
+| vetting rounds recorded on the matter as appended entries | doctrine §6 | [adjudication:467](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:578](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:601](../threads/2026-08-24-audit-and-adjudication.md) |
+| matters assert immutable references; no undated mutable-state claims | doctrine §9.4 | [adjudication:477](../threads/2026-08-24-audit-and-adjudication.md) |
+| one-line provenance pointer to the archive | doctrine header + §14 | [adjudication:575](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:601](../threads/2026-08-24-audit-and-adjudication.md) |
+| housekeeping: PR #1 closed unmerged, archive branch kept, planning drafts absorbed, directory names | executed at build; the archive branch `m0001-matter-system` and doctrine §14 are its in-tree traces | [adjudication:590](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:604](../threads/2026-08-24-audit-and-adjudication.md) |
+| unprocessed operator proposals become matters | [m0006](m0006-review-lenses-and-dry-rounds.md), [m0010](m0010-risk-tiers.md), [m0011](m0011-thread-persistence.md) | [adjudication:605](../threads/2026-08-24-audit-and-adjudication.md) |
+| relative links | doctrine §12 | [adjudication:481](../threads/2026-08-24-audit-and-adjudication.md) |
 
 ## Scope held out deliberately
 
@@ -105,16 +108,28 @@ own matters rather than built now: review structure
 ([m0010](m0010-risk-tiers.md)), thread policy
 ([m0011](m0011-thread-persistence.md)).
 
-The operator's global-CLAUDE.md/assertions question raised in the first
-attempt's session is cross-repo by definition and out of scope for this
-collection.
+The operator's global-CLAUDE.md/assertions question is out of scope for
+this collection. It is the one row of the ledger whose *disposition* is
+derived rather than stated, and the derivation is now readable end to
+end: proposed as a matter
+([design:318](../threads/2026-08-24-matter-system.md)), then narrowed by
+the operator once they identified the file as their user-level global
+CLAUDE.md rather than a repo one
+([design:457](../threads/2026-08-24-matter-system.md)), which makes it
+cross-repo by definition and so excluded by their own "concerns across
+repos are not mixed"
+([design:450](../threads/2026-08-24-matter-system.md)). Never
+contradicted afterwards.
 
 ## Execution
 
-The tree was written together with this matter (doctrine §14): the
-doctrine, matters m0001–m0011, the derived index, the first thread
-export, the first run record, the interim index generator, and the
-repository README. This
+The tree was written together with this matter (doctrine §14) and has
+grown with its vetting. Everything in it is claimed here: the doctrine,
+matters m0001–m0011, the derived index, the interim index generator,
+the repository README, both thread exports in `threads/` (the design
+session imported verbatim from the archive branch in round 2's
+response, the adjudication session exported by its participating
+agent), and every record in `runs/`. Nothing else is in the tree. This
 section is completed with commits and date when the matter reaches
 `executed`, which under §14 happens immediately after ratification.
 
@@ -640,3 +655,252 @@ W1 closed at the source, on operator instruction.
   round, and the ratification read should treat this file's reviewer
   and the doctrine's author as no longer fully independent for §6 and
   the two prose sites named above.
+
+### Round 2 response — 2026-08-25 — claude-code/2026-08-25 (author)
+
+A fresh author instance, not the round 2 reviewer. Every finding W1–W11
+is answered below; one is answered by disputing part of it, and the
+rest are applied. Evidence for anything re-verified is in
+[runs/2026-08-25-archive-thread-import.md](../runs/2026-08-25-archive-thread-import.md),
+per §9.1.
+
+**A numbering note, since the round's own cross-references disagree
+with its ranked list.** The ranked findings are W1–W11. Three
+back-references in the round's "Applied, verified" section point one
+higher: under V5, "Framing nit: W12" is §15's framing, ranked W11;
+under V2, "See W11 for the timing note's wording" is the
+response-entry claim, ranked W10; under V3, "the exception noted in
+W10(a)" is the Landed-column residue, ranked W9(a). The closing
+deviation note's "W4-W12" is W4–W11. There is no W12. This response
+follows the ranked list, which is the one carrying the findings' text.
+(Cited by phrase, not by line: this response inserts text above the
+round 2 entry, so every `m0001:NNN` in it — the round's own included —
+now describes the file as it stood at `25d2e16`, not as it stands
+here.)
+
+#### W2 — applied, by export rather than by patching the preamble
+
+The archived first attempt's **design session** is now in this tree, at
+[`threads/2026-08-24-matter-system.md`](../threads/2026-08-24-matter-system.md),
+copied verbatim from the archive branch `m0001-matter-system` at
+`c11956d` — byte-identical, `50022f11…9816a` (run record, step 1). It
+is a move, not a re-export: nobody re-derived it, nobody summarized it,
+and the file that was reviewed as part of PR #1 is the file here.
+
+What that retires, in order:
+
+- **The † apparatus is gone from the ledger.** Every row's source is
+  now a column, and the column cites the turn — thread and line. Where
+  a reviewer previously had a marker meaning "you cannot check this,
+  take the witness's word", there is a link to the operator's sentence.
+- **The affirmation stops being load-bearing.** It remains in the
+  adjudication thread as what it is — a witness attesting from memory
+  of a source now on the shelf — and nothing in the tree rests on it.
+- **The carry-forward ruling stops doing evidentiary work.** It is
+  still the reason these rulings govern this collection; it is no
+  longer the reason anyone should believe they exist.
+- **The provenance sentences got simpler rather than more carefully
+  scoped.** Doctrine's header, this matter's supersession note, and the
+  README status paragraph now say the plain thing: no doctrine or
+  matter text was reused, and the design session is here because the
+  rulings in it govern this document. Round 1's V1 and the round 2
+  addendum both had to scope those sentences to *text, not provenance*.
+  That hedge is gone — the claim is simply true now.
+- **W2's specific complaint is dissolved rather than patched.** Row 73
+  (lenses/dry-rounds) had its only support inside a `## Vetting`
+  append, outside the ratified region. It now cites
+  [design:298](../threads/2026-08-24-matter-system.md) like every other
+  row, inside the ratified region, checkable by anyone.
+
+**Where I disagree with the finding, partially.** W2 calls the round 1
+response's marking of row 73 "a new archive dependency introduced by
+the fix for an archive-dependency finding". As a description of the
+*evidence* available at `981b2a6`, that is exactly right. As a
+description of the *marking*, it was not wrong: the operator did defer
+the lenses machinery in that session, at design:298, and anyone can now
+read them doing it — "this is a pain I as an operator have not felt yet
+… i propose this should be filed as a feature matter". The round was
+right that the tree could not support the claim, and right that this
+was the wrong way to fix it. It was not right that the claim itself was
+manufactured. The remedy stands either way, which is why this is
+recorded rather than argued.
+
+**On the addendum's recommendation to file this as a `spec` matter
+against §9.2 instead of applying it.** The operator directed the
+import; recording why the direction is coherent rather than an
+exception to §1. m0001 is `proposed` and is being revised in its own
+vetting rounds; adding a primary source it cites is a revision to what
+this matter proposes, inside the bootstrap §14 licenses, not a change
+to a ratified system. §9.2 needs no amendment either — it already says
+`threads/` holds verbatim session exports and that threads are the
+primary source for rulings; the archived design session was always the
+kind of thing it describes, and was excluded by a review-prompt line,
+not by doctrine. What the import *does* change is the text the operator
+is being asked to ratify, and the ratification read should treat it
+that way.
+
+**The review prompt's isolation line is retired, in the README.** The
+prompt recorded at
+[thread:646-671](../threads/2026-08-24-audit-and-adjudication.md) tells
+a fresh reviewer "The first attempt is archived unmerged (PR #1): do
+not read it, its matters, or its thread." That line was written to stop
+a reviewer anchoring on archived text while this bundle was being
+*authored* — the same argument the adjudication session used to keep
+the archive out (thread:495). Authoring is finished; what is left is
+reading, and the line now subtracts from every round: V1 and W2 are
+both reports of rows a reviewer was forbidden to check. It is retired,
+with the reason, under "Running a vetting round" in the README, and
+step 1's fidelity check now covers both threads. What survives is the
+narrower rule it was standing in for: review the text as it stands
+here, and never carry archived wording into this tree.
+
+#### W1 — closed at the source before this round; nothing further
+
+Doctrine §6's "the pin follows the act, never precedes it" and the
+README's three verification commands close it structurally, as the
+round 2 addendum 2 records. This response computes no pin, deliberately
+(run record, "No ratification pin") — it changes §6, §7, §11 and §15,
+so a pin computed here would be stale by exactly the mechanism W1
+found.
+
+#### W3 — (a) and (b) were applied by the reviewer; (c) is applied here
+
+The risk-tiers deferral now has its own ledger row, citing
+[design:304](../threads/2026-08-24-matter-system.md). That takes V4's
+first branch — the ledger was incomplete — which the round 1 response
+declined to take, and it makes the preamble's "Every operator proposal
+and ruling" true of that ruling rather than nearly true. m0010's
+pointer resolves to a real row and no longer routes through a retired
+convention; detail in m0010's response entry.
+
+**Two rows added beyond the findings, both consequences of reading the
+imported session.** The ledger claims *every* proposal and ruling, and
+with the source in the tree that claim is now checkable by anyone:
+
+- **"describe, do not fix"** — [design:146](../threads/2026-08-24-matter-system.md)
+  ("are you describing them to me or did you actually make these fixes?
+  if not, stop, do not fix") and
+  [design:287](../threads/2026-08-24-matter-system.md) ("which i propose
+  we roll back, and persist as issues to be ratified"). This is the
+  ruling the whole system exists to implement — it is this matter's
+  Diagnosed reason and doctrine §1's "nothing lands that did not begin
+  as a matter" — and it had no row.
+- **the state spine** was carried as an unmarked row, i.e. attributed
+  to the adjudication session. It was ruled in the design session, at
+  [design:280](../threads/2026-08-24-matter-system.md) ("poorly worded,
+  state should be proposed -> ratified -> staged -> executed"). The
+  Ruled in column now says so.
+
+#### W4 — applied on m0010
+
+The §11 amendment leaves the `feature` matter, as m0007's equivalent
+finding was resolved: a separate `spec` matter, filed and vetted
+alongside m0010 and named in its `depends_on` before either is
+ratified. Why it is not filed today is on m0010.
+
+#### W5 — applied on m0008
+
+"supersession/amendment link" → "supersession link". §5 stopped
+defining amendment in the round 1 response; m0008 was the last carrier.
+
+#### W6 — applied, in the doctrine rather than in m0008
+
+The rule V6(g) produced was normative text living in a tooling matter,
+which inverts §10. Doctrine §7 now states the transition-time gate — a
+matter cannot be staged or executed while a dependency is unexecuted —
+and exempts the §11 retroactive path, which reaches `executed` without
+ever being `staged` and would otherwise have been blocked by the
+validator on the one path designed to bypass gates; a retroactive
+matter names its unexecuted dependencies in `## Retroactive` instead.
+§11 carries the pointer, and m0008's bullet now cites §7 rather than
+legislating.
+
+#### W7 — applied, in §6
+
+For a matter entering `executed` by the retroactive path, the hashed
+region additionally covers `## Retroactive` and `## Execution` as they
+stand at the acknowledged commit — because on that path the
+acknowledgment *is* the ratifying act and what is acknowledged is what
+landed. Nothing leaves `executed` (§3), so those sections do not move
+afterwards. m0007 gains the requirement that the check name which of
+the three regimes it verified; see its response entry.
+
+#### W8 — applied on m0011, including the record the round found missing
+
+`1347af3` rewrote the thread header in answer to a vetting finding and
+no response entry said so. It is recorded now. The sentence it produced
+was false at HEAD, as the round says, and has been rewritten to a form
+that survives an append: the export "is brought current as exchanges
+land: it ends wherever the last export run reached, and the reply to
+the final human turn shown may already exist outside the file." The
+edit is three lines replacing three, verified length-neutral (run
+record, step 5) — every `thread:NNN` citation in this file's vetting
+record points into that file, and a header that changed length would
+have silently moved all of them. m0011's Open now carries the general
+question: what a header may assert between landings.
+
+#### W9 — (a) and (b) applied; (c) is moot
+
+(a) The housekeeping row's Landed column now names its in-tree traces —
+the archive branch `m0001-matter-system` and doctrine §14 — rather than
+resting on "executed at build" alone. It is also no longer unreachable
+to a reviewer: PR #1 is readable from this round on. (b) The
+proposals-become-matters row's three IDs are relative links like every
+other matter reference. (c) The blanket "were ruled in the archived
+first attempt's design session" sentence is gone with the † apparatus;
+the org/assertions row states its own derivation, and the Scope section
+now walks it turn by turn — proposed as a matter at design:318,
+narrowed by the operator at design:457 once they identified the file as
+their user-level global CLAUDE.md, and so excluded by their own
+"concerns across repos are not mixed" at design:450. That derivation
+was the least checkable thing in the ledger and is now the most.
+
+#### W10 — (a) accepted and corrected here; (b) closed by the run file
+
+(a) The round 1 response's timing note said the export update "now
+shows the §6 mechanism being presented to the operator, so V2's 'first
+presentation' clause is historical". The round is right that this is
+looser than the record: `1347af3` appended the build-report turn, which
+announces the bundle as already built and pushed at `44d6be0`
+([thread:623-627](../threads/2026-08-24-audit-and-adjudication.md)), so
+the tree did precede the presentation. The accurate statement is the
+narrower one: the tree is no longer the only presentation, and V2's
+substance — no operator ruling — is untouched, which is what §15 flags.
+Stated here rather than fixed there, because a vetting entry is never
+edited. (b) The run file promised in-thread at thread:844 exists now.
+
+#### W11 — applied, in §15
+
+§15 no longer says all six defaults were presented before authoring.
+Five were; the ratified-region definition was written in the round 1
+response answering m0007, and what the operator saw before "apply" was
+the narrower "body-only hash" form, while what landed also excludes
+`## Vetting` and `## Execution`. The ratification read should see that
+difference rather than infer it.
+
+#### One invariant re-scoped, not repaired
+
+Rounds 1 and 2 both checked "every relative link in the tree resolves,
+none uses the leading-slash form" over every `.md` file. That was sound
+while every `.md` was authored. The imported transcript contains one
+link-shaped string, at
+[design:475](../threads/2026-08-24-matter-system.md): a table cell
+where the agent quotes OKF's bundle-absolute link form to the operator,
+target `/matters/m0001-….md`, ellipsis included. It is verbatim primary
+source and must not be fixed — and it is leading-slash, so it fails the
+check twice over. From here the check has a stated scope: authored
+files, of which every relative link resolves and none is leading-slash;
+`threads/` is evidence, not link graph (run record, step 7).
+
+#### Independence, still degraded, and by one more step
+
+Round 2's addendum 2 recorded that its reviewer applied three of its own
+findings at the operator's direction, and asked the ratification read to
+treat that reviewer and the doctrine's author as no longer fully
+independent for §6 and two prose sites. That stands. This response adds
+a second degradation of a different kind: the ledger's new rows and the
+Scope rewrite come from *this author* reading the imported session, not
+from a reviewer. They are the most checkable claims in the file — every
+one is a line citation — but they have not been reviewed by anyone.
+Round 3's fidelity check should start there, and it can, which is the
+whole point of the import.
