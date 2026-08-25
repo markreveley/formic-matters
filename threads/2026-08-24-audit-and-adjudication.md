@@ -16,8 +16,8 @@ The redaction policy (absolute local paths to `~`, project slugs to
 nothing was redacted.
 
 The thread necessarily ends mid-turn: the reply to the final human
-message is the turn that built this tree and produced this export. The
-export is brought current after ratification.
+message is the turn that brought this export current. Ratification and
+later exchanges are appended when they happen.
 
 Speaker headings are marked `▸` because turns contain their own `##`
 headings; the marker keeps turn boundaries machine-parseable.
@@ -603,5 +603,175 @@ Answer here in whatever form is fastest. On your answers I start the build in th
 7/8 - are beatcode and beatcode-dev matters mixed and ids interspersed? is there a setting in the frontmatter that indicates which project the matter pertains to?
 9 yes
 everything else - the aspects of "the state machine's remaining shape, the thread-persistence policy's scope, vetting-round format" that i proposed i would like to keep and not nee to restate. all proposals by me, if not being processed now, i would be proposed be added as matters
+
+---
+
+## ▸ Claude
+
+All answers are in — Q6 gets an easier mechanism (I compute and record the hash; you only read and say "ratified" in-thread; anyone can re-verify the hash later since it's recomputable), and I'll answer the Q7/8 clarification in the summary. Building the fresh bundle now: doctrine first, then the eleven matters, tooling, the run record, this thread's export, and the derived index.
+
+Now the largest piece: this session's verbatim thread export.
+
+Now deriving the index, removing the absorbed planning drafts, and validating the whole tree.
+
+Index derived cleanly with real YAML validation. Now the full link check across the new tree.
+
+All 52 internal links and every frontmatter reference resolve. Committing and pushing, then closing PR #1 as archive.
+
+PR #1 is closed as archive. One last thing — computing the doctrine's hash at this commit so ratification has its pin ready.
+
+The fresh bundle is built and pushed to `claude/beatcode-pr1-audit-1t400g` (commit `44d6be0`), and **PR #1 is closed unmerged — the archive ruling is executed**. Your remaining answers, then what exists now and what's left for you.
+
+## Your questions
+
+**Q6 — no local hashing needed.** Resolved, and baked into doctrine §6: you read the file and state ratification here in-thread; *I* compute and record `ratified_commit` + `ratified_sha256` in m0001's frontmatter. Who computes first doesn't matter, because the hash is independently verifiable forever — any agent, any time, can recompute it from the named commit and check. The ratification pin, ready when you are: `doctrine/matters.md` at commit `44d6be0`, sha256 `034d46bf…c7f0ef` (full hash recorded on ratification).
+
+**Q7/8 — yes, mixed and interspersed, and the frontmatter field is `target`.** One collection, one ID sequence; every matter carries `target: beatcode` or `target: beatcode-dev` (doctrine §1, §12). IDs deliberately encode nothing — not type, not target — so reclassification never moves an ID, and "all beatcode matters" is a query, never a directory. You can see it in the derived index: m0002–m0005 and m0009 target beatcode; m0001, m0006–m0008, m0010–m0011 target beatcode-dev. With that mechanism clear, I proceeded on the defaults — **bundle ratified first, beatcode matters after** (Q7) and **IDs restarted at m0001**, with §12 stating IDs are unique within this collection and the archive is a separate, closed one (Q8). Both are trivially changeable before you ratify if you disagree.
+
+**"Everything else" — nothing of yours needs restating.** Two places guarantee it: `matters/m0001-matter-system.md` carries a **Rulings ledger** — every proposal and ruling you made across these sessions, one row each, mapped to exactly where it landed (doctrine section or matter). And m0011 has a "Standing operator proposals — kept, not restated" section carrying your thread-persistence positions as the standing content. Anything of yours not processed into the doctrine landed in a matter; the ledger is also what the fresh reviewer checks fidelity against, row by row.
+
+## What was built (blank tree, nothing textual carried)
+
+- **`doctrine/matters.md`** — 336 lines, 15 sections: your state spine with the `staged → proposed` failure transition; operator-triggered execution; execution record required for `executed`; conflict rule; vetting recorded on the matter; ratification over exact text; discourse-in-repo with PR comments retired and the `Matter: mNNNN` commit trailer; `runs/`, `threads/`, claims-DAGs, immutability; deterministic-code principle; the retroactive path *designed* (minimal: file in `executed` with evidence + your acknowledgment); OKF as documented dialect; one-repo topology with the extraction tripwire; an honest bootstrap record; and §15 Open is — deliberately — empty.
+- **m0001–m0011**, all `proposed`, nothing `verified`. The beatcode four are re-derived with complete diagnoses: **m0004 files as resolved from day one**, with a six-claim DAG over immutable refs and the run record; m0002 is scoped to §9.3 only; m0002/m0003 cite the evidence branch by SHA with no mutable-state claims.
+- **`runs/2026-08-24-render-reproduction.md`** — the first run record: environment, commands, the golden-derived length table, four hashes, 48/48.
+- **`threads/2026-08-24-audit-and-adjudication.md`** — this session, exported verbatim (your turns and my prose, tool traffic dropped, method honestly stated in the header). It ends at your last message; I append the ratification exchange when it happens.
+- **`tools/gen-index.py`** — real YAML parsing, state→status derivation enforced, descriptions in the index; `matters/index.md` is generated by it. All 52 internal links verified resolving; every frontmatter thread/run reference verified.
+- Planning drafts absorbed and removed (they sit one commit back in this branch's history — honest same-session provenance, no rewrite). The scratch branch *is* the bundle branch; branch-name matter prefixes start with the next matter, per the bootstrap exception.
+
+## What's left — three moves, all yours
+
+1. **Review by a fresh instance** (your protocol). Paste this into a fresh session:
+
+   ```
+   Review branch claude/beatcode-pr1-audit-1t400g of
+   github.com/ob6to8/beatcode-dev — the second bootstrap of a process
+   doctrine. The first attempt is archived unmerged (PR #1): do not
+   read it, its matters, or its thread. Your inputs are this branch's
+   tree and github.com/ob6to8/beatcode. Do not open with agreement.
+
+   1. FIDELITY — highest value. The operator's rulings are in
+      threads/2026-08-24-audit-and-adjudication.md, compiled row by
+      row in the Rulings ledger of matters/m0001-matter-system.md.
+      Check the ledger against the thread, and doctrine/matters.md
+      against both: report anything ruled but absent, and anything
+      presented as ruled that was not.
+   2. VERIFY m0002–m0005 against beatcode, including m0004's Claims
+      table leaf by leaf and edge by edge, and the run record in runs/.
+   3. CONSISTENCY: every frontmatter field used is defined in doctrine
+      §12; states in §3; status derivation holds; all links resolve;
+      tools/gen-index.py regenerates matters/index.md byte-identically.
+   4. HOLES: what does the state machine still fail to cover?
+   5. SCOPE: does the tree do anything m0001 does not claim?
+
+   Record findings as appended ## Vetting entries — on m0001, and on
+   the specific matter where a finding is matter-local — commit with a
+   "Matter: m0001" trailer, and push to the branch. No PR comments.
+   Rank by severity with file:line; state which checks passed clean.
+   ```
+
+   Its findings arrive as commits on the branch — you read and answer them in neovim, as file edits.
+
+2. **Read `doctrine/matters.md` yourself** (`git fetch origin claude/beatcode-pr1-audit-1t400g && git checkout claude/beatcode-pr1-audit-1t400g`) and, when satisfied — after the review round, or before it; §6 lets you ratify at any round — say "ratify m0001" here. I'll record the verified entry, commit, and hash, walk m0001 through its states with the execution record, and bring the thread export current.
+
+3. **Say the word and I open the PR** — title `m0001 — the matter system`, body a one-line pointer per §8, from this branch into main.
+
+---
+
+## ▸ Mark
+
+to run this review by a fresh protocol, are you suggesting that i have the other agent check out this branch?
+
+---
+
+## ▸ Claude
+
+Yes — the review runs against a checkout of this branch, but in the flow I'd recommend you don't do the checking out; the reviewer does.
+
+**Flow A — remote session (recommended, zero setup for you).** Start a fresh claude.ai/code session on `beatcode-dev` and paste the prompt. The prompt names the branch, so the agent fetches and checks it out itself, and clones `beatcode` itself (it's public) — exactly the mechanics of this session, where your first message named PR #1 and I did all the fetching. This gets even simpler if I open the PR first: the prompt's first line becomes "Review PR #2 on github.com/ob6to8/beatcode-dev" and the agent resolves the branch from the PR, which also hands it the whole change as one diff boundary.
+
+**Flow B — local session.** Check the branch out in your local clone (`git fetch origin claude/beatcode-pr1-audit-1t400g && git checkout claude/beatcode-pr1-audit-1t400g`) and start `claude` in that directory; the agent reads your working tree directly. This one has a workflow perk for you: the vetting entries appear as edits to local files, so you watch the review land in neovim as it happens, and the push uses your credentials.
+
+Two notes either way:
+
+- **"Fresh" is just a brand-new session with no prior context** — there's no special protocol beyond the prompt. The branch's own tree contains nothing from the archive, so the isolation is only the prompt's "do not read PR #1 / its matters / its thread" line, which keeps the agent from going and fetching the closed PR or the old `m0001-matter-system` branch on its own.
+- **One line to append to the prompt for the remote flow**: remote agents are constrained to their own assigned branch unless the operator explicitly says otherwise, and the review is supposed to push vetting commits to *this* branch (your Q5 ruling). So add: *"You have explicit permission to push your vetting commits to branch claude/beatcode-pr1-audit-1t400g."* In the local flow this line is harmless but unnecessary.
+
+Say the word and I'll open the PR now — then hand you the final prompt with the PR-number first line and the push-permission line already in it.
+
+---
+
+## ▸ Mark
+
+should you open the pr before or after the prompt for the fresh instance is run?
+
+---
+
+## ▸ Claude
+
+Before. The PR is the right container for the review to happen *in*, and opening it commits you to nothing — merge is the gate, and that waits for ratification regardless.
+
+The concrete reasons:
+
+- **The reviewer gets the change as one object.** "Review PR #2" resolves the branch, and the PR's diff against main is exactly the object the SCOPE check needs — "does the tree do anything m0001 doesn't claim" is a question about that diff.
+- **The vetting lands where it belongs, live.** The reviewer's vetting commits push to the PR branch, so they appear in the PR as they happen; you pull and read them in neovim. Review-on-an-open-PR is also just the shape everything else (CI later, the merge gate) hangs off.
+- **There's nothing to gain by waiting.** The only argument for "after" would be not creating an artifact until it survives review — but the PR isn't the artifact, the branch is; the PR is mechanics. And the one anchoring risk PR #1 actually demonstrated — a persuasive body framing the review before it starts — is gone by construction, because §8 makes the body a one-line pointer with no argument in it.
+
+Sequence, start to finish: open PR → fresh instance reviews (vetting commits on the branch) → you read and answer in neovim → you ratify m0001 here (I record commit + hash, complete the execution record, bring the thread export current) → merge.
+
+Say the word and I'll open it and hand you the final review prompt with the PR-number line and the push-permission line filled in.
+
+---
+
+## ▸ Mark
+
+how should the review agent commit its findings?
+
+---
+
+## ▸ Claude
+
+One commit per review round, append-only, findings filed where they're local, nothing fixed. Concretely:
+
+**Where findings go.** Each finding is appended to the `## Vetting` section of the most local matter that owns it — a defect in m0004's claims table goes on m0004; anything about the doctrine text, the bundle's structure, or cross-cutting concerns goes on m0001 (m0001 *is* the doctrine's matter). m0001's entry also carries the round's ranked index — one line per finding with severity and a link to where the detail lives — so you get one navigable summary without duplicating detail. Entry shape, light enough to write and countable later (m0006's dry-round rule and m0008's bookkeeping will want to parse rounds):
+
+```markdown
+## Vetting
+
+### Round 1 — 2026-08-24 — <reviewer actor>
+Findings (ranked):
+1. HIGH — file:line — what is wrong, why it matters.
+2. …
+Checks passed clean: …
+```
+
+**One commit for the whole round.** Not per finding, not per file — the round is the unit of vetting (§6), and one commit makes it one diffable object: `git show` answers "what did round 1 find." Subject `m0001: vetting round 1`, body with the counts, and the `Matter: m0001` trailer (§8). If the reviewer re-runs verification — rebuilds beatcode, re-checks the claims DAG — that evidence is a new `runs/` file in the same commit, cited from the findings.
+
+**Append-only, and no fixes.** The reviewer never edits existing text — not the doctrine, not matter bodies, not the index, not prior vetting entries. Two reasons: the vetting record's integrity is its append-only history, and — more important — you ratify the *author's* text. A reviewer who fixes what it finds has become a co-author, and the review stops being a review; that's the exact one-unbroken-motion failure the system exists to prevent. Findings state what's wrong and a recommended disposition; changing anything is the author's move, in response.
+
+**The response loop.** Your rulings come back the same way: an appended response entry under the round (you, in neovim, editing the file — never rewriting the reviewer's entry), committed with the same trailer. So the `## Vetting` section alternates reviewer round / operator response, and the whole exchange is one file's history. If a round demands text changes, I (or a build agent) apply them as ordinary commits, and the next round reviews the new state.
+
+One honest caveat: this level of detail — entry format, one-commit-per-round — is operational convention, not ratified doctrine; §6 fixes only "appended, never rewritten, recorded on the matter." I'd run round 1 under this convention via the prompt, and let m0006/m0008 formalize whatever survives contact.
+
+The lines I'll add to the review prompt:
+
+```
+Record findings as appended ## Vetting entries: each finding on the
+most local matter that owns it; the ranked index of the whole round on
+m0001. Append only — never edit existing text, never fix what you
+find, never regenerate views. If you re-verify claims, add a new runs/
+file and cite it. Commit the entire round as ONE commit, subject
+"m0001: vetting round 1", with a "Matter: m0001" trailer. You have
+explicit permission to push that commit to this PR's branch. No PR
+comments.
+```
+
+Still holding on opening the PR until you say the word.
+
+---
+
+## ▸ Mark
+
+also, have you committed everything?
 
 ---
