@@ -75,3 +75,28 @@ and §1.1's new text land consistently.
 A pre-process draft exists on beatcode's unmerged
 `docs/pipeline-order-clarity` (commit `b2042746`) — evidence, not a
 deliverable. Execution re-derives from this matter as ratified.
+
+## Vetting
+
+### Round 1 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance.
+- **Verified:** `src/events.rs:196` exact — fan-out plus
+  left-to-right sum under a terminal `clamp0`, swing and lane reading
+  the pristine `grid`, humanize keyed `(voice, "hum", step)`; §6.5's
+  odd-integer gate, §6.3's `floor_i(grid ÷ div)` indexing, §4.4's
+  threshold stated without its ulp derivation, §3's "only
+  rational→float edge" — all as claimed. Clamp survival of the
+  itemized ms fields confirmed in the dilla golden (kick step 0:
+  `lane_ms: -4.0`, `performed_s: 0.0`).
+- **Finding (nit) 1:** "ten determinism rules in one semicolon-joined
+  paragraph with no statement of what each closes off" (m0003:53-54)
+  overstates — two of the ten carry their reason inline at §1.4 (libm
+  platform variance; HashMap iteration order); the other eight are
+  bare. "Mostly without" is the accurate claim.
+- **Finding (nit) 2:** the §1.1 diagram at m0003:28 is quoted
+  simplified — SPEC.md:38 reads `grid (exact rationals) → … →
+  performed_s (f64, clamped ≥ 0)`. Fine as paraphrase, but the
+  parenthetical two lines later is quoted verbatim, so mark the
+  simplification.
+- **Disposition:** diagnosis and proposed text stand as filed.

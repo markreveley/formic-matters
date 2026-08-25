@@ -64,3 +64,23 @@ This collection's first thread export ran ahead of this policy, by
 operator instruction, under the standing proposals above — recorded
 here rather than left tacit, since under the doctrine a change to this
 repository should originate as a matter.
+
+## Vetting
+
+### Round 1 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance.
+- **Finding 1:** the thread header
+  ([threads/2026-08-24-audit-and-adjudication.md:8-9](../threads/2026-08-24-audit-and-adjudication.md))
+  attributes the joining of consecutive agent messages within one
+  turn to "the persistence convention (m0011)"; the standing
+  proposals here (m0011:36-38) contain no joining clause. The
+  citation points at a rule that is not written. Add the convention
+  to Form, or drop the attribution.
+- **Finding 2:** the same header asserts "The export is brought
+  current after ratification" (line 20), while this matter lists
+  exactly that timing as open (Recursion, m0011:56-57). Consistent
+  only if the header is a per-instance choice; one clause either
+  place would settle which it is.
+- **Disposition:** the open questions stand as filed; both findings
+  are one-line alignments.

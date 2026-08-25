@@ -47,3 +47,28 @@ the bootstrap itself: a doctrine marked ratified that the operator had
 not read, and an execution summary that misdescribed the committed
 text. The recording half of the fix is already in doctrine §6; this
 matter is the enforcement half.
+
+## Vetting
+
+### Round 1 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance.
+- **Finding 1:** §6 (doctrine/matters.md:144) defines
+  `ratified_sha256` as a whole-file hash, and the recording act
+  itself — writing `verified`/`ratified_commit`/`ratified_sha256`
+  into the frontmatter — edits the file the moment ratification
+  happens. The check as described here (m0007:29-30, recompute and
+  compare) can therefore never pass against the working file; it can
+  only pass by recomputing at `ratified_commit`. The hashed-region
+  bullet (m0007:33-38) treats the region definition as a choice to
+  record at execution; it is a prerequisite for the check to be
+  implementable at all. State that, or move §6 to a defined region up
+  front.
+- **Finding 2:** the same bullet plans to "record the choice in
+  doctrine §6 when this matter executes" — a change to normative
+  doctrine text, which §2 types as `spec`, executed from inside a
+  `feature` matter. Either that edit ships as its own `spec` matter
+  at execution time, or this matter should say why the §2 boundary
+  does not apply.
+- **Disposition:** the feature is sound; both findings are text edits
+  at vetting.

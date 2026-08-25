@@ -80,3 +80,32 @@ among live possibilities. The audit resolved the diagnosis entirely
 from committed evidence (thread linked in frontmatter) — which is why
 this collection's doctrine requires claims to be laid out as a DAG over
 checkable evidence (doctrine §9.3) rather than punted.
+
+## Vetting
+
+### Round 1 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance; §9.3 audit
+  protocol — every leaf verified independently, then every edge.
+- **Leaves:** C1 — SPEC.md:681-685 at seed `91188a5` pins exactly the
+  five cited lengths. C2 — recomputed from
+  `goldens/events/four.events.jsonl` + the §9.1 placement rule + C1:
+  `last = 94,529`, exact; the same computation reproduces the run
+  record's dilla/poly/edge rows. C3 — SPEC.md:793-795 at the seed
+  states 466,360 bytes = 44 + 116,579×4 in prose, and the header hex
+  agrees twice (`b0 1d 07 00` = 466,352 = size−8; `8c 1d 07 00` =
+  466,316 = 116,579×4). C5 — re-executed on this machine (rustc
+  1.94.1): all four hashes in `goldens/renders-v0.1.txt` reproduce,
+  rendered sizes 466,360 / 1,039,596 / 1,808,140 / 1,053,788 bytes
+  match the golden-derived predictions, 48/48 tests across 15
+  binaries.
+- **Edges:** C4 — 94,529 + 22,050 = 116,579, exact. C6 — follows from
+  C4 + C5. No dispute filed against any claim id.
+- **Also verified:** §9.4 byte-identical seed↔`fa17627`;
+  `src/render.rs:62,68` and the comment at `:65-66` cited exactly;
+  `goldens/README.md` states the conformance direction as
+  characterized.
+- **Finding (nit):** the verbatim §9.4 quote at m0004:25 has three
+  spaces after `last`; SPEC.md:757 has two. One byte off in quoted
+  evidence — fix at vetting.
+- **Disposition:** diagnosis and proposed fix stand as filed.

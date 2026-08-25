@@ -48,3 +48,26 @@ not propose would be tier 3.
 Deferred by the operator with the same reasoning as
 [m0006](m0006-review-lenses-and-dry-rounds.md): felt pain first. Filed
 so the design is ready when it is.
+
+## Vetting
+
+### Round 1 — 2026-08-25
+
+- **Reviewer:** claude-code/2026-08-25, fresh instance.
+- **Finding 1:** "Deferred by the operator" (m0010:48) has no support
+  in the tree's primary sources: risk tiers appear nowhere in
+  [the thread](../threads/2026-08-24-audit-and-adjudication.md), and
+  m0001's rulings ledger — "every operator proposal and ruling" — has
+  no risk-tiers row. If the deferral was ruled in the archived first
+  attempt's sessions, the ledger is incomplete and this attribution
+  rests on a source the collection says it does not depend on; if it
+  was not, the attribution is wrong. Cite the ruling or reword to own
+  the deferral.
+- **Finding 2:** the tier-0 gate ("retroactive record, doctrine §11",
+  m0010:27) reads §11 as a routine path for low-risk changes, while
+  §11 frames itself as exceptional (emergencies and backfills).
+  Ratifying this matter as written would widen §11's charter without
+  amending it — the eventual vetting should treat that as a §11
+  amendment, not a footnote.
+- **Disposition:** the tier design itself was reviewed this round
+  only for consistency (schema, links, §12) — clean.
