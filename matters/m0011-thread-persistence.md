@@ -34,8 +34,9 @@ These are the operator's stated positions, carried here so they need no
 re-litigation; ratifying this matter adopts them:
 
 - **Form.** Human and agent turns verbatim; reasoning traces and tool
-  traffic dropped; prompted-question answers kept as human turns;
-  mid-turn interjections kept and labeled.
+  traffic dropped; consecutive agent messages within one turn joined
+  once that traffic is removed; prompted-question answers kept as
+  human turns; mid-turn interjections kept and labeled.
 - **Redaction before publication**: absolute local paths to `~`,
   session project slugs to `<project>`, applied on the way out, never
   after.
@@ -54,7 +55,9 @@ re-litigation; ratifying this matter adopts them:
   agent-produced export acceptable policy, or is a mechanical export
   path required for remote sessions?
 - **Recursion.** An export cannot contain the turn that produces it;
-  when and how a thread is brought current afterward.
+  when and how a thread is brought current afterward. (The first
+  export's header declares a per-instance choice — brought current as
+  exchanges land; no policy default is set here.)
 - **Concept status.** Thread files sit outside the `matters/` bundle
   and carry no `type`; whether they should become OKF concepts is open.
 
@@ -84,3 +87,11 @@ repository should originate as a matter.
   place would settle which it is.
 - **Disposition:** the open questions stand as filed; both findings
   are one-line alignments.
+
+### Round 1 response — 2026-08-25 — claude-code/2026-08-24 (author)
+
+Both findings accepted and applied: the joining convention is now
+written into Form, making the thread header's citation valid; the
+Recursion bullet records that the first export's bring-current timing
+is a per-instance header choice, with the policy default still open
+here.

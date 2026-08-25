@@ -12,7 +12,10 @@ this text is a candidate.
 
 Provenance, in one line: this is the second bootstrap. The first was
 audited, adjudicated, and archived unmerged (PR #1 of this repository);
-nothing here depends on it.
+no text here derives from it. Rulings carried from its sessions reach
+this tree through the operator's carry-forward ruling and the witness
+affirmation, both recorded in the thread named above and marked as such
+in m0001's rulings ledger.
 
 ---
 
@@ -62,9 +65,10 @@ matter against this section.
 
 ```
 proposed ──▶ ratified ──▶ staged ──▶ executed
-    ▲                        │
-    └────────────────────────┘   execution failure
-proposed · ratified · staged ──▶ rejected · withdrawn · superseded
+    ▲            │           │
+    └────────────┴───────────┘   re-opened · execution failure
+proposed ──▶ rejected · withdrawn
+proposed · ratified · staged ──▶ superseded
 ```
 
 | State | Meaning |
@@ -86,10 +90,24 @@ Transitions and their owners:
   would be its own future matter, never an inference.
 - `staged → proposed` — execution failure: the ratified plan proved
   wrong or impossible. The failure is recorded on the matter before the
-  transition, and re-ratification is required to proceed again.
-- The three terminal states are reachable from `proposed`, `ratified`,
-  and `staged`. Nothing leaves `executed`; correcting executed work is
-  a new matter.
+  transition — including what, if anything, half-landed in the target
+  and whether it is reverted or kept via a retroactive matter (§11) —
+  and re-ratification is required to proceed again.
+- `ratified → proposed` — the operator re-opens a ratified matter whose
+  plan is found broken before staging. The ratification fields are
+  cleared, their values recorded in the vetting section.
+- `proposed → rejected` — the operator declines the proposal.
+  `proposed → withdrawn` — the author retracts it. Both apply to
+  un-ratified proposals only; a ratified or staged matter exits through
+  re-opening, failure, or supersession.
+- `→ superseded` — from `proposed`, `ratified`, or `staged`, effected
+  by the operator ratifying the superseding matter (§5).
+- Nothing leaves `executed`; correcting executed work is a new matter.
+
+Two licensed exceptions enter or exit outside this diagram: a
+retroactive matter (§11) moves `proposed → executed` directly on
+operator acknowledgment, and m0001 alone moves `ratified → executed`
+at the bootstrap (§14).
 
 A `branch` field is present exactly while a dev agent is working the
 matter. Its presence is what distinguishes in-flight from queued, and
@@ -120,10 +138,13 @@ three, and this is how that resolves. The superseded matter keeps its
 record forever; superseded matters are never deleted.
 
 **Conflict rule.** A matter that contradicts an already-ratified matter
-cannot itself be ratified until the earlier one is explicitly superseded
-or amended; the supersession link must exist at ratification time. The
+cannot itself be ratified until the earlier one is explicitly
+superseded; the supersession link must exist at ratification time. The
 validator checks for the link ([m0008](../matters/m0008-matter-tooling.md));
-judging *whether* two matters conflict is vetting's job.
+judging *whether* two matters conflict is vetting's job. If two
+already-ratified matters are later discovered to conflict, the earlier
+ratification governs until the operator resolves the conflict by
+superseding one of them.
 
 ## 6 · Vetting and ratification
 
@@ -141,7 +162,12 @@ rewritten — the matter accretes its review history.
 operator reads the matter as it stands at a specific commit and states
 ratification. The recording agent then writes into the frontmatter:
 `verified` (actor and datetime), `ratified_commit` (the commit read),
-and `ratified_sha256` (whole-file hash at that commit). The hash is
+and `ratified_sha256` — a hash of the matter's **ratified region**: the
+body minus the frontmatter and the append-only record sections
+(`## Vetting`, `## Execution`), so lifecycle appends and frontmatter
+transitions never invalidate it. Where a matter's proposed text is a
+separate document (m0001 → this doctrine, which has no frontmatter),
+the hash is that document's whole file at the same commit. The hash is
 agent-computed and independently verifiable — anyone can recompute it
 from the named commit at any time; the operator computes nothing.
 Detecting post-ratification drift mechanically is
@@ -237,10 +263,12 @@ whether scope is right. Ratification is the operator's alone.
 
 Some work cannot wait for vetting: an emergency fix while CI is red, or
 the backfilling of decisions already made. The path: act, then file the
-matter directly in `executed` with the evidence attached (commits,
-runs), a `## Retroactive` section stating why this path was used, and
-explicit operator acknowledgment recorded in `verified`. The validator
-flags retroactive matters so they are reviewed, late but always.
+matter as `proposed` with the evidence attached (commits, runs) and a
+`## Retroactive` section stating why this path was used. Explicit
+operator acknowledgment, recorded in `verified`, moves it directly to
+`executed` (§3). If the operator declines, the matter is `rejected` and
+a new matter is opened to unwind what landed. The validator flags
+retroactive matters so they are reviewed, late but always.
 This path is already needed by
 [m0009](../matters/m0009-spec-gaps-to-matters.md) and
 [m0011](../matters/m0011-thread-persistence.md).
@@ -327,10 +355,28 @@ archived unmerged (PR #1). Its central failure — a document ratified
 without being read, then misdescribed to the operator — is why §6
 requires ratification over the exact text and why m0007 exists.
 
-## 15 · Open
+## 15 · Open, and adopted by default
 
-Nothing is currently open in this document. Design that is deliberately
-deferred lives in the matters that own it: review structure (m0006),
-drift tooling (m0007), the validator and its language (m0008), risk
-tiers (m0010), thread policy scope and mechanism (m0011). Anything
-appearing in neither this document nor a matter is not doctrine.
+Design that is deliberately deferred lives in the matters that own it:
+review structure (m0006), drift tooling (m0007), the validator and its
+language (m0008), risk tiers (m0010), thread policy scope and mechanism
+(m0011). Anything appearing in neither this document nor a matter is
+not doctrine.
+
+Six choices in this document and the collection were adopted by the
+authoring agent as defaults — presented to the operator in the thread
+but not ruled before authoring. Ratifying this document confirms them;
+they are listed here so the confirmation is deliberate, not silent:
+
+- the ratification recording mechanism of §6 — operator reads and
+  states, agent computes and records the hash;
+- the ratified-region definition of §6 (body minus frontmatter and
+  record sections);
+- the single interspersed ID sequence over both targets (§1), and the
+  ID restart at m0001 with the archive as a separate closed collection
+  (§12);
+- the extraction tripwire's specific conditions (§13);
+- the extension of "views are derived" to threads — maps and indexes
+  over threads derived from frontmatter (§9.2);
+- bundle-first sequencing: m0002–m0005 filed `proposed`, ratified after
+  this document (implicit in the collection's state).

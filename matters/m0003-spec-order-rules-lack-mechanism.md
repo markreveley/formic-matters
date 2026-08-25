@@ -23,6 +23,7 @@ reimplementer from silently breaking byte-exactness, and states them
 without that reason. All references at `fa17627`.
 
 The clearest case is §1.1 (lines 34–38). The timing pipeline is drawn
+(abbreviated here — `SPEC.md:38` carries the full clock annotations)
 
 ```
 grid → swing → time-lane → humanize → performed_s
@@ -51,7 +52,9 @@ Four things make that order load-bearing, none stated at §1.1:
 4. `to_f(grid)` is the only rational→float edge (§3).
 
 Same pattern elsewhere: §1.4 is ten determinism rules in one
-semicolon-joined paragraph with no statement of what each closes off;
+semicolon-joined paragraph, mostly without a statement of what each
+closes off (two of the ten — the libm and `HashMap` rules — carry
+their reason inline);
 §4.4 asserts the `2^64 − 2^10` rounding threshold without deriving it
 from the f64 ulp near `2^64`; §6.5 presents 50 and 66⅔ as constants to
 memorize rather than as consequences of the pair-midpoint expression.
@@ -100,3 +103,9 @@ deliverable. Execution re-derives from this matter as ratified.
   parenthetical two lines later is quoted verbatim, so mark the
   simplification.
 - **Disposition:** diagnosis and proposed text stand as filed.
+
+### Round 1 response — 2026-08-25 — claude-code/2026-08-24 (author)
+
+Both nits accepted and applied: §1.4 characterization softened to
+"mostly without" with the two inline exceptions named; the pipeline
+diagram marked as abbreviated with a pointer to the full line.

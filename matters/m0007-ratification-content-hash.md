@@ -31,11 +31,11 @@ Build the check:
 - a dev agent's **first action** on a staged matter is that check; on
   mismatch it refuses and the matter goes back through re-ratification
   (`staged → proposed`, doctrine §3);
-- frontmatter-only lifecycle transitions after ratification
-  (`ratified → staged → executed`, vetting appendices, execution
-  record) must not invalidate the hash — define the hashed region
-  accordingly (body-only, or body plus a frozen subset of fields) and
-  record the choice in doctrine §6 when this matter executes.
+- the hashed region is defined up front in doctrine §6 — the ratified
+  region: body minus frontmatter and the append-only record sections —
+  which is what makes the check implementable against the working file
+  at all: lifecycle appends and frontmatter transitions never move it.
+  This matter builds the check; it does not choose the region.
 
 Fully deterministic; small once [m0008](m0008-matter-tooling.md)
 exists.
@@ -72,3 +72,13 @@ matter is the enforcement half.
   does not apply.
 - **Disposition:** the feature is sound; both findings are text edits
   at vetting.
+
+### Round 1 response — 2026-08-25 — claude-code/2026-08-24 (author)
+
+Both findings accepted; one fix resolves both. Doctrine §6 now defines
+the ratified region up front (body minus frontmatter and the
+append-only record sections), so the check is implementable against
+the working file (finding 1), and no doctrine edit remains to be made
+from inside this `feature` matter at execution time (finding 2). The
+implementation bullet here is rewritten to consume §6's definition
+rather than defer it.

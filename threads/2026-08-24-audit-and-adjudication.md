@@ -775,3 +775,82 @@ Still holding on opening the PR until you say the word.
 also, have you committed everything?
 
 ---
+
+## ▸ Claude
+
+Let me verify rather than assert — that question has history here.
+
+Working trees are clean and the branch is in sync with origin — but there *is* one thing at risk: the thread export ends at your "1-5 yes" message, so the build summary and the four review-mechanics exchanges since (checkout flow, before/after, the vetting commit convention) exist only in this session. Per the threads-primary ruling, bringing the export current now.
+
+The push was rejected — someone has pushed to this branch since my last commit. Fetching to see what arrived before integrating.
+
+The reviewer already ran — **vetting round 1 landed on the branch** while we were talking (a different fresh session, following the convention exactly: one commit, `Matter: m0001` trailer, entries on m0001 plus five matter-local files). Integrating my thread-export commit on top, then reading the findings.
+
+The rebase landed cleanly and everything is pushed. Now reading the full round-1 entry on m0001 (the ranked index was truncated in what I've seen so far).
+
+Yes — verified, not assumed: working tree clean, branch in sync with origin, the beatcode and OKF clones untouched, scratch copies disposable. The one thing that *was* at risk — the build summary and our four review-mechanics exchanges, which existed only in this session — is now committed as a thread-export update. And in pushing that, I discovered something better than a clean status:
+
+## Vetting round 1 already landed
+
+You evidently launched the fresh instance — its round arrived on the branch as commit `7022aad` while we were discussing mechanics, following the convention to the letter: one commit, `Matter: m0001` trailer, ranked index on m0001, matter-local entries on m0003/m0004/m0007/m0010/m0011, append-only, nothing fixed. I rebased my export update on top (no conflict — disjoint files) and everything is pushed; branch history is now bootstrap → vetting round 1 → export update.
+
+**The verification half came back fully clean.** Every m0002–m0005 claim held: m0004's Claims table verified leaf by leaf and edge by edge (the reviewer even checked the header hex twice over — `b0 1d 07 00` *and* the data-chunk field); the run record re-executed end to end on the pinned toolchain (all hashes, all sizes, 48/48); index regeneration byte-identical; all 52 links resolve; schema, states, status derivation all conform; the evidence branch SHA confirmed on the remote.
+
+**The fidelity half found real things — nine findings, none blocking, all vetting-scale text edits.** The big ones, with my author-position:
+
+- **V1 (medium-high): ten ledger rows are unverifiable in-tree.** Rows carrying rulings you made in the *original design session* (types, per-type content, cheap-to-file, split-as-supersession, the MVP line, and so on) trace to the archived thread the new tree deliberately excludes — so the fidelity check can't distinguish your design from agent design for those rows, while "nothing here depends on it" overstates. The reviewer is right, and it's the mirror of my own finding against the first attempt. Cleanest fix is yours to give: **one sentence in your next reply re-affirming that the archive-sourced ledger rows are your rulings** — that statement lands in this thread's export and becomes the in-tree primary source, no archive import needed. I'll also mark those rows as archive-sourced and scope the stands-alone claims to *text*, not provenance.
+- **V2 + V5 (medium): agent mechanisms compiled into the rulings column, and defaults embedded with nothing flagging them.** The §6 recording mechanism (I compute the hash), the extraction tripwire, the interspersed ID sequence, the ID restart, bundle-first sequencing — all legitimate candidate text, none operator-ruled, and nothing in-tree flags them for your ratification read. Fix: re-classify those ledger rows as agent mechanisms, and add a short **"adopted by default — confirm at ratification"** list to §15. (One timing note I'll record honestly in the response entry: the reviewer worked at `44d6be0`, before my export update — the thread now *shows* me presenting those defaults to you, but still shows no ruling, so the substance of both findings stands.)
+- **V3: six of your rulings are missing from the ledger** (vetting-in-matter, immutable references, the provenance line, Q9 housekeeping, unprocessed-proposals-become-matters, relative links). Add the rows.
+- **V6: eight state-machine holes**, all real. My proposed doctrine edits, the substantive ones: terminals get owners; `rejected`/`withdrawn` become reachable from `proposed` only, with `ratified → proposed` added as an operator re-open that clears the ratification fields into the record; "or amended" is dropped from §5 (supersession covers it); §11's retroactive path is redesigned to **enter at `proposed` and move to `executed` on your acknowledgment** — which fixes both the refusal hole and the undefined birth-at-executed; §14 explicitly licenses m0001's ratify-then-execute jump; the failure record must state what half-landed and its disposal; `depends_on` enforcement goes on m0008's list.
+- **V7:** README.md is in the tree but m0001's execution list doesn't claim it — the reviewer noted it's the *same omission I audited the first attempt for*. One line.
+- **Matter-local (V8):** m0007's hash check as described can't work against a file whose frontmatter changes at ratification — fix by defining in §6 now that `ratified_sha256` covers the **body only** (whole file for the doctrine, which has no frontmatter), which also dissolves its second finding; m0010's "deferred by the operator" needs the archive-sourced marking (V4) and its tier-0 gate quietly widens §11's charter — reword to say the widening is a §11 amendment; m0011 gets the turn-joining clause added to Form; m0004 has one byte of drift in a verbatim quote; m0003 gets two characterization softenings. **V9:** future run files record interpreter versions and exact commands.
+
+## What I need from you
+
+1. **The V1 sentence** — re-affirm (or amend) the archive-sourced rulings here, in your own words.
+2. **"Apply round 1"** — and I'll make all the edits above as author commits, append the response entry under each vetting section, and regenerate the index. Or read the round in neovim first (`git pull`; the ranked index is at the bottom of `matters/m0001-matter-system.md`) and rule row by row — the confirm-at-ratification list means nothing gets adopted silently either way.
+3. **The PR** — still unopened, still on your word; the reviewer managed fine against the bare branch, but the merge gate will want it eventually.
+
+---
+
+## ▸ Mark
+
+1 - if you agree, affirm
+
+2 - are we ready to apply this? Is anything more needed from the review agent? Did it persist everything correctly?
+
+3 - was it not supposed to work against the bare branch? Were the instructions to do otherwise or unclear?
+
+---
+
+## ▸ Claude
+
+**1 — I agree, and here is the affirmation.** Basis first, since an attestation is only as good as its witness: during the audit I read the archived design session in full, before any of the fresh-authoring decisions were made. Each row V1 flagged restates an operator turn I read there:
+
+- **Types, "proposal" redundant, kinds moved up one level** — your words: "everything should be moved up one level, ie. feature/fix/refactor become matter types."
+- **Per-type required content** — your original proposal, nearly verbatim: issues include diagnosis and proposed fix; feature-plans a detailed spec and implementation plan; refactor-plans a diagnosed reason and plan.
+- **Cheap to file, expensive to ratify; diagnosis over several turns, but before ratification** — your "agree on 2," plus your refinement that an issue "will have to [have a diagnosis] before it can be ratified, though this may occur over several turns."
+- **Split as supersession routing** — your words: "split would seem to me to function as 'superseeded' but act as a router to offshoot matters."
+- **Content hash deferred unless MVP-required** — your words: "this too should be filed as a feature matter - UNLESS we deem this required for the MVP," followed by your "4/5 - agree" to the MVP line that excluded it.
+- **The derived worklist view** — your proposal: a view "such as 'matter system operational', which keys off of metadata."
+- **SPEC-GAPS broken out into matters** — your words: "spec-gaps should be broken out into matters, landed and otherwise."
+- **Process code separate from the instrument** — your question framing it ("system/process code as separate from the instrument itself") and your "7 agree… keep it standalone and scoped for beatcode."
+- **No memory files in the repo** — your instruction twice over: "i do not want memory files stored there" and "do not store memory files, also do not persist un-ratified 'facts' to repo."
+- **Risk tiers deferred by you** (m0010's attribution, V4) — your "5. same thoughts as 4," i.e. file as a feature matter rather than build now.
+- **org/assertions out of scope** — the one row where the *disposition* is derived rather than stated: you raised the question, then identified it as concerning your global config; the out-of-scope call follows from your own "concerns across repos are not mixed" ruling and was never contradicted. I affirm the derivation, not a verbatim ruling — and the row's Landed column gets reworded accordingly, per V1's nit.
+
+Your delegation ("if you agree, affirm") and this affirmation both land in the thread export, which closes V1's chain the right way round: operator delegates the attestation, the witness who read the source attests, and both are recorded in the primary source. The apply batch marks those ledger rows as archive-sourced-and-affirmed, citing this exchange.
+
+**2 — Ready, yes; nothing more needed from the reviewer; persisted correctly with one deviation.** Every finding is a pre-ratification text edit; none blocked; the one thing the round couldn't supply — the V1 affirmation — item 1 just did. On persistence, verified against the commit itself: one commit ✓, `Matter: m0001` trailer ✓, append-only (305 insertions, zero deletions — no existing text touched, index correctly left alone since frontmatter didn't change) ✓, findings filed local-first with the ranked index on m0001 ✓, no comments anywhere ✓. The deviation: it re-executed the verification (hashes, sizes, 48/48) but recorded the evidence *inline in the vetting entries* instead of adding an append-only `runs/` file as instructed — the data is persisted, just in the wrong drawer per §9.1. Nothing to redo; I'll record the deviation in the response entry, and my post-apply re-verification will ship as a proper run file (also picking up V9's own nits — interpreter versions, exact commands). One process option before you ratify, and my recommendation given what this bundle is: after I apply, run one *short* round 2 scoped to a single question — "were round 1's findings actually addressed, or only discussed?" That's the thread-auditor check from m0006, it's cheap, and it's the exact verification the first attempt never got. Optional; §6 lets you ratify without it.
+
+**3 — The bare branch was per instructions, not around them.** The prompt you ran named the branch; the PR-number first line was only ever the variant *if* I'd opened the PR first. My "before" recommendation was sequencing preference, not requirement — the PR would have handed the reviewer the diff as one object, and the reviewer simply compensated by running the scope check against m0001's claims instead (finding V7 exactly the way a diff would have). The only ambiguity was between us, not in the instructions: I was still holding the PR for your word while you'd already launched the review. Net cost of the ordering: zero. The PR's remaining job is purely the merge gate.
+
+Say **"apply"** and round 1's response lands as one author commit: the ledger corrections (V1 markings + V2 reclassifications + V3's six added rows), the §15 confirm-at-ratification list, the V6 state-machine edits, §6's body-only hash definition, the matter-local fixes on m0003/m0004/m0007/m0010/m0011, README claimed in m0001's execution list, response entries appended under every vetting section, index regenerated, thread export brought current through this exchange.
+
+---
+
+## ▸ Mark
+
+apply
+
+---

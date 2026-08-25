@@ -33,8 +33,10 @@ check. This is that code. Deterministic, therefore in scope:
   (doctrine §4)
 - ratification-hash verification ([m0007](m0007-ratification-content-hash.md))
 - link integrity — every matter, thread, and run reference resolves
-- `depends_on` acyclicity; claims-DAG checks — ids resolve, acyclic,
-  leaves evidence-typed (doctrine §9.3)
+- `depends_on` acyclicity, and its transition-time enforcement — a
+  matter cannot be staged or executed while a dependency is unexecuted
+- claims-DAG checks — ids resolve, acyclic, leaves evidence-typed
+  (doctrine §9.3)
 - conflict-rule link check — a ratification that contradicts a ratified
   matter carries the supersession/amendment link (doctrine §5)
 - index and worklist regeneration; CI fails if committed views are

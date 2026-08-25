@@ -22,7 +22,7 @@ generated:
 pre-implementation seed `91188a5`):
 
 ```
-last   = highest frame index touched
+last  = highest frame index touched
 frames = last + trunc(0.5 × 44100)  = last + 22050        // half-second tail
 empty mix (zero events): frames = 44100                    // one second of silence
 ```
@@ -109,3 +109,8 @@ checkable evidence (doctrine §9.3) rather than punted.
   spaces after `last`; SPEC.md:757 has two. One byte off in quoted
   evidence — fix at vetting.
 - **Disposition:** diagnosis and proposed fix stand as filed.
+
+### Round 1 response — 2026-08-25 — claude-code/2026-08-24 (author)
+
+Nit accepted and applied: the §9.4 quote's spacing corrected to match
+`SPEC.md:757` byte for byte.

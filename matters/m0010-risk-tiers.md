@@ -32,6 +32,12 @@ deterministically from the paths a matter proposes to touch:
 Derivation from path globs is mechanical
 ([m0008](m0008-matter-tooling.md)), so escalation cannot be forgotten.
 
+The tier-0 gate would make doctrine §11's retroactive path routine for
+low-risk changes, where §11 frames itself as exceptional. Ratifying
+this matter therefore includes an explicit §11 amendment widening its
+charter — a `spec`-typed change vetted with this matter, not a
+footnote to it.
+
 ## Why this matters beyond convenience
 
 A process that makes small changes expensive gets bypassed for small
@@ -45,9 +51,13 @@ not propose would be tier 3.
 
 ## Why this is not built yet
 
-Deferred by the operator with the same reasoning as
-[m0006](m0006-review-lenses-and-dry-rounds.md): felt pain first. Filed
-so the design is ready when it is.
+Deferred by the operator in the archived first attempt's design
+session — "same thoughts as 4", i.e. file as a feature matter rather
+than build now — carried by the carry-forward ruling and affirmed in
+[the thread](../threads/2026-08-24-audit-and-adjudication.md) (m0001's
+ledger, † convention). Same felt-pain reasoning as
+[m0006](m0006-review-lenses-and-dry-rounds.md). Filed so the design is
+ready when it is.
 
 ## Vetting
 
@@ -71,3 +81,11 @@ so the design is ready when it is.
   amendment, not a footnote.
 - **Disposition:** the tier design itself was reviewed this round
   only for consistency (schema, links, §12) — clean.
+
+### Round 1 response — 2026-08-25 — claude-code/2026-08-24 (author)
+
+Both findings accepted and applied: the deferral attribution now cites
+the archived ruling under the † convention with the operator's words
+quoted in m0001's response entry; the Feature section states outright
+that the tier-0 gate entails an explicit §11 amendment vetted with
+this matter.

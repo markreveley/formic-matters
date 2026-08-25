@@ -39,7 +39,8 @@ this matter is ratifying that document at a specific commit (doctrine
 ## What this supersedes
 
 Nothing in this collection — it is the first matter. The archived first
-attempt is referenced, not superseded: this collection stands alone.
+attempt is referenced, not superseded. No text here derives from it;
+rulings carried from its sessions are sourced per the ledger below.
 
 ## Rulings ledger
 
@@ -47,35 +48,52 @@ Every operator proposal and ruling from the 2026-08-24 sessions, and
 where it landed. This table is what the fidelity review checks the
 doctrine against, alongside the thread itself.
 
+Sources. Rows marked **†** were ruled in the archived first attempt's
+design session; they reach this collection through the operator's
+carry-forward ruling, and each was affirmed — at the operator's
+delegation — by the auditing agent, which read that session in full.
+Both the delegation and the affirmation are recorded in
+[the thread](../threads/2026-08-24-audit-and-adjudication.md). Clauses
+marked **‡** are authoring-agent mechanisms adopted to satisfy a
+ruling, not rulings; they are listed in doctrine §15 for deliberate
+confirmation at ratification. Unmarked rows are ruled in the thread
+directly.
+
 | Operator proposal / ruling | Landed |
 |---|---|
-| three change kinds as matter types; "proposal" not a type; types moved up one level | doctrine §2 |
-| per-type required content (fix: diagnosis + fix; feature: spec + plan; refactor: reason + plan) | doctrine §2 |
+| † three change kinds as matter types; "proposal" not a type; types moved up one level | doctrine §2 |
+| † per-type required content (fix: diagnosis + fix; feature: spec + plan; refactor: reason + plan) | doctrine §2 |
 | state spine `proposed → ratified → staged → executed` | doctrine §3 |
 | vetting by fresh agent reviews until the operator ratifies | doctrine §6 |
 | execution by a dev agent launched by the operator; orchestration later, as its own matter | doctrine §3 |
-| cheap to file, expensive to ratify; diagnosis may arrive over several turns but precedes ratification | doctrine §4 |
-| split functions as supersession routing to offshoots | doctrine §5 |
+| † cheap to file, expensive to ratify; diagnosis may arrive over several turns but precedes ratification | doctrine §4 |
+| † split functions as supersession routing to offshoots | doctrine §5 |
 | flat collection, metadata-sortable, all views derived | doctrine §1, §7, §12 |
 | deterministic code wherever possible | doctrine §10 |
-| lenses/dry-round review machinery deferred as premature, filed as a matter | [m0006](m0006-review-lenses-and-dry-rounds.md) |
-| ratification content hash deferred unless MVP-required; record now, tooling later | doctrine §6 + [m0007](m0007-ratification-content-hash.md) |
-| "matter system operational" as a derived worklist view | doctrine §7 |
-| SPEC-GAPS broken out into matters, landed and otherwise; `spec` as a real type | [m0009](m0009-spec-gaps-to-matters.md), doctrine §2 |
+| † lenses/dry-round review machinery deferred as premature, filed as a matter | [m0006](m0006-review-lenses-and-dry-rounds.md) |
+| † ratification content hash deferred unless MVP-required; record now, tooling later | doctrine §6 + [m0007](m0007-ratification-content-hash.md) |
+| † "matter system operational" as a derived worklist view | doctrine §7 |
+| † SPEC-GAPS broken out into matters, landed and otherwise; `spec` as a real type | [m0009](m0009-spec-gaps-to-matters.md), doctrine §2 |
 | PRs cite matter IDs | doctrine §8 (commit trailer, branch/PR title prefix) |
-| process/system code kept separate from the instrument | [m0008](m0008-matter-tooling.md) |
-| consider OKF; keep the useful shape, no memory files in the repo | doctrine §12 (documented dialect) |
+| † process/system code kept separate from the instrument | [m0008](m0008-matter-tooling.md) |
+| † consider OKF; keep the useful shape, no memory files in the repo | doctrine §12 (documented dialect) |
 | thread persistence: verbatim human and agent turns, reasoning and tool traffic dropped, redact before publication | doctrine §9.2 + [m0011](m0011-thread-persistence.md) |
 | runs directory documenting verification runs with environment specs | doctrine §9.1 |
 | claims-DAG in the matter itself, visualization derived, nodes are not matters | doctrine §9.3 |
 | retire PR comments; keep GitHub and PRs as transport and merge mechanics; operator responds by local file edits | doctrine §8 |
-| one repo, self-hosting explicit, no framework split; extraction on tripwire | doctrine §1, §13 |
+| one repo, self-hosting explicit, no framework split; extraction tripwire's specific conditions are ‡ | doctrine §1, §13 |
 | archive the first attempt, do not expunge; fresh authoring, nothing textual carried | doctrine §14, this matter |
 | landed/execution record required to enter `executed` | doctrine §3.1 |
 | git citation convention (trailer + prefixes) | doctrine §8 |
-| threads primary reference; adjudication thread exported into this tree; views over threads derived | doctrine §9.2, [threads/2026-08-24-audit-and-adjudication.md](../threads/2026-08-24-audit-and-adjudication.md) |
-| ratification without operator-computed hashes: operator reads and states; agent records commit + hash, independently verifiable | doctrine §6 |
-| org/assertions question is cross-repo and out of scope here | this section |
+| threads primary reference; adjudication thread exported into this tree; derived-views-over-threads formalization is ‡ | doctrine §9.2, [threads/2026-08-24-audit-and-adjudication.md](../threads/2026-08-24-audit-and-adjudication.md) |
+| ratification gate over the exact text; operator prefers not to compute hashes locally; the recording mechanism (agent computes and records) is ‡ | doctrine §6 |
+| † org/assertions raised; out-of-scope disposition derived from the operator's cross-repo separation ruling, never contradicted | noted under Scope below |
+| vetting rounds recorded on the matter as appended entries | doctrine §6 |
+| matters assert immutable references; no undated mutable-state claims | doctrine §9.4 |
+| one-line provenance pointer to the archive | doctrine header + §14 |
+| housekeeping: PR #1 closed unmerged, archive branch kept, planning drafts absorbed, directory names | executed at build |
+| unprocessed operator proposals become matters | m0006, m0010, m0011 |
+| relative links | doctrine §12 |
 
 ## Scope held out deliberately
 
@@ -95,7 +113,8 @@ collection.
 
 The tree was written together with this matter (doctrine §14): the
 doctrine, matters m0001–m0011, the derived index, the first thread
-export, the first run record, and the interim index generator. This
+export, the first run record, the interim index generator, and the
+repository README. This
 section is completed with commits and date when the matter reaches
 `executed`, which under §14 happens immediately after ratification.
 
@@ -281,3 +300,56 @@ construction — that is the finding).
   continued vetting. V1-V3 are corrections to this file's ledger and
   the provenance lines; V5 is a flag the operator should see at the
   ratification read; V6 is §3/§5 doctrine text; V7 is one line.
+
+### Round 1 response — 2026-08-25 — claude-code/2026-08-24 (author)
+
+All nine findings accepted; none disputed. Applied in this commit, on
+operator instruction ("apply", recorded in
+[the thread](../threads/2026-08-24-audit-and-adjudication.md)):
+
+- **V1** — the operator delegated the attestation ("if you agree,
+  affirm") and the auditing agent, which read the archived design
+  session in full, affirmed each flagged ruling in the thread, quoting
+  the operator's words. The ledger preamble now defines the † source
+  marking and cites that exchange; the doctrine header and this
+  matter's supersession note are scoped to *text*, not provenance.
+  Supplementing the in-thread affirmation for two rows it named only
+  via m0010: the lenses deferral is likewise witnessed — operator:
+  "this is a pain I as an operator have not felt yet … i propose this
+  should be filed as a feature matter" — and the tiers deferral:
+  "same thoughts as 4".
+- **V2** — rows 72, 76, 77 reworded to separate ruling from mechanism;
+  ‡ marking defined; all ‡ items listed in doctrine §15 for deliberate
+  confirmation at ratification. Timing note: the reviewer worked at
+  `44d6be0`; the export update `1347af3` landed afterward and now
+  shows the §6 mechanism being presented to the operator, so V2's
+  "first presentation" clause is historical — its substance (no
+  operator ruling) stands and is what §15 now flags.
+- **V3** — six rows added (vetting-in-matter, immutable references,
+  provenance line, housekeeping, proposals-become-matters, relative
+  links).
+- **V4** — m0010 reworded to cite the archived deferral ruling under
+  the † convention; see m0010's response entry.
+- **V5** — doctrine §15 is now "Open, and adopted by default", listing
+  all six defaults for confirmation at the ratification read.
+- **V6** — doctrine §3 rewritten: owners for every transition;
+  `rejected`/`withdrawn` from `proposed` only; `ratified → proposed`
+  re-open defined with ratification fields cleared into the record;
+  the failure record must state what half-landed and its disposal;
+  the two licensed diagram exceptions (§11 retroactive entry, §14
+  bootstrap) stated. §5: "or amended" dropped; later-discovered
+  conflicts resolved by earlier-ratification precedence until the
+  operator supersedes. §11 redesigned: retroactive matters file as
+  `proposed` and reach `executed` on acknowledgment; refusal →
+  `rejected` plus an unwinding matter (m0009's wording aligned).
+  `depends_on` transition-time enforcement added to m0008's list.
+- **V7** — README claimed in the Execution list.
+- **V8** — matter-local fixes applied; see the response entries on
+  m0003, m0004, m0007, m0010, m0011.
+- **V9** — accepted for future runs: interpreter versions and exact
+  commands. Recorded here since run files are never edited.
+- **Reviewer deviation, recorded:** round 1 re-executed the
+  verification but filed the evidence inline in vetting entries
+  rather than as an append-only `runs/` file (§9.1). The evidence
+  stands; the next run record follows §9.1, and the round-2 prompt
+  should restate the requirement.

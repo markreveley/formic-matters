@@ -25,9 +25,9 @@ collections recording decisions about beatcode, and they will drift.
 
 ## Proposed text
 
-- Each SPEC-GAPS entry becomes a `spec` matter filed directly in
-  `executed` via the retroactive path (doctrine §11), evidence and
-  operator acknowledgment attached, tagged `gap`.
+- Each SPEC-GAPS entry becomes a `spec` matter filed via the
+  retroactive path (doctrine §11) — evidence attached, reaching
+  `executed` on operator acknowledgment — tagged `gap`.
 - `SPEC-GAPS.md` is **regenerated** from the query
   `type: spec, state: executed, tags: [gap]` rather than deleted —
   preserving the one readable document a builder wants, while making it
