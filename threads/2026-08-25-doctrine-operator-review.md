@@ -736,3 +736,59 @@ merge PR #2 and stage m0012
 `ratified → staged` transition on m0012 (§3: staging is the operator's
 own move; execution still waits on a dev agent the operator launches,
 and on the admin acts only the operator can perform).
+
+---
+
+## ▸ Claude
+
+Both done. **PR #2 is merged and m0012 is staged** — and `main` now
+carries the entire ratified state.
+
+The order mattered, so: I recorded the staging first, on the PR branch
+— m0012 `ratified → staged` (the operator's own §3 transition, citing
+your `f3` direction in the thread), with a vetting entry noting it's
+queued (no `branch` field) and what execution requires. Then I merged
+PR #2 as a **merge commit** (`7956d9f`), not a squash — all sixteen
+commits of the lineage survive in `main`'s history with their
+`Matter:` trailers, which is what "the repository is the record"
+wants. Verified: `origin/main`'s tree is byte-identical to the branch
+head's, so nothing was lost or altered in the merge, and the three
+ratification pins remain checkable from `main` directly.
+
+Where things stand:
+
+- **`main`**: the Formic Matters specification (normative), m0001
+  `executed`, m0012 `staged`, m0013 `ratified`, m0002–m0011
+  `proposed`, three threads, six runs, the derived index.
+- **m0012 execution** waits on exactly two things, in order: your
+  admin acts — renaming this repository to the framework and creating
+  the new `beatcode-dev` — and then, per §3, a dev agent you launch
+  against m0012 to do the mechanical half (moving m0002–m0005 and
+  m0009 with IDs preserved, the link re-pins, dropping m0009's
+  `depends_on`, the installation record, and the execution record).
+  That transition is reachable no other way, so nothing further
+  happens until you direct it.
+
+When you've done the rename and created the consumer repo, say so
+(and note the session will need the new repo added to its GitHub
+scope) — that message is the launch, and the split executes.
+
+---
+
+## ▸ Mark — the admin acts, and the handoff (f4)
+
+give me a prompt to hand to the next session, context is getting long here
+
+and then we need to persist the thread transcript and open pr
+
+beatcode-dev renamed to formic-matters
+new beatcode-dev created https://github.com/ob6to8/beatcode-dev.git
+
+**Apparatus:** **f4** — m0012's execution preconditions are met: the
+operator has performed both admin acts (this repository renamed to
+`formic-matters`; a new, empty `ob6to8/beatcode-dev` created as the
+consumer). The requested handoff prompt, given in the session's reply,
+is the operator's launch instrument: a session started with it is the
+dev agent §3 requires for `staged → executed` on m0012. This export
+ends here; the reply, the handoff prompt, and m0012's execution live
+outside this file, in the record the next session writes.
