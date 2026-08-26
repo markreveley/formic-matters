@@ -42,7 +42,7 @@ tree-wide invariant the response could have disturbed.
   (`fa17627c3f797872188c76e14e22059f2dece741`), seed `91188a5`
   (`91188a514585345e5b98d3a33560c03b2507b276`)
 - `$BC` below is the beatcode clone; commands run from the
-  beatcode-dev worktree root. No beatcode build was run this round —
+  formic-matters worktree root. No beatcode build was run this round —
   round 1's render reproduction was not re-executed and is not
   re-asserted here.
 

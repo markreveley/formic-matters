@@ -70,8 +70,8 @@ unpublished commit.
    `difflib.unified_diff` (n=0) between
    `git show 70db408:matters/<file>` and the consumer file; every
    changed line inspected against the licensed-edit itemization on
-   [the consumer's m0010](https://github.com/markreveley/beatcode-dev/blob/main/matters/m0010-framework-installation.md)
-   (path reference, dated 2026-08-26). Expected: only itemized edits.
+   [the consumer's m0010](https://github.com/markreveley/beatcode-dev/blob/c6d4a3c4b29bfb1de4bd5aa7fe2e1f9b315c0038/matters/m0010-framework-installation.md)
+   (pinned at its final bootstrap form). Expected: only itemized edits.
    **Observed: m0002 — 2 changed lines (frontmatter `threads:`
    re-pin); m0003 — 4 (frontmatter `threads:`; one body run link);
    m0004 — 10 (frontmatter `threads:` + `runs:`; three body run
@@ -132,8 +132,10 @@ unpublished commit.
 
 8. **Commit discipline (§8)** — `git log --format` with trailer
    extraction over `origin/main..HEAD` (framework) and
-   `d36ea0f..main` (consumer). Expected: `Matter: m0012` on both
-   framework commits, `Matter: m0010` on both consumer commits.
+   `d36ea0f..main` (consumer). Expected: `Matter: m0012` on the
+   framework commits then present (the sweep and move commits; the
+   records commits that followed carry the same trailer), and
+   `Matter: m0010` on the consumer's installing commits.
    **Observed: exactly that.**
 
 ## Verdict
