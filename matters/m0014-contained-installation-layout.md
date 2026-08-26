@@ -1,7 +1,7 @@
 ---
 type: spec
 title: Contained installation layout for code-bearing consumers
-description: "A consumer repository may carry its whole installation inside one root directory, .formic-matters/, instead of five root directories — chosen at bootstrap, default for repositories with their own code."
+description: "Consumer installations live inside one root directory, .formic-matters/, instead of five root directories; the framework alone keeps the root form."
 id: m0014
 state: proposed
 status: draft
@@ -29,8 +29,14 @@ operator directed a contained form and its name in the m0012
 execution session
 ([thread R7](../threads/2026-08-26-m0012-execution.md)):
 ".formic-matters", chosen over the shorter ".formic" because the full
-name self-documents and matches the framework. Filed now, before the
-second adoption, so no two layout generations ever exist in the wild.
+name self-documents and matches the framework. A follow-up ruling
+([thread R8](../threads/2026-08-26-m0012-execution.md)) settled the
+scope: the contained form is for every consumer, the existing
+`beatcode-dev` included — uniformity across consumers beats
+grandfathering — with `beatcode-dev`'s own move directed as that
+installation's own matter. Filed and revised now, before the second
+adoption, so no two consumer layout generations ever exist in the
+wild.
 
 ## Proposed text
 
@@ -47,10 +53,10 @@ remains the framework's own.
   link. Which form an installation uses is read off where its
   installation record sits; changing form later is a `spec` matter in
   that installation's collection.
-- **§12's default rule.** A repository whose content is the process
-  itself uses the root form; a repository with its own code adopts
-  the contained form. The bootstrap records the choice in the
-  installation's first matter (§14, §15).
+- **§12's form rule.** The framework's own installation uses the root
+  form — the framework is that repository's content. A consumer
+  installation uses the contained form. The bootstrap records the
+  form in the installation's first matter (§14, §15).
 - **§14's convention sentence** names both forms where it names the
   directory conventions, and the installation record's path in the
   contained form is `.formic-matters/doctrine/installation.md`.
@@ -63,10 +69,12 @@ remains the framework's own.
 
 No ratified matter. It amends the specification's implicit anchoring
 of the conventions at the repository root (§12, §14) by making the
-anchor explicit and two-valued. Existing installations are untouched:
-the framework and `beatcode-dev` keep the root form, and no retrofit
-is proposed — a consumer that later wants the contained form files
-that as its own matter.
+anchor explicit and two-valued. It reaches into no other collection:
+`beatcode-dev`, bootstrapped at the root before this matter existed,
+moves to the contained form through its own matter in its own
+collection — directed by the operator
+([thread R8](../threads/2026-08-26-m0012-execution.md)) — and until
+that executes it is, knowingly, the one root-form consumer.
 
 ## Notes
 
