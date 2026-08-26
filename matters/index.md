@@ -23,6 +23,7 @@ Derived from the frontmatter of every matter in this directory.
 | `m0010` | feature | formic-matters, process | [Risk tiers derived from paths touched](m0010-risk-tiers.md) | Review rigor keyed off blast radius rather than type; a README typo and a rounding-rule change are both fixes. |
 | `m0011` | spec | formic-matters, process, provenance | [Thread persistence policy](m0011-thread-persistence.md) | Whether, in what form, and by what mechanism the sessions behind matters are persisted as threads. |
 | `m0012` | refactor | formic-matters, topology | [The Formic Matters split](m0012-formic-matters-split.md) | Rename this repository to the framework, create beatcode-dev as its first consumer installation, and move the beatcode-facing matters there. |
+| `m0013` | spec | formic-matters, doctrine, bootstrap | [Bootstrap defaults record](m0013-bootstrap-defaults-record.md) | The authoring-agent choices adopted without an operator ruling during the bootstrap, with the confirmation trail for each — relocated out of the specification on operator direction. |
 
 ## Ordering
 
@@ -38,3 +39,4 @@ Derived from the frontmatter of every matter in this directory.
 | `m0010` | m0001 | m0008 |
 | `m0011` | m0001 | — |
 | `m0012` | m0001 | m0001 |
+| `m0013` | m0001 | — |

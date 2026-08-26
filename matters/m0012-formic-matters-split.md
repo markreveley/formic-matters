@@ -51,7 +51,7 @@ concern.
    content verbatim. IDs are preserved; the vacated IDs are never
    reused here (§12); the new collection's own sequence allocates above
    the highest imported ID. This installation's matters — m0001,
-   m0006–m0008, m0010–m0012 — stay: the framework self-hosts (review
+   m0006–m0008, m0010–m0013 — stay: the framework self-hosts (review
    a1).
 4. **Re-pin cross-collection references at the move.** The moved
    matters cite this repository's threads and runs as relative paths,
@@ -65,25 +65,47 @@ concern.
    itself belong to the new collection; matters about the framework
    belong here.
 
-## Open, to settle in vetting
+## Installation mechanism — proposed
 
-- **Installation mechanics.** What "installing the framework" is,
-  concretely: the specification carried verbatim at a pinned ratified
-  commit, the directory conventions, and the tooling once m0008
-  exists — but by what mechanism (copy, submodule, fetched release) is
-  deliberately unproposed until the first real installation forces the
-  choice. This matter performs one installation and must answer it for
-  that installation before ratification.
-- **Cross-collection `depends_on`.** m0009 (moving) carries
-  `depends_on: [m0008]` (staying). Whether a consumer matter may depend
-  on a framework matter, how it names it, and what the §7 gate means
-  across installations is undefined in the spec. Proposed here,
-  narrowly: at the move the dependency is rewritten as a pinned
-  reference to the framework matter, and the gate treats a framework
-  dependency as satisfied when the installed framework carries that
-  matter executed; if vetting finds this wants normative text, that is
-  a `spec` matter against §7, filed before this one is ratified and
-  named in `depends_on`.
+Asked by the operator
+([review r7a](../threads/2026-08-25-doctrine-operator-review.md));
+proposed: **verbatim copy, pinned**.
+
+- The consumer repository carries `doctrine/matters.md` copied verbatim
+  from the framework repository at a ratified commit, the directory
+  conventions (`matters/`, `threads/`, `runs/`, `tools/`), and the
+  interim generator (the real tooling once m0008 ships).
+- Beside the copy, an **installation record** — one small file stating
+  the framework repository, the source commit SHA, and the sha256 of
+  the copied specification. Anyone verifies the installation with the
+  same three commands the README uses for a ratification: hash the
+  copy, hash the file at the recorded commit, diff.
+- **Upgrades are matters.** The consumer re-copies at a newer ratified
+  commit by filing a `spec` matter in its own collection ("adopt
+  framework at `<commit>`"), so framework upgrades go through the
+  consumer's own process — consistent with the isolation ruling below.
+- **Why copy**, over a submodule or a fetched release: the repository
+  is the record (§8) and must read with no tooling (§12) — a submodule
+  is a mutable pointer plus tooling, and a release channel does not
+  exist until m0008 ships. The pin (repo, commit, hash) is an immutable
+  reference (§9.4). A release-based channel can supersede this
+  mechanism later, as its own matter.
+
+## Dependencies across the split — ruled
+
+The operator ruled: a consumer matter **cannot** depend on a framework
+matter, or any external matter — "this may change but for simplicity
+lets say this for now"
+([review r7b](../threads/2026-08-25-doctrine-operator-review.md)).
+Spec §7 now states it: `depends_on` names matters in the installation's
+own collection only.
+
+Consequence for the move: m0009's `depends_on: [m0008]` becomes
+inexpressible when m0009 crosses collections. At the move it is
+dropped from the frontmatter and restated as a prose precondition in
+m0009's body (execution needs the framework tooling the installed
+framework provides), a conforming edit listed in the execution record
+alongside the re-pinned links.
 
 ## Scope held out deliberately
 

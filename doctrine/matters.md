@@ -41,12 +41,9 @@ The framework governs whatever repository installs it. An
 **installation** is one repository carrying this specification, its
 directory conventions, and one matter collection. Which systems an
 installation governs is the installation's own declaration, named as
-`tags` (§12); this repository, the framework's home and founding
-installation, governs the framework itself — the system is
-self-hosting: its own evolution goes through it — and, until the split
-ratified in the 2026-08-25 review executes
-([m0012](../matters/m0012-formic-matters-split.md)), also beatcode and
-its development process.
+`tags` (§12). This repository, the framework's home, governs the
+framework itself — self-hosting: the framework's evolution goes
+through its own process.
 
 Nothing lands in any governed system that did not begin as a matter,
 with two defined exceptions: the bootstrap of an installation (§14) and
@@ -240,8 +237,10 @@ the goal *is*, plus metadata on the members:
 - `implements: m0001` — this matter serves that spec
 - `depends_on: [m0007, m0008]` — execution-order constraint
 
-`depends_on` is enforced at transition time: a matter cannot be staged
-or executed while a dependency is unexecuted. The retroactive path
+`depends_on` names matters in the installation's own collection only;
+a dependency on another installation's or the framework's matters is
+not expressible. It is enforced at transition time: a matter cannot be
+staged or executed while a dependency is unexecuted. The retroactive path
 (§11) is exempt — it exists for work that cannot wait and never passes
 through `staged`; a retroactive matter names its unexecuted
 dependencies in its `## Retroactive` section instead of being blocked
@@ -266,16 +265,20 @@ exception.
 The repository is the record. Review, rulings, and decisions live in
 the tree: vetting entries on matters (§6), threads (§9.2), runs (§9.1).
 
-- The operator's channel is local file edits, committed and pushed —
-  not platform comments. Agents read rulings from the tree. One form is
-  first-class: **in-document review** — operator comments written
-  `->[…]` into an authored file and committed. The comment commit is an
-  operator turn. The responding agent transcribes every comment
-  verbatim, with its location and the commit that carries it, into a
-  thread (§9.2), and removes the markers in its response commit, so the
-  exchange survives as a citable primary source while normative text
-  stays clean. The diff pair — comment commit, response commit — is the
-  underlying record; the thread is where it is read.
+- The operator's channel is the tree, reached two ways: local file
+  edits, committed and pushed, or a session exchange with an agent,
+  which enters the record when the session is exported as a thread
+  (§9.2). Platform comments are neither. Agents read rulings from the
+  tree. One file-edit form is first-class: **in-document review** —
+  operator comments written `->[…]` into an authored file and
+  committed. The comment commit is an operator turn. The responding
+  agent transcribes every comment — shown in situ, inside a verbatim
+  excerpt of the text it responds to, with its location and the commit
+  that carries it — into a thread (§9.2), and removes the markers in
+  its response commit, so the exchange survives as a citable primary
+  source while normative text stays clean. The diff pair — comment
+  commit, response commit — is the underlying record; the thread is
+  where it is read.
 - GitHub is transport and merge mechanics. A pull request is a diff
   boundary and a gate; its body is a one-line pointer; its comment
   surface is unused. If the platform changes, the record does not.
@@ -298,14 +301,17 @@ fact; a superseding run is a new file.
 
 ### 9.2 Threads
 
-`threads/` holds verbatim session exports — primary sources, like
-goldens: human and agent turns verbatim, reasoning and tool traffic
-omitted, redaction applied before publication. Threads are never
-derived or summarized in place; every view over them (indexes,
-matter-to-thread maps) is derived from frontmatter. An in-document
-review exchange (§8) is exported the same way: comments verbatim,
-locations and commits cited. Which sessions are exported, and by what
-mechanism, is
+Threads are the record of §8's session channel and of in-document
+review exchanges: §8 says when a thread comes to exist, this section
+says what one is. `threads/` holds verbatim session exports — primary
+sources, like goldens: human and agent turns verbatim, reasoning and
+tool traffic omitted, redaction applied before publication. Threads
+are never derived or summarized in place; every view over them
+(indexes, matter-to-thread maps) is derived from frontmatter. An
+in-document review exchange is exported with each comment shown in
+situ, inside a verbatim excerpt of the text it responds to, locations
+and commits cited. Which sessions are exported, and by what mechanism,
+is
 [m0011](../matters/m0011-thread-persistence.md).
 
 ### 9.3 Claims DAGs
@@ -437,131 +443,41 @@ by installing it into others (§1). It is self-hosting: changes to this
 specification and to the framework's tooling are matters in this
 repository's own collection, put through this process.
 
-This section originally deferred extraction behind a tripwire — "a
-framework with one consumer teaches its boundary by being used, not by
-being split," with extraction on a second consumer's adoption. The
-operator ruled the tripwire fired in the
-[2026-08-25 review](../threads/2026-08-25-doctrine-operator-review.md)
-(review c14, c15: "i feel we are already past this point and am
-ratifying the abstraction now"; "triggered - i have 5 which can adopt
-it"), and named the framework in the same exchange. The split — this
-repository renamed to the framework; a new `beatcode-dev` created as
-its first strict consumer, carrying the beatcode-facing matters — is
-[m0012](../matters/m0012-formic-matters-split.md). Each installation is
-a separate collection with its own ID sequence (§1); how a repository
-installs the framework is m0012's design to propose and its successors'
-to refine. Extraction stays mechanical because the collection is flat
-and frontmattered.
+Each installation is a separate collection with its own ID sequence
+(§1). Moving matters between collections stays mechanical because the
+collection is flat and frontmattered.
 
 ## 14 · The bootstrap
 
-Every installation begins with the one change that could not itself
-have been a matter in that repository: the framework landing. The
-bootstrap exception (§1) covers exactly that — the installing commits,
-recorded in the installation's first matter, with everything after
-entering through the process. Branch-name and PR-title matter prefixes
-(§8) start with the first matter after the bootstrap; the bootstrap's
-own branches predate the collection they create.
+A repository adopts the framework by committing it: the specification,
+the directory conventions, and the tooling. That first commit cannot go
+through the process, because the process is not in the repository until
+it lands — this is the bootstrap exception §1 names. The installing
+commits are recorded in the installation's first matter; everything
+after them enters through the process. Branch-name and PR-title matter
+prefixes (§8) start with the first matter after the bootstrap.
 
-This repository's bootstrap is the founding instance, and larger than
-an installation's: this document and the initial collection
-(m0001–m0011) were written in one motion, before ratification — the one
-permitted out-of-order execution, visible and pinned: authored against
-the operator rulings in the threads named in the header, with m0001
-carrying the state, and ratification (§6) recording the exact commit
-and hash the operator read. m0001 alone moves `ratified → executed` on
-it (§3).
+This repository's own bootstrap is recorded on
+[m0001](../matters/m0001-matter-system.md): this document and the
+initial collection were written in one motion, before ratification,
+with m0001 carrying the state and ratification (§6) recording the exact
+commit and hash the operator read; m0001 alone moves
+`ratified → executed` on it (§3). The first attempt was audited,
+adjudicated, and archived unmerged (PR #1); its central failure — a
+document ratified without being read, then misdescribed to the
+operator — is why §6 requires ratification over the exact text and why
+m0007 exists.
 
-The first attempt at this bootstrap was audited, adjudicated, and
-archived unmerged (PR #1). Its central failure — a document ratified
-without being read, then misdescribed to the operator — is why §6
-requires ratification over the exact text and why m0007 exists.
-
-## 15 · Open, and adopted by default
+## 15 · Open
 
 Design that is deliberately deferred lives in the matters that own it:
 review structure (m0006), drift tooling (m0007), the validator and its
 language (m0008), risk tiers (m0010), thread policy scope and mechanism
-(m0011), the split and installation mechanics (m0012). Anything
-appearing in neither this document nor a matter is not part of the
-framework.
+(m0011), the split and installation mechanics
+([m0012](../matters/m0012-formic-matters-split.md)). Anything appearing
+in neither this document nor a matter is not part of the framework.
 
-Choices in this document and the collection that are the authoring
-agents', adopted without an operator ruling, are listed here, grouped
-by how each came to be unruled, so that ratifying this document
-confirms them deliberately rather than silently.
-
-**Presented to the operator before authoring, left unruled — then
-ratified in the
-[2026-08-25 review](../threads/2026-08-25-doctrine-operator-review.md)**
-(review c17, "others are ratified"): the ratification recording
-mechanism of §6; the extraction tripwire's specific conditions
-(§13 — since superseded by the same review's ruling that it fired); the
-extension of "views are derived" to threads (§9.2); bundle-first
-sequencing — m0002–m0005 filed `proposed`, ratified after this
-document. Recorded here as ruled, no longer pending. One choice from
-this group remains listed, because the review's ruling on it was to
-dissolve its premise rather than confirm it: the single interspersed ID
-sequence was framed over two `target`s, and `target` is removed (review
-c13, c16); what §1 now states — one collection and one sequence per
-installation — and the ID restart at m0001 with the archive as a
-separate closed collection (§12) still await the ratification read.
-
-**Written later, by an author answering a vetting finding.** These did
-not exist when the operator last saw this document as a whole, and no
-ruling covers them; "apply" was an instruction to address findings, not
-a decision on the text each fix produced. Plainspeak breakdowns of each,
-with implications, are in the operator-review response on
-[m0001](../matters/m0001-matter-system.md), as the review requested
-(review c18).
-
-- the ratified-region definition of §6 (body minus frontmatter and
-  record sections) — round 1, answering
-  [m0007](../matters/m0007-ratification-content-hash.md). What the
-  operator saw before saying "apply" was the narrower "body-only hash"
-  form; what landed also excludes `## Vetting` and `## Execution`;
-- §3's owners for the terminal transitions, and the `ratified →
-  proposed` re-open that clears the ratification fields into the record
-  — round 1;
-- §5's earlier-ratification precedence for conflicts discovered after
-  the fact — round 1;
-- §11's retroactive path: its original shape, offered under the
-  operator's "suggest matter corrections" and never separately agreed,
-  and its round 1 redesign to `proposed → executed` on acknowledgment;
-- §7's transition-time `depends_on` gate and its §11 exemption —
-  round 2;
-- §6's hashed region for the retroactive path (`## Retroactive` and
-  `## Execution` at the acknowledged commit) — round 2.
-
-**Written in the operator-review response, answering the review's own
-questions and findings.** The operator asked the questions; the text
-answering each is the author's, and the ratification read confirms it:
-
-- §3's in-flight/queued derivation from `branch` presence, answering
-  review c08;
-- §3.1's deviation rule — what re-opens, what the record may carry —
-  answering review c09;
-- §4's definition of "file" and the ratification-readiness restatement,
-  answering review c10 and c11;
-- §7's gate exit (supersession re-points; rejection and withdrawal
-  block until amended), answering round 3's X7;
-- §8's in-document review convention, answering review c12;
-- §11's completeness-before-acknowledgment rule, answering round 3's
-  X8;
-- §12's `## Retroactive` marker note (with X7's self-declaration
-  containment) and the authored-files link-check scope, answering
-  round 3's X7 and X12;
-- §14's generalization of the bootstrap to installations, per the
-  review's clarifying ruling, and its branch-prefix carve-out,
-  answering round 3's X13.
-
-**Put to the operator and expressly not ruled on.**
-
-- §4's "ratification-readiness is a checklist on the matter, not a
-  state", and the absence of a `draft` state. This was the adjudication
-  session's R1; the operator declined to settle it — "do i even need to
-  pick?" — and the answer given was that R1's substance "gets settled by
-  whatever state machine the fresh author proposes and you ratify as a
-  whole document". This is that ratification; the plainspeak breakdown
-  the review asked for (review c19) is in the operator-review response
-  on [m0001](../matters/m0001-matter-system.md).
+Choices adopted by an authoring agent without an operator ruling are
+never confirmed silently: they are recorded on a matter and confirmed
+by ratifying it. The bootstrap's record is
+[m0013](../matters/m0013-bootstrap-defaults-record.md).

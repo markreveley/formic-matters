@@ -66,8 +66,9 @@ and the
 **Ruled in** cites the turn, so every row is checkable here. Review
 turns are cited by label rather than line — `review cNN` for the
 in-document comments, `review aN` for the answers to the prompted
-questions, `review i1` for the naming interjection — because that
-export is brought current as exchanges land and labels survive appends.
+questions, `review i1` for the naming interjection, `review rN` for
+the 2026-08-26 response-review points — because that export is brought
+current as exchanges land and labels survive appends.
 Two review rulings are deliberately not rows: the answers on turn scope
 (a3) and push target (a4) are session mechanics that land no text; they
 are recorded in the thread and in the operator-review response below.
@@ -124,6 +125,14 @@ ratification.
 | in-document operator↔agent comment exchanges must be accounted for; commit-pointer and duplicate-at-state offered as options | doctrine §8, §9.2; [the exchange's own thread](../threads/2026-08-25-doctrine-operator-review.md) is the first exercise | [review c12](../threads/2026-08-25-doctrine-operator-review.md) |
 | §15's presented-before-authoring choices: "others are ratified" | doctrine §15, first group | [review c17](../threads/2026-08-25-doctrine-operator-review.md) |
 | plainspeak breakdowns, with implications, required on the later-written choices and the R1 item before ruling | the operator-review response below | [review c18](../threads/2026-08-25-doctrine-operator-review.md), [review c19](../threads/2026-08-25-doctrine-operator-review.md) |
+| the operator's channel is file edits **or** a session exchange exported as a thread; §8 and §9.2 read as confusingly separated — consolidate | doctrine §8, §9.2 | [review r1](../threads/2026-08-25-doctrine-operator-review.md) |
+| historical narration does not belong in the specification — git history and the matters carry it | doctrine §13 slimmed; §1's interim clause trimmed under the same principle | [review r2](../threads/2026-08-25-doctrine-operator-review.md) |
+| state the bootstrap plainly, not abstractly | doctrine §14 | [review r3](../threads/2026-08-25-doctrine-operator-review.md) |
+| the adopted-by-default record moves out of the specification, persisted as a matter (meta-matter chosen of the two offered homes) | doctrine §15 slimmed; [m0013](m0013-bootstrap-defaults-record.md) | [review r4](../threads/2026-08-25-doctrine-operator-review.md) |
+| the specification ratified in principle, four areas outstanding; the formal §6 act follows over the revised text at a named commit | this revision | [review r5](../threads/2026-08-25-doctrine-operator-review.md) |
+| the response record and the breakdown items (§15's groups B and D) confirmed on reading | [m0013](m0013-bootstrap-defaults-record.md)'s confirmation trail | [review r6](../threads/2026-08-25-doctrine-operator-review.md) |
+| a consumer matter cannot depend on a framework matter, or any external matter — may change, ruled for simplicity now | doctrine §7; [m0012](m0012-formic-matters-split.md) | [review r7b](../threads/2026-08-25-doctrine-operator-review.md) |
+| the exchange record must carry the text each comment responds to, or it cannot be audited | the thread's in-situ excerpt format | [review r8](../threads/2026-08-25-doctrine-operator-review.md) |
 
 ## Scope held out deliberately
 
@@ -157,7 +166,7 @@ it.
 
 The tree was written together with this matter (doctrine §14) and has
 grown with its vetting. Everything in it is claimed here: the
-specification, matters m0001–m0012, the derived index, the interim
+specification, matters m0001–m0013, the derived index, the interim
 index generator, the repository README, the three thread exports in
 `threads/` (the design session imported verbatim from the archive
 branch in round 2's response, the adjudication session exported by its
@@ -1694,3 +1703,100 @@ should start exactly there: fidelity of the new rows against the
 exchange thread, and the rewrite against the rulings — the same check
 round 3 ran on the round 2 response, now possible against a primary
 source that includes the operator's own answers.
+
+### Operator review, round 2 — 2026-08-26 — in-session
+
+- **Reviewer:** the operator, over the response — through the session
+  channel their own r1 rules into §8. The turn is appended verbatim to
+  [the exchange thread](../threads/2026-08-25-doctrine-operator-review.md)
+  with a labeling apparatus, r1–r8, and the two intervening turns (the
+  line-pinning question and the reading list its numbered replies refer
+  to) are appended with it.
+- **What it carries:** four findings on the specification — the
+  operator channel should be file edits *or* a session exchange, with
+  §8/§9.2 consolidated (r1); historical narration removed (r2); the
+  bootstrap stated plainly (r3); §15 relocated out of the document
+  (r4) — a partial ratification ("everything else in doctrine/matters
+  is ratified", r5), approval of the response record and breakdown
+  items (r6), one question and one ruling on m0012 (r7a, r7b), and a
+  direction on the exchange record itself: comments must carry the text
+  they respond to (r8).
+
+### Operator review round 2 response — 2026-08-26 — claude-code/2026-08-26 (author)
+
+The same author instance as the previous two entries. Every point
+r1–r8 is answered; each disposition names its text.
+
+- **r1 — applied in §8 and §9.2.** The operator's channel is now "the
+  tree, reached two ways": committed file edits, or a session exchange
+  that enters the record as a thread export. The two sections are
+  stitched explicitly — §8 says when a thread comes to exist, §9.2 says
+  what one is — rather than renumbered into one: every matter and
+  vetting entry in the collection cites "§9.2" and "§8" by number, and
+  renumbering would silently re-point all of them.
+- **r2 — applied in §13, and extended to §1.** The tripwire history is
+  gone from §13, which now states topology in two short paragraphs; the
+  ledger and m0012 carry the history. The same principle was applied to
+  one site the operator did not name: §1's "until the split executes
+  (m0012), also beatcode and its development process" clause — interim
+  instance state — is removed. Flagged here because it is an extension
+  of the ruling, not a directed edit.
+- **r3 — applied in §14.** The bootstrap is stated plainly: a
+  repository adopts the framework by committing it; that first commit
+  cannot go through a process that is not in the repository yet; it is
+  recorded in the installation's first matter. This repository's own
+  record keeps one paragraph, factual.
+- **r4 — applied; the meta-matter is chosen.**
+  [m0013](m0013-bootstrap-defaults-record.md) now carries the whole
+  adopted-by-default record with a confirmation trail per item (c17,
+  r5, r6 cited row by row), plus a new group E: the text this very
+  response wrote, recorded as unconfirmed immediately. §15 shrinks to
+  the standing rule — unruled choices are recorded on a matter and
+  confirmed by ratifying it — and the deferred-design pointers. The
+  meta-matter was chosen over `dev-history.md` because a matter is
+  already the system's persistence unit and a confirmation record needs
+  ratification semantics; a loose file would be a new un-mattered
+  artifact class.
+- **r5 and r6 — recorded, with the interpretation stated rather than
+  assumed.** r5 is read as ratification in principle of everything
+  outside the four named areas; r6 as approval of the response record
+  and confirmation of the breakdown items (§15's groups B and D, now
+  m0013's). Neither is treated as the formal §6 act: that act is over
+  the whole document at a commit the operator names, and cannot precede
+  the four changes this response makes. No `verified`,
+  `ratified_commit`, or `ratified_sha256` is written. When the operator
+  reads the revised text and states ratification naming the commit,
+  the recording follows §6 exactly.
+- **r7a — answered in m0012:** verbatim copy, pinned — the consumer
+  carries the specification copied at a ratified commit beside an
+  installation record (repo, commit SHA, sha256), verifiable with the
+  README's three commands; upgrades are `spec` matters in the
+  consumer's own collection; copy over submodule or release because the
+  record must read with no tooling and the pin must be immutable.
+- **r7b — applied in §7 and m0012.** The spec states the rule —
+  `depends_on` names matters in the installation's own collection only
+  — and m0012's plan now drops m0009's `depends_on: [m0008]` at the
+  move, restating it as a prose precondition in m0009's body. The
+  earlier cross-collection proposal is withdrawn.
+- **r8 — applied to the exchange thread.** Every comment block is
+  rebuilt as an in-situ excerpt: verbatim lines of the file at
+  `9c1d295` over a stated range, with the operator's comment line
+  inside them — each comment now carries exactly the text it responds
+  to. The comment lines themselves are unchanged, the format amendment
+  is declared in the thread's header with r8 as its authorization, and
+  every excerpt is verified byte-exact against `9c1d295` in
+  [runs/2026-08-26-review-round-2-response.md](../runs/2026-08-26-review-round-2-response.md).
+  §8 and §9.2 now specify the in-situ form as the convention.
+- **Not done, deliberately:** no ratification pin is computed (§6 — the
+  text moved under this response); the repository rename and the new
+  beatcode-dev remain operator/admin acts staged behind m0012; and the
+  a3/a4 session-mechanics answers remain thread-recorded rather than
+  ledger rows, as before.
+
+**Independence, unchanged in kind.** This response again wrote the text
+implementing the operator's rulings — §8, §9.2, §13, §14, §15, §7, §1,
+m0012's mechanism, m0013 — and m0013's group E lists every passage so
+the next read confirms them deliberately. The next round's fidelity
+check has the full exchange in one thread: nineteen comments in situ,
+four prompted answers, one interjection, and the response review, all
+labeled.

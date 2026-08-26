@@ -8,21 +8,24 @@ follow are the session that answered it. The underlying primary record
 is the diff pair — the comment commit and the response commits — in git
 history; this file is where that exchange is read.
 
-The nineteen comments are transcribed byte-exact from
-`doctrine/matters.md` as it stands at `9c1d295`: for a comment written
-inline, the whole source line is reproduced; for a comment on its own
-line, that line is reproduced. Each is labeled `cNN` with the section
-and line it sits at; the answers to the prompted questions are labeled
-`a1`–`a4` and the mid-turn interjection `i1`. These labels — not line
+The nineteen comments are shown **in situ**: each block is a verbatim
+excerpt of `doctrine/matters.md` as it stands at `9c1d295`, covering
+the stated line range, with the operator's comment line inside it — so
+every comment carries the text it responds to. This format was directed
+by the operator (r8 below) and replaced the original single-line
+blocks on 2026-08-26; the comment lines themselves are unchanged.
+Excerpts use four-backtick fences because one excerpt contains a
+three-backtick line. Each comment is labeled `cNN`; the answers to the
+prompted questions are labeled `a1`–`a4`, the naming interjection `i1`,
+and the response-review points `r1`–`r8`. These labels — not line
 numbers into this file — are how the rest of the tree cites this
 thread, because this export is brought current as exchanges land and
-labels survive appends. Transcription fidelity is mechanically
-verified in
-[runs/2026-08-26-operator-review-response.md](../runs/2026-08-26-operator-review-response.md).
+labels survive appends. Excerpt fidelity is mechanically verified in
+[runs/2026-08-26-review-round-2-response.md](../runs/2026-08-26-review-round-2-response.md).
 
 Session turns are reproduced exactly as written; reasoning traces and
 tool traffic are omitted. Prompted-question answers are kept as human
-turns and the mid-turn interjection is kept and labeled, per the
+turns and mid-turn interjections are kept and labeled, per the
 persistence convention (m0011). The redaction policy (absolute local
 paths to `~`, project slugs to `<project>`) was applied on the way out;
 no such strings occurred, so nothing was redacted.
@@ -39,140 +42,217 @@ machine-parseable.
 
 ## ▸ Mark — commit `9c1d295`, 2026-08-25T16:37:51-07:00
 
-Nineteen comments written into `doctrine/matters.md`, transcribed in
-file order. Line numbers are positions in that file at `9c1d295`.
+Nineteen comments written into `doctrine/matters.md`, shown in situ.
+Line numbers are positions in that file at `9c1d295`.
 
-**c01 · §1, line 32** — inline:
+**c01 · §1, lines 32–33 — comment at line 32, inline:**
 
-```
+````
 A matter is one proposed change ->[to a system], persisted as one markdown file in
-```
+`matters/`, vetted before the change is made.
+````
 
-**c02 · §1, line 36** — own line, following "There are two targets,
-named by the `target` field:". The comment ends mid-sentence, bracket
-unclosed, trailing space preserved:
+**c02 · §1, lines 35–41 — comment at line 36, own line; ends mid-sentence, bracket unclosed, trailing space preserved:**
 
-```
+````
+There are two targets, named by the `target` field:
 -> [my sense is that we already from init should think of this as a framework that should be consumed. i have 10 other repos i could drop it into. i would like to ratify this change now. as a result this document should strictly be a formal spec for the framework, which I would like to name "Formic Ascent". this repo will be renamed to that, and a new repo beatcode-dev will be created to consume the framework and contain the relevant matters, for both beatcode and beatcode-dev itself. however, since beatcode-dev should be a strict consumer of Formic ascent, 
-```
 
-**c03 · §1, line 42** — own line, following the `beatcode-dev` target
-bullet:
+- `beatcode` — the instrument.
+- `beatcode-dev` — this repository: the doctrine, the tooling, the
+  process itself. The system is self-hosting: its own evolution goes
+  through it.
+````
 
-```
+**c03 · §1, lines 38–42 — comment at line 42, own line:**
+
+````
+- `beatcode` — the instrument.
+- `beatcode-dev` — this repository: the doctrine, the tooling, the
+  process itself. The system is self-hosting: its own evolution goes
+  through it.
 -> [per above, redacted]
-```
+````
 
-**c04 · §1, line 44** — inline:
+**c04 · §1, lines 44–46 — comment at line 44, inline:**
 
-```
+````
 Nothing lands in either ->[any] target that did not begin as a matter, with two
-```
-
-**c05 · §1, line 45** — inline:
-
-```
 defined exceptions: ->[redacted] the bootstrap (§14) and the retroactive path (§11).
-```
+The proposal is the unit of work, not the commit.
+````
 
-**c06 · §1, line 47** — own line, following "The proposal is the unit
-of work, not the commit.":
+**c05 · §1, lines 44–46 — comment at line 45, inline:**
 
-```
+````
+Nothing lands in either ->[any] target that did not begin as a matter, with two
+defined exceptions: ->[redacted] the bootstrap (§14) and the retroactive path (§11).
+The proposal is the unit of work, not the commit.
+````
+
+**c06 · §1, lines 46–47 — comment at line 47, own line:**
+
+````
+The proposal is the unit of work, not the commit.
 -> [should it be that the MATTER is the unit of work, not the 'proposal'? if not, where is proposal defined?]
-```
+````
 
-**c07 · §1, line 49** — own line, preceding the one-collection /
-one-ID-sequence paragraph:
+**c07 · §1, lines 49–53 — comment at line 49, own line, preceding the paragraph:**
 
-```
+````
 -> [edit below to conform]
-```
+There is one collection and one ID sequence; matters for both targets
+are interspersed. "All beatcode matters" is a query over `target`,
+never a directory. IDs deliberately encode nothing — not type, not
+target — so reclassification never moves an ID.
+````
 
-**c08 · §3, line 127** — own line, following the `branch` field
-paragraph:
+**c08 · §3, lines 124–127 — comment at line 127, own line:**
 
-```
+````
+A `branch` field is present exactly while a dev agent is working the
+matter. Its presence is what distinguishes in-flight from queued, and
+staleness checks key off it.
 ->[are in-flight and queued explicit states for a matter? if so that should be included in the state enum. or - should this be an additional property, such as 'dev-state'?]
-```
+````
 
-**c09 · §3.1, line 135** — own line, following the execution-record
-paragraph:
+**c09 · §3.1, lines 129–135 — comment at line 135, own line:**
 
-```
+````
+### 3.1 The execution record
+
+Entering `executed` requires a final `## Execution` section on the
+matter: what actually landed (commits, PR), deviations from the
+ratified plan, date, actor. A matter ends as plan and reality side by
+side; the next reader learns where the plan was wrong.
 -->[technically, shouldn't 'deviations' from the plan actually land as proposed changes to the plan which need to be ratified before proceeding? or does this invite an endless loop?]
-```
+````
 
-**c10 · §4, line 140** — own line, mid-paragraph after "The required
-sections in §2 gate **ratification**, not filing. A matter":
+**c10 · §4, lines 139–141 — comment at line 140, own line, mid-sentence:**
 
-```
+````
+The required sections in §2 gate **ratification**, not filing. A matter
 -->[i believe you are using 'filing' in the way you have also used 'proposed' - correct me if wrong. if wrong 'filing' needs to be specified]
-```
+may be filed as a single sentence: a defect can be reported before it
+````
 
-**c11 · §4, line 147** — own line, following "Completeness is
-therefore a checklist on the matter, not a state.":
+**c11 · §4, lines 146–147 — comment at line 147, own line:**
 
-```
+````
+Completeness is therefore a checklist on the matter, not a state.
 -->[is exectuted not then the completed state?]
-```
+````
 
-**c12 · §9.2, line 261** — own line, splitting the sentence "Which
-sessions are exported, and by what mechanism, is [m0011]":
+**c12 · §9.2, lines 255–262 — comment at line 261, own line, mid-sentence:**
 
-```
+````
+`threads/` holds verbatim session exports — primary sources, like
+goldens: human and agent turns verbatim, reasoning and tool traffic
+omitted, redaction applied before publication. Threads are never
+derived or summarized in place; every view over them (indexes,
+matter-to-thread maps) is derived from frontmatter. Which sessions are
+exported, and by what mechanism, is
 ->[need to account for the scenario like this where operator and agent interact within a document via comments - options i see are to either make a note to check a document with a pointer to the git commit, or persist a duplicate copy at the state the commit was made]
+[m0011](../matters/m0011-thread-persistence.md).
+````
+
+**c13 · §12, lines 361–365 — comment at line 365, own line, after the schema block:**
+
+````
+ratified_commit: <sha>                  # §6; written at ratification
+ratified_sha256: <hash>                 # §6; whole-file, agent-computed
 ```
 
-**c13 · §12, line 365** — own line, following the frontmatter schema
-block:
-
-```
 ->[i would propose, per earlier, that 'target' would be unecessary for the framework spec. the target will be whatever client repo has installed the framework]
-```
+````
 
-**c14 · §13, line 376** — own line, following "a framework with one
-consumer teaches its boundary by being used, not by being split.":
+**c14 · §13, lines 373–376 — comment at line 376, own line:**
 
-```
+````
+One repository governs itself and beatcode (§1). The doctrine is
+latently general, and deliberately not yet extracted: a framework with
+one consumer teaches its boundary by being used, not by being split.
 ->[again, i feel we are already past this point and am ratifying the abstraction now]
-```
+````
 
-**c15 · §13, line 380** — own line, splitting the tripwire sentence
-after "a second consumer repository actually adopts it; the tooling":
+**c15 · §13, lines 378–381 — comment at line 380, own line, mid-sentence:**
 
-```
+````
+The process moves to its own framework repository when any of these
+fires: a second consumer repository actually adopts it; the tooling
 ->[triggered - i have 5 which can adopt it]
-```
+matures into a released binary wanting its own cadence; doctrine
+````
 
-**c16 · §15, line 420** — indented, on the
-interspersed-ID-sequence-and-restart bullet of the
-presented-before-authoring group:
+**c16 · §15, lines 417–420 — comment at line 420, indented, on the bullet:**
 
-```
+````
+- the single interspersed ID sequence over both targets (§1), and the
+  ID restart at m0001 with the archive as a separate closed collection
+  (§12);
   ->[propose the removal of target making this moot]
-```
+````
 
-**c17 · §15, line 426** — own line, following the last bullet of the
-presented-before-authoring group:
+**c17 · §15, lines 413–426 — comment at line 426, own line, after the group:**
 
-```
+````
+**Presented to the operator before authoring, and left unruled.**
+
+- the ratification recording mechanism of §6 — operator reads and
+  states, agent computes and records the hash;
+- the single interspersed ID sequence over both targets (§1), and the
+  ID restart at m0001 with the archive as a separate closed collection
+  (§12);
+  ->[propose the removal of target making this moot]
+- the extraction tripwire's specific conditions (§13);
+- the extension of "views are derived" to threads — maps and indexes
+  over threads derived from frontmatter (§9.2);
+- bundle-first sequencing: m0002–m0005 filed `proposed`, ratified after
+  this document (implicit in the collection's state).
 ->[others are ratified]
-```
+````
 
-**c18 · §15, line 450** — indented, following the last bullet of the
-written-later-by-an-author group:
+**c18 · §15, lines 428–450 — comment at line 450, indented, after the group:**
 
-```
+````
+**Written later, by an author answering a vetting finding.** These did
+not exist when the operator last saw this document as a whole, and no
+ruling covers them; "apply" was an instruction to address findings, not
+a decision on the text each fix produced.
+
+- the ratified-region definition of §6 (body minus frontmatter and
+  record sections) — round 1, answering
+  [m0007](../matters/m0007-ratification-content-hash.md). What the
+  operator saw before saying "apply" was the narrower "body-only hash"
+  form; what landed also excludes `## Vetting` and `## Execution`;
+- §3's owners for the terminal transitions, and the `ratified →
+  proposed` re-open that clears the ratification fields into the record
+  — round 1;
+- §5's earlier-ratification precedence for conflicts discovered after
+  the fact — round 1;
+- §11's retroactive path: its original shape, offered under the
+  operator's "suggest matter corrections" and never separately agreed,
+  and its round 1 redesign to `proposed → executed` on acknowledgment;
+- §7's transition-time `depends_on` gate and its §11 exemption —
+  round 2;
+- §6's hashed region for the retroactive path (`## Retroactive` and
+  `## Execution` at the acknowledged commit) — round 2.
   ->[i will need plainspeak breakdowns of what these are and what the implications of each are]
-```
+````
 
-**c19 · §15, line 460** — indented, following the
-expressly-not-ruled-on item (§4 completeness / R1):
+**c19 · §15, lines 452–460 — comment at line 460, indented, after the item:**
 
-```
+````
+**Put to the operator and expressly not ruled on.**
+
+- §4's "completeness is a checklist on the matter, not a state", and
+  the absence of a `draft` state. This was the adjudication session's
+  R1; the operator declined to settle it — "do i even need to pick?" —
+  and the answer given was that R1's substance "gets settled by whatever
+  state machine the fresh author proposes and you ratify as a whole
+  document". This is that ratification.
   ->[need clarity here too]
-```
+````
 
 ---
 
@@ -303,3 +383,118 @@ permission to push to a branch other than my designated one.
 ## ▸ Mark — mid-turn interjection (i1)
 
 Also - set name of new framework to "formic matters"
+
+---
+
+## ▸ Mark — 2026-08-26
+
+re: "threads/2026-08-25-doctrine-operator-review.md"
+my statements are there listed in the context of line numbers. is it pinned to a source ref of the original document or something, given these will of course change?
+
+ok, so what documents should i read?
+
+---
+
+## ▸ Claude
+
+**On the line numbers — yes, they're pinned.** Every line number in the
+thread is explicitly a position in `doctrine/matters.md` **at commit
+`9c1d295`** — your review commit, which is immutable. The turn heading
+names the commit ("▸ Mark — commit `9c1d295`") and the header states
+"Line numbers are positions in that file at `9c1d295`." The rewrite
+moving every line afterwards doesn't touch those citations, because
+they don't point at the working file; anyone can recover the exact text
+forever with `git show 9c1d295:doctrine/matters.md | sed -n '36p'` —
+and the run record already did exactly that mechanically, verifying all
+19 transcribed lines byte-identical to that commit. One more layer of
+insulation: nothing else in the tree cites your comments by line at all
+— the ledger and vetting entries cite the stable labels (`review c02`,
+`a1`, `i1`), so even the thread's own internal layout can change
+without breaking a citation. This is §9.4's immutable-reference rule
+doing its job.
+
+**What to read, in order:**
+
+1. **`doctrine/matters.md`** — the Formic Matters specification, whole
+   document (~570 lines). This is the thing you'd ratify, and §6 makes
+   ratification an act over the exact text, so this one is
+   non-optional. If you want to prioritize within it: §1, §3.1, §4, §7,
+   §8, §13, §14, and §15 changed the most; §2, §5, §6, §9–§11 are
+   lightly touched.
+2. **m0001's tail — the last three vetting entries** (from
+   "### Operator review — 2026-08-25" to the end of
+   `matters/m0001-matter-system.md`, ~370 lines). This carries the
+   per-comment disposition of everything you wrote, and — the part you
+   said you need before ruling — the **plainspeak breakdowns** of §15's
+   six later-written choices and the R1/draft-state item, each with its
+   implications and trades.
+3. **`matters/m0012-formic-matters-split.md`** (~100 lines) — the split
+   plan: rename, new beatcode-dev, which matters move. It deliberately
+   leaves two questions open for you/vetting: what "installing the
+   framework" concretely is, and how cross-collection `depends_on`
+   works (m0009 will depend on m0008 across the split).
+4. **Skim, to check me:** the twelve new rows at the end of m0001's
+   rulings ledger — they're my transcription of your rulings into the
+   record, and you're the one person who can spot-check them from
+   memory. The thread itself
+   (`threads/2026-08-25-doctrine-operator-review.md`) is your own words
+   plus the four Q&A answers; worth a glance to confirm the record is
+   faithful.
+
+You can skip m0002–m0011 (only frontmatter conformed — `target`
+dropped, system tag added — plus appended response entries) and the run
+record (mechanical verification).
+
+After reading, the flow gives you two moves: mark it up again — `->[]`
+comments are now a first-class channel per §8, exactly as before — or
+ratify m0001 using the README's procedure (`git pull`,
+`git rev-parse HEAD`, read, then state ratification naming that commit;
+the pin is recorded after your act, never before). m0012 waits behind
+m0001's ratification by its own `depends_on`.
+
+---
+
+## ▸ Mark — response review, 2026-08-26
+
+"The operator's channel is local file edits, committed and pushed — not platform comments" - i would recommend it be this OR thread based (such as now). could this and 9.2 seem confusingly spaced apart? "8 where discourse lives" sounds like its the only place. recommend consolidating
+
+"This section originally deferred extraction behind a tripwire — "a framework with one consumer teaches its boundary by being used, not by being split," with extraction on a second consumer's adoption. The operator ruled the tripwire fired in the 2026-08-25 review (review c14, c15: "i feel we are already past this point and am ratifying the abstraction now"; "triggered - i have 5 which can adopt it"), and named the framework in the same exchange. The split — this repository renamed to the framework; a new beatcode-dev created as its first strict consumer, carrying the beatcode-facing matters — is m0012. " - i would prefer this be removed - historical, which is in the git history, and unecessary to state in the doctrine. unecessary and polluting context
+
+"Every installation begins with the one change that could not itself have been a matter in that repository: the framework landing. " - unecessarily abstract and dramatic. just state clearly what is happening
+
+"15 · Open, and adopted by default" - this entire section - should this live in the primary doctrine document forever? feels like this is more a historical thing already persisted in the git history. if we DO wish to explicitly record this kind of thing, i would recommend an append only "dev-history.md" or something somewhere in the repo, NOT in the doctrine. or - within a meta-matter that covers historical decisions during bootstrap, and is persisted as a matter
+
+everything else in doctrine/matters is ratified, though the above points still outstanding and need to be discussed
+
+2 - m0001 ratified
+
+3 - 
+a. what do you recommend for installation?
+b. a consumer matter CANNOT depend on a framework matter, or any external matter. this may change but for simplicity lets say this for now
+
+4 -
+the problem is, without context, its very difficult for me to audit. i would suggest including the quotes that i was responding to
+
+**Labeling apparatus** — the points above, in order, cited as:
+
+- **r1** — §8's operator channel: file edits "OR thread based (such as
+  now)"; §8 and §9.2 "confusingly spaced apart", "recommend
+  consolidating"
+- **r2** — §13's historical paragraph: "i would prefer this be
+  removed - historical … unecessary and polluting context"
+- **r3** — §14's opening sentence: "unecessarily abstract and dramatic.
+  just state clearly what is happening"
+- **r4** — §15 as a whole: relocate out of the doctrine; "an append
+  only 'dev-history.md' … or - within a meta-matter … persisted as a
+  matter"
+- **r5** — "everything else in doctrine/matters is ratified, though the
+  above points still outstanding and need to be discussed"
+- **r6** — "2 - m0001 ratified" (item 2 of the reading list above: the
+  vetting-record tail and the plainspeak breakdowns)
+- **r7a** — "what do you recommend for installation?"
+- **r7b** — "a consumer matter CANNOT depend on a framework matter, or
+  any external matter. this may change but for simplicity lets say this
+  for now"
+- **r8** — the ledger/thread audit: "without context, its very
+  difficult for me to audit. i would suggest including the quotes that
+  i was responding to"
