@@ -203,7 +203,7 @@ claude-code/2026-08-26, in
 ### Round 1 — 2026-08-25
 
 - **Reviewer:** claude-code/2026-08-25, fresh instance. Inputs: this
-  branch's tree at `44d6be0` and `ob6to8/beatcode` (`fa17627`, seed
+  branch's tree at `44d6be0` and `markreveley/beatcode` (`fa17627`, seed
   `91188a5`, `b2042746`); the archived first attempt not read, per
   operator instruction.
 - **Checks run:** fidelity (rulings ledger ↔
@@ -438,7 +438,7 @@ operator instruction ("apply", recorded in
 
 - **Reviewer:** claude-code/2026-08-25, fresh instance. Inputs: this
   branch at `981b2a6`, the diff `7022aad..981b2a6`, and
-  `ob6to8/beatcode` at `fa17627` (seed `91188a5`); the archived first
+  `markreveley/beatcode` at `fa17627` (seed `91188a5`); the archived first
   attempt not read, per operator instruction.
 - **Scope:** one question — were round 1's findings actually
   addressed, or only discussed? Each V1–V9 disposition and each
@@ -977,7 +977,7 @@ whole point of the import.
   branch at `7357244`, the diff `25d2e16..7357244`, both threads, and —
   for the first time in this collection's review history — the archived
   first attempt: PR #1, the branch `m0001-matter-system` at `c11956d`,
-  and its matters. `ob6to8/beatcode` was not cloned; nothing in the diff
+  and its matters. `markreveley/beatcode` was not cloned; nothing in the diff
   bears on m0002–m0005 beyond two response entries that apply nothing,
   so rounds 1 and 2 own those verdicts and none is re-asserted here.
 - **Scope:** the four checks the round 2 response makes possible or
@@ -1344,7 +1344,7 @@ bootstrap exception"); §14 does not mention it.
   `m0001: vetting round 2 response`, `Matter: m0001` trailer; all eight
   commits on the branch carry the trailer.
 
-**Not checked:** `ob6to8/beatcode` — not cloned, and the render
+**Not checked:** `markreveley/beatcode` — not cloned, and the render
 reproduction not re-executed, because nothing in `25d2e16..7357244`
 bears on it: m0002 and m0005 are untouched and m0003 and m0004 gained
 only response entries applying nothing. Rounds 1 and 2 own those

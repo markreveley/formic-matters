@@ -31,11 +31,11 @@ archive readable — PR #1, its matters, its branch, and both threads.
 - bash 5.2.21(1)-release; GNU coreutils 9.4 (`sha256sum`); GNU
   diffutils 3.10 (`diff`); git 2.43.0
 - Python 3.11.15; PyYAML 6.0.1; `difflib` from the standard library
-- Repo: `ob6to8/beatcode-dev`, branch
+- Repo: `markreveley/formic-matters`, branch
   `claude/beatcode-pr1-vetting-round-2-pbyiud` at `7357244`, parent
   `25d2e16`; archive branch `m0001-matter-system` at `c11956d`
   (= `refs/pull/1/head`, confirmed by `git ls-remote`)
-- `ob6to8/beatcode` was not cloned and not built. Nothing in
+- `markreveley/beatcode` was not cloned and not built. Nothing in
   `25d2e16..7357244` touches a beatcode-facing claim: the diff adds
   only response entries to m0003 and m0004 and leaves m0002 and m0005
   untouched. Rounds 1 and 2 own those verdicts; none is re-asserted

@@ -19,7 +19,7 @@ superseding run is a new file.
 - Toolchain: rustc 1.94.1 (e408947bf 2026-03-25), pinned via
   `rust-toolchain.toml`; cargo release profile
 - Python 3 for the golden-derived computation
-- Repo: `ob6to8/beatcode` at `fa17627` (main; SPEC.md and
+- Repo: `markreveley/beatcode` at `fa17627` (main; SPEC.md and
   `goldens/events/` byte-identical at seed `91188a5`), built in a
   scratch copy — working clones untouched
 

@@ -34,11 +34,11 @@ ledger against it.
   diffutils 3.10 (`diff`); GNU sed 4.9; GNU grep 3.11; git 2.43.0
 - Python 3.11.15, PyYAML 6.0.1 (`tools/gen-index.py`, and the checkers
   below, which are inline `python3 - <<'PY'` heredocs)
-- Repo: `ob6to8/beatcode-dev`, branch
+- Repo: `markreveley/formic-matters`, branch
   `claude/beatcode-pr1-vetting-round-2-pbyiud`, parent commit
   `25d2e16`; archive branch `m0001-matter-system` at `c11956d`
 - beatcode was not cloned and not built this round. No claim about
-  `ob6to8/beatcode` is tested or re-asserted here; rounds 1 and 2 own
+  `markreveley/beatcode` is tested or re-asserted here; rounds 1 and 2 own
   those.
 
 ## Commands and results

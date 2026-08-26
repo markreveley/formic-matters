@@ -35,7 +35,7 @@ and its stability checks.
 - OS: Linux 6.18.44-fc-v21, x86_64 (remote agent container)
 - bash 5.2.21(1)-release; git 2.43.0; GNU coreutils 9.4
   (`sha256sum`); Python 3.11.15, PyYAML 6.0.1
-- Repo: `ob6to8/beatcode-dev`, the m0001 lineage (PR #2 head), parent
+- Repo: `markreveley/formic-matters`, the m0001 lineage (PR #2 head), parent
   commit `85fe451` — the ratified commit itself; the tree verified is
   this recording's, in which this run file lands
 

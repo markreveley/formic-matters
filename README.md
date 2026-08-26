@@ -2,7 +2,7 @@
 
 The home of **Formic Matters**, the matter framework — born as the
 development process for
-[beatcode](https://github.com/ob6to8/beatcode), kept out of the
+[beatcode](https://github.com/markreveley/beatcode), kept out of the
 instrument's own repo so the two sets of concerns don't mix, and
 generalized into a consumable framework on the operator's rulings in
 the

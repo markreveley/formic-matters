@@ -36,9 +36,9 @@ tree-wide invariant the response could have disturbed.
   diffutils 3.10 (`diff`); GNU sed 4.9; GNU grep 3.11; mawk 1.3.4
   20240123; git 2.43.0
 - Python 3.11.15 (`tools/gen-index.py`; also the link checker below)
-- Repos: `ob6to8/beatcode-dev` at `981b2a6` (branch
+- Repos: `markreveley/formic-matters` at `981b2a6` (branch
   `claude/beatcode-pr1-audit-1t400g`), working tree clean;
-  `ob6to8/beatcode` cloned fresh, `fa17627`
+  `markreveley/beatcode` cloned fresh, `fa17627`
   (`fa17627c3f797872188c76e14e22059f2dece741`), seed `91188a5`
   (`91188a514585345e5b98d3a33560c03b2507b276`)
 - `$BC` below is the beatcode clone; commands run from the

@@ -34,10 +34,10 @@ applies rulings r1–r4 and r7b to the specification, files
 - bash 5.2.21(1)-release; git 2.43.0; GNU coreutils 9.4; GNU sed 4.9;
   GNU grep 3.11
 - Python 3.11.15, PyYAML 6.0.1
-- Repo: `ob6to8/beatcode-dev`, the m0001 lineage (PR #2 head), parent
+- Repo: `markreveley/formic-matters`, the m0001 lineage (PR #2 head), parent
   commit `3ea60e8`; the tree verified is this response's, in which this
   run file lands
-- `ob6to8/beatcode` was not cloned; nothing here bears on m0002–m0005
+- `markreveley/beatcode` was not cloned; nothing here bears on m0002–m0005
 
 ## Commands and results
 
