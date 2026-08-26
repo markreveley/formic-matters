@@ -1,10 +1,10 @@
 ---
 type: spec
 title: Contained installation layout for code-bearing consumers
-description: "Consumer installations live inside one root directory, .formic-matters/, instead of five root directories; the framework alone keeps the root form."
+description: "A consumer installation lives only inside .formic-matters/ at the repository root; the framework's own repository is the framework's home, its layout at root — not a choosable form."
 id: m0014
-state: executed
-status: stable
+state: proposed
+status: draft
 tags: [formic-matters, topology, installation]
 implements: m0001
 threads:
@@ -12,11 +12,6 @@ threads:
 generated:
   by: claude-code/2026-08-26
   at: 2026-08-26T19:12:11Z
-verified:
-  - by: human:mark
-    at: 2026-08-26T19:41:59Z
-ratified_commit: cb44d7e981d6f17b7349ede9cbca4b39054fa648
-ratified_sha256: 277c270cb6c5a66bf54c0799775df4f2b565d84b350e50cb4b312a8ab5190b3e
 ---
 
 # m0014 · Contained installation layout for code-bearing consumers
@@ -45,30 +40,30 @@ wild.
 
 ## Proposed text
 
-Amendments to §12 and §14; additive — the root form remains valid and
-remains the framework's own.
+Amendments to §12 and §14. There is no choice of layout anywhere in
+them: a consumer installation has exactly one home, and the
+framework's own root layout is not a form an installation could
+elect — it is simply the framework's home.
 
-- **§12 gains a layout clause.** An installation lives in one of two
-  forms, chosen at bootstrap: at the repository root — the
-  framework's own layout — or wholly inside one containing directory
-  at the root, named `.formic-matters/`. Inside the container the
-  layout is identical (`doctrine/`, `matters/`, `threads/`, `runs/`,
-  `tools/`), and because every authored link in an installation is
-  relative (§12), moving the whole tree into the container changes no
-  link. Which form an installation uses is read off where its
-  installation record sits; changing form later is a `spec` matter in
-  that installation's collection.
-- **§12's form rule.** The framework's own installation uses the root
-  form — the framework is that repository's content. A consumer
-  installation uses the contained form. The bootstrap records the
-  form in the installation's first matter (§14, §15).
-- **§14's convention sentence** names both forms where it names the
-  directory conventions, and the installation record's path in the
-  contained form is `.formic-matters/doctrine/installation.md`.
-- **Forwarded to m0008:** the tooling locates an installation by
-  probing `.formic-matters/`, then the root, and operates identically
-  on both; the interim generator gains the same probe if it is still
-  in service when this ratifies.
+- **§12 gains the consumer-layout clause.** A consumer installation
+  lives wholly inside one containing directory at the repository
+  root, named `.formic-matters/` — the only place a consumer
+  installation lives. Inside the container the layout is identical
+  to the framework's own (`doctrine/`, `matters/`, `threads/`,
+  `runs/`, `tools/`), and because every authored link in an
+  installation is relative (§12), containment changes no link. The
+  framework's own repository is not an installed copy — it is the
+  framework's home, its layout at its root — and the presence of an
+  installation record at `.formic-matters/doctrine/installation.md`
+  is what marks a consumer.
+- **§14's convention sentence** places a consumer's adoption inside
+  `.formic-matters/`, with the installation record at
+  `.formic-matters/doctrine/installation.md`.
+- **Forwarded to m0008:** the tooling locates the collection by
+  probing `.formic-matters/` (a consumer), then the repository root
+  (the framework's home), and operates identically on both; the
+  interim generator gains the same probe if it is still in service
+  when this ratifies.
 
 ## What this contradicts
 
@@ -146,3 +141,40 @@ move to the contained form is its own matter in its own collection
 claude-code/2026-08-26, the dev agent the operator launched against
 this matter. Verification:
 [runs/2026-08-26-m0014-execution-verification.md](../runs/2026-08-26-m0014-execution-verification.md).
+
+## Execution failure — 2026-08-26
+
+Recorded before the transition (§3). At the m0001 re-ratification
+read — over the amended document on this matter's own unmerged
+branch — the operator ruled the ratified plan's central framing
+wrong, at both amendment sites: "An installation lives in one of two
+forms, chosen at bootstrap … this is incorrect - it should ONLY live
+in .formic-matters", and the §14 mirror "also incorrct"
+([execution thread R10](../threads/2026-08-26-m0012-execution.md)).
+The scope ruling followed (thread R11): `.formic-matters/` applies to
+client repositories only, as their sole layout with no choice
+language, and the framework's own repository keeps its files at the
+root — not as a "form", but as the framework's home. The operator's
+question of record — whether clients-only-contained had been implied
+and lost — is answered in the thread's reply: the ratified rule's
+substance did assign consumers no root option, but the ratified
+framing ("two forms, chosen at bootstrap") presented a choice that
+was never intended, a drafting carry-over from the pre-R8 draft.
+
+Disposition, per §3 `staged → proposed`:
+
+- **What half-landed, and its fate:** the amendment commits
+  `954f11bc979867d98b7b28cfbfd056154a7f21e8` and
+  `c3d4825db3908a5222b848d812500d1f39e4c5af`, on this branch only —
+  nothing reached `main`. The spec, m0008, and generator changes are
+  **reverted** to `main`'s state in the failure commit; the branch
+  history is kept, never rewritten. The `## Execution` section above
+  stands as the halted attempt's record.
+- **Ratification fields cleared into this entry:** `verified`
+  human:mark at 2026-08-26T19:41:59Z; `ratified_commit`
+  `cb44d7e981d6f17b7349ede9cbca4b39054fa648`; `ratified_sha256`
+  `277c270cb6c5a66bf54c0799775df4f2b565d84b350e50cb4b312a8ab5190b3e`.
+- **The proposed text is revised** in the same commit to the
+  no-choice form, and re-ratification is required to proceed —
+  `## Execution` on this matter resumes only after the operator's new
+  act over the revised text.

@@ -67,12 +67,7 @@ def fmt_list(v):
 
 
 def main():
-    # installation-form probe (doctrine §12, m0014): contained, then root
-    root = (".formic-matters"
-            if os.path.isdir(os.path.join(".formic-matters", "matters"))
-            else ".")
-    rows = [frontmatter(p)
-            for p in sorted(glob.glob(os.path.join(root, "matters", "m*.md")))]
+    rows = [frontmatter(p) for p in sorted(glob.glob("matters/m*.md"))]
 
     out = ["---", 'okf_version: "0.2"', "---", "",
            "# Matters", "",
@@ -104,8 +99,7 @@ def main():
                        f"{fmt_list(r.get('depends_on'))} |")
         out.append("")
 
-    io.open(os.path.join(root, "matters", "index.md"), "w",
-            encoding="utf-8").write("\n".join(out))
+    io.open("matters/index.md", "w", encoding="utf-8").write("\n".join(out))
     print(f"{len(rows)} matters indexed")
 
 
