@@ -16,8 +16,10 @@ generated:
 verified:
   - by: human:mark
     at: 2026-08-26T05:21:39Z
-ratified_commit: 85fe4511326a30516ed2bf86a2e2a2b9d05c3d25
-ratified_sha256: 5adc0aafe92c5ead0269c681c8802516572765cf77b22549ea5acc45d8dda7bd
+  - by: human:mark
+    at: 2026-08-26T18:33:07Z
+ratified_commit: 97854b884a9af1a82b5b881560883a8264c6474f
+ratified_sha256: 9fb1f925f37c3533ffff7caba7c1094f5631e098503e06ac569841d0ef1f4c7d
 ---
 
 # m0001 · The matter system
@@ -1863,3 +1865,28 @@ Recorded per §6, the pin following the act:
 - The recording agent is the round-2 response author, not a fresh
   instance; every mechanical claim above is independently recomputable
   from the named commit, which is what the pins are for.
+
+### Doctrine re-ratification — 2026-08-26
+
+The m0012 execution, under the operator's R2 ruling
+([execution thread](../threads/2026-08-26-m0012-execution.md)), made
+one edit to `doctrine/matters.md` — §11's m0009 example re-pinned as
+an absolute reference after the move — deliberately breaking this
+matter's whole-file pin. The operator merged PR #4 as a merge commit
+and stated the re-ratification — "2 - ratified" (execution thread,
+R5) — read, per that thread's apparatus, as the §6 act over the
+corrected document at the merge commit. Recorded, the pin following
+the act:
+
+- **Superseded pin, preserved:** `ratified_commit`
+  `85fe4511326a30516ed2bf86a2e2a2b9d05c3d25`, `ratified_sha256`
+  `5adc0aafe92c5ead0269c681c8802516572765cf77b22549ea5acc45d8dda7bd` —
+  still the pin of record for the consumer installation's copy of the
+  specification, whose installation record cites it.
+- **New pin:** `ratified_commit`
+  `97854b884a9af1a82b5b881560883a8264c6474f` (the PR #4 merge commit
+  on `main`), `ratified_sha256`
+  `9fb1f925f37c3533ffff7caba7c1094f5631e098503e06ac569841d0ef1f4c7d`,
+  whole-file regime — verified equal at the named commit and in the
+  working tree at recording time, with the stability checks, in
+  [runs/2026-08-26-re-ratification-and-acknowledgment-recording.md](../runs/2026-08-26-re-ratification-and-acknowledgment-recording.md).
