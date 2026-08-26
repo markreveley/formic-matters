@@ -725,3 +725,14 @@ push — then you can check any pin with the README's three commands.
   and m0013 at commit 85fe451"
 - **f2** — the stated basis, for the record: "everything i've read
   i've read from links in this thread"
+
+---
+
+## ▸ Mark — after the recording (f3)
+
+merge PR #2 and stage m0012
+
+**Apparatus:** **f3** — the merge direction and the operator's
+`ratified → staged` transition on m0012 (§3: staging is the operator's
+own move; execution still waits on a dev agent the operator launches,
+and on the admin acts only the operator can perform).

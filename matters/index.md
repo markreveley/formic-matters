@@ -26,8 +26,13 @@ Derived from the frontmatter of every matter in this directory.
 
 | | Type | Tags | Matter | Description |
 |---|---|---|---|---|
-| `m0012` | refactor | formic-matters, topology | [The Formic Matters split](m0012-formic-matters-split.md) | Rename this repository to the framework, create beatcode-dev as its first consumer installation, and move the beatcode-facing matters there. |
 | `m0013` | spec | formic-matters, doctrine, bootstrap | [Bootstrap defaults record](m0013-bootstrap-defaults-record.md) | The authoring-agent choices adopted without an operator ruling during the bootstrap, with the confirmation trail for each — relocated out of the specification on operator direction. |
+
+## staged
+
+| | Type | Tags | Matter | Description |
+|---|---|---|---|---|
+| `m0012` | refactor | formic-matters, topology | [The Formic Matters split](m0012-formic-matters-split.md) | Rename this repository to the framework, create beatcode-dev as its first consumer installation, and move the beatcode-facing matters there. |
 
 ## executed
 

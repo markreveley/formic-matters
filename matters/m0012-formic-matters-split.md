@@ -3,7 +3,7 @@ type: refactor
 title: The Formic Matters split
 description: "Rename this repository to the framework, create beatcode-dev as its first consumer installation, and move the beatcode-facing matters there."
 id: m0012
-state: ratified
+state: staged
 status: stable
 tags: [formic-matters, topology]
 implements: m0001
@@ -139,3 +139,17 @@ The plan is now the contract (§3). Staging waits on nothing: the one
 dependency, m0001, is executed — the operator stages this matter when
 ready, and execution begins with the operator/admin acts only they can
 perform (the rename, the new repository).
+
+### Staged — 2026-08-26
+
+`ratified → staged`, the operator's own transition (§3), directed in
+the same exchange —
+[review f3](../threads/2026-08-25-doctrine-operator-review.md),
+"merge PR #2 and stage m0012" — together with the merge that carried
+the ratified state to `main`. The §7 gate is satisfied: m0001, the one
+dependency, is `executed`. No `branch` field is present: the matter is
+queued, not in-flight. Execution requires, in order: the operator's
+admin acts (rename this repository; create the new `beatcode-dev`),
+then a dev agent the operator launches against this matter for the
+mechanical steps (the moves, the re-pins, the execution record) —
+§3's `staged → executed` is reachable no other way.
