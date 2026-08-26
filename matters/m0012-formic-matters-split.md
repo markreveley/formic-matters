@@ -3,8 +3,8 @@ type: refactor
 title: The Formic Matters split
 description: "Rename this repository to the framework, create beatcode-dev as its first consumer installation, and move the beatcode-facing matters there."
 id: m0012
-state: proposed
-status: draft
+state: ratified
+status: stable
 tags: [formic-matters, topology]
 implements: m0001
 depends_on: [m0001]
@@ -13,6 +13,11 @@ threads:
 generated:
   by: claude-code/2026-08-26
   at: 2026-08-26T00:45:00Z
+verified:
+  - by: human:mark
+    at: 2026-08-26T05:21:39Z
+ratified_commit: 85fe4511326a30516ed2bf86a2e2a2b9d05c3d25
+ratified_sha256: 21492653902313ce826b53ef895b43e519eb898e7ff4a3afb69dbbe3ab54a747
 ---
 
 # m0012 · The Formic Matters split
@@ -113,3 +118,24 @@ Adopting the framework into the operator's other five candidate
 repositories (review c15) is not this matter: each adoption is that
 installation's own bootstrap, one matter each, after this split
 executes and the installation mechanics have been exercised once.
+
+## Vetting
+
+### Ratification — 2026-08-26
+
+Ratified by the operator with m0001 and m0013 —
+"I ratify m0001, m0012, and m0013 at commit 85fe451"
+([review f1](../threads/2026-08-25-doctrine-operator-review.md)),
+after accepting this matter's installation mechanism and dependency
+sections in the round-2 checklist
+([review k](../threads/2026-08-25-doctrine-operator-review.md), item
+5: "accept, ratified"). §6 permits ratification at any round; this
+matter had no fresh-agent vetting round, which the operator knew from
+the act's framing. Pin: ratified region at
+`85fe4511326a30516ed2bf86a2e2a2b9d05c3d25`, sha256 in the frontmatter,
+recorded in
+[runs/2026-08-26-ratification-recording.md](../runs/2026-08-26-ratification-recording.md).
+The plan is now the contract (§3). Staging waits on nothing: the one
+dependency, m0001, is executed — the operator stages this matter when
+ready, and execution begins with the operator/admin acts only they can
+perform (the rename, the new repository).

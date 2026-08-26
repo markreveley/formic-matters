@@ -498,3 +498,230 @@ the problem is, without context, its very difficult for me to audit. i would sug
 - **r8** — the ledger/thread audit: "without context, its very
   difficult for me to audit. i would suggest including the quotes that
   i was responding to"
+
+---
+
+## ▸ Claude
+
+All eight points are answered and pushed — PR #2's head is now
+`85fe451`. Point by point:
+
+**Auditability (your point 4) first, since everything else runs
+through it:** every comment block in the exchange thread is rebuilt as
+an in-situ excerpt — the verbatim text of the doctrine at `9c1d295`
+over a stated line range, with your comment line sitting inside it. So
+`c17`'s "others are ratified" now shows the five bullets it ruled on,
+`c02` shows the targets list it redacted, and so on. Your comment lines
+are byte-unchanged (mechanically verified, all 19), and the in-situ
+form is now the stated convention in §8/§9.2. Your response-review
+message is appended to the thread too, labeled r1–r8, so this round's
+rulings are citable the same way.
+
+**The four doctrine points:** §8 now says the operator's channel is the
+tree reached two ways — committed file edits, or a session exchange
+that enters the record as a thread export — and is explicitly stitched
+to §9.2 (I kept the section numbers rather than merging, because every
+matter and vetting entry cites "§8"/"§9.2" by number and renumbering
+would silently re-point all of them). §13's historical paragraph is
+gone — and I extended the same principle to §1's "until the split
+executes" clause, which was also instance state; that extension is
+flagged in the response entry since you didn't direct it. §14 now
+opens plainly: a repository adopts the framework by committing it;
+that commit can't go through a process that isn't in the repo yet;
+it's recorded in the installation's first matter. §15 is down to two
+short paragraphs — the standing rule plus deferred-design pointers —
+with the entire record relocated to **m0013**, the meta-matter (chosen
+over `dev-history.md` because a matter already has frontmatter,
+derived-view visibility, and ratification semantics, which is exactly
+what a confirmation record needs). m0013 also opens a "group E"
+listing the text this very response wrote — the mechanism working on
+itself.
+
+**3a — my installation recommendation: verbatim copy, pinned.** The
+consumer carries `doctrine/matters.md` copied byte-for-byte at a
+ratified commit, plus a small installation record (framework repo,
+source commit SHA, spec sha256) — verifiable with the same three
+commands the README uses for ratifications. Upgrades are `spec`
+matters in the consumer's own collection ("adopt framework at
+`<commit>`"), so framework upgrades go through the consumer's process,
+consistent with your 3b isolation ruling. I chose copy over submodule
+(mutable pointer + tooling dependence) and over a fetched release
+(m0008 doesn't exist yet); a release channel can supersede it later as
+its own matter. This is now written into m0012.
+
+**3b** is applied: §7 states `depends_on` names matters in the
+installation's own collection only, and m0012's plan drops m0009's
+`[m0008]` edge at the move, restating it as a prose precondition.
+
+**One interpretation recorded, not assumed:** I treated "everything
+else is ratified" and "m0001 ratified" as ratification-in-principle
+plus approval of the record and breakdowns — **not** the formal §6
+act, which is over the whole document at a commit you name and can't
+precede the changes you just directed. So no
+`verified`/`ratified_commit`/hash was written. When you're satisfied
+with the revised text, the formal step is the README procedure:
+`git pull`, `git rev-parse HEAD`, read, state ratification naming that
+commit — and the next agent records the pin. The spec is now 484
+lines; the sections that changed this round are §1, §7, §8, §9.2, §13,
+§14, §15, plus m0012's two new sections and m0013.
+
+---
+
+## ▸ Mark
+
+what should i check then? give a list
+
+---
+
+## ▸ Claude
+
+Six checks, ordered so each one gates the next. Items 1–5 are this
+round's diff only — the full-document read happens once, at the formal
+act (item 6).
+
+1. **The changed spec sections** — `doctrine/matters.md`, now 484
+   lines. Read §8 and §9.2 (your r1: channel is "file edits or a
+   session exchange", the two sections explicitly stitched — I kept
+   the section numbers rather than merging, since every vetting entry
+   cites them by number), §13 (r2: two short paragraphs, history
+   gone), §14 (r3: plain statement), §15 (r4: two paragraphs, record
+   relocated), and §7's one new sentence (r7b: `depends_on` is
+   same-collection only). Question per section: does the text say what
+   you ruled, and nothing extra?
+
+2. **The one edit you didn't direct** — §1's second paragraph. I
+   removed the "until the split executes, also beatcode…" interim
+   clause as an extension of your r2 principle (instance state doesn't
+   belong in the spec). Confirm or reject that extension.
+
+3. **The rebuilt exchange thread** —
+   `threads/2026-08-25-doctrine-operator-review.md`. Spot-check two or
+   three excerpts against your memory — c17 ("others are ratified",
+   now showing the five bullets it ruled on) and c02 are the
+   load-bearing ones — and read the last turn: your response-review
+   verbatim plus the r1–r8 labeling apparatus. Question: is this now
+   auditable without git archaeology, and is the apparatus faithful to
+   what you meant?
+
+4. **m0013** (`matters/m0013-bootstrap-defaults-record.md`, ~130
+   lines) — the relocated record. The critical part is the
+   confirmation trail: I wrote down **my interpretations** of your
+   shorthand — r5 as "ratified in principle outside the four areas",
+   r6 as "breakdown items confirmed" — and groups B/C/D cite them as
+   confirmations. If either reading is wrong, this is the file where
+   it's wrong. Group E lists everything this response itself wrote,
+   awaiting your read.
+
+5. **m0012's two new sections** — "Installation mechanism — proposed"
+   (verbatim pinned copy + installation record; upgrades as consumer
+   `spec` matters) and "Dependencies across the split — ruled"
+   (m0009's `depends_on: [m0008]` dropped at the move, restated in
+   prose). Question: do you accept the copy-and-pin mechanism, or want
+   a different one before this matter ratifies?
+
+6. **The eight new ledger rows** on m0001 (table's end, citing
+   `review r1`–`r8`) — now checkable one click deep, since each label
+   lands on your verbatim words in the thread. This is the re-run of
+   your point 4 from last time, with the context you asked for.
+
+If all six pass, the formal act closes the loop — in your checkout:
+
+```
+git pull
+git rev-parse HEAD        # the commit you are reading at
+$EDITOR doctrine/matters.md   # the whole document, once
+```
+
+then state ratification naming that commit (a `->[]` comment, a
+committed note, or a message here all work under §8 now). The
+recording agent writes `verified`/`ratified_commit`/`ratified_sha256`,
+m0001 jumps `ratified → executed` per §14, and m0012 — the split —
+becomes stageable. Anything that fails a check: mark it up and it's
+the next round.
+
+---
+
+## ▸ Mark — checklist ratifications (k)
+
+1 - ratified
+2 - ratified
+3 - ratified
+4 - ratified
+5 - accept, ratified
+6 - ratified
+
+I 'll do the formal act - how do I "state ratification"?
+
+---
+
+## ▸ Claude
+
+Three answers:
+
+**1 — Formal ratification is per-matter, and you're right: you can
+name more than m0001.** The state machine's `ratified` is a property
+of a matter, so the act names matters. Everything else you've said
+"ratified" to in this conversation — checklist items, "everything else
+is ratified" — are rulings: they're recorded in the thread and ledger
+and they shaped the text, but they don't flip a state or write a pin
+by themselves. The formal act is what does that. m0001 carries the
+specification (ratifying it *is* ratifying the doctrine, whole file).
+But you also approved m0012's plan ("accept, ratified") and m0013's
+record ("ratified") — so if that's your intent, name all three in one
+statement. Each gets its own pin: m0001 over the whole doctrine file,
+m0012 and m0013 over their ratified regions. What happens to each:
+m0001 goes `ratified → executed` immediately (§14's one licensed
+jump); m0012 goes `ratified` and becomes stageable the moment m0001 is
+executed (its `depends_on` gate); m0013 goes `ratified`. One honest
+note: m0012 and m0013 have had no fresh-agent vetting round — §6
+expressly permits ratifying at any round, including immediately, so
+it's your call, not a rule question.
+
+**2 — `$EDITOR doctrine/matters.md` just opens the file in your text
+editor.** `$EDITOR` is a shell variable holding whatever editor you
+use; the line does nothing but put the text in front of you — no
+recording, no hashing, nothing procedural. Reading on GitHub is
+exactly as good **provided the version you read is the commit you
+name** — that's the only thing the local commands guarantee. GitHub's
+default file view can show `main` or a stale ref, so the safe form is
+the commit-pinned URL:
+`github.com/ob6to8/beatcode-dev/blob/85fe451/doctrine/matters.md` —
+those bytes are identical to a local checkout at `85fe451`. If what
+you read was the PR #2 branch just now, that head is `85fe451`
+(nothing has been pushed since), and I'll re-verify the head hasn't
+moved before recording.
+
+**3 — Accepted, and it goes in the record as you said it.** Your
+statement — comfortable on the basis of the accumulated sectional
+review, no continuous pass — will be in the exported thread verbatim,
+so the ratification's basis is documented honestly rather than
+implied. That's the difference from the first attempt: not the reading
+ritual, but that the record says what actually happened.
+
+So, whenever ready, send (adjusting the matter list to your intent):
+
+> **I ratify m0001, m0012, and m0013 at commit `85fe451`.**
+
+On receipt I'll verify the head, compute the three pins (whole-file
+for m0001, ratified-region for m0012/m0013), write the
+`verified`/`ratified_commit`/`ratified_sha256` records, execute m0001
+per §14, regenerate the index, append this exchange to the thread, and
+push — then you can check any pin with the README's three commands.
+
+---
+
+## ▸ Mark — the formal act (f1, f2)
+
+1 - I ratify m0001, m0012, and m0013 at commit 85fe451
+
+2 - everything i've read i've read from links in this thread, for the record
+
+**Labeling apparatus:**
+
+- **k** — the six checklist ratifications, one per item of the
+  preceding checklist ("1 - ratified … 6 - ratified"; item 5 "accept,
+  ratified" accepts m0012's proposed installation mechanism)
+- **f1** — the formal ratification statement: "I ratify m0001, m0012,
+  and m0013 at commit 85fe451"
+- **f2** — the stated basis, for the record: "everything i've read
+  i've read from links in this thread"

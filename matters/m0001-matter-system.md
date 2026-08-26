@@ -3,8 +3,8 @@ type: spec
 title: The matter system
 description: "Every change to a governed system — and to the framework itself — is proposed, vetted, and ratified as a matter before it is made."
 id: m0001
-state: proposed
-status: draft
+state: executed
+status: stable
 tags: [formic-matters, doctrine, bootstrap]
 threads:
   - threads/2026-08-24-matter-system.md
@@ -13,6 +13,11 @@ threads:
 generated:
   by: claude-code/2026-08-24
   at: 2026-08-24T22:33:00Z
+verified:
+  - by: human:mark
+    at: 2026-08-26T05:21:39Z
+ratified_commit: 85fe4511326a30516ed2bf86a2e2a2b9d05c3d25
+ratified_sha256: 5adc0aafe92c5ead0269c681c8802516572765cf77b22549ea5acc45d8dda7bd
 ---
 
 # m0001 · The matter system
@@ -133,6 +138,9 @@ ratification.
 | the response record and the breakdown items (§15's groups B and D) confirmed on reading | [m0013](m0013-bootstrap-defaults-record.md)'s confirmation trail | [review r6](../threads/2026-08-25-doctrine-operator-review.md) |
 | a consumer matter cannot depend on a framework matter, or any external matter — may change, ruled for simplicity now | doctrine §7; [m0012](m0012-formic-matters-split.md) | [review r7b](../threads/2026-08-25-doctrine-operator-review.md) |
 | the exchange record must carry the text each comment responds to, or it cannot be audited | the thread's in-situ excerpt format | [review r8](../threads/2026-08-25-doctrine-operator-review.md) |
+| the six round-2 checks ratified, one per checklist item — changed spec sections, the §1 extension, the rebuilt thread, m0013, m0012's mechanism, the ledger rows | the texts approved are those formally ratified below | [review k](../threads/2026-08-25-doctrine-operator-review.md) |
+| formal ratification: "I ratify m0001, m0012, and m0013 at commit 85fe451" | the `verified`/`ratified_commit`/`ratified_sha256` records on all three matters; m0001 executed per §14 | [review f1](../threads/2026-08-25-doctrine-operator-review.md) |
+| basis stated for the record: everything read was read from links in this thread; no continuous pass, per the operator's earlier statement of comfort with the accumulated review | recorded with the act, in the ratification entry below | [review f2](../threads/2026-08-25-doctrine-operator-review.md) |
 
 ## Scope held out deliberately
 
@@ -172,9 +180,23 @@ index generator, the repository README, the three thread exports in
 branch in round 2's response, the adjudication session exported by its
 participating agent, and the operator-review exchange transcribed by
 its responding agent), and every record in `runs/`. Nothing else is in
-the tree. This section is completed with commits and date when the
-matter reaches `executed`, which under §14 happens immediately after
-ratification.
+the tree.
+
+**Completed 2026-08-26.** Ratified by the operator at
+`85fe4511326a30516ed2bf86a2e2a2b9d05c3d25` and executed in the same
+act, per §14's one licensed `ratified → executed` jump — for a
+bootstrap `spec` matter the proposed text is the deliverable, and it
+was already in the tree at the ratified commit, so execution lands
+nothing further. What landed, in full: the lineage from the bootstrap
+build `44d6be0` through `85fe451` on the m0001 branch (thirteen
+work commits, each carrying its `Matter:` trailer; PR #2 is the diff
+boundary against `main`), containing the specification, m0001–m0013,
+three thread exports, five run records, the derived index, the interim
+generator, and the README. Deviations from the ratified plan: none —
+the ratified text and the landed text are the same bytes by
+construction, verifiable from the pin above. Recording actor:
+claude-code/2026-08-26, in
+[runs/2026-08-26-ratification-recording.md](../runs/2026-08-26-ratification-recording.md).
 
 ## Vetting
 
@@ -1800,3 +1822,44 @@ the next read confirms them deliberately. The next round's fidelity
 check has the full exchange in one thread: nineteen comments in situ,
 four prompted answers, one interjection, and the response review, all
 labeled.
+
+### Ratification — 2026-08-26
+
+The operator ratified the six round-2 checks one by one
+([review k](../threads/2026-08-25-doctrine-operator-review.md)) and
+then stated the formal act
+([review f1](../threads/2026-08-25-doctrine-operator-review.md)):
+
+> I ratify m0001, m0012, and m0013 at commit 85fe451
+
+Recorded per §6, the pin following the act:
+
+- **Head verified:** `85fe451` resolved to
+  `85fe4511326a30516ed2bf86a2e2a2b9d05c3d25`, the head of the m0001
+  branch on the remote at recording time — the named commit is the
+  text as it stood.
+- **m0001** — whole-file regime (§6: the proposed text is a separate
+  document): sha256 of `doctrine/matters.md` at that commit,
+  `5adc0aafe92c5ead0269c681c8802516572765cf77b22549ea5acc45d8dda7bd`,
+  cross-checked against plain `sha256sum` per the README procedure.
+  State `proposed → ratified → executed` in one act, §14's licensed
+  jump; the Execution section above is completed.
+- **m0012, m0013** — ratified-region regime: the body after the
+  frontmatter, neither file carrying a `## Vetting` or `## Execution`
+  section at the ratified commit. `21492653…54a747` and
+  `b0f4810e…12cec5` respectively; full values and the exact extraction
+  rule in
+  [runs/2026-08-26-ratification-recording.md](../runs/2026-08-26-ratification-recording.md).
+  Both matters move `proposed → ratified`; each carries its own
+  ratification entry.
+- **Basis, for the record
+  ([review f2](../threads/2026-08-25-doctrine-operator-review.md)):**
+  the operator read everything from the links in the exchange thread —
+  GitHub views of this branch, byte-identical to the named commit —
+  and stated earlier in the same exchange that the accumulated
+  sectional review across the rounds sufficed and no continuous pass
+  was wanted. Recorded as stated: the ratification rests on the
+  reviewed rounds, each of which is in this record.
+- The recording agent is the round-2 response author, not a fresh
+  instance; every mechanical claim above is independently recomputable
+  from the named commit, which is what the pins are for.

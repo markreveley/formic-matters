@@ -3,8 +3,8 @@ type: spec
 title: Bootstrap defaults record
 description: "The authoring-agent choices adopted without an operator ruling during the bootstrap, with the confirmation trail for each — relocated out of the specification on operator direction."
 id: m0013
-state: proposed
-status: draft
+state: ratified
+status: stable
 tags: [formic-matters, doctrine, bootstrap]
 implements: m0001
 threads:
@@ -12,6 +12,11 @@ threads:
 generated:
   by: claude-code/2026-08-26
   at: 2026-08-26T02:10:00Z
+verified:
+  - by: human:mark
+    at: 2026-08-26T05:21:39Z
+ratified_commit: 85fe4511326a30516ed2bf86a2e2a2b9d05c3d25
+ratified_sha256: b0f4810ec3149b27416b1d18228681fb8ebf66d6060660304b796e7d7b12cec5
 ---
 
 # m0013 · Bootstrap defaults record
@@ -143,3 +148,20 @@ during the bootstrap is missing from it. Later unruled choices are
 recorded by appending a group here (a frontmatter-visible revision
 while `proposed`; after ratification, a new matter per §3), or on the
 matter that owns them.
+
+## Vetting
+
+### Ratification — 2026-08-26
+
+Ratified by the operator with m0001 and m0012 —
+"I ratify m0001, m0012, and m0013 at commit 85fe451"
+([review f1](../threads/2026-08-25-doctrine-operator-review.md)),
+after ratifying this record as round-2 checklist item 4
+([review k](../threads/2026-08-25-doctrine-operator-review.md)). That
+act also closes group E's "awaiting the next read": the passages it
+lists are in the specification and matters ratified in the same
+statement. §6 permits ratification at any round; this matter had no
+fresh-agent vetting round. Pin: ratified region at
+`85fe4511326a30516ed2bf86a2e2a2b9d05c3d25`, sha256 in the frontmatter,
+recorded in
+[runs/2026-08-26-ratification-recording.md](../runs/2026-08-26-ratification-recording.md).

@@ -25,10 +25,15 @@ operator rulings arrive as committed file edits, session transcripts
 live in `threads/`, verification evidence in `runs/`. GitHub is
 transport and merge mechanics; its comment surface is unused.
 
-**Status:** awaiting ratification of
-[m0001](matters/m0001-matter-system.md) (spec §6, §14) — the Formic
-Matters specification, revised in answer to the operator's 2026-08-25
-in-document review. This is the second bootstrap; the first was audited
+**Status:** the specification is **normative** —
+[m0001](matters/m0001-matter-system.md) was ratified by the operator
+and executed on 2026-08-26, at commit
+`85fe4511326a30516ed2bf86a2e2a2b9d05c3d25` (spec §6, §14).
+[m0012](matters/m0012-formic-matters-split.md), the split into
+framework and consumer repositories, and
+[m0013](matters/m0013-bootstrap-defaults-record.md), the bootstrap
+defaults record, were ratified in the same act; m0012 awaits staging.
+This is the second bootstrap; the first was audited
 and archived unmerged (PR #1). Nothing in it was ratified, and this
 bundle was re-authored rather than derived — but by an agent that had
 read the archive, and passages of the archived text survive here
