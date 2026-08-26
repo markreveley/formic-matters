@@ -16,13 +16,18 @@ Derived from the frontmatter of every matter in this directory.
 | `m0008` | feature | formic-matters, process, tooling | [Matter tooling — validator, ID allocator, index generator](m0008-matter-tooling.md) | The deterministic half of the matter system: everything checkable by code rather than by an agent. |
 | `m0010` | feature | formic-matters, process | [Risk tiers derived from paths touched](m0010-risk-tiers.md) | Review rigor keyed off blast radius rather than type; a README typo and a rounding-rule change are both fixes. |
 | `m0011` | spec | formic-matters, process, provenance | [Thread persistence policy](m0011-thread-persistence.md) | Whether, in what form, and by what mechanism the sessions behind matters are persisted as threads. |
-| `m0014` | spec | formic-matters, topology, installation | [Contained installation layout for code-bearing consumers](m0014-contained-installation-layout.md) | Consumer installations live inside one root directory, .formic-matters/, instead of five root directories; the framework alone keeps the root form. |
 
 ## ratified
 
 | | Type | Tags | Matter | Description |
 |---|---|---|---|---|
 | `m0013` | spec | formic-matters, doctrine, bootstrap | [Bootstrap defaults record](m0013-bootstrap-defaults-record.md) | The authoring-agent choices adopted without an operator ruling during the bootstrap, with the confirmation trail for each — relocated out of the specification on operator direction. |
+
+## staged
+
+| | Type | Tags | Matter | Description |
+|---|---|---|---|---|
+| `m0014` | spec | formic-matters, topology, installation | [Contained installation layout for code-bearing consumers](m0014-contained-installation-layout.md) | Consumer installations live inside one root directory, .formic-matters/, instead of five root directories; the framework alone keeps the root form. |
 
 ## executed
 

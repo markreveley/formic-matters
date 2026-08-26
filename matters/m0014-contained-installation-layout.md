@@ -3,15 +3,21 @@ type: spec
 title: Contained installation layout for code-bearing consumers
 description: "Consumer installations live inside one root directory, .formic-matters/, instead of five root directories; the framework alone keeps the root form."
 id: m0014
-state: proposed
-status: draft
+state: staged
+status: stable
 tags: [formic-matters, topology, installation]
 implements: m0001
+branch: m0014-execution
 threads:
   - threads/2026-08-26-m0012-execution.md
 generated:
   by: claude-code/2026-08-26
   at: 2026-08-26T19:12:11Z
+verified:
+  - by: human:mark
+    at: 2026-08-26T19:41:59Z
+ratified_commit: cb44d7e981d6f17b7349ede9cbca4b39054fa648
+ratified_sha256: 277c270cb6c5a66bf54c0799775df4f2b565d84b350e50cb4b312a8ab5190b3e
 ---
 
 # m0014 · Contained installation layout for code-bearing consumers
@@ -84,3 +90,27 @@ the way in the host repository's daily view. The cost considered and
 accepted: dotted paths are hidden from bare `ls`, and the consumer's
 README should say where the installation lives — a sentence the
 bootstrap already writes.
+
+## Vetting
+
+### Ratification — 2026-08-26
+
+Ratified by the operator over the revised text — "I ratify m0014
+commit cb44d7e"
+([execution thread R9](../threads/2026-08-26-m0012-execution.md)),
+after merging the revision (PR #6, merge commit `1e12e5a`). §6
+permits ratification at any round; this matter had no fresh-agent
+vetting round beyond the operator's own two scope rulings (R7, R8),
+which the operator knew from the exchange. Pin, following the act:
+ratified region at `cb44d7e981d6f17b7349ede9cbca4b39054fa648` — the
+commit the operator named, reachable from `main` and byte-identical
+to `main`'s copy at recording time — sha256 in the frontmatter. The
+plan is now the contract (§3).
+
+### Staged — 2026-08-26
+
+`ratified → staged` and the launch, directed in the same operator
+turn — "run m0014 execution here" (thread R9). The dev agent is the
+m0012 execution session, launched against this matter; branch
+`m0014-execution` set (in-flight, §3). The §7 gate is satisfied: no
+dependencies.

@@ -378,6 +378,19 @@ never reused, never renamed. IDs are unique within their installation's
 collection; this installation's archived first attempt is a separate,
 closed collection.
 
+An installation lives in one of two forms, chosen at bootstrap: at
+the repository root — the framework's own layout — or wholly inside
+one containing directory at the root, named `.formic-matters/`.
+Inside the container the layout is identical (`doctrine/`,
+`matters/`, `threads/`, `runs/`, `tools/`), and every authored link,
+being relative (below), is unchanged by containment. The framework's
+own installation uses the root form — the framework is that
+repository's content; a consumer installation uses the contained
+form. Which form an installation uses is read off where its
+installation record sits; the bootstrap records the form in the
+installation's first matter (§14, §15), and changing form later is a
+`spec` matter in that installation's collection.
+
 The format is **OKF v0.2 as a documented dialect, not a
 certification** — markdown with YAML frontmatter, readable with no
 tooling. The dialect choices, recorded deliberately:
@@ -452,7 +465,10 @@ collection is flat and frontmattered.
 ## 14 · The bootstrap
 
 A repository adopts the framework by committing it: the specification,
-the directory conventions, and the tooling. That first commit cannot go
+the directory conventions, and the tooling — at the repository root
+for the framework's own form, or inside `.formic-matters/` for a
+consumer (§12), where the installation record sits at
+`.formic-matters/doctrine/installation.md`. That first commit cannot go
 through the process, because the process is not in the repository until
 it lands — this is the bootstrap exception §1 names. The installing
 commits are recorded in the installation's first matter; everything
