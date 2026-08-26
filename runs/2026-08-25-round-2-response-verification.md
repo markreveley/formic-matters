@@ -10,10 +10,10 @@ evidence round 1 used, per the deviation that round recorded
 Each is a claim the round 1 response makes about what it applied, or a
 tree-wide invariant the response could have disturbed.
 
-- The §9.4 quote on [m0004](../matters/m0004-track-length-index-count.md)
+- The §9.4 quote on [m0004](https://github.com/markreveley/formic-matters/blob/70db408d9148667097b2cd052853d37d01e9f3fa/matters/m0004-track-length-index-count.md)
   is byte-identical to `SPEC.md` at `fa17627` (round 1's nit; response:
   "corrected to match `SPEC.md:757` byte for byte").
-- [m0003](../matters/m0003-spec-order-rules-lack-mechanism.md)'s revised
+- [m0003](https://github.com/markreveley/formic-matters/blob/70db408d9148667097b2cd052853d37d01e9f3fa/matters/m0003-spec-order-rules-lack-mechanism.md)'s revised
   §1.4 characterization is accurate: ten semicolon-joined determinism
   rules, of which exactly two carry their reason inline (round 1 nit 1).
 - m0003's pipeline diagram pointer is accurate: `SPEC.md:38` carries the

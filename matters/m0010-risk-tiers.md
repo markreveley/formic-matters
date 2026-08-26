@@ -50,7 +50,9 @@ changes, and a bypassed process ends up covering only the work that was
 already being done carefully. Tiering keeps the doctrine survivable at
 the low end.
 
-Worked example: [m0004](m0004-track-length-index-count.md) as a
+Worked example:
+[m0004](https://github.com/markreveley/formic-matters/blob/70db408d9148667097b2cd052853d37d01e9f3fa/matters/m0004-track-length-index-count.md)
+(moved to the consumer by m0012; pinned pre-move) as a
 prose-only fix is tier 0–1; the behavioral variant it explicitly does
 not propose would be tier 3.
 

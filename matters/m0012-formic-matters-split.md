@@ -8,6 +8,7 @@ status: stable
 tags: [formic-matters, topology]
 implements: m0001
 depends_on: [m0001]
+branch: claude/formic-matters-m0012-review-14vhhy
 threads:
   - threads/2026-08-25-doctrine-operator-review.md
 generated:
