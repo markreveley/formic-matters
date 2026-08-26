@@ -20,22 +20,23 @@ generated:
 
 The conventions §12 and §14 name — `doctrine/`, `matters/`,
 `threads/`, `runs/`, `tools/` — sit at the repository root. That is
-right where the installation *is* the repository's content: the
-framework itself, and a dedicated process repository like
-`beatcode-dev`. It is intrusive where it is not: the operator's five
-candidate adopters carry their own source trees, and five process
-directories at their roots collide with the host's own layout. The
-operator directed a contained form and its name in the m0012
-execution session
+right in exactly one place: the framework's home, where the framework
+*is* the repository's content. In a consumer it is intrusive — the
+operator's candidate adopters carry their own source trees, and five
+process directories at their roots collide with the host's own
+layout. The operator directed a contained form and its name in the
+m0012 execution session
 ([thread R7](../threads/2026-08-26-m0012-execution.md)):
 ".formic-matters", chosen over the shorter ".formic" because the full
-name self-documents and matches the framework. A follow-up ruling
-([thread R8](../threads/2026-08-26-m0012-execution.md)) settled the
-scope: the contained form is for every consumer, the existing
-`beatcode-dev` included — uniformity across consumers beats
-grandfathering — with `beatcode-dev`'s own move directed as that
-installation's own matter. Filed and revised now, before the second
-adoption, so no two consumer layout generations ever exist in the
+name self-documents and matches the framework. Follow-up rulings
+settled the scope: the contained form is for every consumer, the
+existing one included — uniformity beats grandfathering, its move
+directed as that installation's own matter
+([thread R8](../threads/2026-08-26-m0012-execution.md)) — and it is
+the consumer's *only* layout, no choice offered, with the framework's
+own repository keeping its files at the root
+([thread R10, R11](../threads/2026-08-26-m0012-execution.md)). Filed
+and revised so no two consumer layout generations ever exist in the
 wild.
 
 ## Proposed text
@@ -70,11 +71,11 @@ elect — it is simply the framework's home.
 No ratified matter. It amends the specification's implicit anchoring
 of the conventions at the repository root (§12, §14) by making the
 anchor explicit and two-valued. It reaches into no other collection:
-`beatcode-dev`, bootstrapped at the root before this matter existed,
-moves to the contained form through its own matter in its own
+the one existing consumer, bootstrapped at the root before this
+matter existed, conforms through its own matter in its own
 collection — directed by the operator
 ([thread R8](../threads/2026-08-26-m0012-execution.md)) — and until
-that executes it is, knowingly, the one root-form consumer.
+that executes it is, knowingly, nonconforming.
 
 ## Notes
 
