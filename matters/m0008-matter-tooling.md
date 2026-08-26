@@ -5,9 +5,8 @@ description: "The deterministic half of the matter system: everything checkable 
 id: m0008
 state: proposed
 status: draft
-target: beatcode-dev
 implements: m0001
-tags: [process, tooling]
+tags: [formic-matters, process, tooling]
 generated:
   by: claude-code/2026-08-24
   at: 2026-08-24T22:33:00Z
@@ -33,9 +32,9 @@ check. This is that code. Deterministic, therefore in scope:
   (doctrine §4)
 - ratification-hash verification ([m0007](m0007-ratification-content-hash.md))
 - link integrity — every matter, thread, and run reference resolves
-- `depends_on` acyclicity, and the transition-time gate doctrine §7
-  states — no staging or execution while a dependency is unexecuted,
-  with the §11 retroactive path exempt
+- `depends_on` acyclicity, the transition-time gate §7 states, the §11
+  exemption keyed on `## Retroactive` section presence (doctrine §12),
+  and §7's release rules for a dependency that exits the live path
 - claims-DAG checks — ids resolve, acyclic, leaves evidence-typed
   (doctrine §9.3)
 - conflict-rule link check — a ratification that contradicts a ratified
@@ -44,8 +43,8 @@ check. This is that code. Deterministic, therefore in scope:
   stale
 - staleness checks — `ratified` with no motion, `branch` present with
   no live agent, `executed` without an execution record
-- commit-msg hook enforcing the `Matter: mNNNN` trailer, in both repos
-  (doctrine §8)
+- commit-msg hook enforcing the `Matter: mNNNN` trailer, in every
+  installation (doctrine §8)
 - `runs/` schema check (doctrine §9.1)
 
 Not mechanizable, and not to be faked: whether a diagnosis is correct,
@@ -60,8 +59,10 @@ Open sub-questions, to settle during vetting:
   repo's zero-dependency vow is a product claim enforced by an
   acceptance criterion, not a house style to propagate. The tool takes
   normal dependencies.
-- **Location.** This repository, per the topology ruling (doctrine
-  §13); extractable when the tripwire fires.
+- **Location.** The framework repository — this one — per the topology
+  ruling (doctrine §13). The extraction tripwire fired in the
+  2026-08-25 review; the tooling stays with the framework through the
+  [m0012](m0012-formic-matters-split.md) split.
 
 ## Interim script
 
@@ -171,3 +172,26 @@ Both findings accepted and applied.
   files — this bullet is about frontmatter references, all ten of which
   resolve. The interim generator it describes regenerates
   `matters/index.md` byte-identically at `7357244`.
+
+### Round 3 response — 2026-08-26 — claude-code/2026-08-26 (author)
+
+All three findings accepted.
+
+- **Finding 1 (X7's marker half) — applied in the spec.** §12 now
+  names the `## Retroactive` section's presence as the marker for the
+  §11 path — section-heading presence, mechanically detectable — and
+  states the self-declaration containment: the exemption only defers
+  checking to the operator's acknowledgment, which is stated over that
+  section. The gate bullet here cites it.
+- **Finding 2 (X7's exit half) — applied in the spec.** §7 now defines
+  the gate's exit: supersession re-points dependents' `depends_on` at
+  ratification of the superseding matter; a dependency ending
+  `rejected` or `withdrawn` blocks dependents until each amends
+  `depends_on`, validated at its next transition. The deadlock this
+  list would have enforced is gone; the check stays transition-time.
+- **Finding 3 — applied here.** The gate bullet cites §7's rules and no
+  longer restates any of them inline: one normative sentence, one file.
+- **Conforming edits, same commit:** the commit-hook bullet's "in both
+  repos" is now "in every installation", and the Location bullet
+  records the tripwire as fired (2026-08-25 review), with the tooling
+  staying in the framework repository through the m0012 split.

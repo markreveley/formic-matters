@@ -5,8 +5,7 @@ description: "frames = last + 22050 yields a 22,049-frame silent tail, one short
 id: m0004
 state: proposed
 status: draft
-target: beatcode
-tags: [spec, render, claims-dag]
+tags: [beatcode, spec, render, claims-dag]
 threads: [threads/2026-08-24-audit-and-adjudication.md]
 runs: [runs/2026-08-24-render-reproduction.md]
 generated:

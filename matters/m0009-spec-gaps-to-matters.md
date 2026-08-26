@@ -5,9 +5,8 @@ description: "The nine SPEC-GAPS entries are retroactively filed spec matters; S
 id: m0009
 state: proposed
 status: draft
-target: beatcode
 depends_on: [m0008]
-tags: [spec, process]
+tags: [beatcode, spec, process]
 generated:
   by: claude-code/2026-08-24
   at: 2026-08-24T22:33:00Z

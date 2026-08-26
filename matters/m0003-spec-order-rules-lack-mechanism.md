@@ -5,9 +5,8 @@ description: "Several normative rules are asserted without the reasoning that ma
 id: m0003
 state: proposed
 status: draft
-target: beatcode
 depends_on: [m0002]
-tags: [spec, clarity]
+tags: [beatcode, spec, clarity]
 threads: [threads/2026-08-24-audit-and-adjudication.md]
 generated:
   by: claude-code/2026-08-24

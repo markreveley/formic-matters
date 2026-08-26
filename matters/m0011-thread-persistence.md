@@ -5,12 +5,12 @@ description: "Whether, in what form, and by what mechanism the sessions behind m
 id: m0011
 state: proposed
 status: draft
-target: beatcode-dev
 implements: m0001
-tags: [process, provenance]
+tags: [formic-matters, process, provenance]
 threads:
   - threads/2026-08-24-matter-system.md
   - threads/2026-08-24-audit-and-adjudication.md
+  - threads/2026-08-25-doctrine-operator-review.md
 generated:
   by: claude-code/2026-08-24
   at: 2026-08-24T22:33:00Z
@@ -55,7 +55,23 @@ re-litigation; ratifying this matter adopts them:
   this collection was produced *by the participating agent from the
   live session*, with that method stated in its header. Is
   agent-produced export acceptable policy, or is a mechanical export
-  path required for remote sessions?
+  path required for remote sessions? Two more mechanisms now exist
+  beside it: import of an existing export (Notes), and the in-document
+  review exchange (§8) — transcription by the responding agent from a
+  comment commit, exercised first by
+  [the 2026-08-25 thread](../threads/2026-08-25-doctrine-operator-review.md).
+  The mechanisms also diverge in what their headers may claim: the live
+  export and the frozen import state different bring-current policies
+  because their provenance differs, and the per-instance framing below
+  should name which instance is which.
+- **Record of the event.** What record an export-or-import event itself
+  requires, given that the instruction authorizing it typically arrives
+  after the last exported turn — both of this collection's first two
+  thread events cite operator instruction with no primary source
+  (round 3's finding). The 2026-08-25 exchange demonstrates one answer,
+  the authorizing turns landing inside the exported thread itself
+  (a1–a4, i1); whether that is the policy or an artifact of the
+  modality is not settled here.
 - **Recursion.** An export cannot contain the turn that produces it;
   when and how a thread is brought current afterward. (The first
   export's header declares a per-instance choice — brought current as
@@ -227,3 +243,22 @@ here.
   [design:567](../threads/2026-08-24-matter-system.md),
   [design:660](../threads/2026-08-24-matter-system.md),
   [adjudication:264](../threads/2026-08-24-audit-and-adjudication.md).
+
+### Round 3 response — 2026-08-26 — claude-code/2026-08-26 (author)
+
+- **Finding 1 accepted — Open carries the general question.** "Record
+  of the event" now asks what record an export-or-import event itself
+  requires. The two uncited events stand as the round found them:
+  their instructions arrived through the session harness and nothing
+  in the tree can retroactively contain them. The reversal of Q3's
+  stays-archive-side premise is additionally recorded on the ledger
+  row that cites Q3 (m0001, per X2). The 2026-08-25 exchange is the
+  first thread event whose authorization is inside the exported thread
+  itself.
+- **Finding 2 accepted — named in Mechanism.** The header divergence
+  is stated where the mechanisms are listed, with its cause: agent
+  export and frozen import legitimately claim different bring-current
+  behavior. The in-document review exchange (doctrine §8) joins the
+  list as a fourth mechanism, its first exercise cited; this matter's
+  `threads:` now carries that export, which under §9.2 this matter
+  governs like the others.

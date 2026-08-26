@@ -42,7 +42,7 @@ def frontmatter(path):
         sys.exit(f"{path}: frontmatter is not valid YAML: {e}")
     if not isinstance(fields, dict) or not fields.get("type"):
         sys.exit(f"{path}: empty or missing 'type' (OKF requires it)")
-    for key in ("id", "title", "description", "state", "target"):
+    for key in ("id", "title", "description", "state"):
         if not fields.get(key):
             sys.exit(f"{path}: missing '{key}'")
     state = fields["state"]
@@ -80,10 +80,11 @@ def main():
         if not group:
             continue
         out += [f"## {state}", "",
-                "| | Type | Target | Matter | Description |",
+                "| | Type | Tags | Matter | Description |",
                 "|---|---|---|---|---|"]
         for r in group:
-            out.append(f"| `{r['id']}` | {r['type']} | {r['target']} | "
+            out.append(f"| `{r['id']}` | {r['type']} | "
+                       f"{fmt_list(r.get('tags'))} | "
                        f"[{r['title']}]({r['file']}) | {r['description']} |")
         out.append("")
 

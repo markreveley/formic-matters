@@ -5,10 +5,9 @@ description: "Give each reviewer a distinct lens, terminate vetting on consecuti
 id: m0006
 state: proposed
 status: draft
-target: beatcode-dev
 implements: m0001
 depends_on: [m0008]
-tags: [process]
+tags: [formic-matters, process]
 generated:
   by: claude-code/2026-08-24
   at: 2026-08-24T22:33:00Z
@@ -50,9 +49,13 @@ vetting-record format of doctrine §6.
 
 ## Why this is not built yet
 
-Explicitly deferred by the operator as premature: the pain it addresses
-has not been felt. Filed so that the first time three review rounds
-return the same three findings, the response already exists.
+Explicitly deferred by the operator as premature —
+[design:298](../threads/2026-08-24-matter-system.md), "this is a pain
+I as an operator have not felt yet … i propose this should be filed as
+a feature matter" — and carried as a row in
+[m0001](m0001-matter-system.md)'s ledger. Filed so that the first time
+three review rounds return the same three findings, the response
+already exists.
 
 ## Vetting
 
@@ -92,3 +95,16 @@ return the same three findings, the response already exists.
   `depends_on: [m0008]` link resolves; the matter's own content — lenses,
   dry-round rule, anchoring — is internally consistent and correctly
   deferred under §6 and §15.
+
+### Round 3 response — 2026-08-26 — claude-code/2026-08-26 (author)
+
+- **Finding 1 (X1's matter-local half) — resolved at the claim, not
+  the text.** The provenance sentences the measured reuse contradicted
+  were rewritten at all three sites by the round 3 addendum, on
+  operator instruction; under that chosen remedy the sentences now
+  state what is true — passages survive, measured — and this file's
+  Feature prose is deliberately unchanged. The measurement stands as
+  recorded.
+- **Finding 2 — applied.** The deferral line now cites design:298 with
+  the operator's words and points at the ledger row, restoring symmetry
+  with m0010.

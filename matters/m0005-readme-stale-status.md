@@ -5,8 +5,7 @@ description: "README says Specification seed and heads its command list Commands
 id: m0005
 state: proposed
 status: draft
-target: beatcode
-tags: [docs]
+tags: [beatcode, docs]
 runs: [runs/2026-08-24-render-reproduction.md]
 generated:
   by: claude-code/2026-08-24

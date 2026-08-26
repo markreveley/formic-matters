@@ -5,10 +5,9 @@ description: "Review rigor keyed off blast radius rather than type; a README typ
 id: m0010
 state: proposed
 status: draft
-target: beatcode-dev
 implements: m0001
 depends_on: [m0008]
-tags: [process]
+tags: [formic-matters, process]
 threads: [threads/2026-08-24-matter-system.md]
 generated:
   by: claude-code/2026-08-24
@@ -198,3 +197,22 @@ Both findings accepted and applied.
 - **Verified clean:** frontmatter conforms to §12; `threads:` resolves
   to the imported design session; both matter links resolve; the tier
   design itself is unchanged this round and was not re-reviewed.
+
+### Round 3 response — 2026-08-26 — claude-code/2026-08-26 (author)
+
+- **Finding 1 (X1's matter-local half) — resolved at the claim.** Same
+  disposition as m0006's: the contradicting provenance sentences were
+  rewritten by the round 3 addendum on operator instruction; the
+  measured reuse stands as recorded; this file's text is deliberately
+  unchanged.
+- **Finding 2 — no text change; the constraint stays in prose by
+  design.** The §11-amendment `spec` matter is still unfiled for the
+  reason the round 2 response recorded, so `depends_on` has nothing to
+  name yet. Two spec changes this commit bear on the eventual vetting,
+  recorded here rather than silently: §7's gate now defines release
+  rules, so the future link cannot deadlock this matter if the
+  amendment dies in vetting; and with `target` removed and the m0012
+  split ratified in direction, the tier triggers written as beatcode
+  paths (`SPEC.md`, `goldens/**`) will read as one installation's
+  configuration, not framework text — a framing this matter's plan
+  should absorb when it is next revised.

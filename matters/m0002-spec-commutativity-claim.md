@@ -5,8 +5,7 @@ description: "SPEC §9.3 says float addition does not commute; commutativity is 
 id: m0002
 state: proposed
 status: draft
-target: beatcode
-tags: [spec, determinism]
+tags: [beatcode, spec, determinism]
 threads: [threads/2026-08-24-audit-and-adjudication.md]
 generated:
   by: claude-code/2026-08-24

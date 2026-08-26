@@ -1,15 +1,20 @@
-# The matter doctrine
+# Formic Matters
 
-Normative definition of how changes to beatcode — and to this
-repository itself — are proposed, vetted, ratified, and executed.
+Normative specification of the matter framework: how changes to a
+governed system — and to the framework itself — are proposed, vetted,
+ratified, and executed.
 
-Authored fresh on 2026-08-24 against the operator's rulings, recorded
-verbatim in the two threads this repository carries — the
+Authored fresh on 2026-08-24 as the beatcode development process,
+against the operator's rulings recorded verbatim in the
 [design session](../threads/2026-08-24-matter-system.md) and the
-[adjudication session](../threads/2026-08-24-audit-and-adjudication.md)
-— and compiled row by row in m0001's rulings ledger, each row citing
-the turn it comes from. It becomes doctrine when the operator ratifies
-it as a whole document (§6). Its ratification state lives on
+[adjudication session](../threads/2026-08-24-audit-and-adjudication.md);
+generalized into this framework, and named, on the operator's rulings
+in the
+[2026-08-25 in-document review](../threads/2026-08-25-doctrine-operator-review.md).
+All three threads are in this repository, and every ruling is compiled
+row by row in m0001's rulings ledger, each row citing the turn it comes
+from. This text becomes normative when the operator ratifies it as a
+whole document (§6). Its ratification state lives on
 [m0001](../matters/m0001-matter-system.md); until m0001 is ratified,
 this text is a candidate.
 
@@ -29,28 +34,30 @@ able to read them.
 
 ## 1 · What a matter is
 
-A matter is one proposed change ->[to a system], persisted as one markdown file in
-`matters/`, vetted before the change is made.
+A matter is one proposed change to a system, persisted as one markdown
+file in `matters/`, vetted before the change is made.
 
-There are two targets, named by the `target` field:
--> [my sense is that we already from init should think of this as a framework that should be consumed. i have 10 other repos i could drop it into. i would like to ratify this change now. as a result this document should strictly be a formal spec for the framework, which I would like to name "Formic Ascent". this repo will be renamed to that, and a new repo beatcode-dev will be created to consume the framework and contain the relevant matters, for both beatcode and beatcode-dev itself. however, since beatcode-dev should be a strict consumer of Formic ascent, 
+The framework governs whatever repository installs it. An
+**installation** is one repository carrying this specification, its
+directory conventions, and one matter collection. Which systems an
+installation governs is the installation's own declaration, named as
+`tags` (§12); this repository, the framework's home and founding
+installation, governs the framework itself — the system is
+self-hosting: its own evolution goes through it — and, until the split
+ratified in the 2026-08-25 review executes
+([m0012](../matters/m0012-formic-matters-split.md)), also beatcode and
+its development process.
 
-- `beatcode` — the instrument.
-- `beatcode-dev` — this repository: the doctrine, the tooling, the
-  process itself. The system is self-hosting: its own evolution goes
-  through it.
--> [per above, redacted]
+Nothing lands in any governed system that did not begin as a matter,
+with two defined exceptions: the bootstrap of an installation (§14) and
+the retroactive path (§11). The matter is the unit of work, not the
+commit.
 
-Nothing lands in either ->[any] target that did not begin as a matter, with two
-defined exceptions: ->[redacted] the bootstrap (§14) and the retroactive path (§11).
-The proposal is the unit of work, not the commit.
--> [should it be that the MATTER is the unit of work, not the 'proposal'? if not, where is proposal defined?]
-
--> [edit below to conform]
-There is one collection and one ID sequence; matters for both targets
-are interspersed. "All beatcode matters" is a query over `target`,
-never a directory. IDs deliberately encode nothing — not type, not
-target — so reclassification never moves an ID.
+There is one collection and one ID sequence per installation; matters
+for every system the installation governs are interspersed. "All
+matters for one system" is a query over `tags`, never a directory. IDs
+deliberately encode nothing — not type, not system — so
+reclassification never moves an ID.
 
 ## 2 · Type — immutable
 
@@ -61,17 +68,18 @@ Every matter has exactly one `type`, fixed for its whole life:
 | `feature` | new capability | detailed spec of the feature + proposed implementation plan |
 | `fix` | defective behavior or text | diagnosis of the problem + proposed fix |
 | `refactor` | restructuring without behavior change | diagnosed reason for the refactor + proposed plan |
-| `spec` | change to normative text (beatcode's `SPEC.md`, this doctrine) | the proposed text + what it contradicts or supersedes |
+| `spec` | change to normative text (a governed system's spec, this specification) | the proposed text + what it contradicts or supersedes |
 
 Type never changes. A matter that turns out to be the wrong type is
 superseded by a new one (§5), which keeps `type` a stable query for the
 life of the collection.
 
 `spec` is its own type because its deliverable is normative text rather
-than code, its review question is contradiction, and in beatcode a spec
-change propagates to goldens and then to render hashes — the highest
-blast radius in either repo. Changing this type set is itself a `spec`
-matter against this section.
+than code and its review question is contradiction. Where a governed
+system pins behavior the way beatcode does — spec propagating to
+goldens and then to render hashes — it is also the highest blast radius
+in the installation. Changing this type set is itself a `spec` matter
+against this section.
 
 ## 3 · State — mutable
 
@@ -122,9 +130,14 @@ operator acknowledgment, and m0001 alone moves `ratified → executed`
 at the bootstrap (§14).
 
 A `branch` field is present exactly while a dev agent is working the
-matter. Its presence is what distinguishes in-flight from queued, and
-staleness checks key off it.
-->[are in-flight and queued explicit states for a matter? if so that should be included in the state enum. or - should this be an additional property, such as 'dev-state'?]
+matter, and staleness checks key off it. Its presence is what
+distinguishes in-flight from queued: `staged` with `branch` is
+in-flight, `staged` without is queued. In-flight and queued are
+deliberately neither states nor a stored field: they describe execution
+mechanics inside `staged`, their changes belong to dev agents rather
+than to the operator who owns state transitions, and a stored copy of
+what `branch` already shows could only drift from it — the condition is
+derived, per §10.
 
 ### 3.1 The execution record
 
@@ -132,19 +145,35 @@ Entering `executed` requires a final `## Execution` section on the
 matter: what actually landed (commits, PR), deviations from the
 ratified plan, date, actor. A matter ends as plan and reality side by
 side; the next reader learns where the plan was wrong.
--->[technically, shouldn't 'deviations' from the plan actually land as proposed changes to the plan which need to be ratified before proceeding? or does this invite an endless loop?]
+
+A deviation that changes what was ratified — behavior, scope,
+interface, normative text — is an execution failure, not a recordable
+deviation: the dev agent stops, the matter takes `staged → proposed`
+(§3), and the changed plan is re-ratified before work resumes. The
+record's deviations line is for the remainder: mechanical divergence,
+within the ratified intent, on detail the plan did not pin. The dev
+agent errs toward stopping, and the record is what makes each call
+auditable afterwards. This does not loop: recordable deviations never
+re-enter ratification — ratifying history is not ratification — and a
+landed deviation the operator judges wrong on reading the record is a
+new matter, since nothing leaves `executed` (§3).
 
 ## 4 · Cheap to file, expensive to ratify
 
-The required sections in §2 gate **ratification**, not filing. A matter
--->[i believe you are using 'filing' in the way you have also used 'proposed' - correct me if wrong. if wrong 'filing' needs to be specified]
-may be filed as a single sentence: a defect can be reported before it
-is understood, and producing the diagnosis is what vetting is for — it
-may take several rounds. No matter reaches `ratified` without its
-type's required sections complete.
+To **file** a matter is to add its file to the collection in state
+`proposed` — "filed" and "proposed" name one event, the act and the
+resulting state. The required sections in §2 gate **ratification**, not
+filing. A matter may be filed as a single sentence: a defect can be
+reported before it is understood, and producing the diagnosis is what
+vetting is for — it may take several rounds. No matter reaches
+`ratified` without its type's required sections complete.
 
-Completeness is therefore a checklist on the matter, not a state.
--->[is exectuted not then the completed state?]
+Ratification-readiness is therefore a checklist on the matter, not a
+state, and not the end of the lifecycle: a matter is *ready* when its
+type's required sections exist, checked at the ratification gate
+(m0008), and *done* only at `executed`, the terminal state (§3). The
+two are different questions and the state enum answers only the second;
+there is deliberately no `draft` state between filing and readiness.
 
 ## 5 · Supersession, splitting, and conflict
 
@@ -182,10 +211,11 @@ and `ratified_sha256` — a hash of the matter's **ratified region**: the
 body minus the frontmatter and the append-only record sections
 (`## Vetting`, `## Execution`), so lifecycle appends and frontmatter
 transitions never invalidate it. Where a matter's proposed text is a
-separate document (m0001 → this doctrine, which has no frontmatter),
-the hash is that document's whole file at the same commit. The hash is
-agent-computed and independently verifiable — anyone can recompute it
-from the named commit at any time; the operator computes nothing.
+separate document (m0001 → this specification, which has no
+frontmatter), the hash is that document's whole file at the same
+commit. The hash is agent-computed and independently verifiable —
+anyone can recompute it from the named commit at any time; the operator
+computes nothing.
 
 A matter that enters `executed` by the retroactive path (§11) is
 acknowledged rather than ratified in advance, and what the operator
@@ -215,8 +245,15 @@ or executed while a dependency is unexecuted. The retroactive path
 (§11) is exempt — it exists for work that cannot wait and never passes
 through `staged`; a retroactive matter names its unexecuted
 dependencies in its `## Retroactive` section instead of being blocked
-by them. The validator checks both
-([m0008](../matters/m0008-matter-tooling.md)).
+by them, and carrying that section is what marks a matter as being on
+the path — the marker the validator keys on (§12). The gate has an
+exit: when a dependency is superseded, the ratification that effects
+the supersession (§5) re-points every dependent's `depends_on` to the
+superseding matter(s); when a dependency ends `rejected` or
+`withdrawn`, its dependents stay blocked until each one's `depends_on`
+is amended — a frontmatter edit, outside the ratified region (§6),
+validated at the dependent's next transition. The validator checks all
+of this ([m0008](../matters/m0008-matter-tooling.md)).
 
 A worklist ("what is left before X is operational") is a filter plus a
 topological sort over `depends_on` — derived, never authored. Container
@@ -230,12 +267,21 @@ The repository is the record. Review, rulings, and decisions live in
 the tree: vetting entries on matters (§6), threads (§9.2), runs (§9.1).
 
 - The operator's channel is local file edits, committed and pushed —
-  not platform comments. Agents read rulings from the tree.
+  not platform comments. Agents read rulings from the tree. One form is
+  first-class: **in-document review** — operator comments written
+  `->[…]` into an authored file and committed. The comment commit is an
+  operator turn. The responding agent transcribes every comment
+  verbatim, with its location and the commit that carries it, into a
+  thread (§9.2), and removes the markers in its response commit, so the
+  exchange survives as a citable primary source while normative text
+  stays clean. The diff pair — comment commit, response commit — is the
+  underlying record; the thread is where it is read.
 - GitHub is transport and merge mechanics. A pull request is a diff
   boundary and a gate; its body is a one-line pointer; its comment
   surface is unused. If the platform changes, the record does not.
 - **Git citation.** Every commit carries a `Matter: mNNNN` trailer, and
-  branch names and PR titles are prefixed with the matter ID. The
+  branch names and PR titles are prefixed with the matter ID — starting
+  with the first matter after an installation's bootstrap (§14). The
   trailer survives squashes and makes `git log` greppable by matter; a
   commit-msg hook enforces it once the tooling exists (m0008).
 
@@ -256,9 +302,10 @@ fact; a superseding run is a new file.
 goldens: human and agent turns verbatim, reasoning and tool traffic
 omitted, redaction applied before publication. Threads are never
 derived or summarized in place; every view over them (indexes,
-matter-to-thread maps) is derived from frontmatter. Which sessions are
-exported, and by what mechanism, is
-->[need to account for the scenario like this where operator and agent interact within a document via comments - options i see are to either make a note to check a document with a pointer to the git commit, or persist a duplicate copy at the state the commit was made]
+matter-to-thread maps) is derived from frontmatter. An in-document
+review exchange (§8) is exported the same way: comments verbatim,
+locations and commits cited. Which sessions are exported, and by what
+mechanism, is
 [m0011](../matters/m0011-thread-persistence.md).
 
 ### 9.3 Claims DAGs
@@ -304,7 +351,10 @@ matter as `proposed` with the evidence attached (commits, runs) and a
 `## Retroactive` section stating why this path was used. Explicit
 operator acknowledgment, recorded in `verified`, moves it directly to
 `executed` (§3), over a hashed region that includes what landed (§6).
-The `depends_on` gate of §7 does not apply on this path. If the
+The `## Retroactive` and `## Execution` sections must be complete at
+the commit the operator acknowledges — the acknowledgment is stated
+over them, and §6's region cannot cover a section that does not yet
+exist. The `depends_on` gate of §7 does not apply on this path. If the
 operator declines, the matter is `rejected` and a new matter is opened
 to unwind what landed. The validator flags
 retroactive matters so they are reviewed, late but always.
@@ -316,23 +366,27 @@ This path is already needed by
 
 One matter per file, flat, in `matters/`. Filenames are
 `mNNNN-slug.md`; IDs are `mNNNN`, zero-padded, allocated sequentially,
-never reused, never renamed. IDs are unique within this collection; the
-archived first attempt is a separate, closed collection.
+never reused, never renamed. IDs are unique within their installation's
+collection; this installation's archived first attempt is a separate,
+closed collection.
 
 The format is **OKF v0.2 as a documented dialect, not a
 certification** — markdown with YAML frontmatter, readable with no
 tooling. The dialect choices, recorded deliberately:
 
 - links are plain relative paths (an OKF-conformant form that also
-  resolves everywhere GitHub renders markdown);
+  resolves everywhere GitHub renders markdown). Every relative link in
+  an authored file resolves and none is leading-slash; `threads/` is
+  evidence, not link graph — a verbatim transcript is never edited to
+  satisfy a link check (§9.2);
 - timestamps are ISO 8601 datetimes with an explicit UTC offset;
 - `state` (§3) is ours; OKF's `status` is carried alongside and derived
   mechanically from it — `proposed → draft`;
   `ratified`/`staged`/`executed → stable`;
   `rejected`/`withdrawn`/`superseded → deprecated` — so a generic OKF
   consumer reads lifecycle correctly. `status` is never set by hand.
-- wherever OKF conflicts with a real need, this doctrine wins and the
-  deviation is recorded here.
+- wherever OKF conflicts with a real need, this specification wins and
+  the deviation is recorded here.
 
 Frontmatter schema — every field that may appear:
 
@@ -343,9 +397,11 @@ description: "<one sentence — quote it; unquoted colons break YAML>"
 id: m0007                               # §12
 state: proposed                         # §3
 status: draft                           # derived from state; never hand-set
-target: beatcode | beatcode-dev         # §1
-tags: [render, process]                 # free labels; views filter on them,
-                                        # semantics live where a query uses them
+tags: [beatcode, render, process]       # free labels; views filter on them.
+                                        # An installation names each governed
+                                        # system as a tag (§1); other
+                                        # semantics live where a query uses
+                                        # them
 implements: m0001                       # optional; §7
 depends_on: [m0008]                     # optional; §7
 superseded_by: [m0043, m0044]           # optional; §5
@@ -359,38 +415,62 @@ verified:                               # the ratification record; §6
   - by: human:mark
     at: 2026-08-24T23:00:00Z
 ratified_commit: <sha>                  # §6; written at ratification
-ratified_sha256: <hash>                 # §6; whole-file, agent-computed
+ratified_sha256: <hash>                 # §6; agent-computed over the §6 region
 ```
 
-->[i would propose, per earlier, that 'target' would be unecessary for the framework spec. the target will be whatever client repo has installed the framework]
+One body marker is schema-relevant: the presence of a `## Retroactive`
+section is what puts a matter on the §11 path and exempts it from the
+§7 gate. There is deliberately no frontmatter flag beside it — a flag
+could only drift from the section it mirrors. Self-declaration is
+contained by where the path ends: the exemption only defers checking to
+the operator's acknowledgment, which is stated over that section (§11).
+
 `index.md` and `log.md` are reserved by OKF and are derived artifacts.
 **Views are derived.** The flat collection is the only source of truth;
 every listing, worklist, and rollup is regenerated
 (`tools/gen-index.py` today, m0008 properly) and never hand-edited.
 
-## 13 · Topology and the extraction tripwire
+## 13 · Topology
 
-One repository governs itself and beatcode (§1). The doctrine is
-latently general, and deliberately not yet extracted: a framework with
-one consumer teaches its boundary by being used, not by being split.
-->[again, i feel we are already past this point and am ratifying the abstraction now]
+The framework lives in its own repository — this one — and is consumed
+by installing it into others (§1). It is self-hosting: changes to this
+specification and to the framework's tooling are matters in this
+repository's own collection, put through this process.
 
-The process moves to its own framework repository when any of these
-fires: a second consumer repository actually adopts it; the tooling
-->[triggered - i have 5 which can adopt it]
-matures into a released binary wanting its own cadence; doctrine
-changes start being motivated by non-beatcode needs. Until then, no
-split. Extraction stays mechanical because the collection is flat and
-frontmattered.
+This section originally deferred extraction behind a tripwire — "a
+framework with one consumer teaches its boundary by being used, not by
+being split," with extraction on a second consumer's adoption. The
+operator ruled the tripwire fired in the
+[2026-08-25 review](../threads/2026-08-25-doctrine-operator-review.md)
+(review c14, c15: "i feel we are already past this point and am
+ratifying the abstraction now"; "triggered - i have 5 which can adopt
+it"), and named the framework in the same exchange. The split — this
+repository renamed to the framework; a new `beatcode-dev` created as
+its first strict consumer, carrying the beatcode-facing matters — is
+[m0012](../matters/m0012-formic-matters-split.md). Each installation is
+a separate collection with its own ID sequence (§1); how a repository
+installs the framework is m0012's design to propose and its successors'
+to refine. Extraction stays mechanical because the collection is flat
+and frontmattered.
 
-## 14 · The bootstrap record
+## 14 · The bootstrap
 
-This document and the initial collection (m0001–m0011) were written in
-one motion, before ratification — the one permitted out-of-order
-execution, this time visible and pinned: authored against the operator
-rulings in the thread named in the header, with m0001 carrying the
-state, and ratification (§6) recording the exact commit and hash the
-operator read.
+Every installation begins with the one change that could not itself
+have been a matter in that repository: the framework landing. The
+bootstrap exception (§1) covers exactly that — the installing commits,
+recorded in the installation's first matter, with everything after
+entering through the process. Branch-name and PR-title matter prefixes
+(§8) start with the first matter after the bootstrap; the bootstrap's
+own branches predate the collection they create.
+
+This repository's bootstrap is the founding instance, and larger than
+an installation's: this document and the initial collection
+(m0001–m0011) were written in one motion, before ratification — the one
+permitted out-of-order execution, visible and pinned: authored against
+the operator rulings in the threads named in the header, with m0001
+carrying the state, and ratification (§6) recording the exact commit
+and hash the operator read. m0001 alone moves `ratified → executed` on
+it (§3).
 
 The first attempt at this bootstrap was audited, adjudicated, and
 archived unmerged (PR #1). Its central failure — a document ratified
@@ -402,33 +482,38 @@ requires ratification over the exact text and why m0007 exists.
 Design that is deliberately deferred lives in the matters that own it:
 review structure (m0006), drift tooling (m0007), the validator and its
 language (m0008), risk tiers (m0010), thread policy scope and mechanism
-(m0011). Anything appearing in neither this document nor a matter is
-not doctrine.
+(m0011), the split and installation mechanics (m0012). Anything
+appearing in neither this document nor a matter is not part of the
+framework.
 
-Twelve choices in this document and the collection are the authoring
-agent's, adopted without an operator ruling. Ratifying this document
-confirms all twelve; they are listed here, grouped by how each came to
-be unruled, so the confirmation is deliberate rather than silent.
+Choices in this document and the collection that are the authoring
+agents', adopted without an operator ruling, are listed here, grouped
+by how each came to be unruled, so that ratifying this document
+confirms them deliberately rather than silently.
 
-**Presented to the operator before authoring, and left unruled.**
-
-- the ratification recording mechanism of §6 — operator reads and
-  states, agent computes and records the hash;
-- the single interspersed ID sequence over both targets (§1), and the
-  ID restart at m0001 with the archive as a separate closed collection
-  (§12);
-  ->[propose the removal of target making this moot]
-- the extraction tripwire's specific conditions (§13);
-- the extension of "views are derived" to threads — maps and indexes
-  over threads derived from frontmatter (§9.2);
-- bundle-first sequencing: m0002–m0005 filed `proposed`, ratified after
-  this document (implicit in the collection's state).
-->[others are ratified]
+**Presented to the operator before authoring, left unruled — then
+ratified in the
+[2026-08-25 review](../threads/2026-08-25-doctrine-operator-review.md)**
+(review c17, "others are ratified"): the ratification recording
+mechanism of §6; the extraction tripwire's specific conditions
+(§13 — since superseded by the same review's ruling that it fired); the
+extension of "views are derived" to threads (§9.2); bundle-first
+sequencing — m0002–m0005 filed `proposed`, ratified after this
+document. Recorded here as ruled, no longer pending. One choice from
+this group remains listed, because the review's ruling on it was to
+dissolve its premise rather than confirm it: the single interspersed ID
+sequence was framed over two `target`s, and `target` is removed (review
+c13, c16); what §1 now states — one collection and one sequence per
+installation — and the ID restart at m0001 with the archive as a
+separate closed collection (§12) still await the ratification read.
 
 **Written later, by an author answering a vetting finding.** These did
 not exist when the operator last saw this document as a whole, and no
 ruling covers them; "apply" was an instruction to address findings, not
-a decision on the text each fix produced.
+a decision on the text each fix produced. Plainspeak breakdowns of each,
+with implications, are in the operator-review response on
+[m0001](../matters/m0001-matter-system.md), as the review requested
+(review c18).
 
 - the ratified-region definition of §6 (body minus frontmatter and
   record sections) — round 1, answering
@@ -447,14 +532,36 @@ a decision on the text each fix produced.
   round 2;
 - §6's hashed region for the retroactive path (`## Retroactive` and
   `## Execution` at the acknowledged commit) — round 2.
-  ->[i will need plainspeak breakdowns of what these are and what the implications of each are]
+
+**Written in the operator-review response, answering the review's own
+questions and findings.** The operator asked the questions; the text
+answering each is the author's, and the ratification read confirms it:
+
+- §3's in-flight/queued derivation from `branch` presence, answering
+  review c08;
+- §3.1's deviation rule — what re-opens, what the record may carry —
+  answering review c09;
+- §4's definition of "file" and the ratification-readiness restatement,
+  answering review c10 and c11;
+- §7's gate exit (supersession re-points; rejection and withdrawal
+  block until amended), answering round 3's X7;
+- §8's in-document review convention, answering review c12;
+- §11's completeness-before-acknowledgment rule, answering round 3's
+  X8;
+- §12's `## Retroactive` marker note (with X7's self-declaration
+  containment) and the authored-files link-check scope, answering
+  round 3's X7 and X12;
+- §14's generalization of the bootstrap to installations, per the
+  review's clarifying ruling, and its branch-prefix carve-out,
+  answering round 3's X13.
 
 **Put to the operator and expressly not ruled on.**
 
-- §4's "completeness is a checklist on the matter, not a state", and
-  the absence of a `draft` state. This was the adjudication session's
-  R1; the operator declined to settle it — "do i even need to pick?" —
-  and the answer given was that R1's substance "gets settled by whatever
-  state machine the fresh author proposes and you ratify as a whole
-  document". This is that ratification.
-  ->[need clarity here too]
+- §4's "ratification-readiness is a checklist on the matter, not a
+  state", and the absence of a `draft` state. This was the adjudication
+  session's R1; the operator declined to settle it — "do i even need to
+  pick?" — and the answer given was that R1's substance "gets settled by
+  whatever state machine the fresh author proposes and you ratify as a
+  whole document". This is that ratification; the plainspeak breakdown
+  the review asked for (review c19) is in the operator-review response
+  on [m0001](../matters/m0001-matter-system.md).

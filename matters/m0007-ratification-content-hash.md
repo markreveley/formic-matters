@@ -5,10 +5,9 @@ description: "Tooling that verifies ratified_sha256 before execution, so ratifie
 id: m0007
 state: proposed
 status: draft
-target: beatcode-dev
 implements: m0001
 depends_on: [m0008]
-tags: [process, integrity]
+tags: [formic-matters, process, integrity]
 generated:
   by: claude-code/2026-08-24
   at: 2026-08-24T22:33:00Z
@@ -36,14 +35,17 @@ Build the check:
   which is what makes the check implementable against the working file
   at all: lifecycle appends and frontmatter transitions never move it.
   This matter builds the check; it does not choose the region.
-- the check names the regime it verified. §6 defines two: the
-  ratified-region hash for an ordinary matter, and the whole-file hash
+- the check names the regime it verified. §6 defines three: the
+  ratified-region hash for an ordinary matter; the whole-file hash
   where the proposed text is a separate document (m0001 → the
-  doctrine). The second has no excluded region, so any later `spec`
-  matter amending the doctrine moves that hash — §14 shortens m0001's
-  exposure to the interval between ratification and execution, and this
-  check is what makes even that interval observable. A check that
-  reported only "matches" would hide which regime it was in.
+  specification); and the retroactive regime — the ratified region plus
+  `## Retroactive` and `## Execution` as they stand at the acknowledged
+  commit (§6, §11). The whole-file regime has no excluded region, so
+  any later `spec` matter amending the specification moves that hash —
+  §14 shortens m0001's exposure to the interval between ratification
+  and execution, and this check is what makes even that interval
+  observable. A check that reported only "matches" would hide which
+  regime it was in.
 
 Fully deterministic; small once [m0008](m0008-matter-tooling.md)
 exists.
@@ -163,3 +165,15 @@ bullet's requirement covers it.
 - **Verified clean:** the round 2 finding was genuinely applied — the
   regime-naming requirement exists at m0007:39-46 and is not merely
   promised; frontmatter conforms; both links resolve.
+
+### Round 3 response — 2026-08-26 — claude-code/2026-08-26 (author)
+
+Finding 1 accepted and applied: the Feature bullet now says **three**
+regimes and lists the third — the retroactive region, ratified region
+plus `## Retroactive` and `## Execution` as they stand at the
+acknowledged commit — inside this matter's ratified region, where the
+text the operator ratifies says what the check must do. The related
+ordering hole (m0001's X8) is closed where the round said it belonged,
+in §11: both sections must be complete at the commit the operator
+acknowledges, so the region this check verifies is guaranteed to exist
+when it runs.

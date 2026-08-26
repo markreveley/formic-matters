@@ -1,15 +1,15 @@
 ---
 type: spec
 title: The matter system
-description: "Every change to beatcode or to this repository is proposed, vetted, and ratified as a matter before it is made."
+description: "Every change to a governed system — and to the framework itself — is proposed, vetted, and ratified as a matter before it is made."
 id: m0001
 state: proposed
 status: draft
-target: beatcode-dev
-tags: [doctrine, bootstrap]
+tags: [formic-matters, doctrine, bootstrap]
 threads:
   - threads/2026-08-24-matter-system.md
   - threads/2026-08-24-audit-and-adjudication.md
+  - threads/2026-08-25-doctrine-operator-review.md
 generated:
   by: claude-code/2026-08-24
   at: 2026-08-24T22:33:00Z
@@ -53,16 +53,26 @@ source, so the rulings it carries are read here rather than attested to.
 
 ## Rulings ledger
 
-Every operator proposal and ruling from the 2026-08-24 sessions, and
-where it landed. This table is what the fidelity review checks the
-doctrine against, alongside the threads themselves.
+Every operator proposal and ruling from the 2026-08-24 sessions and
+the 2026-08-25 in-document review, and where it landed. This table is
+what the fidelity review checks the doctrine against, alongside the
+threads themselves.
 
-Both sessions are in this tree: the
-[design session](../threads/2026-08-24-matter-system.md) and the
-[adjudication session](../threads/2026-08-24-audit-and-adjudication.md).
-**Ruled in** cites the turn, so every row is checkable here. Clauses
-marked **‡** are authoring-agent mechanisms adopted to satisfy a
-ruling, not rulings; doctrine §15 lists them for confirmation at
+All three sources are in this tree: the
+[design session](../threads/2026-08-24-matter-system.md), the
+[adjudication session](../threads/2026-08-24-audit-and-adjudication.md),
+and the
+[operator review](../threads/2026-08-25-doctrine-operator-review.md).
+**Ruled in** cites the turn, so every row is checkable here. Review
+turns are cited by label rather than line — `review cNN` for the
+in-document comments, `review aN` for the answers to the prompted
+questions, `review i1` for the naming interjection — because that
+export is brought current as exchanges land and labels survive appends.
+Two review rulings are deliberately not rows: the answers on turn scope
+(a3) and push target (a4) are session mechanics that land no text; they
+are recorded in the thread and in the operator-review response below.
+Clauses marked **‡** are authoring-agent mechanisms adopted to satisfy
+a ruling, not rulings; doctrine §15 lists them for confirmation at
 ratification.
 
 | Operator proposal / ruling | Landed | Ruled in |
@@ -72,7 +82,7 @@ ratification.
 | per-type required content (fix: diagnosis + fix; feature: spec + plan; refactor: reason + plan) | doctrine §2 | [design:169-171](../threads/2026-08-24-matter-system.md) |
 | state spine `proposed → ratified → staged → executed` | doctrine §3 | [design:280](../threads/2026-08-24-matter-system.md) |
 | vetting by fresh agent reviews until the operator ratifies | doctrine §6 | [design:173](../threads/2026-08-24-matter-system.md) |
-| execution by a dev agent launched by the operator; orchestration later, as its own matter | doctrine §3 | [design:173](../threads/2026-08-24-matter-system.md) |
+| execution by a dev agent launched by the operator; orchestration later, as its own matter | doctrine §3 | [design:173](../threads/2026-08-24-matter-system.md), [adjudication:290](../threads/2026-08-24-audit-and-adjudication.md) |
 | cheap to file, expensive to ratify; diagnosis may arrive over several turns but precedes ratification | doctrine §4 | [design:287](../threads/2026-08-24-matter-system.md) |
 | split functions as supersession routing to offshoots | doctrine §5 | [design:307](../threads/2026-08-24-matter-system.md) |
 | flat collection, metadata-sortable, all views derived | doctrine §1, §7, §12 | [design:175](../threads/2026-08-24-matter-system.md) |
@@ -80,12 +90,12 @@ ratification.
 | lenses/dry-round review machinery deferred as premature, filed as a matter | [m0006](m0006-review-lenses-and-dry-rounds.md) | [design:298](../threads/2026-08-24-matter-system.md) |
 | ratification content hash deferred unless MVP-required; record now, tooling later | doctrine §6 + [m0007](m0007-ratification-content-hash.md) | [design:301](../threads/2026-08-24-matter-system.md), [design:449](../threads/2026-08-24-matter-system.md) |
 | risk tiers deferred on the same reasoning — "same thoughts as 4" | [m0010](m0010-risk-tiers.md) | [design:304](../threads/2026-08-24-matter-system.md) |
-| "matter system operational" as a derived worklist view | doctrine §7 | [design:301](../threads/2026-08-24-matter-system.md) |
+| "matter system operational" as a derived worklist view | doctrine §7 | [design:301](../threads/2026-08-24-matter-system.md), [design:449](../threads/2026-08-24-matter-system.md) |
 | SPEC-GAPS broken out into matters, landed and otherwise; `spec` as a real type | [m0009](m0009-spec-gaps-to-matters.md), doctrine §2 | [design:316](../threads/2026-08-24-matter-system.md), [design:456](../threads/2026-08-24-matter-system.md) |
 | PRs cite matter IDs | doctrine §8 (commit trailer, branch/PR title prefix) | [design:317](../threads/2026-08-24-matter-system.md) |
 | process/system code kept separate from the instrument | [m0008](m0008-matter-tooling.md) | [design:310](../threads/2026-08-24-matter-system.md), [design:450](../threads/2026-08-24-matter-system.md) |
-| consider OKF; keep the useful shape, no memory files in the repo | doctrine §12 (documented dialect) | [design:453](../threads/2026-08-24-matter-system.md), [design:486](../threads/2026-08-24-matter-system.md) |
-| org/assertions raised as a matter, then withdrawn once identified as the operator's global CLAUDE.md; the out-of-scope disposition is derived from the cross-repo separation ruling and was never contradicted | noted under Scope below | [design:318](../threads/2026-08-24-matter-system.md), [design:450](../threads/2026-08-24-matter-system.md), [design:457](../threads/2026-08-24-matter-system.md) |
+| consider OKF; keep the useful shape, no memory files in the repo; "agree on okf direction", with the conformity-cost scepticism that keeps it a dialect | doctrine §12 (documented dialect) | [design:453](../threads/2026-08-24-matter-system.md), [design:486](../threads/2026-08-24-matter-system.md), [adjudication:310](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:394](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:473](../threads/2026-08-24-audit-and-adjudication.md) |
+| org/assertions raised as a matter ([design:318](../threads/2026-08-24-matter-system.md)); the operator asked whether the file was their user-level global CLAUDE.md rather than a repo one ([design:457](../threads/2026-08-24-matter-system.md)); the identification and the out-of-scope derivation are the agent's, in the following turn, never answered by the operator | noted under Scope below, where the derivation is owned | [design:318](../threads/2026-08-24-matter-system.md), [design:457](../threads/2026-08-24-matter-system.md), [design:467](../threads/2026-08-24-matter-system.md), [design:450](../threads/2026-08-24-matter-system.md) |
 | thread persistence: verbatim human and agent turns, reasoning and tool traffic dropped, redact before publication | doctrine §9.2 + [m0011](m0011-thread-persistence.md) | [design:567](../threads/2026-08-24-matter-system.md), [design:660](../threads/2026-08-24-matter-system.md), [adjudication:264](../threads/2026-08-24-audit-and-adjudication.md) |
 | runs directory documenting verification runs with environment specs | doctrine §9.1 | [adjudication:260](../threads/2026-08-24-audit-and-adjudication.md) |
 | claims-DAG in the matter itself, visualization derived, nodes are not matters | doctrine §9.3 | [adjudication:270](../threads/2026-08-24-audit-and-adjudication.md) |
@@ -94,7 +104,7 @@ ratification.
 | archive the first attempt, do not expunge; fresh authoring, nothing textual carried | doctrine §14, this matter | [adjudication:551](../threads/2026-08-24-audit-and-adjudication.md) |
 | landed/execution record required to enter `executed` | doctrine §3.1 | [adjudication:565](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:601](../threads/2026-08-24-audit-and-adjudication.md) |
 | git citation convention (trailer + prefixes) | doctrine §8 | [adjudication:568](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:601](../threads/2026-08-24-audit-and-adjudication.md) |
-| threads primary reference; adjudication thread exported into this tree; derived-views-over-threads formalization is ‡ | doctrine §9.2, [threads/2026-08-24-audit-and-adjudication.md](../threads/2026-08-24-audit-and-adjudication.md) | [adjudication:467](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:557](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:571](../threads/2026-08-24-audit-and-adjudication.md) |
+| threads primary reference; adjudication thread exported into this tree; derived-views-over-threads formalization is ‡. Q3's premise that the design conversation stays archive-side was later reversed by the round 2 response's import — recorded there, on m0011, and in round 3's X2 | doctrine §9.2, [threads/2026-08-24-audit-and-adjudication.md](../threads/2026-08-24-audit-and-adjudication.md) | [adjudication:467](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:557](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:571](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:601](../threads/2026-08-24-audit-and-adjudication.md) |
 | ratification gate over the exact text; operator prefers not to compute hashes locally; the recording mechanism (agent computes and records) is ‡ | doctrine §6 | [adjudication:284](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:602](../threads/2026-08-24-audit-and-adjudication.md) |
 | vetting rounds recorded on the matter as appended entries | doctrine §6 | [adjudication:467](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:578](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:601](../threads/2026-08-24-audit-and-adjudication.md) |
 | matters assert immutable references; no undated mutable-state claims | doctrine §9.4 | [adjudication:477](../threads/2026-08-24-audit-and-adjudication.md) |
@@ -102,6 +112,18 @@ ratification.
 | housekeeping: PR #1 closed unmerged, archive branch kept, planning drafts absorbed, directory names | executed at build; the archive branch `m0001-matter-system` and doctrine §14 are its in-tree traces | [adjudication:590](../threads/2026-08-24-audit-and-adjudication.md), [adjudication:604](../threads/2026-08-24-audit-and-adjudication.md) |
 | unprocessed operator proposals become matters | [m0006](m0006-review-lenses-and-dry-rounds.md), [m0010](m0010-risk-tiers.md), [m0011](m0011-thread-persistence.md) | [adjudication:605](../threads/2026-08-24-audit-and-adjudication.md) |
 | relative links | doctrine §12 | [adjudication:481](../threads/2026-08-24-audit-and-adjudication.md) |
+| authorize the bootstrap: "agree to draft and execute m0001", answering the agent's make-m0001-the-exception proposal | doctrine §14, and §3's m0001-only `ratified → executed` exception | [design:437-443](../threads/2026-08-24-matter-system.md), [design:459](../threads/2026-08-24-matter-system.md) |
+| "do not persist un-ratified 'facts' to repo, just what we discuss" | doctrine §15's existence — the confirm-at-ratification apparatus for unruled choices | [design:486](../threads/2026-08-24-matter-system.md) |
+| the process is a consumable framework from init; the abstraction is ratified now; this document becomes strictly the framework's formal spec | this document as a whole; doctrine §13 | [review c02](../threads/2026-08-25-doctrine-operator-review.md), [review c14](../threads/2026-08-25-doctrine-operator-review.md) |
+| the framework is named **Formic Matters** ("Formic Ascent" in the review comment, corrected in the same exchange) | title, throughout | [review c02](../threads/2026-08-25-doctrine-operator-review.md), [review i1](../threads/2026-08-25-doctrine-operator-review.md) |
+| the extraction tripwire fired — five repositories can adopt | doctrine §13 | [review c15](../threads/2026-08-25-doctrine-operator-review.md) |
+| the split: this repository renamed to the framework; a new beatcode-dev created as its first strict consumer, carrying the beatcode-facing matters; the framework keeps and self-hosts its own | doctrine §13, [m0012](m0012-formic-matters-split.md) | [review c02](../threads/2026-08-25-doctrine-operator-review.md), [review a1](../threads/2026-08-25-doctrine-operator-review.md) |
+| remove `target` from the spec — the target is whatever repository installs the framework; governed systems named as tags | doctrine §1, §12; every matter's frontmatter conformed | [review c03](../threads/2026-08-25-doctrine-operator-review.md), [review c13](../threads/2026-08-25-doctrine-operator-review.md), [review c16](../threads/2026-08-25-doctrine-operator-review.md) |
+| the matter, not the proposal, is the unit of work | doctrine §1 | [review c06](../threads/2026-08-25-doctrine-operator-review.md) |
+| the bootstrap exception generalized to installations | doctrine §1, §14 | [review c05](../threads/2026-08-25-doctrine-operator-review.md), [review a2](../threads/2026-08-25-doctrine-operator-review.md) |
+| in-document operator↔agent comment exchanges must be accounted for; commit-pointer and duplicate-at-state offered as options | doctrine §8, §9.2; [the exchange's own thread](../threads/2026-08-25-doctrine-operator-review.md) is the first exercise | [review c12](../threads/2026-08-25-doctrine-operator-review.md) |
+| §15's presented-before-authoring choices: "others are ratified" | doctrine §15, first group | [review c17](../threads/2026-08-25-doctrine-operator-review.md) |
+| plainspeak breakdowns, with implications, required on the later-written choices and the R1 item before ruling | the operator-review response below | [review c18](../threads/2026-08-25-doctrine-operator-review.md), [review c19](../threads/2026-08-25-doctrine-operator-review.md) |
 
 ## Scope held out deliberately
 
@@ -115,28 +137,35 @@ own matters rather than built now: review structure
 
 The operator's global-CLAUDE.md/assertions question is out of scope for
 this collection. It is the one row of the ledger whose *disposition* is
-derived rather than stated, and the derivation is now readable end to
-end: proposed as a matter
-([design:318](../threads/2026-08-24-matter-system.md)), then narrowed by
-the operator once they identified the file as their user-level global
-CLAUDE.md rather than a repo one
-([design:457](../threads/2026-08-24-matter-system.md)), which makes it
-cross-repo by definition and so excluded by their own "concerns across
-repos are not mixed"
-([design:450](../threads/2026-08-24-matter-system.md)). Never
-contradicted afterwards.
+derived rather than stated, and the derivation is readable end to end —
+and owned: proposed as a matter
+([design:318](../threads/2026-08-24-matter-system.md)); the operator
+*asked* whether the file was their user-level global CLAUDE.md rather
+than a repo one
+([design:457](../threads/2026-08-24-matter-system.md)); the
+identification, and the whole out-of-scope derivation — cross-repo by
+definition, so excluded by the operator's own "concerns across repos
+are not mixed"
+([design:450](../threads/2026-08-24-matter-system.md)) — are the
+agent's, stated in the next turn
+([design:467](../threads/2026-08-24-matter-system.md)) and never
+answered by the operator. The disposition is the agent's, unanswered,
+standing because never contradicted; ratifying this matter confirms
+it.
 
 ## Execution
 
 The tree was written together with this matter (doctrine §14) and has
-grown with its vetting. Everything in it is claimed here: the doctrine,
-matters m0001–m0011, the derived index, the interim index generator,
-the repository README, both thread exports in `threads/` (the design
-session imported verbatim from the archive branch in round 2's
-response, the adjudication session exported by its participating
-agent), and every record in `runs/`. Nothing else is in the tree. This
-section is completed with commits and date when the matter reaches
-`executed`, which under §14 happens immediately after ratification.
+grown with its vetting. Everything in it is claimed here: the
+specification, matters m0001–m0012, the derived index, the interim
+index generator, the repository README, the three thread exports in
+`threads/` (the design session imported verbatim from the archive
+branch in round 2's response, the adjudication session exported by its
+participating agent, and the operator-review exchange transcribed by
+its responding agent), and every record in `runs/`. Nothing else is in
+the tree. This section is completed with commits and date when the
+matter reaches `executed`, which under §14 happens immediately after
+ratification.
 
 ## Vetting
 
@@ -1359,3 +1388,309 @@ recorded twice (m0001:599-612, m0001:628-657), and it has the same
 consequence: the ratification read should treat this file's round 3
 reviewer and the author of these four edits as the same instance, and
 therefore not independent for the three X1 sites and §15's list.
+
+### Operator review — 2026-08-25 — in-document
+
+- **Reviewer:** the operator, for the first time over the whole
+  document since vetting began — and through the channel §8 prescribes:
+  a committed file edit. Commit `9c1d295` writes nineteen `->[…]`
+  comments into `doctrine/matters.md`; the session that answered it
+  adds a task message, four prompted questions with answers, and a
+  naming interjection.
+- **Where the record lives:** the entire exchange is exported verbatim
+  to
+  [threads/2026-08-25-doctrine-operator-review.md](../threads/2026-08-25-doctrine-operator-review.md)
+  — comments c01–c19 byte-exact from `9c1d295` with their locations,
+  answers a1–a4, interjection i1 — with transcription fidelity verified
+  in
+  [runs/2026-08-26-operator-review-response.md](../runs/2026-08-26-operator-review-response.md).
+  This is the first exercise of the in-document review convention that
+  §8 now defines, and the export mechanism is itself the answer to the
+  review's c12.
+- **What the comments carry**, in three kinds: rulings — the process is
+  a consumable framework, ratified as such now, named **Formic
+  Matters** (i1; "Formic Ascent" in c02, superseded), this repository
+  to be renamed to it, a new beatcode-dev created as its first strict
+  consumer, `target` removed from the spec, the §13 tripwire declared
+  fired, §15's presented-group "others are ratified"; directed edits —
+  c01, c03, c04, c05, c07, and c06's unit-of-work correction; and seven
+  questions — c08 (in-flight/queued), c09 (deviations), c10 (filing),
+  c11 (executed as completed?), c12 (persisting exchanges like this
+  one), c18 and c19 (plainspeak breakdowns before ruling on §15's
+  later-written and not-ruled items). c02 ends mid-sentence; its
+  truncated clause was resolved by prompted question q1/a1: the
+  framework self-hosts — m0001 and the process matters stay with the
+  framework; the beatcode-facing matters move to the new consumer.
+- **Not a §6 vetting round:** the reviewer is the operator, and several
+  comments are rulings rather than findings. Recorded here because this
+  file is where m0001's review history accretes, and because the
+  response below is structured like a response round: every comment
+  dispositioned, every question answered.
+
+### Round 3 response — 2026-08-26 — claude-code/2026-08-26 (author)
+
+A fresh author instance — not the round 3 reviewer, and not the author
+of any earlier response. X1 and X3 were applied by the round 3 addendum
+on operator instruction; the remaining findings are answered here, in
+the same commit that answers the operator review, because four of them
+(X7, X8, X12, X13) fix text the review's rewrite restructures anyway.
+Where a fix lands in rewritten text, §15's new group names it so the
+ratification read sees the authorship.
+
+- **X2 — (a) applied in the ledger; (b) answered by this turn's own
+  discipline.** (a) The Q3 row now cites the ruling turn
+  (adjudication:601) and carries the reversal on its face: the
+  stays-archive-side premise was reversed by the round 2 response's
+  import, recorded there, on m0011, and in X2 itself. Nothing is
+  un-reversed by saying so; what the finding asked — that the record
+  stop contradicting §9.4 silently — is done. (b) The three uncited
+  operator directions arrived through the session harness, outside any
+  exported thread; nothing in the tree can retroactively contain them,
+  and no citation is manufactured. What changes is forward-looking:
+  m0011's Open now carries "what record an export-or-import event
+  itself requires" (its round 3 finding asked for exactly this), and
+  every direction *this* response acts on has a primary source in the
+  exchange thread — a1–a4 and i1 are citable where "proceed with fix"
+  never was.
+- **X4 — applied.** The org/assertions row and the Scope section now
+  cite [design:467](../threads/2026-08-24-matter-system.md), the turn
+  that contains the derivation, and say whose it is: the agent's,
+  unanswered by the operator, standing because never contradicted and
+  confirmed at ratification.
+- **X5 — applied.** Two rows added (the bootstrap authorization at
+  design:459; the no-unratified-facts ruling at design:486), and four
+  rows gain the citations the finding named: dev-agent execution +
+  adjudication:290, the worklist/superset answer + design:449, OKF
+  adoption + adjudication:310/394/473, and the Q3 row +
+  adjudication:601.
+- **X6 — applied on m0007:** "§6 defines two" is now three, in the
+  ratified region, with the retroactive regime in the list; see m0007's
+  entry.
+- **X7 — applied in the spec.** §7 gains the gate's exit — supersession
+  re-points dependents' `depends_on` at ratification of the superseding
+  matter; a dependency ending `rejected`/`withdrawn` blocks dependents
+  until each amends `depends_on`, a frontmatter edit outside the
+  ratified region, validated at the next transition — and §12 names the
+  `## Retroactive` section as the path marker, with the
+  self-declaration containment (the exemption only defers checking to
+  the acknowledgment, which is stated over that section). m0008's entry
+  records the validator implications.
+- **X8 — applied in §11:** the `## Retroactive` and `## Execution`
+  sections must be complete at the commit the operator acknowledges;
+  §6's region cannot cover a section that does not yet exist.
+- **X9 — acknowledged; nothing to edit.** Run files are never edited;
+  the correct count is in round 3's own run record.
+- **X10 — acknowledged; adopted as practice.** This response cites
+  moving targets by section anchor or stable label (`review cNN`), not
+  line number; the vetting record's historical `:NNN` citations remain
+  readable at the commits their entries name.
+- **X11 — applied in the README.** "Stands except for one line" now
+  enumerates what actually changed: the isolation line retired, the
+  fidelity check re-scoped over all threads, and the recorded prompt's
+  branch name historical.
+- **X12 — applied in §12:** the authored-files link-check scope is
+  normative text, stated where the link dialect is defined.
+- **X13 — applied in §14:** branch-name and PR-title prefixes start
+  with the first matter after an installation's bootstrap; the
+  bootstrap's own branches predate the collection they create.
+
+### Operator review response — 2026-08-26 — claude-code/2026-08-26 (author)
+
+The same author instance as the round 3 response above; one commit
+carries both, plus the exchange thread, the rewritten specification,
+the conformed collection, m0012, and the regenerated index. Every
+comment c01–c19 is dispositioned here; the plainspeak breakdowns c18
+and c19 asked for close the entry. Citations into the exchange use its
+stable labels.
+
+**Directed edits — applied.**
+
+- **c01** — §1 opens "A matter is one proposed change to a system".
+- **c03** — the two-target enumeration is gone; §1 now defines an
+  installation and lets it declare its governed systems as tags. The
+  self-hosting sentence from the redacted bullet survives at the
+  framework level, where a1 put it.
+- **c04** — applied as "Nothing lands in any governed system": the
+  operator's "any" kept, the word "target" retired with the field
+  (conforming under c07's license). Recorded as a deliberate wording
+  choice, not silent drift from the comment's literal text.
+- **c05** — applied per a2: two exceptions stand, the first
+  generalized — the bootstrap of an installation (§14). "Two defined
+  exceptions" stays true.
+- **c06** — answered yes, and applied: "The matter is the unit of work,
+  not the commit." The word "proposal" was doing undefined work;
+  "filed"/"proposed" are now defined terms (§4, see c10).
+- **c07** — the one-collection/one-sequence paragraph is rewritten
+  installation-generic: one collection and one ID sequence per
+  installation, systems interspersed, "all matters for one system" a
+  query over tags.
+- **c13** — `target` is out of the schema. Every matter's frontmatter
+  is conformed in this commit: the field removed, the governed system
+  named as the first tag (`beatcode` on m0002–m0005 and m0009;
+  `formic-matters` on m0001, m0006–m0008, m0010–m0011). The index
+  generator drops the target requirement and column and shows tags.
+- **c16** — the §15 bullet's two-target premise dissolved with the
+  field; what §1 now states, and the ID restart, remain listed for the
+  ratification read, since the review ruled on the premise rather than
+  the residue.
+
+**Rulings — recorded, and executed as far as text can execute them.**
+
+- **c02 + i1** — the framework is real and named **Formic Matters**;
+  the specification is rewritten as its formal spec, framed for any
+  installation, with beatcode kept as the motivating example where
+  concreteness helps. The naming supersession ("Formic Ascent" → i1) is
+  on the ledger. The truncated "however" clause is resolved by a1:
+  framework self-hosts, beatcode-facing matters move.
+- **c14, c15** — §13 is rewritten from tripwire-deferral to topology:
+  the tripwire is recorded as fired by ruling, five candidate adopters
+  named. The mechanics — rename this repository, create the new
+  beatcode-dev, move m0002–m0005 and m0009 — are
+  [m0012](m0012-formic-matters-split.md), filed `proposed` this commit:
+  repository renames and creation are operator/admin acts this session
+  cannot perform, and under this spec they should not land un-mattered
+  anyway. m0012's plan is what the operator ratifies to execute the
+  split.
+- **c17** — §15's first group is marked ratified with the citation, and
+  its items are out of the pending list.
+
+**Questions — answered, each embodied in the text.**
+
+- **c08 (in-flight/queued).** Neither a state nor a new field. States
+  are positions in the ratification lifecycle and their transitions
+  belong to the operator; in-flight vs. queued is execution plumbing
+  inside `staged`, and it changes when agents start and stop. Making
+  them states would put agent mechanics on the operator's state
+  machine; storing a `dev-state` field would duplicate what `branch`
+  presence already says, and two copies of one fact can disagree —
+  that is drift by construction. §3 now states the derivation
+  explicitly: `staged` + `branch` = in-flight, `staged` without =
+  queued. Nothing new is stored; the distinction is derived, per §10.
+- **c09 (deviations — ratify them, or endless loop?).** Both horns are
+  avoided by splitting what "deviation" means. A deviation that changes
+  *what was ratified* — behavior, scope, interface, normative text — is
+  an execution failure: stop, `staged → proposed`, re-ratify the
+  changed plan. That is the existing §3 path and it converges, because
+  each failure narrows the plan — the loop is the system working. A
+  deviation *within* the ratified intent, on detail the plan never
+  pinned (a variable name, a file split, an equivalent command), lands
+  and is recorded in `## Execution`. Requiring re-ratification for
+  those would ratify history — the record is written after reality —
+  and would make small honesty expensive, which is how processes get
+  bypassed (m0010's argument). The dev agent errs toward stopping; the
+  record makes each call auditable; a landed deviation the operator
+  reads and dislikes is a new matter, because nothing leaves
+  `executed`. §3.1 now says all of this.
+- **c10 (filing).** Confirmed: "filed" and "proposed" name one event —
+  the act and the resulting state. §4 now defines it: to file a matter
+  is to add its file to the collection in state `proposed`.
+- **c11 (is `executed` not the completed state?).** Yes — `executed` is
+  the terminal state, where a matter is *done*. What §4 was calling
+  "completeness" is a different thing: whether the matter's required
+  sections exist yet, which gates `ratified` — an earlier gate, not the
+  end of life. The collision was the word. §4 now says
+  **ratification-readiness** is a checklist, checked at the gate; done
+  is `executed`, answered by state.
+- **c12 (persisting exchanges like this one).** Both offered options,
+  combined — because each alone loses something. The commit pointer
+  alone (`9c1d295`) is immutable and sufficient for verification, but
+  it leaves the exchange readable only through git archaeology, and
+  §9.2 wants primary sources on the shelf. A duplicate copy of the
+  whole file at state duplicates what git already keeps. The mechanism
+  now in §8: the comment commit is an operator turn; the responding
+  agent transcribes every comment verbatim — location and commit cited
+  — into a thread, and removes the markers in its response commit. The
+  thread is the readable primary source; the diff pair is the
+  underlying record; either can be checked against the other by anyone.
+  [This exchange's thread](../threads/2026-08-25-doctrine-operator-review.md)
+  is the first exercise, its fidelity verified by run record. m0011
+  records the new modality in its Mechanism scope.
+
+**c18 — plainspeak breakdowns of §15's later-written choices.** Each
+of these is text an author wrote while answering a vetting finding,
+which you have not separately ruled on; ratifying the document adopts
+them. What each one is, and what it implies for you:
+
+1. **§6's ratified region** (round 1, answering m0007). When you
+   ratify a matter, the seal — the hash — covers the matter's
+   substantive body only: not the YAML frontmatter, not the append-only
+   `## Vetting` and `## Execution` logs. *Why:* state changes and
+   review history are supposed to happen after ratification; if they
+   were sealed, every legitimate lifecycle step would break the seal
+   and the check would cry wolf. *Implication:* tampering with the
+   substance is mechanically detectable while the lifecycle proceeds
+   freely. *The trade:* frontmatter and appends are not sealed — a
+   falsified append would not move the hash; catching that is git
+   history's job, and m0007's checker names which regime it verified so
+   the boundary is always explicit.
+2. **§3's terminal owners and the re-open** (round 1). Who may end or
+   reopen a matter: only you can reject; only the author can withdraw,
+   and only before you decide; supersession happens as a side effect of
+   you ratifying the replacement; and if a ratified plan turns out
+   broken before work starts, you re-open it — back to `proposed`, with
+   the old ratification stamp moved into the record rather than
+   deleted. *Implication:* no agent can decline, bury, or silently
+   re-ratify anything; every ending is yours or is the author backing
+   out in the open, and ratification stamps are never erased.
+3. **§5's earlier-ratification precedence** (round 1). If two matters
+   you already ratified are later found to contradict each other, the
+   one you ratified first governs until you explicitly supersede one.
+   *Implication:* a discovered conflict never leaves the system
+   ambiguous and never gets resolved by an agent's judgment call — the
+   tiebreak is deterministic and the fix is always an explicit act of
+   yours. *The trade:* first-ratified is not always the better text;
+   the rule optimizes for a stable default, not for being right — being
+   right is what the supersession is for.
+4. **§11's retroactive path** (offered during adjudication, redesigned
+   round 1). Emergencies and already-made decisions can act first and
+   file after: the matter is filed `proposed` with evidence of what
+   landed and a `## Retroactive` section saying why it could not wait;
+   your acknowledgment moves it straight to `executed`; your refusal
+   makes it `rejected` and spawns a matter to unwind what landed.
+   *Implication:* the process admits reality without becoming optional
+   — late review is still review, and nothing that landed escapes the
+   record. *The risk:* the path becoming a habit; every retroactive
+   matter is validator-flagged so it is always reviewed, and the
+   acknowledgment is yours alone.
+5. **§7's `depends_on` gate and its §11 exemption** (round 2). "This
+   cannot run before that" is enforced by the machine at the moment of
+   staging or executing, not just written down. The retroactive path is
+   exempt because it exists precisely for work that could not wait —
+   it declares its unexecuted dependencies instead of being blocked by
+   them. *Implication:* execution order cannot be forgotten, and
+   worklists are derivable. *The trade closed this round:* a gate needs
+   an exit — a dead dependency used to mean a permanently stuck
+   dependent; §7 now says how dependents are released (see X7 above).
+6. **§6's retroactive hashed region** (round 2). For the retroactive
+   path, what you acknowledge *is* what landed — so the seal covers the
+   `## Retroactive` and `## Execution` sections too, as they stand at
+   the commit you acknowledge. *Implication:* nobody can show you one
+   account of what landed and let the record later say another; the
+   account you acknowledged is sealed. *Closed this round:* those
+   sections must be complete before you acknowledge (X8), so the seal
+   cannot cover a section that does not exist yet.
+
+**c19 — the R1 item, plainly.** The question you declined to pick on
+was: should an incomplete matter have its own state — a `draft` before
+`proposed`? The authored answer, now in §4: no extra state. `proposed`
+covers everything from a one-line defect report to a finished plan;
+what gates ratification is a checklist — does this matter have the
+sections its type requires? — checked at the gate rather than encoded
+as a state. *Implication for you:* filing stays cheap (a sentence is a
+legal matter), the state machine stays small, and "ready to ratify" is
+a question the validator answers rather than a status someone must
+remember to flip. *The trade:* you cannot see readiness in the state
+column — you ask the checklist. c11's confusion was the cost of the
+old wording, and the section now uses "ratification-readiness" so the
+checklist cannot be mistaken for the end of the lifecycle again.
+
+**Independence, degraded in the standing way.** This author answered
+the operator's questions and wrote the text embodying the answers;
+nobody has reviewed the rewritten specification, the new §15 group
+names every passage this response added, and the ledger's twelve new
+rows — ten transcribing the review, two restoring 2026-08-24 rulings
+X5 found missing — are this author's. The next round
+should start exactly there: fidelity of the new rows against the
+exchange thread, and the rewrite against the rulings — the same check
+round 3 ran on the round 2 response, now possible against a primary
+source that includes the operator's own answers.
