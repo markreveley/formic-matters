@@ -3,11 +3,10 @@ type: spec
 title: Contained installation layout for code-bearing consumers
 description: "Consumer installations live inside one root directory, .formic-matters/, instead of five root directories; the framework alone keeps the root form."
 id: m0014
-state: staged
+state: executed
 status: stable
 tags: [formic-matters, topology, installation]
 implements: m0001
-branch: m0014-execution
 threads:
   - threads/2026-08-26-m0012-execution.md
 generated:
@@ -114,3 +113,36 @@ turn — "run m0014 execution here" (thread R9). The dev agent is the
 m0012 execution session, launched against this matter; branch
 `m0014-execution` set (in-flight, §3). The §7 gate is satisfied: no
 dependencies.
+
+## Execution
+
+Executed by the session the operator launched with "run m0014
+execution here" (thread R9), on branch `m0014-execution` — PR #7
+against `main`, every commit carrying `Matter: m0014`:
+
+- `954f11bc979867d98b7b28cfbfd056154a7f21e8` — the ratification
+  recording (§6, pin at the operator's named commit), the staging,
+  and the amendment itself: §12's two-form layout clause; §14 naming
+  both forms and the contained installation-record path; m0008's
+  installation-form discovery bullet (the requirement this matter
+  forwards); the interim generator's probe — `.formic-matters/`
+  first, then the repository root — tested on both forms before the
+  commit; the index regenerated.
+- the record commit, in which this section lands — this record,
+  `staged → executed` with the branch field removed, the exchange
+  thread brought current through R9, and the §9.1 run record beside
+  it.
+
+The doctrine edit breaks m0001's whole-file pin — the second such
+break, and the same recorded dance as the first: the operator's merge
+of PR #7 and re-ratification re-pin it over sha256
+`b61ea861ecba1c83f3fa0b1a12ec0b930e068f6f8cdd73517bc1e51365b03497`.
+Deviations from the ratified plan: none — the four amendment bullets
+landed as ratified; the probe's concrete shape (a two-line root probe
+in the interim generator) is detail within "gains the same probe".
+Consumer follow-through is deliberately not here: `beatcode-dev`'s
+move to the contained form is its own matter in its own collection
+(R8), for the next session. Date: 2026-08-26. Actor:
+claude-code/2026-08-26, the dev agent the operator launched against
+this matter. Verification:
+[runs/2026-08-26-m0014-execution-verification.md](../runs/2026-08-26-m0014-execution-verification.md).
