@@ -38,10 +38,10 @@ tags), and file [m0012](../matters/m0012-formic-matters-split.md).
   (`sha256sum`); GNU sed 4.9; GNU grep 3.11
 - Python 3.11.15, PyYAML 6.0.1 (`tools/gen-index.py` and the checkers
   below)
-- Repo: `ob6to8/beatcode-dev`, the m0001 lineage (PR #2 head), parent
+- Repo: `markreveley/formic-matters`, the m0001 lineage (PR #2 head), parent
   commit `9c1d295` — the operator's review commit; the tree verified is
   this response's, in which this run file lands
-- `ob6to8/beatcode` was not cloned; nothing in this response bears on
+- `markreveley/beatcode` was not cloned; nothing in this response bears on
   m0002–m0005 beyond frontmatter conformance, and earlier rounds own
   those verdicts
 

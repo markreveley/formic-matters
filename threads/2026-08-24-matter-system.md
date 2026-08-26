@@ -489,7 +489,7 @@ The user answered: "Where should the matters repo live? No `beatcode-dev` exists
 
 ## ▸ Claude
 
-Repo confirmed: `ob6to8/beatcode-dev`, empty, no commits. Noted on memory — I won't write memory files, and nothing goes into the repo that we haven't actually settled here.
+Repo confirmed: `markreveley/formic-matters`, empty, no commits. Noted on memory — I won't write memory files, and nothing goes into the repo that we haven't actually settled here.
 
 Drafting and executing m0001 now.
 
@@ -573,7 +573,7 @@ push beatcode-dev
 
 ## ▸ Claude
 
-Pushed. **PR #1: https://github.com/ob6to8/beatcode-dev/pull/1**
+Pushed. **PR #1: https://github.com/markreveley/formic-matters/pull/1**
 
 `main` was seeded with an empty root commit so the branch had a base; history is linear (`Initial commit` → m0001 → thread export).
 
@@ -596,8 +596,8 @@ I also filed **m0011** for the persistence policy rather than treating your lean
 Paste this into a fresh session:
 
 ```
-Review PR #1 on github.com/ob6to8/beatcode-dev. It bootstraps a process
-doctrine. Its factual claims are about github.com/ob6to8/beatcode — you
+Review PR #1 on github.com/markreveley/formic-matters. It bootstraps a process
+doctrine. Its factual claims are about github.com/markreveley/beatcode — you
 need both repos.
 
 Report findings. Do not edit, commit, push, or fix anything.
@@ -696,7 +696,7 @@ Squashed and force-pushed. PR #1 now shows a single commit `a92ab9b`, and I veri
 **But the redaction is still not complete, and you should know why.** I checked rather than assumed:
 
 ```
-gh api repos/ob6to8/beatcode-dev/commits/dc7be46
+gh api repos/markreveley/formic-matters/commits/dc7be46
 → dc7be46 still reachable by SHA
 ```
 
@@ -738,7 +738,7 @@ Verified no SHA references remain anywhere in the PR body. The squashed commit m
 
 **Where things stand:**
 
-- PR #1 — https://github.com/ob6to8/beatcode-dev/pull/1 — one commit, `a92ab9b`
+- PR #1 — https://github.com/markreveley/formic-matters/pull/1 — one commit, `a92ab9b`
 - Transcript redacted, header states the exception
 - Audit prompt is in the PR body, copyable from GitHub
 - m0011 records the redaction-after-publication gap honestly

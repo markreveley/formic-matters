@@ -26,14 +26,14 @@ headings; the marker keeps turn boundaries machine-parseable.
 
 ## ▸ Mark
 
-clone beatcode [https://github.com/ob6to8/beatcode.git](https://github.com/ob6to8/beatcode-dev.git)
+clone beatcode [https://github.com/markreveley/beatcode.git](https://github.com/markreveley/beatcode.git)
 
 then audit and provide feedback on PR #1, following the prompt below:
 
-https://github.com/ob6to8/beatcode-dev/pull/1
+https://github.com/markreveley/formic-matters/pull/1
 
-Review PR #1 on github.com/ob6to8/beatcode-dev. It bootstraps a process
-doctrine. Its factual claims are about github.com/ob6to8/beatcode — you
+Review PR #1 on github.com/markreveley/formic-matters. It bootstraps a process
+doctrine. Its factual claims are about github.com/markreveley/beatcode — you
 need both repos.
 
 Report findings. Do not edit, commit, push, or fix anything.
@@ -144,7 +144,7 @@ All verification is done — every check has hard evidence. Marking the remainin
 
 # Audit of PR #1 (`m0001-matter-system`)
 
-Method: read `doctrine/matters.md`, the transcript, and all 11 matters in full; cloned `ob6to8/beatcode` (main, `seed`, `docs/pipeline-order-clarity`, and the research branch) and the OKF spec repo; rebuilt beatcode on the pinned toolchain in a scratch copy and re-rendered all four scores. Nothing was edited, committed, or pushed — the working copies are untouched; experiments ran in scratchpad copies.
+Method: read `doctrine/matters.md`, the transcript, and all 11 matters in full; cloned `markreveley/beatcode` (main, `seed`, `docs/pipeline-order-clarity`, and the research branch) and the OKF spec repo; rebuilt beatcode on the pinned toolchain in a scratch copy and re-rendered all four scores. Nothing was edited, committed, or pushed — the working copies are untouched; experiments ran in scratchpad copies.
 
 The headline: the two showcase artifacts of this PR — m0004's "deliberately unresolved" diagnosis and the doctrine's §9 "nothing silently adopted" mechanism — are both faulty, in ways the PR's own persuasive framing conceals. Most of the low-level factual claims, by contrast, verify exactly.
 
@@ -338,7 +338,7 @@ disregard "continue" message
 
 Posting the full audit findings to PR #1, structured for adjudication.
 
-Posted — the full audit with per-finding dispositions is now on the PR for the next adjudication agent: [PR #1 comment](https://github.com/ob6to8/beatcode-dev/pull/1#issuecomment-5401395394). Nothing else was written to either repo. Now, your items.
+Posted — the full audit with per-finding dispositions is now on the PR for the next adjudication agent: [PR #1 comment](https://github.com/markreveley/formic-matters/pull/1#issuecomment-5401395394). Nothing else was written to either repo. Now, your items.
 
 ---
 
@@ -645,10 +645,10 @@ The fresh bundle is built and pushed to `claude/beatcode-pr1-audit-1t400g` (comm
 
    ```
    Review branch claude/beatcode-pr1-audit-1t400g of
-   github.com/ob6to8/beatcode-dev — the second bootstrap of a process
+   github.com/markreveley/formic-matters — the second bootstrap of a process
    doctrine. The first attempt is archived unmerged (PR #1): do not
    read it, its matters, or its thread. Your inputs are this branch's
-   tree and github.com/ob6to8/beatcode. Do not open with agreement.
+   tree and github.com/markreveley/beatcode. Do not open with agreement.
 
    1. FIDELITY — highest value. The operator's rulings are in
       threads/2026-08-24-audit-and-adjudication.md, compiled row by
@@ -688,7 +688,7 @@ to run this review by a fresh protocol, are you suggesting that i have the other
 
 Yes — the review runs against a checkout of this branch, but in the flow I'd recommend you don't do the checking out; the reviewer does.
 
-**Flow A — remote session (recommended, zero setup for you).** Start a fresh claude.ai/code session on `beatcode-dev` and paste the prompt. The prompt names the branch, so the agent fetches and checks it out itself, and clones `beatcode` itself (it's public) — exactly the mechanics of this session, where your first message named PR #1 and I did all the fetching. This gets even simpler if I open the PR first: the prompt's first line becomes "Review PR #2 on github.com/ob6to8/beatcode-dev" and the agent resolves the branch from the PR, which also hands it the whole change as one diff boundary.
+**Flow A — remote session (recommended, zero setup for you).** Start a fresh claude.ai/code session on `beatcode-dev` and paste the prompt. The prompt names the branch, so the agent fetches and checks it out itself, and clones `beatcode` itself (it's public) — exactly the mechanics of this session, where your first message named PR #1 and I did all the fetching. This gets even simpler if I open the PR first: the prompt's first line becomes "Review PR #2 on github.com/markreveley/formic-matters" and the agent resolves the branch from the PR, which also hands it the whole change as one diff boundary.
 
 **Flow B — local session.** Check the branch out in your local clone (`git fetch origin claude/beatcode-pr1-audit-1t400g && git checkout claude/beatcode-pr1-audit-1t400g`) and start `claude` in that directory; the agent reads your working tree directly. This one has a workflow perk for you: the vetting entries appear as edits to local files, so you watch the review land in neovim as it happens, and the push uses your credentials.
 

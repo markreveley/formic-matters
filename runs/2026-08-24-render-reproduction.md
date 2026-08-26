@@ -7,11 +7,11 @@ superseding run is a new file.
 
 - The oracle's four.bc track length is recoverable from committed,
   pre-implementation evidence, and equals `last + 22050`
-  ([m0004](../matters/m0004-track-length-index-count.md) C2–C5).
+  ([m0004](https://github.com/markreveley/formic-matters/blob/70db408d9148667097b2cd052853d37d01e9f3fa/matters/m0004-track-length-index-count.md) C2–C5).
 - The implementation reproduces all four committed render hashes and
   the golden-derived byte sizes
-  ([m0004](../matters/m0004-track-length-index-count.md) C5;
-  [m0005](../matters/m0005-readme-stale-status.md) "48 tests green").
+  ([m0004](https://github.com/markreveley/formic-matters/blob/70db408d9148667097b2cd052853d37d01e9f3fa/matters/m0004-track-length-index-count.md) C5;
+  [m0005](https://github.com/markreveley/formic-matters/blob/70db408d9148667097b2cd052853d37d01e9f3fa/matters/m0005-readme-stale-status.md) "48 tests green").
 
 ## Environment
 
@@ -19,7 +19,7 @@ superseding run is a new file.
 - Toolchain: rustc 1.94.1 (e408947bf 2026-03-25), pinned via
   `rust-toolchain.toml`; cargo release profile
 - Python 3 for the golden-derived computation
-- Repo: `ob6to8/beatcode` at `fa17627` (main; SPEC.md and
+- Repo: `markreveley/beatcode` at `fa17627` (main; SPEC.md and
   `goldens/events/` byte-identical at seed `91188a5`), built in a
   scratch copy — working clones untouched
 

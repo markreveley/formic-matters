@@ -365,7 +365,9 @@ operator declines, the matter is `rejected` and a new matter is opened
 to unwind what landed. The validator flags
 retroactive matters so they are reviewed, late but always.
 This path is already needed by
-[m0009](../matters/m0009-spec-gaps-to-matters.md) and
+[m0009](https://github.com/markreveley/formic-matters/blob/70db408d9148667097b2cd052853d37d01e9f3fa/matters/m0009-spec-gaps-to-matters.md)
+(moved to the first consumer's collection by m0012; the pin serves its
+pre-move text) and
 [m0011](../matters/m0011-thread-persistence.md).
 
 ## 12 · Storage and format

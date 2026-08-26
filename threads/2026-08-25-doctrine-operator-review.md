@@ -301,7 +301,7 @@ ledger rows for the new rulings, and fold in the author responses to
 round 3's X2, X4–X13, which the addendum left "for an author round."
 One note on mechanics: renaming this repo and creating the new
 `beatcode-dev` are operator/admin acts outside my GitHub scope (this
-session reaches only `ob6to8/beatcode-dev`), so I'll write the spec
+session reaches only `markreveley/formic-matters`), so I'll write the spec
 text to survive the rename rather than perform it.
 
 Four things genuinely block me:
@@ -685,7 +685,7 @@ exactly as good **provided the version you read is the commit you
 name** — that's the only thing the local commands guarantee. GitHub's
 default file view can show `main` or a stale ref, so the safe form is
 the commit-pinned URL:
-`github.com/ob6to8/beatcode-dev/blob/85fe451/doctrine/matters.md` —
+`github.com/markreveley/formic-matters/blob/85fe451/doctrine/matters.md` —
 those bytes are identical to a local checkout at `85fe451`. If what
 you read was the PR #2 branch just now, that head is `85fe451`
 (nothing has been pushed since), and I'll re-verify the head hasn't
@@ -782,11 +782,11 @@ give me a prompt to hand to the next session, context is getting long here
 and then we need to persist the thread transcript and open pr
 
 beatcode-dev renamed to formic-matters
-new beatcode-dev created https://github.com/ob6to8/beatcode-dev.git
+new beatcode-dev created https://github.com/markreveley/beatcode-dev.git
 
 **Apparatus:** **f4** — m0012's execution preconditions are met: the
 operator has performed both admin acts (this repository renamed to
-`formic-matters`; a new, empty `ob6to8/beatcode-dev` created as the
+`formic-matters`; a new, empty `markreveley/beatcode-dev` created as the
 consumer). The requested handoff prompt, given in the session's reply,
 is the operator's launch instrument: a session started with it is the
 dev agent §3 requires for `staged → executed` on m0012. This export

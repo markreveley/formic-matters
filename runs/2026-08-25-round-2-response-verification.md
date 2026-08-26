@@ -10,10 +10,10 @@ evidence round 1 used, per the deviation that round recorded
 Each is a claim the round 1 response makes about what it applied, or a
 tree-wide invariant the response could have disturbed.
 
-- The §9.4 quote on [m0004](../matters/m0004-track-length-index-count.md)
+- The §9.4 quote on [m0004](https://github.com/markreveley/formic-matters/blob/70db408d9148667097b2cd052853d37d01e9f3fa/matters/m0004-track-length-index-count.md)
   is byte-identical to `SPEC.md` at `fa17627` (round 1's nit; response:
   "corrected to match `SPEC.md:757` byte for byte").
-- [m0003](../matters/m0003-spec-order-rules-lack-mechanism.md)'s revised
+- [m0003](https://github.com/markreveley/formic-matters/blob/70db408d9148667097b2cd052853d37d01e9f3fa/matters/m0003-spec-order-rules-lack-mechanism.md)'s revised
   §1.4 characterization is accurate: ten semicolon-joined determinism
   rules, of which exactly two carry their reason inline (round 1 nit 1).
 - m0003's pipeline diagram pointer is accurate: `SPEC.md:38` carries the
@@ -36,13 +36,13 @@ tree-wide invariant the response could have disturbed.
   diffutils 3.10 (`diff`); GNU sed 4.9; GNU grep 3.11; mawk 1.3.4
   20240123; git 2.43.0
 - Python 3.11.15 (`tools/gen-index.py`; also the link checker below)
-- Repos: `ob6to8/beatcode-dev` at `981b2a6` (branch
+- Repos: `markreveley/formic-matters` at `981b2a6` (branch
   `claude/beatcode-pr1-audit-1t400g`), working tree clean;
-  `ob6to8/beatcode` cloned fresh, `fa17627`
+  `markreveley/beatcode` cloned fresh, `fa17627`
   (`fa17627c3f797872188c76e14e22059f2dece741`), seed `91188a5`
   (`91188a514585345e5b98d3a33560c03b2507b276`)
 - `$BC` below is the beatcode clone; commands run from the
-  beatcode-dev worktree root. No beatcode build was run this round —
+  formic-matters worktree root. No beatcode build was run this round —
   round 1's render reproduction was not re-executed and is not
   re-asserted here.
 

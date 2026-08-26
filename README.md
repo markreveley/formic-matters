@@ -1,18 +1,14 @@
-# beatcode-dev
+# formic-matters
 
 The home of **Formic Matters**, the matter framework — born as the
 development process for
-[beatcode](https://github.com/ob6to8/beatcode), kept out of the
+[beatcode](https://github.com/markreveley/beatcode), kept out of the
 instrument's own repo so the two sets of concerns don't mix, and
 generalized into a consumable framework on the operator's rulings in
 the
 [2026-08-25 review](threads/2026-08-25-doctrine-operator-review.md).
 The framework is self-hosting: changes to it are matters in this
-repository's own collection. The repository keeps its founding name
-until the split matter
-([m0012](matters/m0012-formic-matters-split.md)) executes, renaming it
-to the framework and moving the beatcode-facing matters to a new
-consumer repository.
+repository's own collection.
 
 Every change — to a governed system or to the framework itself — is
 proposed as a **matter**, vetted, and ratified by the operator before
@@ -21,18 +17,34 @@ it is made. The normative definition is
 [`matters/`](matters/index.md).
 
 The repository is the record: vetting rounds live on the matters,
-operator rulings arrive as committed file edits, session transcripts
-live in `threads/`, verification evidence in `runs/`. GitHub is
-transport and merge mechanics; its comment surface is unused.
+operator rulings arrive as committed file edits or as session
+exchanges exported into `threads/`, verification evidence in `runs/`.
+GitHub is transport and merge mechanics; its comment surface is unused.
+
+**The renames and the split, stated and dated (spec §9.4).** This
+repository was founded as `beatcode-dev` on 2026-08-24 and renamed to
+`formic-matters` by the operator on 2026-08-26 — step 1 of
+[m0012](matters/m0012-formic-matters-split.md), the split matter.
+m0012 executed on 2026-08-26: the beatcode-facing matters —
+m0002–m0005 and m0009 — moved to the first consumer installation,
+[markreveley/beatcode-dev](https://github.com/markreveley/beatcode-dev)
+(a new repository under the founding name), and their vacated IDs are
+never reused here (spec §12). The owner account was also renamed on
+2026-08-26, and every repository reference in this tree was rewritten
+to the current names in the same execution, on operator ruling — the
+pre-rename text is in git history, and m0012's execution record
+itemizes the sweep.
 
 **Status:** the specification is **normative** —
 [m0001](matters/m0001-matter-system.md) was ratified by the operator
 and executed on 2026-08-26, at commit
 `85fe4511326a30516ed2bf86a2e2a2b9d05c3d25` (spec §6, §14).
 [m0012](matters/m0012-formic-matters-split.md), the split into
-framework and consumer repositories, and
+framework and consumer repositories, was ratified in the same act and
+executed on 2026-08-26.
 [m0013](matters/m0013-bootstrap-defaults-record.md), the bootstrap
-defaults record, were ratified in the same act; m0012 awaits staging.
+defaults record, is ratified. The collection here is the framework's
+own: m0001, m0006–m0008, m0010–m0013.
 This is the second bootstrap; the first was audited
 and archived unmerged (PR #1). Nothing in it was ratified, and this
 bundle was re-authored rather than derived — but by an agent that had
