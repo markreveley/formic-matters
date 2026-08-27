@@ -32,6 +32,10 @@ check. This is that code. Deterministic, therefore in scope:
   (doctrine §4)
 - ratification-hash verification ([m0007](m0007-ratification-content-hash.md))
 - link integrity — every matter, thread, and run reference resolves
+- collection discovery — the tooling locates the collection by probing
+  `.formic-matters/` (a consumer), then the repository root (the
+  framework's home), and operates identically on both (doctrine §12,
+  per [m0014](m0014-contained-installation-layout.md))
 - `depends_on` acyclicity, the transition-time gate §7 states, the §11
   exemption keyed on `## Retroactive` section presence (doctrine §12),
   and §7's release rules for a dependency that exits the live path

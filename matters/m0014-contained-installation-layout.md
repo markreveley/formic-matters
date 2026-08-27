@@ -3,15 +3,21 @@ type: spec
 title: Contained installation layout for code-bearing consumers
 description: "A consumer installation lives only inside .formic-matters/ at the repository root; the framework's own repository is the framework's home, its layout at root — not a choosable form."
 id: m0014
-state: proposed
-status: draft
+state: staged
+status: stable
 tags: [formic-matters, topology, installation]
 implements: m0001
+branch: m0014-execution
 threads:
   - threads/2026-08-26-m0012-execution.md
 generated:
   by: claude-code/2026-08-26
   at: 2026-08-26T19:12:11Z
+verified:
+  - by: human:mark
+    at: 2026-08-27T01:27:27Z
+ratified_commit: 125dff7567278fba881f7d391fbb8ccbe78fd3b7
+ratified_sha256: bc56f0092954d5115e477bcf9106e3109084679194571fcddeade056dec4dc05
 ---
 
 # m0014 · Contained installation layout for code-bearing consumers
@@ -109,6 +115,28 @@ turn — "run m0014 execution here" (thread R9). The dev agent is the
 m0012 execution session, launched against this matter; branch
 `m0014-execution` set (in-flight, §3). The §7 gate is satisfied: no
 dependencies.
+
+### Re-ratification — 2026-08-27
+
+After the execution failure recorded below and the operator's
+revision directions (thread R10–R12): text revised to the no-choice,
+consumer-only form with the client unnamed in current voice, and the
+operator ratified over the revised exact text — "I ratify m0014 at
+commit 125dff7"
+([thread R12](../threads/2026-08-26-m0012-execution.md)). Pin,
+following the act: ratified region at
+`125dff7567278fba881f7d391fbb8ccbe78fd3b7` — reachable on this
+matter's own branch, byte-identical to the working tree at recording
+time — sha256 in the frontmatter. The failure entry below preserves
+the superseded first pin.
+
+### Re-staged — 2026-08-27
+
+`ratified → staged` under the operator's standing launch (thread R9,
+"run m0014 execution here"), resumed after the failure; the same
+session, branch `m0014-execution` set again. Execution resumes in the
+ratified wording; its record closes the matter below the failure
+entry.
 
 ## Execution
 
