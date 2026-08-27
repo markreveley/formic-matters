@@ -8,7 +8,7 @@
 ## Observation
 
 - Repository base observed: `cee4c12af8ed019226717be08b9beed9c85e8ddc`
-- Observed at: `2026-08-27T16:40:33-07:00`
+- Observed at: `2026-08-27T16:43:46-07:00`
 - Closing actor: `codex/2026-08-27`
 - Working branch: `m0019-fresh-context-handoffs`
 
@@ -24,7 +24,9 @@
   filing commit, `933980af0182820fa9fa8db2156f5165b96d67a4`, stacked after
   the m0017 filing commit. It has not been pushed or opened as a PR.
 - [m0019](matters/m0019-fresh-context-durable-handoffs.md) and this
-  provisional handoff are being filed on the current stacked branch.
+  provisional handoff have a local filing commit,
+  `466701d8f6c4880efd46c76697a51d21da753c55`, stacked after the m0018
+  filing commit. The branch has not been pushed or opened as a PR.
 - All four matters remain `proposed`. None is ratified or staged.
 
 ## Pending operator acts and filing queue
