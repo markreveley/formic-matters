@@ -16,6 +16,7 @@ Derived from the frontmatter of every matter in this directory.
 | `m0008` | feature | formic-matters, process, tooling | [Matter tooling — validator, ID allocator, index generator](m0008-matter-tooling.md) | The deterministic half of the matter system: everything checkable by code rather than by an agent. |
 | `m0010` | feature | formic-matters, process | [Risk tiers derived from paths touched](m0010-risk-tiers.md) | Review rigor keyed off blast radius rather than type; a README typo and a rounding-rule change are both fixes. |
 | `m0011` | spec | formic-matters, process, provenance | [Thread persistence policy](m0011-thread-persistence.md) | Whether, in what form, and by what mechanism the sessions behind matters are persisted as threads. |
+| `m0015` | spec | formic-matters, process, tooling | [Agent instructions file](m0015-agent-instructions.md) | A root CLAUDE.md distilling the standing rulings into the one channel that reaches every agent session before it reads anything else; it distills the doctrine and never overrides it. |
 
 ## ratified
 
@@ -45,3 +46,4 @@ Derived from the frontmatter of every matter in this directory.
 | `m0012` | m0001 | m0001 |
 | `m0013` | m0001 | — |
 | `m0014` | m0001 | — |
+| `m0015` | m0001 | — |
