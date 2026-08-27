@@ -8,7 +8,7 @@
 ## Observation
 
 - Repository base observed: `cee4c12af8ed019226717be08b9beed9c85e8ddc`
-- Observed at: `2026-08-27T16:43:46-07:00`
+- Observed at: `2026-08-27T16:44:36-07:00`
 - Closing actor: `codex/2026-08-27`
 - Working branch: `m0019-fresh-context-handoffs`
 
@@ -19,14 +19,16 @@
   GitHub PR #9. The PR was open and reported clean when checked.
 - [m0017](matters/m0017-operator-authored-ratification.md) has a local
   filing commit, `db6b87d6e33b0c9c5af1f891c6dbf3b91d41c75d`, stacked after
-  the m0016 filing commit. It has not been pushed or opened as a PR.
+  the m0016 filing commit. Its remote branch is published; no PR has
+  been opened.
 - [m0018](matters/m0018-doctrine-heading-citations.md) has a local
   filing commit, `933980af0182820fa9fa8db2156f5165b96d67a4`, stacked after
-  the m0017 filing commit. It has not been pushed or opened as a PR.
+  the m0017 filing commit. Its remote branch is published; no PR has
+  been opened.
 - [m0019](matters/m0019-fresh-context-durable-handoffs.md) and this
   provisional handoff have a local filing commit,
   `466701d8f6c4880efd46c76697a51d21da753c55`, stacked after the m0018
-  filing commit. The branch has not been pushed or opened as a PR.
+  filing commit. Its remote branch is published; no PR has been opened.
 - All four matters remain `proposed`. None is ratified or staged.
 
 ## Pending operator acts and filing queue
