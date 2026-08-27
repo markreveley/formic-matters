@@ -18,6 +18,7 @@ Derived from the frontmatter of every matter in this directory.
 | `m0011` | spec | formic-matters, process, provenance | [Thread persistence policy](m0011-thread-persistence.md) | Whether, in what form, and by what mechanism the sessions behind matters are persisted as threads. |
 | `m0016` | spec | formic-matters, process, execution, provenance | [Launch instructions are pointers, not shadow specifications](m0016-launch-instructions-policy.md) | A launch identifies the repository, matter, operator act, and external authority; all substantive scope and execution instructions live in the repository's ratified record. |
 | `m0017` | spec | formic-matters, process, ratification, integrity | [Operator-authored ratification commits](m0017-operator-authored-ratification.md) | Ratification becomes an operator-authored summary and declaration committed to the matter; agent review verifies the summary, and the final operator commit is the act and exact-text pin. |
+| `m0018` | spec | formic-matters, process, documentation, review | [Doctrine citations include section headings](m0018-doctrine-heading-citations.md) | Every authored citation to a numbered doctrine section carries the section's exact heading, so the operator can understand the reference without cross-referencing the specification. |
 
 ## ratified
 
@@ -51,3 +52,4 @@ Derived from the frontmatter of every matter in this directory.
 | `m0015` | m0001 | — |
 | `m0016` | m0001 | — |
 | `m0017` | m0001 | — |
+| `m0018` | m0001 | — |
