@@ -3,11 +3,10 @@ type: spec
 title: Contained installation layout for code-bearing consumers
 description: "A consumer installation lives only inside .formic-matters/ at the repository root; the framework's own repository is the framework's home, its layout at root — not a choosable form."
 id: m0014
-state: staged
+state: executed
 status: stable
 tags: [formic-matters, topology, installation]
 implements: m0001
-branch: m0014-execution
 threads:
   - threads/2026-08-26-m0012-execution.md
 generated:
@@ -207,3 +206,36 @@ Disposition, per §3 `staged → proposed`:
   no-choice form, and re-ratification is required to proceed —
   `## Execution` on this matter resumes only after the operator's new
   act over the revised text.
+
+## Execution — resumed after the failure
+
+The operator re-ratified the revised text at `125dff7` (Vetting,
+Re-ratification entry) and execution resumed under the standing R9
+launch, on the same branch — PR #7 against `main`, every commit
+carrying `Matter: m0014`:
+
+- `1ac3b32f0c9456e1392b9b960715a2da79fc1fa5` — the ratification
+  recording, the re-staging, and the amendment in the ratified
+  wording: §12's consumer-layout clause (a consumer installation
+  lives only in `.formic-matters/`; the framework's root layout is
+  its home, not a form); §14 placing a consumer's adoption inside the
+  container with the installation record at
+  `.formic-matters/doctrine/installation.md`; m0008's
+  collection-discovery bullet; the interim generator's probe, tested
+  on both forms before the commit; the index regenerated.
+- the record commit, in which this section lands — this record,
+  `staged → executed` with the branch field removed, the thread
+  brought current through R12, and the §9.1 run record beside it.
+
+The doctrine edit breaks m0001's whole-file pin — the recorded
+dance: the operator's merge of PR #7 and re-ratification re-pin it
+over sha256
+`e55dd508d7048789a43a2f98e403366da11b1a4f6f14d0bff2766438d98a7381`.
+Deviations from the ratified plan: none — the three amendment bullets
+landed as ratified, the probe's concrete shape detail within "gains
+the same probe". Consumer follow-through remains deliberately
+elsewhere: the existing consumer's move to the container is its own
+matter in its own collection (R8), for the next session. Date:
+2026-08-27. Actor: claude-code/2026-08-26, the dev agent the operator
+launched against this matter. Verification:
+[runs/2026-08-27-m0014-re-execution-verification.md](../runs/2026-08-27-m0014-re-execution-verification.md).

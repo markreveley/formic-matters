@@ -23,18 +23,13 @@ Derived from the frontmatter of every matter in this directory.
 |---|---|---|---|---|
 | `m0013` | spec | formic-matters, doctrine, bootstrap | [Bootstrap defaults record](m0013-bootstrap-defaults-record.md) | The authoring-agent choices adopted without an operator ruling during the bootstrap, with the confirmation trail for each — relocated out of the specification on operator direction. |
 
-## staged
-
-| | Type | Tags | Matter | Description |
-|---|---|---|---|---|
-| `m0014` | spec | formic-matters, topology, installation | [Contained installation layout for code-bearing consumers](m0014-contained-installation-layout.md) | A consumer installation lives only inside .formic-matters/ at the repository root; the framework's own repository is the framework's home, its layout at root — not a choosable form. |
-
 ## executed
 
 | | Type | Tags | Matter | Description |
 |---|---|---|---|---|
 | `m0001` | spec | formic-matters, doctrine, bootstrap | [The matter system](m0001-matter-system.md) | Every change to a governed system — and to the framework itself — is proposed, vetted, and ratified as a matter before it is made. |
 | `m0012` | refactor | formic-matters, topology | [The Formic Matters split](m0012-formic-matters-split.md) | Rename this repository to the framework, create beatcode-dev as its first consumer installation, and move the beatcode-facing matters there. |
+| `m0014` | spec | formic-matters, topology, installation | [Contained installation layout for code-bearing consumers](m0014-contained-installation-layout.md) | A consumer installation lives only inside .formic-matters/ at the repository root; the framework's own repository is the framework's home, its layout at root — not a choosable form. |
 
 ## Ordering
 
