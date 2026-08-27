@@ -17,6 +17,7 @@ Derived from the frontmatter of every matter in this directory.
 | `m0010` | feature | formic-matters, process | [Risk tiers derived from paths touched](m0010-risk-tiers.md) | Review rigor keyed off blast radius rather than type; a README typo and a rounding-rule change are both fixes. |
 | `m0011` | spec | formic-matters, process, provenance | [Thread persistence policy](m0011-thread-persistence.md) | Whether, in what form, and by what mechanism the sessions behind matters are persisted as threads. |
 | `m0016` | spec | formic-matters, process, execution, provenance | [Launch instructions are pointers, not shadow specifications](m0016-launch-instructions-policy.md) | A launch identifies the repository, matter, operator act, and external authority; all substantive scope and execution instructions live in the repository's ratified record. |
+| `m0017` | spec | formic-matters, process, ratification, integrity | [Operator-authored ratification commits](m0017-operator-authored-ratification.md) | Ratification becomes an operator-authored summary and declaration committed to the matter; agent review verifies the summary, and the final operator commit is the act and exact-text pin. |
 
 ## ratified
 
@@ -49,3 +50,4 @@ Derived from the frontmatter of every matter in this directory.
 | `m0014` | m0001 | — |
 | `m0015` | m0001 | — |
 | `m0016` | m0001 | — |
+| `m0017` | m0001 | — |
