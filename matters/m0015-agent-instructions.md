@@ -3,8 +3,8 @@ type: spec
 title: Agent instructions file
 description: "A root CLAUDE.md distilling the standing rulings into the one channel that reaches every agent session before it reads anything else; it distills the doctrine and never overrides it."
 id: m0015
-state: proposed
-status: draft
+state: executed
+status: stable
 tags: [formic-matters, process, tooling]
 implements: m0001
 threads:
@@ -12,6 +12,11 @@ threads:
 generated:
   by: claude-code/2026-08-26
   at: 2026-08-27T01:39:32Z
+verified:
+  - by: human:mark
+    at: 2026-08-27T02:10:06Z
+ratified_commit: 60b7a4655f4109f14590bd81bc1c7aae7924687e
+ratified_sha256: 06782accfd9f856a272092081cc096b0a6167c58b879689d16544471f939b23e
 ---
 
 # m0015 · Agent instructions file
@@ -73,3 +78,21 @@ m0001 re-pin recording for the m0014 amendment rides the same branch
 once the operator states that act, so one merge carries both. Date:
 2026-08-27. Actor: claude-code/2026-08-26, on the operator's R13
 direction.
+
+## Vetting
+
+### Acknowledgment — 2026-08-27
+
+The operator acknowledged this matter per §11 — "I acknowledge m0015
+at commit 60b7a46"
+([execution thread R14](../threads/2026-08-26-m0012-execution.md)) —
+moving it `proposed → executed`. Recorded per §6's retroactive
+regime, the pin following the act: `ratified_commit`
+`60b7a4655f4109f14590bd81bc1c7aae7924687e` (the filing commit),
+`ratified_sha256`
+`06782accfd9f856a272092081cc096b0a6167c58b879689d16544471f939b23e` —
+the body after the frontmatter with `## Retroactive` and
+`## Execution` included, as they stood at the acknowledged commit; no
+`## Vetting` section existed there, and this entry sits after that
+commit, outside the acknowledged text. Mechanical half:
+[runs/2026-08-27-recording-m0001-and-m0015.md](../runs/2026-08-27-recording-m0001-and-m0015.md).
