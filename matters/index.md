@@ -19,6 +19,7 @@ Derived from the frontmatter of every matter in this directory.
 | `m0016` | spec | formic-matters, process, execution, provenance | [Launch instructions are pointers, not shadow specifications](m0016-launch-instructions-policy.md) | A launch identifies the repository, matter, operator act, and external authority; all substantive scope and execution instructions live in the repository's ratified record. |
 | `m0017` | spec | formic-matters, process, ratification, integrity | [Operator-authored ratification commits](m0017-operator-authored-ratification.md) | Ratification becomes an operator-authored summary and declaration committed to the matter; agent review verifies the summary, and the final operator commit is the act and exact-text pin. |
 | `m0018` | spec | formic-matters, process, documentation, review | [Doctrine citations include section headings](m0018-doctrine-heading-citations.md) | Every authored citation to a numbered doctrine section carries the section's exact heading, so the operator can understand the reference without cross-referencing the specification. |
+| `m0019` | spec | formic-matters, process, review, execution, provenance | [Fresh contexts and durable handoffs](m0019-fresh-context-durable-handoffs.md) | Vetting and execution begin across explicit context boundaries, while a mutable, non-authoritative handoff keeps the repository's current operational projection available to each new context. |
 
 ## ratified
 
@@ -53,3 +54,4 @@ Derived from the frontmatter of every matter in this directory.
 | `m0016` | m0001 | — |
 | `m0017` | m0001 | — |
 | `m0018` | m0001 | — |
+| `m0019` | m0001 | m0017 |
