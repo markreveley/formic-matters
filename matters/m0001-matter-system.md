@@ -18,8 +18,10 @@ verified:
     at: 2026-08-26T05:21:39Z
   - by: human:mark
     at: 2026-08-26T18:33:07Z
-ratified_commit: 97854b884a9af1a82b5b881560883a8264c6474f
-ratified_sha256: 9fb1f925f37c3533ffff7caba7c1094f5631e098503e06ac569841d0ef1f4c7d
+  - by: human:mark
+    at: 2026-08-27T02:10:06Z
+ratified_commit: d800ee8a928d220bf7e27cf547d856ac38f4c784
+ratified_sha256: e55dd508d7048789a43a2f98e403366da11b1a4f6f14d0bff2766438d98a7381
 ---
 
 # m0001 · The matter system
@@ -1890,3 +1892,23 @@ the act:
   whole-file regime — verified equal at the named commit and in the
   working tree at recording time, with the stability checks, in
   [runs/2026-08-26-re-ratification-and-acknowledgment-recording.md](../runs/2026-08-26-re-ratification-and-acknowledgment-recording.md).
+
+### Doctrine re-ratification — 2026-08-27 (m0014)
+
+The m0014 execution amended §12 and §14 — the consumer-only
+container — breaking this matter's whole-file pin for the second
+recorded time. The operator merged PR #7 as a merge commit and stated
+the act — "I re-ratify m0001 at commit d800ee8"
+([execution thread R14](../threads/2026-08-26-m0012-execution.md)).
+Recorded, the pin following the act:
+
+- **Superseded pin, preserved:** `ratified_commit`
+  `97854b884a9af1a82b5b881560883a8264c6474f`, `ratified_sha256`
+  `9fb1f925f37c3533ffff7caba7c1094f5631e098503e06ac569841d0ef1f4c7d`.
+- **New pin:** `ratified_commit`
+  `d800ee8a928d220bf7e27cf547d856ac38f4c784` (the PR #7 merge commit
+  on `main`), `ratified_sha256`
+  `e55dd508d7048789a43a2f98e403366da11b1a4f6f14d0bff2766438d98a7381`,
+  whole-file regime — verified equal at the named commit and in the
+  working tree at recording time, in
+  [runs/2026-08-27-recording-m0001-and-m0015.md](../runs/2026-08-27-recording-m0001-and-m0015.md).
