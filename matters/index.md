@@ -22,6 +22,7 @@ Derived from the frontmatter of every matter in this directory.
 | `m0019` | spec | formic-matters, process, review, execution, provenance | [Fresh contexts and durable handoffs](m0019-fresh-context-durable-handoffs.md) | Vetting and execution begin across explicit context boundaries, while a mutable, non-authoritative handoff keeps the repository's current operational projection available to each new context. |
 | `m0020` | fix | formic-matters, process, execution, authority, handoff | [Referential handoff launches and delegated authority](m0020-referential-handoff-authority.md) | Let an operator adopt one explicit handoff action by reference while distinguishing operator-only lifecycle acts from agent-performed repository mechanics. |
 | `m0021` | spec | formic-matters, documentation, provenance | [README carries the naming rationale and lineage](m0021-readme-naming-lineage.md) | The README gains an expository section on the restate-to-ratify name — its rule, its agency-law and read-back lineage, and the three provenance layers the record accretes. |
+| `m0022` | spec | formic-matters, process, naming, topology | [Rename the framework to Restate to Ratify (RTR)](m0022-rename-to-rtr.md) | The framework takes the name of its central act — Restate to Ratify, short form RTR — and the doctrine, agent instructions, README, container-directory convention, and repository carry the rename. |
 
 ## ratified
 
@@ -59,3 +60,4 @@ Derived from the frontmatter of every matter in this directory.
 | `m0019` | m0001 | m0017 |
 | `m0020` | m0001 | m0017 |
 | `m0021` | m0001 | m0017 |
+| `m0022` | m0001 | m0017 |
