@@ -21,6 +21,7 @@ Derived from the frontmatter of every matter in this directory.
 | `m0018` | spec | formic-matters, process, documentation, review | [Doctrine citations include section headings](m0018-doctrine-heading-citations.md) | Every authored citation to a numbered doctrine section carries the section's exact heading, so the operator can understand the reference without cross-referencing the specification. |
 | `m0019` | spec | formic-matters, process, review, execution, provenance | [Fresh contexts and durable handoffs](m0019-fresh-context-durable-handoffs.md) | Vetting and execution begin across explicit context boundaries, while a mutable, non-authoritative handoff keeps the repository's current operational projection available to each new context. |
 | `m0020` | fix | formic-matters, process, execution, authority, handoff | [Referential handoff launches and delegated authority](m0020-referential-handoff-authority.md) | Let an operator adopt one explicit handoff action by reference while distinguishing operator-only lifecycle acts from agent-performed repository mechanics. |
+| `m0021` | spec | formic-matters, documentation, provenance | [README carries the naming rationale and lineage](m0021-readme-naming-lineage.md) | The README gains an expository section on the restate-to-ratify name — its rule, its agency-law and read-back lineage, and the three provenance layers the record accretes. |
 
 ## ratified
 
@@ -57,3 +58,4 @@ Derived from the frontmatter of every matter in this directory.
 | `m0018` | m0001 | — |
 | `m0019` | m0001 | m0017 |
 | `m0020` | m0001 | m0017 |
+| `m0021` | m0001 | m0017 |
