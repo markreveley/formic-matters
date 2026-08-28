@@ -58,6 +58,10 @@ what the decider understood and chose to accept, hashed with the text
 it accepts.
 ```
 
+The fenced block is quoted destination text: its relative link
+resolves from the repository root, where `README.md` lives, not from
+`matters/` — by construction, since the block lands verbatim.
+
 The section is expository. It is subordinate to the doctrine and to
 [m0017](m0017-operator-authored-ratification.md)'s normative text, and
 the historical narration it carries belongs in the README precisely
