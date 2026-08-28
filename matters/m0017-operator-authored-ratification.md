@@ -68,10 +68,10 @@ record.
 
 Quotation and line-by-line paraphrase are findings from the other
 side: they reproduce the matter's fidelity without interpreting it, so
-they evidence nothing. Load-bearing content — the deliverable, the
-scope and its stated exclusions, the stated dependencies and risks,
-the matter's stated rationale — appears at the operator's altitude;
-detail need not.
+they evidence nothing. The restatement carries no content checklist of
+its own: what there is to restate is set by the matter — starting with
+the content its type requires (doctrine §2, “Type — immutable”) — and
+a material omission against the matter is a finding.
 
 The operator authors the restatement; agents verify it against the
 matter text. The operator's verified restatement is the basis of
