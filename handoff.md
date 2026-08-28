@@ -7,10 +7,13 @@
 
 ## Observation
 
-- `main` observed at: `cee4c12af8ed019226717be08b9beed9c85e8ddc`
-- Working branch: `claude/restate-ratify-spec-eval-02nojc` at
-  `a789f904d0bd2877b61711e0dd8dbd8aadfd7b0f`
-- Observed at: `2026-08-28T22:58:30Z`
+- `main` observed at: `527397e5031073e74f2c6e7567b5ca2acdcacf15`,
+  confirmed by fetch — the branch's own merge base, so the filing PR
+  applies cleanly
+- Working branch: `claude/restate-ratify-spec-eval-02nojc`, content
+  commits through `a789f904d0bd2877b61711e0dd8dbd8aadfd7b0f`; this
+  file's own commits follow the observation
+- Observed at: `2026-08-28T22:59:30Z`
 - Closing actor: `claude-code/2026-08-28`
 
 ## Established state
@@ -90,9 +93,9 @@ by doctrine, and each matter supplies its own contract.
 - **Stop boundary:** after the merge completes, stop and report; do
   not ratify, stage, vet, or launch anything
 - **Verified against:** `main` at
-  `cee4c12af8ed019226717be08b9beed9c85e8ddc` and branch head
-  `a789f904d0bd2877b61711e0dd8dbd8aadfd7b0f` at
-  `2026-08-28T22:58:30Z`; the PR is opened after this observation —
+  `527397e5031073e74f2c6e7567b5ca2acdcacf15` (fetched) and branch
+  content through `a789f904d0bd2877b61711e0dd8dbd8aadfd7b0f` at
+  `2026-08-28T22:59:30Z`; the PR is opened after this observation —
   verify it exists, targets `main`, and contains only this branch
 
 The operator may adopt this one record in a fresh session with:
