@@ -1,7 +1,7 @@
 ---
 type: spec
 title: Restate to ratify — operator-authored ratification commits
-description: "Ratification is an operator-authored restatement and declaration committed to the matter; agent review verifies the restatement against the exact text, and the final operator commit is the act and exact-text pin."
+description: "Ratification is an operator-authored restatement and declaration committed to the matter; agent review diffs the restatement against the matter text, and the final operator commit is the act and exact-text pin."
 id: m0017
 state: proposed
 status: draft
@@ -51,27 +51,31 @@ operator's section.
 ### The restatement
 
 The operator restates; no other party may. A **restatement** is the
-operator's own-words synthesis of what is being accepted:
+operator's account, in the operator's own words, of what the matter
+does and why — the operator's interpretation at the operator's
+altitude, not a second copy at the matter's fidelity. It is bounded by
+the matter: every claim in it anchors in the matter text, it adds
+nothing the matter does not say, and the draft review diffs it against
+the matter. Zero additive content is the test.
 
-- the deliverable and intended outcome;
-- the accepted scope;
-- explicit exclusions and non-goals;
-- dependencies or execution-order constraints;
-- material risks, irreversible effects, or uncertainties knowingly
-  accepted; and
-- why the operator accepts this contract.
+A claim the review cannot anchor in the matter is a finding, and the
+operator resolves it one of two ways: it was a misreading, and the
+operator corrects the restatement; or it was real content the matter
+fails to state, and the matter is underspecified — the content enters
+the matter through revision and review before ratification proceeds.
+Ratification is never the channel by which new content enters the
+record.
 
-Restating is not repeating. Quotation or paraphrase of the matter
-without synthesis is not a restatement, and the draft review treats it
-as a finding: a conforming restatement carries decision content the
-text alone does not supply — the exclusions, the risks accepted, the
-reasons for acceptance.
+Quotation and line-by-line paraphrase are findings from the other
+side: they reproduce the matter's fidelity without interpreting it, so
+they evidence nothing. Load-bearing content — the deliverable, the
+scope and its stated exclusions, the stated dependencies and risks,
+the matter's stated rationale — appears at the operator's altitude;
+detail need not.
 
-The direction of the account is fixed. The operator authors the
-restatement; agents verify it against the exact text and never author
-it. An agent's description of a matter is never the basis of
-ratification — the operator's restatement, reviewed against the text,
-is.
+The operator authors the restatement; agents verify it against the
+matter text. The operator's verified restatement is the basis of
+ratification.
 
 The record then carries three provenance layers: text provenance (the
 pinned commit and hash), ruling provenance (threads and the rulings
@@ -100,15 +104,17 @@ reviews the complete ratified region and appends a `## Vetting` entry
 that checks the restatement claim by claim against the matter. The
 agent:
 
-- identifies omissions, contradictions, or material
-  misunderstandings;
-- checks that the restatement is a synthesis rather than quotation or
-  paraphrase, carrying the decision content the definition above
-  requires;
+- identifies material omissions, contradictions, and
+  misunderstandings against the matter text;
+- flags every claim it cannot anchor in the matter — the zero-additive
+  test — for the operator to resolve as a misreading or as matter
+  underspecification, per the definition above;
+- flags quotation and line-by-line paraphrase, which interpret
+  nothing;
 - never writes, rewrites, completes, or supplies replacement wording
   for any content under `## Operator ratification`; and
-- records a clean disposition only when the restatement accurately
-  covers the contract.
+- records a clean disposition only when the restatement is accurate,
+  bounded, and interpretive.
 
 The operator makes every correction personally, in a new commit.
 History is never amended or force-pushed. Review and correction repeat
@@ -143,10 +149,11 @@ Git author metadata is not proof that a human made the commit: agents
 commonly inherit the operator's configured Git identity. The normative
 identity boundary is therefore the channel rule that agents never edit
 the operator section. A cryptographically signed, human-only commit
-would strengthen provenance, as would statistical review of the
+would strengthen provenance, as would integrity analysis of the
 restatement corpus against the operator's verbatim turns in
-`threads/`; neither is required by this matter — introducing either is
-a separate policy decision.
+`threads/` ([m0023](m0023-restatement-integrity-analysis.md));
+neither is required by this matter — introducing either is a separate
+policy decision.
 
 ### Recording and the pin
 
@@ -221,10 +228,9 @@ including immediately, by requiring the restatement review as the last
 prospective gate. It does not require any other number of vetting
 rounds.
 
-The name changes no rule. “Restate to ratify” names the mechanism this
-matter proposes, and **restatement** is defined above as a term of
-art: the plain-English reading of *restate* — repeat in other words —
-is exactly what the definition excludes.
+The name changes no rule. “Restate to ratify” names the mechanism
+this matter proposes; **restatement** is defined above — bounded by
+the matter and diffed against it, which is what the *re-* carries.
 
 ## Proposed execution plan
 
