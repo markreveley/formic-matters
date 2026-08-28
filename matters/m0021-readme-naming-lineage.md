@@ -26,15 +26,18 @@ Insert into [`README.md`](../README.md), immediately before
 The ratification mechanism
 ([m0017](matters/m0017-operator-authored-ratification.md)) is named
 for its rule: no ratification without a restatement. A restatement is
-the operator's own-words synthesis of what is being accepted — scope,
-exclusions, risks knowingly accepted, and the reasons for acceptance —
-committed onto the matter, verified by agent review against the exact
-text, and finished by the operator's own ratification commit. The
-direction is the point: the operator authors the account and agents
-check it against the text. An agent's description of a matter is never
-the basis of ratification — the first bootstrap failed exactly there,
-with a document marked ratified on the strength of an agent summary
-that misdescribed the committed text (spec §14).
+the operator's account, in the operator's own words, of what the
+matter does and why — bounded by the matter, adding nothing the matter
+does not say, diffed against it by agent review, and finished by the
+operator's own ratification commit. The operator authors the account;
+agents verify it against the matter text. The first bootstrap shows
+why the roles sit that way: a document was marked ratified on the
+strength of an agent summary that misdescribed the committed text
+(spec §14). The zero-additive bound cuts the other way too: a
+restatement that contains something true the matter fails to say has
+found an underspecified matter, and that content enters the matter by
+revision — ratification is never the channel by which new content
+enters the record.
 
 The pattern has precedents wherever one party's understanding must be
 verified before an act takes effect:
@@ -46,9 +49,11 @@ verified before an act takes effect:
   record at the moment of adoption.
 - **Read-back protocols.** Aviation read-back/hear-back, clinical
   teach-back, the plea colloquy: the accepting party restates, the
-  counterparty evaluates, and the restatement goes on the record. The
-  framework is that protocol for human–agent governance, with the
-  restatement pinned by commit and hash.
+  counterparty evaluates, and the restatement goes on the record. A
+  read-back is itself zero-additive — a pilot who adds to a clearance
+  has made an error, not a contribution. The framework is that
+  protocol for human–agent governance, with the restatement pinned by
+  commit and hash.
 
 The record accretes three provenance layers: **text provenance** — the
 pinned commit and hash: what exactly was accepted; **ruling
