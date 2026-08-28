@@ -8,6 +8,8 @@ status: draft
 tags: [formic-matters, documentation, provenance]
 implements: m0001
 depends_on: [m0017]
+threads:
+  - threads/2026-08-28-restate-to-ratify.md
 generated:
   by: claude-code/2026-08-28
   at: 2026-08-28T20:08:20Z
