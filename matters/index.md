@@ -17,10 +17,13 @@ Derived from the frontmatter of every matter in this directory.
 | `m0010` | feature | formic-matters, process | [Risk tiers derived from paths touched](m0010-risk-tiers.md) | Review rigor keyed off blast radius rather than type; a README typo and a rounding-rule change are both fixes. |
 | `m0011` | spec | formic-matters, process, provenance | [Thread persistence policy](m0011-thread-persistence.md) | Whether, in what form, and by what mechanism the sessions behind matters are persisted as threads. |
 | `m0016` | spec | formic-matters, process, execution, provenance | [Launch instructions are pointers, not shadow specifications](m0016-launch-instructions-policy.md) | A launch identifies the repository, matter, operator act, and external authority; all substantive scope and execution instructions live in the repository's ratified record. |
-| `m0017` | spec | formic-matters, process, ratification, integrity | [Operator-authored ratification commits](m0017-operator-authored-ratification.md) | Ratification becomes an operator-authored summary and declaration committed to the matter; agent review verifies the summary, and the final operator commit is the act and exact-text pin. |
+| `m0017` | spec | formic-matters, process, ratification, integrity | [Restate to ratify — operator-authored ratification commits](m0017-operator-authored-ratification.md) | Ratification is an operator-authored restatement and declaration committed to the matter; agent review diffs the restatement against the matter text, and the final operator commit is the act and exact-text pin. |
 | `m0018` | spec | formic-matters, process, documentation, review | [Doctrine citations include section headings](m0018-doctrine-heading-citations.md) | Every authored citation to a numbered doctrine section carries the section's exact heading, so the operator can understand the reference without cross-referencing the specification. |
 | `m0019` | spec | formic-matters, process, review, execution, provenance | [Fresh contexts and durable handoffs](m0019-fresh-context-durable-handoffs.md) | Vetting and execution begin across explicit context boundaries, while a mutable, non-authoritative handoff keeps the repository's current operational projection available to each new context. |
 | `m0020` | fix | formic-matters, process, execution, authority, handoff | [Referential handoff launches and delegated authority](m0020-referential-handoff-authority.md) | Let an operator adopt one explicit handoff action by reference while distinguishing operator-only lifecycle acts from agent-performed repository mechanics. |
+| `m0021` | spec | formic-matters, documentation, provenance | [README carries the naming rationale and lineage](m0021-readme-naming-lineage.md) | The README gains an expository section on the restate-to-ratify name — its rule, its agency-law and read-back lineage, and the three provenance layers the record accretes. |
+| `m0022` | spec | formic-matters, process, naming, topology | [Rename the framework to Restate to Ratify (RTR)](m0022-rename-to-rtr.md) | The framework takes the name of its central act — Restate to Ratify, short form RTR — and the doctrine, agent instructions, README, container-directory convention, and repository carry the rename. |
+| `m0023` | feature | formic-matters, process, integrity, ratification | [Restatement integrity analysis against the thread corpus](m0023-restatement-integrity-analysis.md) | An advisory integrity check on operator restatements — LLM-as-judge and consistency analysis against the operator's verbatim turns in threads/ — that emits vetting findings and can never gate or grant ratification. |
 
 ## ratified
 
@@ -57,3 +60,6 @@ Derived from the frontmatter of every matter in this directory.
 | `m0018` | m0001 | — |
 | `m0019` | m0001 | m0017 |
 | `m0020` | m0001 | m0017 |
+| `m0021` | m0001 | m0017 |
+| `m0022` | m0001 | m0017 |
+| `m0023` | m0001 | m0017 |
