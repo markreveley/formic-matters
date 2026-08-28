@@ -7,81 +7,101 @@
 
 ## Observation
 
-- Repository base observed: `c05959193e4b9ecc50765e746f404b05d003a358`
-- Observed at: `2026-08-27T16:54:24-07:00`
-- Closing actor: `codex/2026-08-27`
-- Working branch: `m0019-fresh-context-handoffs`
+- Repository base observed: `916749153154d3f59a63cecbe00079a40d691e2a`
+- Observed at: `2026-08-28T08:25:37-07:00`
+- Closing actor: `codex/2026-08-28`
+- Working branch: `m0020-referential-handoff-authority`
 
 ## Established state
 
 - `main` and `origin/main` were both at the observed base when checked.
-- [m0016](matters/m0016-launch-instructions-policy.md) is proposed on
-  `main`; PR #9 merged it at
-  `c9d9bb6c48a7200c8c0ac0dffd3b472b5c27a7a7`.
-- [m0017](matters/m0017-operator-authored-ratification.md) is proposed
-  on `main`; PR #10 merged it at
-  `0662e19abd96dc74357543a1845e2513b777f412`.
-- [m0018](matters/m0018-doctrine-heading-citations.md) is proposed on
-  `main`; PR #11 merged it at
-  `c05959193e4b9ecc50765e746f404b05d003a358`.
-- [m0019](matters/m0019-fresh-context-durable-handoffs.md) and this
-  provisional handoff have a local filing commit,
-  `466701d8f6c4880efd46c76697a51d21da753c55`, stacked after the m0018
-  filing commit. Its remote branch is published; no PR has been opened.
-- All four matters remain `proposed`. None is ratified or staged.
+- [m0016](matters/m0016-launch-instructions-policy.md),
+  [m0017](matters/m0017-operator-authored-ratification.md),
+  [m0018](matters/m0018-doctrine-heading-citations.md), and
+  [m0019](matters/m0019-fresh-context-durable-handoffs.md) are proposed
+  on `main`. None is ratified or staged.
+- [m0020](matters/m0020-referential-handoff-authority.md) and its
+  [decision thread](threads/2026-08-28-handoff-launch-authority.md) are
+  being filed on the working branch. If this handoff is read from
+  `main`, verify that the m0020 filing merge completed and that m0020
+  remains proposed.
 
-## Pending filing action
+## Open process findings
 
-At the observation point, only the m0019 filing remains. The operator
-authorized the agent to proceed with the complete filing phase. That
-authorization permits the agent to open, verify, and merge the m0019
-filing PR by merge commit; it does not ratify or stage any matter.
+[m0020](matters/m0020-referential-handoff-authority.md) owns two
+corrections that must not depend on the session that discovered them:
 
-The m0019 comparison against the observed base contains only
-`handoff.md`, the m0019 matter, and its derived index entries. If this
-handoff is being read from `main`, the filing merge carrying it has
-necessarily completed; re-verify that fact rather than repeating it.
+1. m0016 must define an operator's adoption of one explicit handoff
+   action by reference and distinguish operator-only lifecycle acts
+   from agent-performed push, PR-open, and merge mechanics.
+2. m0019 must classify a current action as `operator act required`,
+   `operator authorization required`, or
+   `agent operation already authorized`, with its matter, action,
+   permitted operations, stop boundary, and verified state.
 
-No operator-authored ratification summary is required for the filing
-merge. Filing leaves m0019 proposed.
+These are proposed fixes, not current policy. Their exact contract and
+later execution order live on m0020.
 
 ## Recommended ratification and execution queue
 
-This queue records current agent judgment. The operator retains staging
-and ratification authority, and each matter supplies its own contract.
+This queue records current agent judgment. It is not a dependency graph
+or grant of authority; the operator retains every act assigned by
+doctrine, and each matter supplies its own contract.
 
-1. Vet m0017 in a fresh context. Before ratification, review its
-   hard-coded claim that m0016 is the first mandatory use and remove the
-   scheduling choice from the ratified plan. Ratify and execute m0017
-   under the currently ratified mechanism; its bootstrap ratification
-   and associated m0001 re-ratification do not require operator-authored
-   summaries.
-2. Vet, ratify, and execute m0019. It depends on m0017 and is the
+1. Vet m0017 in a fresh context. Before ratification, remove its
+   hard-coded choice of m0016 as the first mandatory use. Ratify and
+   execute m0017 under the currently ratified mechanism; its bootstrap
+   ratification and associated m0001 re-ratification require no
+   operator-authored summaries.
+2. Vet, ratify, and execute m0020. It depends on m0017 and is the
    recommended first use of operator-authored ratification. An operator
-   summary is required on m0019, and a separate summary is required on
-   m0001 for the doctrine re-ratification.
-3. Vet, ratify, and execute m0018 under the m0017 and m0019 policies.
+   summary is required on m0020. It does not amend doctrine, so it
+   requires no m0001 re-ratification.
+3. Vet, ratify, and execute m0019 after m0020 has corrected its
+   proposed text. An operator summary is required on m0019, and a
+   separate summary is required on m0001 for the doctrine
+   re-ratification.
+4. Vet, ratify, and execute m0018 under the m0017 and m0019 policies.
    An operator summary is required on m0018, and a separate summary is
    required on m0001 for the doctrine re-ratification.
-4. Vet, ratify, and execute m0016 after revising its still-proposed text
-   to follow m0018's heading-qualified citation policy. An operator
-   summary is required on m0016, and a separate summary is required on
-   m0001 for the doctrine re-ratification.
+5. Vet, ratify, and execute m0016 after m0020's correction and after
+   revising its still-proposed text to follow m0018's
+   heading-qualified citation policy. An operator summary is required
+   on m0016, and a separate summary is required on m0001 for the
+   doctrine re-ratification.
 
-## Next launch after the filing lands
+## Next action
 
-After verifying m0019 is proposed on `main`, the recommended next act is
-an independent vetting round on m0017. The minimal launch pointer is:
+- **Classification:** `operator authorization required`
+- **Repository and matter:** `markreveley/formic-matters`, m0017
+- **Action:** conduct one fresh vetting round for ratification readiness
+- **Permitted operations:** create and push an m0017-prefixed branch,
+  append the vetting record, and open a matter-prefixed PR
+- **Stop boundary:** do not merge, ratify, stage, or execute; return the
+  findings and PR to the operator
+- **Verified against:** repository base
+  `916749153154d3f59a63cecbe00079a40d691e2a` at
+  `2026-08-28T08:25:37-07:00`; the next context must additionally verify
+  the m0020 filing on then-current `main`
 
-> Vet m0017 for ratification readiness in markreveley/formic-matters. You may push an m0017-prefixed branch and open a PR; do not merge.
+The complete action is encoded above. The operator may adopt it in the
+next fresh session with only:
+
+> Proceed from `handoff.md` in markreveley/formic-matters.
+
+This one shorthand is an explicit bootstrap form directed by the
+operator in m0020's decision thread. General referential-launch policy
+remains proposed until m0020 is executed through the matter system.
 
 ## Re-verification and uncertainties
 
-- Re-check the m0019 PR state and `origin/main`; both are external state
-  and may have changed after the observation time.
-- Confirm all four matters remain `proposed` and that no filing merge
-  was mistaken for ratification or staging.
-- The proposed m0019 policy is not yet normative. The provisional
-  handoff is being used as an explicit bootstrap aid, not as authority.
-- No instruction from the session that produced this file is required
-  to continue the queue.
+- Re-check the m0020 PR and `origin/main`; both are external state and
+  may have changed after the observation time.
+- Confirm m0016–m0020 remain `proposed` and that the filing merge was
+  not mistaken for ratification or staging.
+- Verify the next-action record before treating the operator's
+  shorthand as authorization. A stale or ambiguous record is a stop and
+  report.
+- No instruction from the exported decision session is required to
+  continue. The thread is historical evidence, m0020 is the proposed
+  change contract, and this file is only the current projection.
