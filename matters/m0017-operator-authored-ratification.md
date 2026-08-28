@@ -1,7 +1,7 @@
 ---
 type: spec
-title: Operator-authored ratification commits
-description: "Ratification becomes an operator-authored summary and declaration committed to the matter; agent review verifies the summary, and the final operator commit is the act and exact-text pin."
+title: Restate to ratify — operator-authored ratification commits
+description: "Ratification is an operator-authored restatement and declaration committed to the matter; agent review verifies the restatement against the exact text, and the final operator commit is the act and exact-text pin."
 id: m0017
 state: proposed
 status: draft
@@ -12,7 +12,7 @@ generated:
   at: 2026-08-27T15:20:13-07:00
 ---
 
-# m0017 · Operator-authored ratification commits
+# m0017 · Restate to ratify — operator-authored ratification commits
 
 ## Diagnosed reason
 
@@ -26,13 +26,13 @@ what the operator understood and accepted is not demonstrated in the
 matter itself, and the act depends on later thread export to enter the
 repository channel.
 
-An operator-authored summary committed inside the matter improves both
-properties. Writing the summary forces an explicit account of scope,
-exclusions, ordering, and risk. Committing it makes the act and the
-exact tree one event, rather than a verbal act later mapped to a commit
-by an agent. Agent review can then compare the operator's understanding
-with the proposed contract before the operator makes the final
-ratification commit.
+An operator-authored restatement committed inside the matter improves
+both properties. Writing the restatement forces an explicit account of
+scope, exclusions, ordering, and risk. Committing it makes the act and
+the exact tree one event, rather than a verbal act later mapped to a
+commit by an agent. Agent review can then compare the operator's
+understanding with the proposed contract before the operator makes the
+final ratification commit.
 
 This is evidence of comprehension, not proof of an internal mental
 state. An operator could still copy text without understanding it. The
@@ -42,9 +42,41 @@ it does not claim to make rubber-stamping logically impossible.
 ## Proposed text
 
 Amend doctrine §6, “Vetting and ratification,” so the operator act is
-an authored commit rather than a verbal statement naming a commit.
-Ownership does not change: the operator alone ratifies; agents review
-and record but never author the operator's section.
+an authored commit rather than a verbal statement naming a commit. The
+mechanism is named **restate to ratify**, and its rule is one line: no
+ratification without a restatement. Ownership does not change: the
+operator alone ratifies; agents review and record but never author the
+operator's section.
+
+### The restatement
+
+The operator restates; no other party may. A **restatement** is the
+operator's own-words synthesis of what is being accepted:
+
+- the deliverable and intended outcome;
+- the accepted scope;
+- explicit exclusions and non-goals;
+- dependencies or execution-order constraints;
+- material risks, irreversible effects, or uncertainties knowingly
+  accepted; and
+- why the operator accepts this contract.
+
+Restating is not repeating. Quotation or paraphrase of the matter
+without synthesis is not a restatement, and the draft review treats it
+as a finding: a conforming restatement carries decision content the
+text alone does not supply — the exclusions, the risks accepted, the
+reasons for acceptance.
+
+The direction of the account is fixed. The operator authors the
+restatement; agents verify it against the exact text and never author
+it. An agent's description of a matter is never the basis of
+ratification — the operator's restatement, reviewed against the text,
+is.
+
+The record then carries three provenance layers: text provenance (the
+pinned commit and hash), ruling provenance (threads and the rulings
+compiled from them), and operator-comprehension provenance (the
+restatement, hashed with the text it accepts).
 
 ### Matter form
 
@@ -56,35 +88,27 @@ adds:
 
 ### Draft — <date>
 
-<operator-authored summary in the operator's own words>
+<the operator's restatement, in the operator's own words>
 ```
 
-The summary addresses, in the operator's own words:
-
-- the deliverable and intended outcome;
-- the accepted scope;
-- explicit exclusions and non-goals;
-- dependencies or execution-order constraints;
-- material risks, irreversible effects, or uncertainties knowingly
-  accepted; and
-- why the operator accepts this contract.
-
-The form is a comprehension aid, not a fill-in attestation. Quoting or
-paraphrasing the matter without synthesizing what is accepted is a
-review finding.
+The form is a comprehension aid, not a fill-in attestation.
 
 ### Draft review
 
 The operator commits the draft on the matter branch. A fresh agent
 reviews the complete ratified region and appends a `## Vetting` entry
-that checks the summary claim by claim against the matter. The agent:
+that checks the restatement claim by claim against the matter. The
+agent:
 
 - identifies omissions, contradictions, or material
   misunderstandings;
+- checks that the restatement is a synthesis rather than quotation or
+  paraphrase, carrying the decision content the definition above
+  requires;
 - never writes, rewrites, completes, or supplies replacement wording
   for any content under `## Operator ratification`; and
-- records a clean disposition only when the summary accurately covers
-  the contract.
+- records a clean disposition only when the restatement accurately
+  covers the contract.
 
 The operator makes every correction personally, in a new commit.
 History is never amended or force-pushed. Review and correction repeat
@@ -94,15 +118,15 @@ This draft review is mandatory even when the operator elects to skip
 other vetting rounds. Doctrine §6's current permission to ratify at any
 round, including immediately, is narrowed accordingly: an operator may
 still end substantive vetting when ready, but prospective ratification
-does not occur until a fresh agent has reviewed the operator-authored
-summary.
+does not occur until a fresh agent has reviewed the operator's
+restatement.
 
 ### The ratification commit
 
 After a clean draft review, the operator makes one final commit that
 changes `### Draft — <date>` to `### Ratified — <datetime>` and appends
 an explicit declaration that the operator ratifies the matter as
-summarized. That final commit is the ratification act. No separate
+restated. That final commit is the ratification act. No separate
 verbal acknowledgment is required.
 
 The final operator commit changes only content under
@@ -111,13 +135,18 @@ other file, it is not a conforming ratification commit: the new text
 requires review, and the operator makes a later final commit after that
 review. The recording agent checks this commit shape mechanically.
 
-The repository's Git author metadata is not proof that a human made
-the commit: agents commonly inherit the operator's configured Git
-identity. The normative identity boundary is therefore the channel
-rule that agents never edit the operator section. A cryptographically
-signed, human-only commit would strengthen provenance but is not
-required by this matter; introducing a signing requirement is a
-separate policy decision.
+What the record evidences is bounded: the exact text accepted, a
+conforming operator act over it, and a fresh review that found the
+restatement faithful. It does not prove human authorship of the
+restatement or an internal state of comprehension. The repository's
+Git author metadata is not proof that a human made the commit: agents
+commonly inherit the operator's configured Git identity. The normative
+identity boundary is therefore the channel rule that agents never edit
+the operator section. A cryptographically signed, human-only commit
+would strengthen provenance, as would statistical review of the
+restatement corpus against the operator's verbatim turns in
+`threads/`; neither is required by this matter — introducing either is
+a separate policy decision.
 
 ### Recording and the pin
 
@@ -126,8 +155,8 @@ then writes `state: ratified`, `verified`, `ratified_commit`, and
 `ratified_sha256` in a later commit. `ratified_commit` is the final
 operator commit. The `## Operator ratification` section sits inside the
 ordinary matter's ratified region, so the hash covers both the contract
-and the operator's authored understanding. The pin still follows the
-act and is never offered in advance.
+and the operator's restatement. The pin still follows the act and is
+never offered in advance.
 
 An invalid final commit is reported and not recorded as ratified. The
 matter remains `proposed`; the operator corrects it through new commits
@@ -135,6 +164,18 @@ and performs a new conforming final act. The agent's conformance check
 does not grant ratification authority — it checks whether the operator's
 act used the ratified mechanism, just as the existing recording agent
 checks the region hash and named commit.
+
+### Precedence and discovered divergence
+
+The ratified text is the contract; the restatement is evidence of the
+act and never governs. A material divergence between restatement and
+text discovered after the act and before execution is a vetting
+finding on the matter, and the exit is doctrine §3, “State — mutable”:
+the operator re-opens the matter (`ratified → proposed`), or the dev
+agent stops and records (`staged → proposed`), and a corrected
+restatement and a new conforming act are required before work
+proceeds. A divergence discovered after execution is a new matter,
+since nothing leaves `executed`.
 
 ### Re-opening and re-ratification
 
@@ -146,19 +187,19 @@ one. Existing doctrine rules still record the superseded pin and the
 reason for re-opening in `## Vetting`.
 
 For m0001, whose proposed text and hash target are the separate
-`doctrine/matters.md` file, the operator appends the summary on m0001
-and makes the final commit over a tree containing the exact doctrine
-being re-ratified. `ratified_commit` names that operator commit;
-`ratified_sha256` remains the whole doctrine file under the existing
-special regime. The summary is immutable through the commit even
-though m0001's special hash does not cover the matter body.
+`doctrine/matters.md` file, the operator appends the restatement on
+m0001 and makes the final commit over a tree containing the exact
+doctrine being re-ratified. `ratified_commit` names that operator
+commit; `ratified_sha256` remains the whole doctrine file under the
+existing special regime. The restatement is immutable through the
+commit even though m0001's special hash does not cover the matter body.
 
 ### Scope boundary
 
 This matter governs prospective ratification and re-ratification. It
 does not change doctrine §11, “The retroactive path”: an acknowledgment
 of already-landed work remains under the existing mechanism. Extending
-operator-authored summaries to retroactive acknowledgments is a
+operator-authored restatements to retroactive acknowledgments is a
 separate matter because their hashed region and review question differ.
 
 ## What this contradicts
@@ -176,14 +217,20 @@ statement as sufficient prospective ratification. Historical acts and
 their records remain valid and are never rewritten.
 
 It narrows doctrine §6's rule that the operator may ratify at any round,
-including immediately, by requiring the operator-summary review as the
-last prospective gate. It does not require any other number of vetting
+including immediately, by requiring the restatement review as the last
+prospective gate. It does not require any other number of vetting
 rounds.
+
+The name changes no rule. “Restate to ratify” names the mechanism this
+matter proposes, and **restatement** is defined above as a term of
+art: the plain-English reading of *restate* — repeat in other words —
+is exactly what the definition excludes.
 
 ## Proposed execution plan
 
-1. Amend doctrine §6, “Vetting and ratification,” with the operator
-   draft, review, final-commit, recording, re-ratification, and scope
+1. Amend doctrine §6, “Vetting and ratification,” with the restatement
+   definition and direction rule, and the operator draft, review,
+   final-commit, recording, precedence, re-ratification, and scope
    rules above; adjust §3 transition wording only where needed to name
    the operator commit rather than a verbal act.
 2. Add a standing rule to `CLAUDE.md`: agents never author or edit
@@ -192,8 +239,8 @@ rounds.
 3. Forward deterministic checks to m0008: presence and placement of the
    final section at a ratification transition, the final operator
    commit's allowed diff shape, and inclusion of the section in the
-   ordinary ratified region. Human authorship and summary comprehension
-   remain judgment checks.
+   ordinary ratified region. Human authorship and restatement
+   comprehension remain judgment checks.
 4. Regenerate `matters/index.md` and record a doctrine/hash/transition
    verification run under doctrine §9.1, “Runs.”
 5. Ratify and execute this matter under the currently ratified verbal
