@@ -23,6 +23,7 @@ Derived from the frontmatter of every matter in this directory.
 | `m0020` | fix | formic-matters, process, execution, authority, handoff | [Referential handoff launches and delegated authority](m0020-referential-handoff-authority.md) | Let an operator adopt one explicit handoff action by reference while distinguishing operator-only lifecycle acts from agent-performed repository mechanics. |
 | `m0021` | spec | formic-matters, documentation, provenance | [README carries the naming rationale and lineage](m0021-readme-naming-lineage.md) | The README gains an expository section on the restate-to-ratify name — its rule, its agency-law and read-back lineage, and the three provenance layers the record accretes. |
 | `m0022` | spec | formic-matters, process, naming, topology | [Rename the framework to Restate to Ratify (RTR)](m0022-rename-to-rtr.md) | The framework takes the name of its central act — Restate to Ratify, short form RTR — and the doctrine, agent instructions, README, container-directory convention, and repository carry the rename. |
+| `m0023` | feature | formic-matters, process, integrity, ratification | [Restatement integrity analysis against the thread corpus](m0023-restatement-integrity-analysis.md) | An advisory integrity check on operator restatements — LLM-as-judge and consistency analysis against the operator's verbatim turns in threads/ — that emits vetting findings and can never gate or grant ratification. |
 
 ## ratified
 
@@ -61,3 +62,4 @@ Derived from the frontmatter of every matter in this directory.
 | `m0020` | m0001 | m0017 |
 | `m0021` | m0001 | m0017 |
 | `m0022` | m0001 | m0017 |
+| `m0023` | m0001 | m0017 |
