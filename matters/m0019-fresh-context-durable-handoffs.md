@@ -7,7 +7,7 @@ state: proposed
 status: draft
 tags: [formic-matters, process, review, execution, provenance]
 implements: m0001
-depends_on: [m0017]
+depends_on: [m0017, m0020]
 generated:
   by: codex/2026-08-27
   at: 2026-08-27T16:40:33-07:00
@@ -99,14 +99,19 @@ Every handoff contains:
   ratify, stage, authorize, or extend a matter;
 - the full commit against which repository state was observed, the
   observation time, and the closing actor;
-- established state, separated from agent recommendations;
+- pointers to the derived index for state and to the matters touched
+  since the previous handoff;
 - pending operator acts;
-- required ordering from ratified dependencies, separated from the
-  agent's recommended queue;
-- the next minimal launch pointer, when an agent launch rather than an
-  operator-only act is next; and
-- blockers, uncertainties, and external state that the next context
-  must re-verify.
+- the next declared action, when one exists — exactly one record; and
+- external state the next context must re-verify.
+
+The handoff carries pointers and declared actions, nothing more. It
+contains no matter-specific commentary: an agent's observation about a
+matter — an open item, a correction, a recommendation, an expected
+finding — is recorded on the matter itself, where it accretes review
+history before every reader equally, and never in the handoff.
+Ordering is derived from `depends_on` and the operator's staging,
+never authored here; there is no recommended queue.
 
 The handoff points to matters for scope and execution instructions; it
 does not reproduce them. A substantive gap discovered while writing the
