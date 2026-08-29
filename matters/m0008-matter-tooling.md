@@ -44,7 +44,12 @@ check. This is that code. Deterministic, therefore in scope:
 - conflict-rule link check — a ratification that contradicts a ratified
   matter carries the supersession link (doctrine §5)
 - index and worklist regeneration; CI fails if committed views are
-  stale
+  stale, and a commit-time check (the hook path doctrine §8 names)
+  refuses any commit whose `matters/index.md` differs from
+  regeneration over that commit's own tree — so an index can never
+  land out of step with its files. Guard for the 2026-08-29 index
+  slip; its error record lands as e0001 when
+  [m0030](m0030-error-log.md) executes
 - staleness checks — `ratified` with no motion, `branch` present with
   no live agent, `executed` without an execution record
 - commit-msg hook enforcing the `Matter: mNNNN` trailer, in every
