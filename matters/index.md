@@ -24,6 +24,7 @@ Derived from the frontmatter of every matter in this directory.
 | `m0021` | spec | formic-matters, documentation, provenance | [README carries the naming rationale and lineage](m0021-readme-naming-lineage.md) | The README gains an expository section on the restate-to-ratify name — its rule, its agency-law and read-back lineage, and the three provenance layers the record accretes. |
 | `m0022` | spec | formic-matters, process, naming, topology | [Rename the framework to Restate to Ratify (RTR)](m0022-rename-to-rtr.md) | The framework takes the name of its central act — Restate to Ratify, short form RTR — and the doctrine, agent instructions, README, container-directory convention, and repository carry the rename. |
 | `m0023` | feature | formic-matters, process, integrity, ratification | [Restatement integrity analysis against the thread corpus](m0023-restatement-integrity-analysis.md) | An advisory integrity check on operator restatements — LLM-as-judge and consistency analysis against the operator's verbatim turns in threads/ — that emits vetting findings and can never gate or grant ratification. |
+| `m0024` | spec | formic-matters, process, provenance, integrity | [Declared sources — authored matters carry their provenance](m0024-declared-sources.md) | Every authored or revised matter declares the sources its reasoning rests on in a sources frontmatter list, and at the ratification gate every declared source is ratified text or append-only evidence — never a proposed matter. |
 
 ## ratified
 
@@ -55,11 +56,12 @@ Derived from the frontmatter of every matter in this directory.
 | `m0013` | m0001 | — |
 | `m0014` | m0001 | — |
 | `m0015` | m0001 | — |
-| `m0016` | m0001 | — |
+| `m0016` | m0001 | m0020, m0018 |
 | `m0017` | m0001 | — |
 | `m0018` | m0001 | — |
-| `m0019` | m0001 | m0017 |
+| `m0019` | m0001 | m0017, m0020 |
 | `m0020` | m0001 | m0017 |
 | `m0021` | m0001 | m0017 |
 | `m0022` | m0001 | m0017 |
 | `m0023` | m0001 | m0017 |
+| `m0024` | m0001 | — |
