@@ -61,10 +61,19 @@ that session, each anchored to the operator's words:
 5. **Plain statement first, detail after.** "This is essentially
    unscrutable" — said of a finding whose first sentence could not
    be understood without the rest.
+6. **Processes are numbered steps.** "Break every process down to
+   discrete steps: 1 - actor (operator or agent) does x with these
+   considerations, 2 - same statement form, next step, 3 -
+   completion definition."
+7. **Vocabulary drift is challenged on sight.** "Usage of
+   terminology outside of this needs to be immediately called out
+   by the other and drilled into — either to correctly state with
+   existing terminology, or to upgrade the term to a proper defined
+   word in the glossary."
 
 ## Proposed text
 
-Four amendments.
+Six amendments.
 
 **A glossary enters the doctrine.** A new doctrine section holds
 authored, normative definitions of this framework's terms of art. A
@@ -97,9 +106,12 @@ carried by this matter verbatim:
 - **restatement** — the operator's own-words account of what a
   matter does and why, bounded by the matter and diffed against it
   ([m0017](m0017-operator-authored-ratification.md)).
-- **clean review** — a review whose appended entry concludes that
-  nothing requires change (its **disposition** — a review entry's
-  closing judgment — is clean).
+- **passing verification** — a comparison of the operator's
+  restatement against the matter, under
+  [m0017](m0017-operator-authored-ratification.md)'s protocol, that
+  found no failures; the event that completes ratification.
+- **disposition** — a review entry's closing judgment: what the
+  review concluded and what, if anything, it asks for.
 - **recording agent** — the agent that writes lifecycle facts into a
   matter after an operator act: state changes, the pin. It records
   acts; it performs none.
@@ -116,11 +128,34 @@ date; the commit whose text was reviewed; what was read; deviations
 with an ID, the section it is about, and one plain-language sentence
 stating the problem, with explanation after; then the disposition.
 Prose stays where judgment lives; fields carry what is enumerable.
+(Which entries exist at all is
+[m0027](m0027-records-begin-at-the-gate.md)'s question — a
+coordination reference, not a basis.)
 
 **Every described act names its actor.** In record text, "the
 review," "the commit," "approval" without whose is a finding. The
 sentence must say who acts: the operator, the reviewing agent, the
 recording agent.
+
+**Multi-step mechanisms are written as numbered steps.** Normative
+text describing a process states it as an ordered list: each step
+names its actor — the operator, or an agent — and the act, in the
+same sentence form throughout; the list ends by defining
+completion, the observable fact that means the process is done.
+[m0017](m0017-operator-authored-ratification.md)'s protocol section
+is the form's first use.
+
+**Terminology drift is challenged on sight.** When any reader —
+operator or agent — meets a term of art that is in neither the
+glossary nor a bold first-use definition:
+
+1. **The reader** names the term and stops on it; unexplained
+   jargon is never read past.
+2. **The writer** restates the sentence in committed vocabulary, or
+   proposes the term for the glossary with a plain definition.
+3. **Completion:** the sentence stands only once it uses committed
+   vocabulary. Glossary additions are doctrine changes and go
+   through matters.
 
 **Legibility is a standing review duty.** A reviewer of any matter,
 entry, or handoff flags text the operator could not restate in their
@@ -143,12 +178,14 @@ everywhere). Nothing is superseded.
 
 ## Proposed execution plan
 
-1. Add the glossary section with the seed entries, amend §6's entry
-   requirement to the fixed shape, and add the actor rule and the
+1. Add the glossary section with the seed entries; amend §6's entry
+   requirement to the fixed shape; add the actor rule, the
+   numbered-steps rule, the drift-challenge protocol, and the
    legibility review duty to §6.
 2. Add a standing rule to `CLAUDE.md`: write record text to the
    operator — plain first sentence, defined terms only, named
-   actors, the fixed entry shape.
+   actors, numbered steps for processes, the fixed entry shape;
+   challenge undefined terms on sight.
 3. Forward to [m0008](m0008-matter-tooling.md), once it exists: a
    lint that flags terms of art absent from the glossary and entries
    missing preamble fields. Whether text is legible stays a judgment
