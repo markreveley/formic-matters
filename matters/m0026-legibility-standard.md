@@ -115,6 +115,12 @@ carried by this matter verbatim:
 - **recording agent** — the agent that writes lifecycle facts into a
   matter after an operator act: state changes, the pin. It records
   acts; it performs none.
+- **in situ** — Latin, "in its original place." An exported review
+  comment is shown in situ: quoted inside an excerpt of the exact
+  text it responded to, with its file location and carrying commit —
+  never in a list detached from its context. Already used,
+  undefined, by §8 "Where discourse lives" and §9.2 "Threads"; the
+  operator challenged it on 2026-08-29.
 - **thread** — a verbatim export of a session, under `threads/`;
   never edited after export (§9.2 "Threads").
 - **run** — an append-only record of a verification actually
