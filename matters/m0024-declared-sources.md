@@ -81,8 +81,8 @@ Second, add this rule as a documented dialect choice:
 Operator direction reaches the list through its recorded form: the
 thread that preserves the direction, or the ruling compiled onto a
 ratified matter. Direction not yet exported is cited by the matter's
-`threads` entry when the export lands; until then the vetting round
-holds the gap open as an ordinary finding.
+`threads` entry when the export lands; until then the matter itself
+names the gap where the citation will go.
 
 ## Enforcement
 
