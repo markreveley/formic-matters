@@ -9,13 +9,15 @@
 
 - `main` observed at: `54b83622928865813aeb694b5ef0195052b9b226`
   (the merge of pull request #15), confirmed by fetch
-- Working branch: `claude/handoff-review-next-steps-fms9u3` is
-  merged; the current branch is `claude/handoff-item-1-2u2k20` —
-  harness-assigned, the recorded deviation — carrying m0017's
-  rewritten Round 1, the operator-rulings record and body revision,
-  m0024's Round 1, the [m0025](matters/m0025-doctrine-enforcement-voice.md)
-  and [m0026](matters/m0026-legibility-standard.md) filings, and this
-  file; per-commit `Matter:` trailers. Pull request #16 is this
+- Working branch: `claude/handoff-item-1-2u2k20` — harness-assigned,
+  the recorded deviation. It revises
+  [m0017](matters/m0017-operator-authored-ratification.md) (the
+  step-by-step protocol; the operator's 2026-08-29 rulings applied)
+  and [m0024](matters/m0024-declared-sources.md), files
+  [m0025](matters/m0025-doctrine-enforcement-voice.md),
+  [m0026](matters/m0026-legibility-standard.md), and
+  [m0027](matters/m0027-records-begin-at-the-gate.md), and rewrites
+  this file; per-commit `Matter:` trailers. Pull request #16 is this
   branch's filing pull request, open at this observation.
 - Observed at: `2026-08-29T04:30:36Z`
 - Closing actor: `claude-code/2026-08-29`
@@ -24,41 +26,39 @@
 
 - State lives in [matters/index.md](matters/index.md) at the observed
   commit and in each matter's frontmatter; this file restates none of
-  it. What an agent had to say about a matter is on the matter.
-- On 2026-08-29 the operator re-ordered the work (recorded in
-  [m0024](matters/m0024-declared-sources.md)'s Round 1): the rules
-  giving proposed matters no authority — m0024, with
-  [m0016](matters/m0016-launch-instructions-policy.md)'s companion
-  paragraph — and the doctrine correction
-  [m0025](matters/m0025-doctrine-enforcement-voice.md) go before
-  [m0017](matters/m0017-operator-authored-ratification.md) and
-  everything else.
+  it.
+- Operator direction of 2026-08-29 (this branch's session; thread
+  export pending) sets the working order:
+  [m0026](matters/m0026-legibility-standard.md) first, then
+  [m0024](matters/m0024-declared-sources.md) with
+  [m0025](matters/m0025-doctrine-enforcement-voice.md), then
+  [m0027](matters/m0027-records-begin-at-the-gate.md), then
+  [m0017](matters/m0017-operator-authored-ratification.md) and the
+  rest. Under the same direction, `proposed` matters on this branch
+  carry no vetting entries: review was applied as edits, and the
+  matter record begins at the ratification gate (the rule m0027
+  proposes).
 
 ## Pending operator acts
 
 - Read pull request #16 and merge it (merge commit), or direct
   changes.
-- Direct the export of the 2026-08-29 session thread — entries on
-  m0017, m0024, m0025, and m0026 hold their provenance gap open on
-  it.
+- Direct the export of the 2026-08-29 session thread — m0025, m0026,
+  and m0027 name it as their pending provenance, and the rulings
+  applied to m0017 live in it.
 - Then the next action below.
 
 ## Next action
 
 - **Classification:** `operator act`
-- **Repository and matters:** `markreveley/formic-matters`, m0024
-  and m0025
-- **Action:** the operator reads
-  [m0024](matters/m0024-declared-sources.md) and
-  [m0025](matters/m0025-doctrine-enforcement-voice.md) and, for
-  each: ratifies under the current verbal mechanism of doctrine §6,
-  "Vetting and ratification," directs a revision, or directs another
-  vetting round. An agent's part is only to record the operator's
-  act.
-- **After that:** m0017 — the operator reads its revised body (the
-  2026-08-29 rulings) and disposes of its open findings A2–A4;
-  [m0026](matters/m0026-legibility-standard.md) queues with the
-  rest.
+- **Repository and matter:** `markreveley/formic-matters`,
+  [m0026](matters/m0026-legibility-standard.md)
+- **Action:** the operator reads m0026 and either ratifies it under
+  the current verbal mechanism of doctrine §6, “Vetting and
+  ratification,” directs revisions, or directs a review. An agent's
+  part is only to apply directed edits or record the operator's act.
+- **After that, in the directed order:** m0024 with m0025, then
+  m0027, then m0017.
 
 ## Re-verification
 
