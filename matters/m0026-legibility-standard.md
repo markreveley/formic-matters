@@ -1,0 +1,163 @@
+---
+type: spec
+title: Legibility standard — record text is written to its ratifier
+description: "Text the operator must act on — matter bodies, vetting entries, handoffs — is written in plain language with only defined terms, named actors, and a fixed entry structure; a glossary enters the doctrine."
+id: m0026
+state: proposed
+status: draft
+tags: [formic-matters, process, documentation, review]
+implements: m0001
+sources:
+  - doctrine/matters.md
+generated:
+  by: claude-code/2026-08-29
+  at: 2026-08-29T04:30:36Z
+---
+
+# m0026 · Legibility standard — record text is written to its ratifier
+
+Filed on operator direction in the 2026-08-29 session. That session
+is not yet exported as a thread; per the practice
+[m0024](m0024-declared-sources.md) proposes, the provenance gap is
+held open here and the `threads` cite is added when the export
+lands. The `sources` list above rehearses m0024's proposed field.
+
+## Diagnosed reason
+
+On 2026-08-29 the operator read a vetting entry that conformed to
+every rule in force — appended per §6 "Vetting and ratification,"
+correct trailer, faithful findings — and could not audit it. The
+entry used terms of art without definitions ("pin," "clean review,"
+"diff shape"), described acts without naming their actors ("the
+review" without saying whose), and was written in the register
+agents use with each other, modeled on m0001's vetting rounds. The
+operator named the resulting state "complexity escape": the point
+where the record outruns the one person whose acts give it force.
+
+Every gate in this framework ends at an operator act. An artifact
+the operator cannot audit turns that act into trust, and trust at
+the gate is the rubber stamp §14 "The bootstrap" records — now with
+better-looking paperwork. §4 "Cheap to file, expensive to ratify"
+prices filing and ratifying; nothing anywhere prices reading. This
+matter adds the missing requirement: text the operator must act on
+must be legible to the operator, and that is a property reviewers
+check, not a courtesy.
+
+The principles below are extracted from the operator's rulings in
+that session, each anchored to the operator's words:
+
+1. **Write to the ratifier.** "I am not qualified to really audit
+   your recent contributions" — an entry only agents can read has
+   failed its purpose regardless of conformance.
+2. **Name the actor of every act.** "When you say 'the review' do
+   you mean the operator review, or the agent review of the
+   operator's restatement? You need to be more explicit."
+3. **No undefined terms of art.** "There should really be a ban on
+   using terminology that hasn't been explicitly defined."
+4. **Structure what is enumerable.** "This would fit much better
+   into a scheme of sorts, some sort of semi-structured data that I
+   can cross reference" — the preamble of a review entry is fields,
+   not prose.
+5. **Plain statement first, detail after.** "This is essentially
+   unscrutable" — said of a finding whose first sentence could not
+   be understood without the rest.
+
+## Proposed text
+
+Four amendments.
+
+**A glossary enters the doctrine.** A new doctrine section holds
+authored, normative definitions of this framework's terms of art. A
+term of art may be used in a matter body, a vetting entry, or the
+handoff only if it is in the glossary or defined in bold at its
+first use in the same document. The glossary is authored text —
+changed only through matters — not a derived view. Seed entries,
+carried by this matter verbatim:
+
+- **pin** — the recorded pair that freezes what was accepted: a
+  commit ID, which preserves the exact text in Git history forever,
+  plus a hash of the accepted text. Recorded only after the
+  operator's act, never offered in advance.
+- **hash** (also **checksum**) — a short fingerprint computed from a
+  text; any change to the text changes the fingerprint, so equal
+  fingerprints mean identical text. The commit remains the source of
+  truth; the stored hash exists because the matter file legitimately
+  keeps changing around the accepted text (review entries append,
+  state fields change), and recomputing one number is a cheaper
+  drift check than re-deriving which parts were accepted. The
+  tooling that verifies it is
+  [m0007](m0007-ratification-content-hash.md)'s deliverable.
+- **ratified region** — the part of a matter file the pin covers:
+  the body minus the frontmatter and the append-only `## Vetting`
+  and `## Execution` sections. m0001 is special: its pin covers the
+  whole doctrine file instead.
+- **contract** — a ratified matter's text, in its role after
+  ratification: the thing execution is held to (§3 "State —
+  mutable": "the plan is now the contract").
+- **restatement** — the operator's own-words account of what a
+  matter does and why, bounded by the matter and diffed against it
+  ([m0017](m0017-operator-authored-ratification.md)).
+- **clean review** — a review whose appended entry concludes that
+  nothing requires change (its **disposition** — a review entry's
+  closing judgment — is clean).
+- **recording agent** — the agent that writes lifecycle facts into a
+  matter after an operator act: state changes, the pin. It records
+  acts; it performs none.
+- **thread** — a verbatim export of a session, under `threads/`;
+  never edited after export (§9.2 "Threads").
+- **run** — an append-only record of a verification actually
+  executed, under `runs/` (§9.1 "Runs").
+
+**Vetting entries gain a fixed shape.** §6 "Vetting and
+ratification" currently requires "(round, reviewer, findings,
+disposition)". That becomes: a preamble as a field table — reviewer;
+date; the commit whose text was reviewed; what was read; deviations
+— rendered the same way in every entry; then findings, each opening
+with an ID, the section it is about, and one plain-language sentence
+stating the problem, with explanation after; then the disposition.
+Prose stays where judgment lives; fields carry what is enumerable.
+
+**Every described act names its actor.** In record text, "the
+review," "the commit," "approval" without whose is a finding. The
+sentence must say who acts: the operator, the reviewing agent, the
+recording agent.
+
+**Legibility is a standing review duty.** A reviewer of any matter,
+entry, or handoff flags text the operator could not restate in their
+own words — the same test
+[m0017](m0017-operator-authored-ratification.md) applies to the
+operator, pointed back at agents. Citation form is
+[m0018](m0018-doctrine-heading-citations.md)'s rule and is not
+restated here; m0017, m0018, and
+[m0006](m0006-review-lenses-and-dry-rounds.md) are coordination
+references only, not a basis for this matter.
+
+## What this contradicts
+
+No ratified matter. It amends §6 "Vetting and ratification" (the
+entry shape) and adds the glossary section. It tightens, without
+contradicting, the existing style the doctrine already practices in
+places (§8 "Where discourse lives" defines "in-document review"
+inline in bold — exactly the first-use form this matter requires
+everywhere). Nothing is superseded.
+
+## Proposed execution plan
+
+1. Add the glossary section with the seed entries, amend §6's entry
+   requirement to the fixed shape, and add the actor rule and the
+   legibility review duty to §6.
+2. Add a standing rule to `CLAUDE.md`: write record text to the
+   operator — plain first sentence, defined terms only, named
+   actors, the fixed entry shape.
+3. Forward to [m0008](m0008-matter-tooling.md), once it exists: a
+   lint that flags terms of art absent from the glossary and entries
+   missing preamble fields. Whether text is legible stays a judgment
+   check.
+4. Regenerate `matters/index.md` and record a verification run under
+   §9.1 "Runs."
+5. Because doctrine changes, re-ratify m0001 over the amendment
+   using the ratification mechanism then in force; record the pin
+   only after the operator's act.
+6. Append this matter's execution record, move it
+   `staged → executed`, and put the branch before the operator for a
+   merge-commit merge.

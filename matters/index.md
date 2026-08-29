@@ -26,6 +26,7 @@ Derived from the frontmatter of every matter in this directory.
 | `m0023` | feature | formic-matters, process, integrity, ratification | [Restatement integrity analysis against the thread corpus](m0023-restatement-integrity-analysis.md) | An advisory integrity check on operator restatements — LLM-as-judge and consistency analysis against the operator's verbatim turns in threads/ — that emits vetting findings and can never gate or grant ratification. |
 | `m0024` | spec | formic-matters, process, provenance, integrity | [Declared sources — authored matters carry their provenance](m0024-declared-sources.md) | Every authored or revised matter declares the sources its reasoning rests on in a sources frontmatter list, and at the ratification gate every declared source is ratified text or append-only evidence — never a proposed matter. |
 | `m0025` | spec | formic-matters, doctrine, integrity | [Doctrine stops describing unbuilt enforcement as operating](m0025-doctrine-enforcement-voice.md) | Six doctrine passages say a validator checks things today when no validator exists; each is rewritten to say who checks now and who will check once the tooling lands, so ratified text stops promising checks nobody runs. |
+| `m0026` | spec | formic-matters, process, documentation, review | [Legibility standard — record text is written to its ratifier](m0026-legibility-standard.md) | Text the operator must act on — matter bodies, vetting entries, handoffs — is written in plain language with only defined terms, named actors, and a fixed entry structure; a glossary enters the doctrine. |
 
 ## ratified
 
@@ -67,3 +68,4 @@ Derived from the frontmatter of every matter in this directory.
 | `m0023` | m0001 | m0017 |
 | `m0024` | m0001 | — |
 | `m0025` | m0001 | — |
+| `m0026` | m0001 | — |
