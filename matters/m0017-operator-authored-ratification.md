@@ -1,7 +1,7 @@
 ---
 type: spec
 title: Restate to ratify — operator-authored restatements
-description: "Ratification is an operator-authored restatement committed to the matter; a fresh agent verifies it against the matter text, and a clean verification completes the act, which the agent records with the exact-text pin."
+description: "Ratification is an operator-authored restatement committed to the matter; a fresh agent verifies it against the matter text, and a passing verification completes the act, which the agent records with the exact-text pin."
 id: m0017
 state: proposed
 status: draft
@@ -34,7 +34,7 @@ both properties. Writing the restatement forces an explicit account of
 scope, exclusions, ordering, and risk. Recording it in the matter makes
 the act and the exact tree one event, rather than a verbal act later
 mapped to a commit by an agent. Agent review compares the operator's
-understanding with the proposed contract, and a clean comparison
+understanding with the proposed contract, and a passing comparison
 completes the act.
 
 This is evidence of comprehension, not proof of an internal mental
@@ -59,10 +59,10 @@ operator's account, in the operator's own words, of what the matter
 does and why — the operator's interpretation at the operator's
 altitude, not a second copy at the matter's fidelity. It is bounded by
 the matter: every claim in it anchors in the matter text, it adds
-nothing the matter does not say, and the draft review diffs it against
-the matter. Zero additive content is the test.
+nothing the matter does not say, and the verification (step 3 below)
+diffs it against the matter. Zero additive content is the test.
 
-A claim the review cannot anchor in the matter is a finding, and the
+A claim the verification cannot anchor in the matter is a finding, and the
 operator resolves it one of two ways: it was a misreading, and the
 operator corrects the restatement; or it was real content the matter
 fails to state, and the matter is underspecified — the content enters
@@ -88,10 +88,8 @@ restatement, hashed with the text it accepts).
 
 ### Matter form
 
-Before the first `## Vetting` or `## Execution` heading, the
-operator's restatement is added — committed by the operator, or
-transcribed verbatim from the operator's recorded turn by an agent
-and attributed:
+The restatement lives in the matter, before the first `## Vetting`
+or `## Execution` heading:
 
 ```markdown
 ## Operator ratification
@@ -102,61 +100,59 @@ and attributed:
 ```
 
 The form is a comprehension aid, not a fill-in attestation.
-Submitting a restatement for review is the operator's declaration
-that, on a clean review, the matter is ratified as restated; no
-separate declaration is written.
 
-### Draft review
+### The protocol, step by step
 
-With the draft on the matter branch, a fresh agent reviews the
-complete ratified region and appends a `## Vetting` entry that
-checks the restatement claim by claim against the matter. The
-agent:
+1. **The operator** writes the restatement — the only text the
+   operator authors in this protocol.
+2. **The operator or an agent** commits it to the matter as
+   `### Draft — <date>` under `## Operator ratification`. An agent
+   doing this transcribes the operator's recorded wording verbatim,
+   attributed, and never composes or alters it. Submitting the
+   draft is the operator's declaration that a passing verification
+   (step 4) ratifies the matter as restated.
+3. **A fresh agent** — one that has not worked on this matter —
+   compares the restatement to the matter text, claim by claim.
+   The comparison fails on: a claim that does not anchor in the
+   matter (zero additive content is the test), a material omission
+   against the matter, or quotation and line-by-line paraphrase,
+   which interpret nothing.
+4. **If the comparison fails,** ratification does not occur. The
+   agent reports each failure to the operator. For an unanchored
+   claim the operator decides which case it is: a misreading — the
+   operator rewords the restatement — or matter
+   underspecification — the missing content enters the matter by
+   revision, and the operator restates over the revised text.
+   Either way the protocol restarts at step 3 with a fresh agent.
+   Every rewording is the operator's own; history is never amended
+   or force-pushed.
+5. **If the comparison passes, ratification is complete at that
+   moment.** The same agent, in the same session, makes one commit
+   that: appends the verification's record to `## Vetting` (who
+   verified, when, at which commit), changes `### Draft — <date>`
+   to `### Ratified — <datetime>`, and writes the frontmatter
+   record — `state: ratified`, `verified` (the operator, with the
+   verification's datetime), and the pin below. That commit changes
+   nothing else — a shape reviewers confirm today and the validator
+   will check once it exists ([m0008](m0008-matter-tooling.md)).
 
-- identifies material omissions, contradictions, and
-  misunderstandings against the matter text;
-- flags every claim it cannot anchor in the matter — the zero-additive
-  test — for the operator to resolve as a misreading or as matter
-  underspecification, per the definition above;
-- flags quotation and line-by-line paraphrase, which interpret
-  nothing;
-- never composes, completes, or alters the operator's restatement —
-  transcribing the operator's recorded wording verbatim, attributed,
-  is the one permitted writing act; and
-- records a clean disposition only when the restatement is accurate,
-  bounded, and interpretive.
+**Completion:** the matter is ratified when step 5's commit exists.
+There is no later confirmation, no second operator act, and no
+waiting period. Step 3 is mandatory even when the operator skips
+every other review: doctrine §6's permission to ratify at any
+round, including immediately, is narrowed to "immediately after the
+comparison passes."
 
-Every correction is the operator's own wording, entering the matter
-the same way as the draft. History is never amended or force-pushed.
-Review and correction repeat until the appended vetting record has a
-clean disposition.
+### What the record proves
 
-This draft review is mandatory even when the operator elects to skip
-other vetting rounds. Doctrine §6's current permission to ratify at any
-round, including immediately, is narrowed accordingly: an operator may
-still end substantive vetting when ready, but prospective ratification
-does not occur until a fresh agent has reviewed the operator's
-restatement.
-
-### Ratification completes on the clean review
-
-A clean review completes ratification; the operator makes no further
-act and no closing commit. The reviewing agent's session records the
-completion in one commit, directly after appending the clean review
-entry: `### Draft — <date>` becomes `### Ratified — <datetime>`, and
-the frontmatter fields below are written. That recording commit
-changes nothing else — a shape reviewers confirm today and the
-validator will check once it exists
-([m0008](m0008-matter-tooling.md)).
-
-What the record evidences is bounded: the exact text accepted, an
-operator-authored restatement a fresh review found faithful to it,
-and a recording that followed that review directly. It does not
-prove human authorship of the restatement or an internal state of
+The record evidences the exact text accepted, an operator-authored
+restatement a fresh agent found faithful to it, and a recording
+made in the same session as the verification. It does not prove
+human authorship of the restatement or an internal state of
 comprehension. Git author metadata is not that proof either: agents
 commonly inherit the operator's configured Git identity. The
-normative identity boundary is the channel rule above — agents never
-compose or alter the restatement. A cryptographically signed,
+normative identity boundary is the channel rule in step 2 — agents
+never compose or alter the restatement. A cryptographically signed,
 human-only commit would strengthen provenance, as would integrity
 analysis of the restatement corpus against the operator's verbatim
 turns in `threads/`
@@ -164,30 +160,28 @@ turns in `threads/`
 required by this matter — introducing either is a separate policy
 decision.
 
-### Recording and the pin
+### The pin
 
-The recording commit writes `state: ratified`, `verified` (the
-operator, with the clean review's datetime), `ratified_commit`, and
-`ratified_sha256`. `ratified_commit` is the recording commit itself:
-its tree carries the contract, the restatement, and the
-`### Ratified` heading, and the `## Operator ratification` section
-sits inside the ordinary matter's ratified region, so the hash
-covers both the contract and the operator's restatement. The clean
-review's entry names the commit whose text it read; between that
-commit and the recording commit, the only permitted changes are the
-review entry itself and the recording commit's own heading flip and
-frontmatter — so the text pinned is the text reviewed, confirmed by
-reviewers today and by the validator once it exists
-([m0008](m0008-matter-tooling.md)). The pin still follows the act
-and is never offered in advance.
+The pin is the pair step 5 records: `ratified_commit` — step 5's
+own commit, whose tree preserves the exact contract and restatement
+in Git history forever — and `ratified_sha256`, a hash of the
+ratified region at that commit. The `## Operator ratification`
+section sits inside the ordinary matter's ratified region, so the
+hash covers both the contract and the restatement. The hash exists
+because the matter file keeps legitimately changing after
+ratification (entries append, state fields change): whether the
+accepted text is still intact is answered by recomputing one number
+([m0007](m0007-ratification-content-hash.md)'s tooling), not by
+hand-diffing history. The pin follows the act and is never offered
+in advance.
 
-A recording later found nonconforming — it changed more than the
-heading and frontmatter, or the matter text moved between the
-reviewed commit and the recording — is a vetting finding, and the
+Steps 3 and 5 happen in one session over one tree state, so the
+text pinned is the text verified. A step 5 commit later found to
+have changed more than its permitted contents is a finding, and the
 exit is doctrine §3, “State — mutable”: the operator re-opens the
-matter. The agent's checks grant no ratification authority: the
-basis of ratification is the operator's verified restatement,
-nothing an agent decides.
+matter. The verification grants the agent no ratification
+authority: the basis of ratification is the operator's restatement;
+the verification only confirms it is faithful.
 
 ### Precedence and discovered divergence
 
@@ -197,7 +191,7 @@ text discovered after the act and before execution is a vetting
 finding on the matter, and the exit is doctrine §3, “State — mutable”:
 the operator re-opens the matter (`ratified → proposed`), or the dev
 agent stops and records (`staged → proposed`), and a corrected
-restatement and a fresh clean review are required before work
+restatement and a fresh pass of steps 3–5 are required before work
 proceeds. A divergence discovered after execution is a new matter,
 since nothing leaves `executed`.
 
@@ -212,10 +206,10 @@ reason for re-opening in `## Vetting`.
 
 For m0001, whose proposed text and hash target are the separate
 `doctrine/matters.md` file, the operator's restatement is added on
-m0001, and the recording commit is made over a tree containing the
-exact doctrine being re-ratified. `ratified_commit` names that
-recording commit; `ratified_sha256` remains the whole doctrine file
-under the existing special regime. The restatement is immutable through the
+m0001, and step 5's commit is made over a tree containing the exact
+doctrine being re-ratified. `ratified_commit` names that commit;
+`ratified_sha256` remains the whole doctrine file under the
+existing special regime. The restatement is immutable through the
 commit even though m0001's special hash does not cover the matter body.
 
 ### Scope boundary
@@ -228,21 +222,24 @@ separate matter because their hashed region and review question differ.
 
 ## What this contradicts
 
-This supersedes doctrine §6, “Vetting and ratification,” where the
-operator presently “reads the matter as it stands at a specific commit
-and states ratification” and an agent maps that statement to the named
-commit. It preserves that section's exact-text rule, operator-only
-ownership, region regimes, agent-computed hash, and pin-follows-the-act
-rule; it replaces only the form and repository location of the
-operator act.
+No ratified matter is contradicted. This amends doctrine §6,
+“Vetting and ratification,” where the operator presently “reads the
+matter as it stands at a specific commit and states ratification”
+and an agent maps that statement to the named commit. It preserves
+that section's exact-text rule, operator-only ownership, region
+regimes, agent-computed hash, and pin-follows-the-act rule; it
+replaces only the form of the operator act. (“Supersede” is
+reserved for its §5, “Supersession, splitting, and conflict,”
+meaning — one matter replacing another; no matter is superseded
+here.)
 
-It also supersedes any standing example that treats a one-line verbal
+It also retires the standing example that treats a one-line verbal
 statement as sufficient prospective ratification. Historical acts and
 their records remain valid and are never rewritten.
 
 It narrows doctrine §6's rule that the operator may ratify at any round,
-including immediately, by requiring the restatement review as the last
-prospective gate. It does not require any other number of vetting
+including immediately, by requiring the restatement verification as the
+last prospective gate. It does not require any other number of vetting
 rounds.
 
 The name changes no rule. “Restate to ratify” names the mechanism
@@ -259,158 +256,24 @@ the matter and diffed against it, which is what the *re-* carries.
 2. Add a standing rule to `CLAUDE.md`: agents never compose or alter
    content under `## Operator ratification`; they transcribe the
    operator's recorded wording verbatim, verify it, and record a
-   clean review's completion.
+   passing verification's completion. In the same edit, revise
+   `CLAUDE.md`'s existing ratification sentence — “over exact text
+   at a commit the operator names” — to describe this mechanism.
 3. Forward deterministic checks to m0008: presence and placement of
-   the section at a ratification transition, the allowed
-   change-shapes of the review-entry and recording commits, the
-   matter text's identity between the reviewed commit and the
-   recording commit, and inclusion of the section in the ordinary
-   ratified region. Human authorship and restatement comprehension
-   remain judgment checks.
+   the section at a ratification transition, step 5's commit shape
+   (the verification record, the heading change, the frontmatter
+   record, nothing else), and inclusion of the section in the
+   ordinary ratified region. Human authorship and restatement
+   comprehension remain judgment checks.
 4. Regenerate `matters/index.md` and record a doctrine/hash/transition
    verification run under doctrine §9.1, “Runs.”
 5. Ratify and execute this matter under the currently ratified verbal
    mechanism; a voluntary operator-authored draft may rehearse the new
    form but cannot bootstrap its own authority.
-6. Re-ratify m0001 under the current mechanism over the doctrine
-   amendment, record both pins, append this matter's execution record,
-   and merge by merge commit on operator direction.
+6. Re-ratify m0001 under the same verbal mechanism as step 5 uses,
+   over the doctrine amendment; record both pins, append this
+   matter's execution record, and merge by merge commit on operator
+   direction.
 7. Use this mechanism for every subsequent prospective ratification.
    Which matter uses it first is staging judgment, not this
    specification's: the operator selects it at launch.
-
-## Vetting
-
-### Round 1 — 2026-08-29
-
-| | |
-|---|---|
-| Reviewer | claude-code/2026-08-29 — a fresh session; no earlier work on this matter |
-| Matter text reviewed | as of commit `54b8362` (the merge of pull request #15) |
-| Launched by | the operator, through `handoff.md`'s declared next action |
-| Read before reviewing | this matter; `doctrine/matters.md`; the two threads this matter cites; m0001's vetting rounds; m0014 (the closest executed precedent); `CLAUDE.md`; the index |
-| Checked before starting | pull request #15 merged as a merge commit; this matter still `proposed`; no `## Vetting` section existed yet |
-| Deviation | the branch name (`claude/handoff-item-1-2u2k20`) was assigned by the launch tooling and is not m0017-prefixed as §8 "Where discourse lives" asks; the commit trailer and pull request title carry the matter ID |
-
-This entry was rewritten in place on its unmerged branch, on
-operator direction, before any of it entered the record — the first
-version was not intelligible to the operator. The branch history
-keeps the original; the findings are unchanged in substance.
-
-Four problems found, biggest first. Each names the section of this
-matter it is about, states the problem in one sentence, then
-explains.
-
-**A1 — Between the agent's approval of the restatement and the
-operator's separate closing commit, the matter text could change
-without anyone noticing.**
-About "The ratification commit" and "Recording and the pin" as they
-stood at the reviewed commit. (Dissolved by the operator's
-2026-08-29 ruling — see the operator review entry below.)
-The drafted protocol had two separate events: first the reviewing
-agent checks the operator's restatement against the matter and
-records that it is faithful; later, the operator personally makes a
-closing commit that marks the matter ratified. The only mechanical
-check named for that closing commit was "did it touch anything
-outside the operator's section?" Nothing required anyone to confirm
-the matter text was still the same text the agent had checked. A
-revision landing between the two events would end up ratified
-without any reviewer having compared it to the restatement. The fix
-suggested at the time: write down which commit the agent's check
-read, and require the matter text to be identical to it at the
-closing commit.
-
-**A2 — The plan updates `CLAUDE.md` but leaves its existing
-ratification sentence wrong.**
-About "Proposed execution plan" step 2. `CLAUDE.md` today says
-ratification happens "over exact text at a commit the operator
-names." Under this matter that sentence stops being true, and step 2
-only adds a new rule without correcting the old sentence — so the
-one file every agent reads first would misdescribe the mechanism.
-Suggested fix: step 2 also rewrites that sentence.
-
-**A3 — Plan step 6 says "under the current mechanism," which will be
-ambiguous by the time it runs.**
-About "Proposed execution plan" step 6. When m0001 is re-ratified,
-the doctrine file will already contain this matter's new rules, but
-they only gain force from that very re-ratification. "Current" could
-mean either the old way or the new way. Step 5 already names the old
-way precisely ("the currently ratified verbal mechanism"); step 6
-should use the same words.
-
-**A4 — "Supersedes" is the wrong word for changing doctrine text.**
-About "What this contradicts." In this repository "supersede" is a
-defined relationship between two matters (§5 "Supersession,
-splitting, and conflict"), recorded in a `superseded_by` list. This
-matter replaces doctrine wording; it supersedes no matter. m0014
-worded the same situation as "No ratified matter. It amends …".
-Suggested fix: say "amends" or "replaces," and state plainly that no
-ratified matter is contradicted.
-
-Checked and found correct: every operator ruling in the two cited
-threads is in this text and none is contradicted — the zero-additive
-definition, the operator-altitude bound, the no-checklist rule, the
-positively stated direction rule, the precedence rule, the honest
-statement of what the record proves, and the generalized step 7
-(rulings at `threads/2026-08-28-restate-to-ratify.md` lines 196,
-198, 204, 286, 288 and
-`threads/2026-08-29-minimal-handoff-and-declared-sources.md` line
-94). Also correct: the list of §6 "Vetting and ratification"
-properties this matter preserves; the claim that §11 "The
-retroactive path" is untouched; the sections §2 "Type — immutable"
-requires of a `spec` matter are present; all links resolve; the
-frontmatter is schema-valid; the index regenerates unchanged; no
-consumer names appear. Two things worth knowing, no change asked: a
-restatement-review finding the operator believes is reviewer error
-resolves only by running another round with a fresh agent — a cost,
-never a deadlock; and at execution, any rewording that changes a
-rule while transcribing this matter into the doctrine is an
-execution failure under §3.1 "The execution record," not a
-recordable deviation.
-
-Not checked: the archived first attempt, and the matters that
-depend on this one (each gets its own round).
-
-Disposition: no design-scale problem found; A1–A4 were text fixes,
-cheapest while the matter is `proposed`. A1 has since been dissolved
-by operator ruling (next entry); A2–A4 remain open for the operator.
-
-### Operator review — 2026-08-29 — in-session
-
-| | |
-|---|---|
-| Reviewer | the operator, in the session that launched Round 1 |
-| Recorded by | claude-code/2026-08-29, from the operator's turns |
-| Source | this session's thread — export pending operator direction; the provenance gap is held open per the practice [m0024](m0024-declared-sources.md) proposes |
-
-Rulings, each now in the body:
-
-1. **The operator makes no closing commit.** "This should be 'the
-   agent makes one final commit…' I don't need to make this commit.
-   This should be explicit in m0017." The body now says the
-   reviewing agent's session records the completion; the operator
-   authors only the restatement.
-2. **A clean review is ratification.** "Once approved is granted,
-   this should by definition mean ratification has occurred." The
-   drafted two-event design — agent approval first, a separate
-   operator closing commit later — is gone; approval and recording
-   are one event in one session. Finding A1 above described a gap
-   that existed only between those two events, so it is dissolved
-   rather than fixed.
-3. **Record text must be intelligible to the operator.** Round 1 as
-   first written could not be audited by the operator and was
-   rewritten in place on this unmerged branch, on operator
-   direction, before any of it entered the record. The general rule
-   is filed as [m0026](m0026-legibility-standard.md).
-
-Judgment exercised and flagged for the operator to strike: ruling 1
-spoke to the closing commit. The revision also lets the draft
-restatement enter by agent transcription — verbatim, attributed —
-instead of requiring an operator commit there either, since the
-operator's recorded acts have been session statements and merges,
-not pushed commits. If the operator prefers to commit drafts
-personally, that sentence reverts.
-
-Open from Round 1: A2, A3, and A4 await the operator's disposition;
-none of them was applied in this revision, which carries only the
-rulings above.
