@@ -28,6 +28,8 @@ Derived from the frontmatter of every matter in this directory.
 | `m0025` | spec | formic-matters, doctrine, integrity | [Doctrine stops describing unbuilt enforcement as operating](m0025-doctrine-enforcement-voice.md) | Six doctrine passages say a validator checks things today when no validator exists; each is rewritten to say who checks now and who will check once the tooling lands, so ratified text stops promising checks nobody runs. |
 | `m0026` | spec | formic-matters, process, documentation, review | [Legibility standard — record text is written to its ratifier](m0026-legibility-standard.md) | Text the operator must act on — matter bodies, vetting entries, handoffs — is written in plain language with only defined terms, named actors, and a fixed entry structure; a glossary enters the doctrine. |
 | `m0027` | spec | formic-matters, process, review | [Proposed matters are working text — records begin at the gate](m0027-records-begin-at-the-gate.md) | While a matter is proposed its text is simply revised — discussion lives in threads, history in git, no review log accretes on the matter; the matter's own record begins at the ratification gate and carries everything after it. |
+| `m0028` | spec | formic-matters, process, lifecycle, integrity | [The challenged state — ratified text is never demoted to proposed](m0028-challenged-state.md) | A disputed ratified matter moves to challenged — a state that reads as not-ratified for every gate while preserving that it was law and that dependents exist; the two back-to-proposed transitions are retired. |
+| `m0029` | spec | formic-matters, documentation | [README explains the lifecycle as dependency management](m0029-readme-dependency-model.md) | The README gains a conceptual section: a ratified matter is a published version, the pin its identifier, re-ratification a new version, challenged a yank, declared sources the manifest, and the dependency gate the resolver. |
 
 ## ratified
 
@@ -71,3 +73,5 @@ Derived from the frontmatter of every matter in this directory.
 | `m0025` | m0001 | — |
 | `m0026` | m0001 | — |
 | `m0027` | m0001 | — |
+| `m0028` | m0001 | — |
+| `m0029` | m0001 | m0024, m0028 |
