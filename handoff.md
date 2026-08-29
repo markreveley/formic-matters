@@ -7,17 +7,17 @@
 
 ## Observation
 
-- `main` observed at: `2bfce1976aae6a78f5ffc134e33676299d6a46b5`,
-  confirmed by fetch
-- Working branch: `claude/handoff-review-next-steps-fms9u3` — revises
-  [m0016](matters/m0016-launch-instructions-policy.md),
-  [m0017](matters/m0017-operator-authored-ratification.md),
-  [m0019](matters/m0019-fresh-context-durable-handoffs.md), and
-  [m0020](matters/m0020-referential-handoff-authority.md), files
-  [m0024](matters/m0024-declared-sources.md), and rewrites this file;
-  per-commit `Matter:` trailers; the harness-assigned branch name is
-  the recorded deviation
-- Observed at: `2026-08-29T00:24:26Z`
+- `main` observed at: `54b83622928865813aeb694b5ef0195052b9b226`
+  (the merge of pull request #15), confirmed by fetch
+- Working branch: `claude/handoff-review-next-steps-fms9u3` is
+  merged; the current branch is `claude/handoff-item-1-2u2k20` —
+  harness-assigned, the recorded deviation — carrying m0017's
+  rewritten Round 1, the operator-rulings record and body revision,
+  m0024's Round 1, the [m0025](matters/m0025-doctrine-enforcement-voice.md)
+  and [m0026](matters/m0026-legibility-standard.md) filings, and this
+  file; per-commit `Matter:` trailers. Pull request #16 is this
+  branch's filing pull request, open at this observation.
+- Observed at: `2026-08-29T04:30:36Z`
 - Closing actor: `claude-code/2026-08-29`
 
 ## State
@@ -25,52 +25,44 @@
 - State lives in [matters/index.md](matters/index.md) at the observed
   commit and in each matter's frontmatter; this file restates none of
   it. What an agent had to say about a matter is on the matter.
-- Pull request #14, the restate-to-ratify filing, is merged. Pull
-  request #15 is this branch's filing pull request, open at this
-  observation.
+- On 2026-08-29 the operator re-ordered the work (recorded in
+  [m0024](matters/m0024-declared-sources.md)'s Round 1): the rules
+  giving proposed matters no authority — m0024, with
+  [m0016](matters/m0016-launch-instructions-policy.md)'s companion
+  paragraph — and the doctrine correction
+  [m0025](matters/m0025-doctrine-enforcement-voice.md) go before
+  [m0017](matters/m0017-operator-authored-ratification.md) and
+  everything else.
 
 ## Pending operator acts
 
-- Merge pull request #15 (merge commit), or authorize its merge.
+- Read pull request #16 and merge it (merge commit), or direct
+  changes.
+- Direct the export of the 2026-08-29 session thread — entries on
+  m0017, m0024, m0025, and m0026 hold their provenance gap open on
+  it.
 - Then the next action below.
 
 ## Next action
 
-- **Classification:** `operator authorization required`
-- **Repository and matter:** `markreveley/formic-matters`, m0017
-- **Action:** launch a fresh vetting round — the matter's first — on
-  [m0017](matters/m0017-operator-authored-ratification.md): read the
-  ratified record and the matter, and append one `## Vetting` entry
-  to the matter (round, reviewer, findings, disposition), per
-  doctrine §6.
-- **Permitted operations:** commit the appended entry, push the
-  branch, and open its filing pull request; nothing else — no
-  revision of the matter body, no state transition, no ratification
-  act. Branch and PR title are m0017-prefixed where the launch
-  environment allows; a harness-assigned branch name is a deviation
-  stated in the round's record.
-- **Stop boundary:** after pushing the entry and opening the pull
-  request, report the findings and stop. The merge, any revision,
-  further rounds, and ratification are separate operator directions.
-- **Verified against:** `main` at
-  `2bfce1976aae6a78f5ffc134e33676299d6a46b5` (fetched) at
-  `2026-08-29T00:24:26Z`. This file's own filing merge precedes the
-  launch; if this handoff is read from `main`, that merge has
-  completed.
-
-The operator may adopt this one record in a fresh session with:
-
-> Proceed from `handoff.md` in markreveley/formic-matters.
-
-This shorthand is the explicit bootstrap form directed by the operator
-in m0020's decision thread; general referential-launch policy remains
-proposed until m0020 is executed through the matter system.
+- **Classification:** `operator act`
+- **Repository and matters:** `markreveley/formic-matters`, m0024
+  and m0025
+- **Action:** the operator reads
+  [m0024](matters/m0024-declared-sources.md) and
+  [m0025](matters/m0025-doctrine-enforcement-voice.md) and, for
+  each: ratifies under the current verbal mechanism of doctrine §6,
+  "Vetting and ratification," directs a revision, or directs another
+  vetting round. An agent's part is only to record the operator's
+  act.
+- **After that:** m0017 — the operator reads its revised body (the
+  2026-08-29 rulings) and disposes of its open findings A2–A4;
+  [m0026](matters/m0026-legibility-standard.md) queues with the
+  rest.
 
 ## Re-verification
 
-- `origin/main` and pull request #15 are external state; re-check
+- `origin/main` and pull request #16 are external state; re-check
   both against the observation above.
-- Before the round: confirm m0017 is `proposed` and carries no
-  `## Vetting` entries.
-- Nothing `proposed` governs; this file remains advisory under the
-  banner above.
+- m0019 remains `proposed`, so the banner above stands. Nothing
+  `proposed` governs; this file is pointers, not policy.
