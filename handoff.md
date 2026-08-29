@@ -46,8 +46,11 @@
 
 ## Pending operator acts
 
-- Read pull request #16 and merge it (merge commit), or direct
-  changes.
+- Read pull request #16. The operator's chosen review channel is
+  §8's in-document review: `->[…]` comments committed to this
+  branch. A responding agent answers each comment, removes the
+  markers in its response commit, and exports the exchange as a
+  thread; the operator merges (merge commit) when satisfied.
 - Direct the export of the 2026-08-29 session thread — m0025, m0026,
   and m0027 name it as their pending provenance, and the rulings
   applied to m0017 live in it.
