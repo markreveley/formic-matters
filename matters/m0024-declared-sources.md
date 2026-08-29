@@ -57,7 +57,26 @@ sources:                                # normative basis; §12
 
 Second, add this rule as a documented dialect choice:
 
-> Every newly authored or revised matter declares its normative basis in `sources`: the documents its reasoning rests on. A valid source is ratified text — the doctrine, a `ratified` or `executed` matter — or an append-only primary source under §9 (a thread, a run). A `proposed` matter is never a valid source. At the ratification gate every declared source must resolve and qualify; a matter whose basis fails the check is not ratifiable until it sheds the dependency or the source is ratified first. References elsewhere in the body — a dependency edge, a supersession target, a coordination pointer — declare nothing and are not checked. The list is the author's claim, not proof: whether it is honest and complete is a vetting question; the check answers only whether what is declared resolves and qualifies. Existing matters lack the field; its absence there is a recorded baseline, not a failure — the field is required of newly authored matters from this rule forward, and added to older matters when they are otherwise legitimately revised.
+> Every newly authored or revised matter declares its normative
+> basis in `sources`: the documents its reasoning rests on.
+>
+> - A valid source is ratified text — the doctrine, a `ratified` or
+>   `executed` matter — or an append-only primary source under §9
+>   (a thread, a run).
+> - A `proposed` matter is never a valid source.
+> - At the ratification gate every declared source must resolve and
+>   qualify; a matter whose basis fails the check is not ratifiable
+>   until it sheds the dependency or the source is ratified first.
+> - References elsewhere in the body — a dependency edge, a
+>   supersession target, a coordination pointer — declare nothing
+>   and are not checked.
+> - The list is the author's claim, not proof: whether it is honest
+>   and complete is a vetting question; the check answers only
+>   whether what is declared resolves and qualifies.
+> - Existing matters lack the field; its absence there is a recorded
+>   baseline, not a failure. The field is required of newly authored
+>   matters from this rule forward, and added to older matters when
+>   they are otherwise legitimately revised.
 
 Operator direction reaches the list through its recorded form: the
 thread that preserves the direction, or the ruling compiled onto a
@@ -111,56 +130,3 @@ first rehearsal of the rule it proposes.
 6. Append this matter's execution record, move it
    `staged → executed`, regenerate the index, and put the completed
    branch before the operator for a merge-commit merge.
-
-## Vetting
-
-### Round 1 — 2026-08-29
-
-| | |
-|---|---|
-| Reviewer | claude-code/2026-08-29 — the session recording the operator's 2026-08-29 rulings; also the author of this entry's companion filings |
-| Matter text reviewed | as of commit `54b8362` (unchanged since filing) |
-| Launched by | operator direction in-session |
-| Source | this session's thread — export pending operator direction; the provenance gap this matter's own text prescribes holding open |
-
-**Operator direction of record.** The operator judged the standing
-of proposed matters a near-emergency: unratified text must not
-govern anything, and the rules that make that checkable — this
-matter, and the companion authority paragraph carried by
-[m0016](m0016-launch-instructions-policy.md) — move ahead of
-everything else, [m0017](m0017-operator-authored-ratification.md)
-included. This direction replaces the prior working order.
-
-Two findings, then the checks that passed.
-
-**B1 — The ratified doctrine itself contains six passages that
-describe unbuilt tooling as if it were running.** They speak in the
-present tense about a validator that does not exist (m0008 is
-`proposed`): in §4 "Cheap to file, expensive to ratify," §5
-"Supersession, splitting, and conflict," §7 "Composition — no
-containers," §9.3 "Claims DAGs," §10 "Deterministic wherever
-possible," and §11 "The retroactive path." A reader trusts checks
-nobody runs. This matter's rule cannot catch that: it governs what
-newly written matters rest on, not the doctrine's own wording. The
-correction is therefore filed separately as
-[m0025](m0025-doctrine-enforcement-voice.md), which quotes all six
-and gives each replacement verbatim.
-
-**B2 — advisory.** The quoted dialect rule in "Proposed text" is one
-dense ten-line paragraph. By the standard proposed in
-[m0026](m0026-legibility-standard.md), it should be broken into
-readable pieces before the operator restates it. No content change
-implied; the operator may also accept it as is.
-
-Checked and found correct: this matter can go first — it depends on
-nothing, and its plan step 5 says "the ratification mechanism then
-in force," so it does not wait on m0017; its Enforcement section
-already uses the honest who-checks-today voice that B1 asks of the
-doctrine; its own `sources` list follows the rule it proposes; all
-links resolve; the frontmatter is schema-valid.
-
-Disposition: sound as filed; B2 is optional wording. The next act is
-the operator's: read this matter and
-[m0025](m0025-doctrine-enforcement-voice.md), then ratify under the
-current verbal mechanism of §6 "Vetting and ratification," direct a
-revision, or direct another round.
