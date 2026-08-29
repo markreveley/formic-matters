@@ -15,11 +15,13 @@
   step-by-step protocol; the operator's 2026-08-29 rulings applied)
   and [m0024](matters/m0024-declared-sources.md), files
   [m0025](matters/m0025-doctrine-enforcement-voice.md),
-  [m0026](matters/m0026-legibility-standard.md), and
-  [m0027](matters/m0027-records-begin-at-the-gate.md), and rewrites
+  [m0026](matters/m0026-legibility-standard.md),
+  [m0027](matters/m0027-records-begin-at-the-gate.md),
+  [m0028](matters/m0028-challenged-state.md), and
+  [m0029](matters/m0029-readme-dependency-model.md), and rewrites
   this file; per-commit `Matter:` trailers. Pull request #16 is this
   branch's filing pull request, open at this observation.
-- Observed at: `2026-08-29T04:30:36Z`
+- Observed at: `2026-08-29T05:51:58Z`
 - Closing actor: `claude-code/2026-08-29`
 
 ## State
@@ -58,7 +60,10 @@
   ratification,” directs revisions, or directs a review. An agent's
   part is only to apply directed edits or record the operator's act.
 - **After that, in the directed order:** m0024 with m0025, then
-  m0027, then m0017.
+  m0027, then m0017, then
+  [m0028](matters/m0028-challenged-state.md) (the challenged
+  state); [m0029](matters/m0029-readme-dependency-model.md) follows
+  its dependencies (m0024, m0028) under §7's gate.
 
 ## Re-verification
 
