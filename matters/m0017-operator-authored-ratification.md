@@ -261,3 +261,157 @@ the matter and diffed against it, which is what the *re-* carries.
 7. Use this mechanism for every subsequent prospective ratification.
    Which matter uses it first is staging judgment, not this
    specification's: the operator selects it at launch.
+
+## Vetting
+
+### Round 1 — 2026-08-29
+
+- **Reviewer:** claude-code/2026-08-29, fresh instance — no prior
+  authoring contact with this matter. Launched by the operator
+  against `handoff.md`'s next-action record; the handoff was read in
+  full and carried no expected findings. The record's re-verification
+  checks were run first: pull request #15 merged as a merge commit,
+  `main` at `54b83622928865813aeb694b5ef0195052b9b226` (fetched,
+  2026-08-29), this matter `proposed` with no prior `## Vetting`
+  entries. Inputs: this matter and the doctrine at that commit, its
+  two cited threads
+  ([restate](../threads/2026-08-28-restate-to-ratify.md),
+  [minimal](../threads/2026-08-29-minimal-handoff-and-declared-sources.md);
+  cited below as `restate:N` / `minimal:N`), m0001's `## Vetting`
+  round format and first round, m0014 as the executed
+  amend-the-doctrine precedent, `CLAUDE.md`, and the regenerated
+  index. The archived first attempt was not read.
+- **Checks run:** fidelity (every operator ruling in the two threads
+  against this text); consistency with the ratified doctrine — §3
+  "State — mutable", §5 "Supersession, splitting, and conflict", §6
+  "Vetting and ratification", §8 "Where discourse lives", §10
+  "Deterministic wherever possible", §11 "The retroactive path", §12
+  "Storage and format" — and with m0014's record; protocol holes in
+  the proposed mechanism; §2 "Type — immutable" readiness for type
+  `spec`; mechanics (frontmatter schema, links, index regeneration,
+  review r2's no-client-names rule).
+
+**Findings, ranked by severity:**
+
+**A1 · MEDIUM — nothing binds the final commit to the tree the clean
+review reviewed.** "The ratification commit" pins the final operator
+commit's diff shape (content under `## Operator ratification` only),
+and "Recording and the pin" has the recording agent "verif[y] the
+final commit against the clean review" — but no rule names the check
+that the contract being ratified is the contract the clean review
+read. The sequence that slips through: the clean review is recorded
+over the region at one commit; a later commit revises the contract
+(the underspecification fork itself licenses mid-protocol revision —
+"the content enters the matter through revision and review"); the
+operator's final commit changes only the operator section. That
+final commit is conforming by diff shape, the last appended review
+is clean, and the recorded pin hashes a region no review compared
+against the restatement. The in-text guard covers only a final
+commit that itself touches the contract. This is exactly the class
+§10 assigns to deterministic code, and plan step 3's forwarded list
+(placement, diff shape, region inclusion) omits it. Suggested edit:
+require the draft-review entry to name the commit it reviewed; state
+in "Recording and the pin" that a final commit is conforming only if
+the ratified region outside `## Operator ratification` is
+byte-identical to that region at the clean review's named commit —
+otherwise the review is stale and a fresh round is required; and add
+the identity check to step 3's forwarded list.
+
+**A2 · LOW-MEDIUM — plan step 2 leaves CLAUDE.md's standing
+ratification rule false.** `CLAUDE.md` (m0015, executed) distills:
+"ratification is the operator's act alone, over exact text at a
+commit the operator names (§6)." Under the amended §6 the operator
+names no commit — the operator authors the final commit. Step 2 only
+adds the new never-author rule; nothing revises the existing bullet,
+which would then misdescribe the mechanism in the one channel that
+reaches every agent before it reads anything else — m0015's own
+diagnosis. (The pin bullet survives as written: its region
+description stays true with `## Operator ratification` inside the
+region.) Suggested edit: step 2 also rewords that bullet to the
+operator-authored-commit form.
+
+**A3 · LOW — plan step 6's "under the current mechanism" is
+ambiguous at the moment it runs.** By step 6, step 1 has landed the
+amendment in the doctrine file while m0001's re-ratification is what
+makes it normative, so "current" can be read as either mechanism.
+Step 5 states the bootstrap rule precisely ("under the currently
+ratified verbal mechanism … cannot bootstrap its own authority");
+step 6 means the same verbal act — m0014's re-pin dance is the
+precedent — and should say so. Suggested edit: "under the same
+verbal mechanism as step 5."
+
+**A4 · LOW — "supersedes" is used for a doctrine amendment.** "What
+this contradicts" opens "This supersedes doctrine §6" and later
+"also supersedes any standing example." §5 defines supersession as a
+matter-to-matter act effected through `superseded_by`; no matter is
+superseded here and no link is owed. The executed precedent words
+this shape cleanly (m0014: "No ratified matter. It amends …").
+Suggested edit: "replaces"/"amends" for doctrine text, plus an
+explicit no-ratified-matter-is-contradicted sentence, reserving
+"supersede" for §5 relations.
+
+**Checks passed clean:**
+
+- **Fidelity, in full — every operator ruling in the cited threads
+  is encoded, none is contradicted:** the zero-additive definition,
+  its two-way fork, and "Ratification is never the channel by which
+  new content enters the record" (restate:196); the
+  operator-altitude bound and the *re-* as bounded-and-diffed
+  (restate:198); no content checklist — the matter sets what there
+  is to restate, §2 cited (restate:286); the positive-form direction
+  rule with the negations dropped (restate:204); precedence and
+  discovered divergence resolving through §3's existing exits
+  (restate:108); the bounded-evidence statement in the normative
+  text with strengthenings named-not-required (restate:110, deltas
+  agreed at restate:288); operator-comprehension provenance as the
+  third layer (restate:106); m0023 cross-linked as advisory
+  (restate:208); step 7 generalized off the hard-coded first use
+  (minimal:94; the pull request #15 diff of this file is exactly
+  that edit plus the second thread cite).
+- **Doctrine consistency:** the preserved-properties list checks out
+  against §6 (exact text, operator-only ownership, both region
+  regimes and the retroactive extension, agent-computed hash, pin
+  follows the act); the narrowing of ratify-at-any-round is
+  declared, never silent; §3's exits are used correctly and nothing
+  leaves `executed`; the §11 scope boundary holds; the placement
+  rule puts `## Operator ratification` inside the §6 region exactly
+  as claimed; the §12 filename rule survived the retitle; §10's
+  division holds — the conformance check is mechanical and
+  explicitly grants no ratification authority.
+- **§2 readiness, type `spec`:** the proposed text and the
+  contradiction account are both present and, A4's wording aside,
+  accurate.
+- **Mechanics:** every frontmatter field is §12-defined and
+  `status: draft` correctly derived; the description is one quoted
+  sentence; timestamps carry explicit offsets; both thread cites and
+  the m0023 link resolve; `tools/gen-index.py` reproduces
+  `matters/index.md` byte-identically; no client names or instance
+  state in current-voiced text (review r2).
+
+Not checked: the archived first attempt (unread, per standing
+practice), and the five matters that depend on this one beyond their
+edges to it — each gets its own round.
+
+**Observations, no edit proposed:** (a) a draft-review finding the
+operator judges to be reviewer error has no third fork branch; the
+recourse is an unchanged restatement and a fresh round, so a wrong
+finding costs one round and never deadlocks — a deliberate price of
+the mandatory gate, worth knowing at the ratification read. (b) At
+execution, transcribing these rules into §6's wording is bounded by
+§3.1: a transcription choice that changes a rule is an execution
+failure, not a recordable deviation. (c) Who counts as fresh across
+draft-review repeats inherits §6's fresh-agents rule and m0006's
+deferral unchanged.
+
+- **Deviations:** the launch environment assigned branch
+  `claude/handoff-item-1-2u2k20`; §8's m0017-prefixed branch
+  convention was not available, recorded here per the launch record.
+  The commit carries the `Matter: m0017` trailer and the filing pull
+  request title is m0017-prefixed.
+- **Disposition:** nothing found is design-scale — the mechanism,
+  its bounds, and its fidelity to the rulings all verified. A1–A4
+  are proposed-state text edits, cheapest now: A1 should be resolved
+  before ratification, since it names the integrity check the
+  mechanism exists to provide; A2 and A3 are one-line plan edits; A4
+  is wording. Recommend one revision pass and a further round before
+  the operator's ratification read.
