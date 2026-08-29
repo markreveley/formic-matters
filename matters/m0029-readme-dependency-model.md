@@ -42,8 +42,10 @@ reference, not a basis).
 `depends_on` names [m0024](m0024-declared-sources.md) and
 [m0028](m0028-challenged-state.md) because the section describes
 the sources manifest and the challenged state: it must not land in
-the README before those mechanisms exist, and §3's dependency gate
-enforces exactly that order.
+the README before those mechanisms exist, and the dependency gate
+of §7, “Composition — no containers,” holds it to that order —
+reviewers enforce the gate today, the validator once it exists
+([m0008](m0008-matter-tooling.md)).
 
 ## Proposed text
 
