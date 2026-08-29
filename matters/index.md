@@ -30,6 +30,7 @@ Derived from the frontmatter of every matter in this directory.
 | `m0027` | spec | formic-matters, process, review | [Proposed matters are working text — records begin at the gate](m0027-records-begin-at-the-gate.md) | While a matter is proposed its text is simply revised — discussion lives in threads, history in git, no review log accretes on the matter; the matter's own record begins at the ratification gate and carries everything after it. |
 | `m0028` | spec | formic-matters, process, lifecycle, integrity | [The challenged state — ratified text is never demoted to proposed](m0028-challenged-state.md) | A disputed ratified matter moves to challenged — a state that reads as not-ratified for every gate while preserving that it was law and that dependents exist; the two back-to-proposed transitions are retired. |
 | `m0029` | spec | formic-matters, documentation | [README explains the lifecycle as dependency management](m0029-readme-dependency-model.md) | The README gains a conceptual section: a ratified matter is a published version, the pin its identifier, re-ratification a new version, challenged a yank, declared sources the manifest, and the dependency gate the resolver. |
+| `m0030` | spec | formic-matters, process, integrity, tooling | [The error log — agent errors become citable records](m0030-error-log.md) | A new errors/ directory holds append-only records of agent errors — what happened, why as far as traceable, and the guard added — with eNNNN IDs that guards in tooling and doctrine cite; e0001, the index-out-of-step slip, is the first entry. |
 
 ## ratified
 
@@ -75,3 +76,4 @@ Derived from the frontmatter of every matter in this directory.
 | `m0027` | m0001 | — |
 | `m0028` | m0001 | — |
 | `m0029` | m0001 | m0024, m0028 |
+| `m0030` | m0001 | — |
