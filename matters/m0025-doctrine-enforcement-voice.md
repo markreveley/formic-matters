@@ -92,6 +92,14 @@ verbatim:
    matters so they are reviewed, late but always; until then
    reviewers watch for the `## Retroactive` section."
 
+And one standing sentence, added to §15, "Open," so the six do not
+become seven:
+
+> The doctrine names a proposed matter only as the owner of deferred
+> design, a dependency, or a historical fact — never as a mechanism
+> in operation. A claim that something is checked or enforced names
+> who performs it today.
+
 ## What this contradicts
 
 No ratified matter, and no rule in substance: every check stays
@@ -101,8 +109,8 @@ which today overstate. Nothing is superseded.
 
 ## Proposed execution plan
 
-1. Amend the six passages exactly as quoted above; change nothing
-   else in the doctrine.
+1. Amend the six passages exactly as quoted above and add the §15
+   standing sentence; change nothing else in the doctrine.
 2. Regenerate `matters/index.md` and record a verification run under
    §9.1 "Runs" showing the doctrine diff is exactly the six pairs.
 3. Because doctrine changes, re-ratify m0001 over the amendment
