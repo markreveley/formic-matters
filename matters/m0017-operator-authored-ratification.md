@@ -257,6 +257,6 @@ the matter and diffed against it, which is what the *re-* carries.
 6. Re-ratify m0001 under the current mechanism over the doctrine
    amendment, record both pins, append this matter's execution record,
    and merge by merge commit on operator direction.
-7. Use this mechanism for the next prospective ratification. The first
-   intended mandatory use is m0016, “Launch instructions are pointers,
-   not shadow specifications.”
+7. Use this mechanism for every subsequent prospective ratification.
+   Which matter uses it first is staging judgment, not this
+   specification's: the operator selects it at launch.
