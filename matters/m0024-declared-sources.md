@@ -9,6 +9,8 @@ tags: [formic-matters, process, provenance, integrity]
 implements: m0001
 sources:
   - doctrine/matters.md
+threads:
+  - threads/2026-08-29-minimal-handoff-and-declared-sources.md
 generated:
   by: claude-code/2026-08-29
   at: 2026-08-29T00:24:26Z
@@ -16,9 +18,9 @@ generated:
 
 # m0024 · Declared sources — authored matters carry their provenance
 
-Filed on operator direction, in a session not yet exported; the
-`threads` cite lands with the export, per this matter's own rule
-below.
+Filed on operator direction; the directing session is exported at
+[threads/2026-08-29-minimal-handoff-and-declared-sources.md](../threads/2026-08-29-minimal-handoff-and-declared-sources.md)
+and cited in `threads`, per this matter's own rule below.
 
 ## Diagnosed reason
 

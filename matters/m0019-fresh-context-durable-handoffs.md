@@ -8,6 +8,8 @@ status: draft
 tags: [formic-matters, process, review, execution, provenance]
 implements: m0001
 depends_on: [m0017, m0020]
+threads:
+  - threads/2026-08-29-minimal-handoff-and-declared-sources.md
 generated:
   by: codex/2026-08-27
   at: 2026-08-27T16:40:33-07:00

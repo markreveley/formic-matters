@@ -10,6 +10,7 @@ implements: m0001
 depends_on: [m0017]
 threads:
   - threads/2026-08-28-handoff-launch-authority.md
+  - threads/2026-08-29-minimal-handoff-and-declared-sources.md
 generated:
   by: codex/2026-08-28
   at: 2026-08-28T08:25:37-07:00
