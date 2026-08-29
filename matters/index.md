@@ -27,6 +27,7 @@ Derived from the frontmatter of every matter in this directory.
 | `m0024` | spec | formic-matters, process, provenance, integrity | [Declared sources — authored matters carry their provenance](m0024-declared-sources.md) | Every authored or revised matter declares the sources its reasoning rests on in a sources frontmatter list, and at the ratification gate every declared source is ratified text or append-only evidence — never a proposed matter. |
 | `m0025` | spec | formic-matters, doctrine, integrity | [Doctrine stops describing unbuilt enforcement as operating](m0025-doctrine-enforcement-voice.md) | Six doctrine passages say a validator checks things today when no validator exists; each is rewritten to say who checks now and who will check once the tooling lands, so ratified text stops promising checks nobody runs. |
 | `m0026` | spec | formic-matters, process, documentation, review | [Legibility standard — record text is written to its ratifier](m0026-legibility-standard.md) | Text the operator must act on — matter bodies, vetting entries, handoffs — is written in plain language with only defined terms, named actors, and a fixed entry structure; a glossary enters the doctrine. |
+| `m0027` | spec | formic-matters, process, review | [Proposed matters are working text — records begin at the gate](m0027-records-begin-at-the-gate.md) | While a matter is proposed its text is simply revised — discussion lives in threads, history in git, no review log accretes on the matter; the matter's own record begins at the ratification gate and carries everything after it. |
 
 ## ratified
 
@@ -69,3 +70,4 @@ Derived from the frontmatter of every matter in this directory.
 | `m0024` | m0001 | — |
 | `m0025` | m0001 | — |
 | `m0026` | m0001 | — |
+| `m0027` | m0001 | — |
