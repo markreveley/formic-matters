@@ -114,10 +114,9 @@ The classifications mean:
   has already granted for the named action and operations. It is not a
   reusable grant after the stop boundary or for later queue entries.
 
-The handoff continues to separate its recommended queue from its one
-current action. Only the current action can be adopted by reference.
-The queue is never bulk authority, and advancing the file does not
-launch the next item.
+The handoff carries exactly one current action, and only it can be
+adopted by reference. The handoff is never bulk authority, and
+advancing the file does not launch anything.
 
 Carry the classification, referential-launch behavior, and
 operator-act boundary into m0019's proposed doctrine and `CLAUDE.md`
@@ -154,9 +153,9 @@ vetted, operator-summarized, ratified, staged, and executed.
    and execution plan with the next-action schema and three authority
    classifications above. Append the same kind of proposed-state
    correction entry under `## Vetting`.
-4. Refresh `handoff.md` to the new schema. Keep one current action and
-   the separate recommended queue; do not copy matter scope or
-   execution instructions into it.
+4. Refresh `handoff.md` to the new schema. Keep exactly one current
+   action; do not copy matter scope, execution instructions, or
+   matter-specific commentary into it.
 5. Regenerate `matters/index.md` and record a run under doctrine §9.1,
    “Runs,” verifying the exact required fields, classification
    vocabulary, referential shorthand, links, state preservation, and
