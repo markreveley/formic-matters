@@ -21,9 +21,11 @@
   [m0029](matters/m0029-readme-dependency-model.md), and
   [m0030](matters/m0030-error-log.md), revises
   [m0008](matters/m0008-matter-tooling.md) (the commit-time index
-  check, e0001's guard), and rewrites this file; per-commit
-  `Matter:` trailers. Pull request #16 is this branch's filing pull
-  request, open at this observation.
+  check, e0001's guard), exports the session thread
+  ([threads/2026-08-29-complexity-escape-and-working-text.md](threads/2026-08-29-complexity-escape-and-working-text.md)),
+  and rewrites this file; per-commit `Matter:` trailers. Pull
+  request #16 is this branch's filing pull request, open at this
+  observation.
 - Observed at: `2026-08-29T17:06:10Z`
 - Closing actor: `claude-code/2026-08-29`
 
@@ -32,8 +34,9 @@
 - State lives in [matters/index.md](matters/index.md) at the observed
   commit and in each matter's frontmatter; this file restates none of
   it.
-- Operator direction of 2026-08-29 (this branch's session; thread
-  export pending) sets the working order:
+- Operator direction of 2026-08-29 (recorded in
+  [threads/2026-08-29-complexity-escape-and-working-text.md](threads/2026-08-29-complexity-escape-and-working-text.md))
+  sets the working order:
   [m0026](matters/m0026-legibility-standard.md) first, then
   [m0024](matters/m0024-declared-sources.md) with
   [m0025](matters/m0025-doctrine-enforcement-voice.md), then
@@ -51,10 +54,9 @@
   branch. A responding agent answers each comment, removes the
   markers in its response commit, and exports the exchange as a
   thread; the operator merges (merge commit) when satisfied.
-- Direct the export of the 2026-08-29 session thread — m0025, m0026,
-  and m0027 name it as their pending provenance, and the rulings
-  applied to m0017 live in it.
-- Then the next action below.
+- Then the next action below. The 2026-08-29 session thread is
+  exported and cited from every matter it drove; no provenance gap
+  remains open on this branch.
 
 ## Next action
 
