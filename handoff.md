@@ -7,70 +7,76 @@
 
 ## Observation
 
-- `main` observed at: `2bfce1976aae6a78f5ffc134e33676299d6a46b5`,
-  confirmed by fetch
-- Working branch: `claude/handoff-review-next-steps-fms9u3` — revises
-  [m0016](matters/m0016-launch-instructions-policy.md),
-  [m0017](matters/m0017-operator-authored-ratification.md),
-  [m0019](matters/m0019-fresh-context-durable-handoffs.md), and
-  [m0020](matters/m0020-referential-handoff-authority.md), files
-  [m0024](matters/m0024-declared-sources.md), and rewrites this file;
-  per-commit `Matter:` trailers; the harness-assigned branch name is
-  the recorded deviation
-- Observed at: `2026-08-29T00:24:26Z`
+- `main` observed at: `54b83622928865813aeb694b5ef0195052b9b226`
+  (the merge of pull request #15), confirmed by fetch
+- Working branch: `claude/handoff-item-1-2u2k20` — harness-assigned,
+  the recorded deviation. It revises
+  [m0017](matters/m0017-operator-authored-ratification.md) (the
+  step-by-step protocol; the operator's 2026-08-29 rulings applied)
+  and [m0024](matters/m0024-declared-sources.md), files
+  [m0025](matters/m0025-doctrine-enforcement-voice.md),
+  [m0026](matters/m0026-legibility-standard.md),
+  [m0027](matters/m0027-records-begin-at-the-gate.md),
+  [m0028](matters/m0028-challenged-state.md),
+  [m0029](matters/m0029-readme-dependency-model.md), and
+  [m0030](matters/m0030-error-log.md), revises
+  [m0008](matters/m0008-matter-tooling.md) (the commit-time index
+  check, e0001's guard), exports the session thread
+  ([threads/2026-08-29-complexity-escape-and-working-text.md](threads/2026-08-29-complexity-escape-and-working-text.md)),
+  and rewrites this file; per-commit `Matter:` trailers. Pull
+  request #16 is this branch's filing pull request, open at this
+  observation.
+- Observed at: `2026-08-29T17:06:10Z`
 - Closing actor: `claude-code/2026-08-29`
 
 ## State
 
 - State lives in [matters/index.md](matters/index.md) at the observed
   commit and in each matter's frontmatter; this file restates none of
-  it. What an agent had to say about a matter is on the matter.
-- Pull request #14, the restate-to-ratify filing, is merged. Pull
-  request #15 is this branch's filing pull request, open at this
-  observation.
+  it.
+- Operator direction of 2026-08-29 (recorded in
+  [threads/2026-08-29-complexity-escape-and-working-text.md](threads/2026-08-29-complexity-escape-and-working-text.md))
+  sets the working order:
+  [m0026](matters/m0026-legibility-standard.md) first, then
+  [m0024](matters/m0024-declared-sources.md) with
+  [m0025](matters/m0025-doctrine-enforcement-voice.md), then
+  [m0027](matters/m0027-records-begin-at-the-gate.md), then
+  [m0017](matters/m0017-operator-authored-ratification.md) and the
+  rest. Under the same direction, `proposed` matters on this branch
+  carry no vetting entries: review was applied as edits, and the
+  matter record begins at the ratification gate (the rule m0027
+  proposes).
 
 ## Pending operator acts
 
-- Merge pull request #15 (merge commit), or authorize its merge.
-- Then the next action below.
+- Read pull request #16. The operator's chosen review channel is
+  §8's in-document review: `->[…]` comments committed to this
+  branch. A responding agent answers each comment, removes the
+  markers in its response commit, and exports the exchange as a
+  thread; the operator merges (merge commit) when satisfied.
+- Then the next action below. The 2026-08-29 session thread is
+  exported and cited from every matter it drove; no provenance gap
+  remains open on this branch.
 
 ## Next action
 
-- **Classification:** `operator authorization required`
-- **Repository and matter:** `markreveley/formic-matters`, m0017
-- **Action:** launch a fresh vetting round — the matter's first — on
-  [m0017](matters/m0017-operator-authored-ratification.md): read the
-  ratified record and the matter, and append one `## Vetting` entry
-  to the matter (round, reviewer, findings, disposition), per
-  doctrine §6.
-- **Permitted operations:** commit the appended entry, push the
-  branch, and open its filing pull request; nothing else — no
-  revision of the matter body, no state transition, no ratification
-  act. Branch and PR title are m0017-prefixed where the launch
-  environment allows; a harness-assigned branch name is a deviation
-  stated in the round's record.
-- **Stop boundary:** after pushing the entry and opening the pull
-  request, report the findings and stop. The merge, any revision,
-  further rounds, and ratification are separate operator directions.
-- **Verified against:** `main` at
-  `2bfce1976aae6a78f5ffc134e33676299d6a46b5` (fetched) at
-  `2026-08-29T00:24:26Z`. This file's own filing merge precedes the
-  launch; if this handoff is read from `main`, that merge has
-  completed.
-
-The operator may adopt this one record in a fresh session with:
-
-> Proceed from `handoff.md` in markreveley/formic-matters.
-
-This shorthand is the explicit bootstrap form directed by the operator
-in m0020's decision thread; general referential-launch policy remains
-proposed until m0020 is executed through the matter system.
+- **Classification:** `operator act`
+- **Repository and matter:** `markreveley/formic-matters`,
+  [m0026](matters/m0026-legibility-standard.md)
+- **Action:** the operator reads m0026 and either ratifies it under
+  the current verbal mechanism of doctrine §6, “Vetting and
+  ratification,” directs revisions, or directs a review. An agent's
+  part is only to apply directed edits or record the operator's act.
+- **After that, in the directed order:** m0024 with m0025, then
+  m0027, then m0017, then
+  [m0028](matters/m0028-challenged-state.md) (the challenged
+  state), then [m0030](matters/m0030-error-log.md) (the error log);
+  [m0029](matters/m0029-readme-dependency-model.md) follows its
+  dependencies (m0024, m0028) under §7's gate.
 
 ## Re-verification
 
-- `origin/main` and pull request #15 are external state; re-check
+- `origin/main` and pull request #16 are external state; re-check
   both against the observation above.
-- Before the round: confirm m0017 is `proposed` and carries no
-  `## Vetting` entries.
-- Nothing `proposed` governs; this file remains advisory under the
-  banner above.
+- m0019 remains `proposed`, so the banner above stands. Nothing
+  `proposed` governs; this file is pointers, not policy.

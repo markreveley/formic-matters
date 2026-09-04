@@ -11,6 +11,7 @@ sources:
   - doctrine/matters.md
 threads:
   - threads/2026-08-29-minimal-handoff-and-declared-sources.md
+  - threads/2026-08-29-complexity-escape-and-working-text.md
 generated:
   by: claude-code/2026-08-29
   at: 2026-08-29T00:24:26Z
@@ -57,13 +58,32 @@ sources:                                # normative basis; §12
 
 Second, add this rule as a documented dialect choice:
 
-> Every newly authored or revised matter declares its normative basis in `sources`: the documents its reasoning rests on. A valid source is ratified text — the doctrine, a `ratified` or `executed` matter — or an append-only primary source under §9 (a thread, a run). A `proposed` matter is never a valid source. At the ratification gate every declared source must resolve and qualify; a matter whose basis fails the check is not ratifiable until it sheds the dependency or the source is ratified first. References elsewhere in the body — a dependency edge, a supersession target, a coordination pointer — declare nothing and are not checked. The list is the author's claim, not proof: whether it is honest and complete is a vetting question; the check answers only whether what is declared resolves and qualifies. Existing matters lack the field; its absence there is a recorded baseline, not a failure — the field is required of newly authored matters from this rule forward, and added to older matters when they are otherwise legitimately revised.
+> Every newly authored or revised matter declares its normative
+> basis in `sources`: the documents its reasoning rests on.
+>
+> - A valid source is ratified text — the doctrine, a `ratified` or
+>   `executed` matter — or an append-only primary source under §9
+>   (a thread, a run).
+> - A `proposed` matter is never a valid source.
+> - At the ratification gate every declared source must resolve and
+>   qualify; a matter whose basis fails the check is not ratifiable
+>   until it sheds the dependency or the source is ratified first.
+> - References elsewhere in the body — a dependency edge, a
+>   supersession target, a coordination pointer — declare nothing
+>   and are not checked.
+> - The list is the author's claim, not proof: whether it is honest
+>   and complete is a vetting question; the check answers only
+>   whether what is declared resolves and qualifies.
+> - Existing matters lack the field; its absence there is a recorded
+>   baseline, not a failure. The field is required of newly authored
+>   matters from this rule forward, and added to older matters when
+>   they are otherwise legitimately revised.
 
 Operator direction reaches the list through its recorded form: the
 thread that preserves the direction, or the ruling compiled onto a
 ratified matter. Direction not yet exported is cited by the matter's
-`threads` entry when the export lands; until then the vetting round
-holds the gap open as an ordinary finding.
+`threads` entry when the export lands; until then the matter itself
+names the gap where the citation will go.
 
 ## Enforcement
 
