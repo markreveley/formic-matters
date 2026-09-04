@@ -9,6 +9,8 @@ tags: [formic-matters, process, integrity, tooling]
 implements: m0001
 sources:
   - doctrine/matters.md
+threads:
+  - threads/2026-08-29-complexity-escape-and-working-text.md
 generated:
   by: claude-code/2026-08-29
   at: 2026-08-29T17:06:10Z
@@ -16,11 +18,9 @@ generated:
 
 # m0030 · The error log — agent errors become citable records
 
-Filed on operator direction in the 2026-08-29 session. That session
-is not yet exported as a thread; per the practice
-[m0024](m0024-declared-sources.md) proposes, the provenance gap is
-held open here and the `threads` cite is added when the export
-lands.
+Filed on operator direction in the 2026-08-29 session, exported at
+[threads/2026-08-29-complexity-escape-and-working-text.md](../threads/2026-08-29-complexity-escape-and-working-text.md)
+and cited in `threads`.
 
 ## Diagnosed reason
 

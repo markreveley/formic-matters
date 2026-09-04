@@ -9,6 +9,8 @@ tags: [formic-matters, process, documentation, review]
 implements: m0001
 sources:
   - doctrine/matters.md
+threads:
+  - threads/2026-08-29-complexity-escape-and-working-text.md
 generated:
   by: claude-code/2026-08-29
   at: 2026-08-29T04:30:36Z
@@ -16,11 +18,10 @@ generated:
 
 # m0026 · Legibility standard — record text is written to its ratifier
 
-Filed on operator direction in the 2026-08-29 session. That session
-is not yet exported as a thread; per the practice
-[m0024](m0024-declared-sources.md) proposes, the provenance gap is
-held open here and the `threads` cite is added when the export
-lands. The `sources` list above rehearses m0024's proposed field.
+Filed on operator direction in the 2026-08-29 session, exported at
+[threads/2026-08-29-complexity-escape-and-working-text.md](../threads/2026-08-29-complexity-escape-and-working-text.md)
+and cited in `threads`. The `sources` list above rehearses the
+frontmatter field [m0024](m0024-declared-sources.md) proposes.
 
 ## Diagnosed reason
 

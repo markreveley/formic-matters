@@ -11,6 +11,7 @@ sources:
   - doctrine/matters.md
 threads:
   - threads/2026-08-29-minimal-handoff-and-declared-sources.md
+  - threads/2026-08-29-complexity-escape-and-working-text.md
 generated:
   by: claude-code/2026-08-29
   at: 2026-08-29T00:24:26Z

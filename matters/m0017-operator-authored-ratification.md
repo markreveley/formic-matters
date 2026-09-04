@@ -10,6 +10,7 @@ implements: m0001
 threads:
   - threads/2026-08-28-restate-to-ratify.md
   - threads/2026-08-29-minimal-handoff-and-declared-sources.md
+  - threads/2026-08-29-complexity-escape-and-working-text.md
 generated:
   by: codex/2026-08-27
   at: 2026-08-27T15:20:13-07:00
