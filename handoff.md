@@ -7,27 +7,20 @@
 
 ## Observation
 
-- `main` observed at: `54b83622928865813aeb694b5ef0195052b9b226`
-  (the merge of pull request #15), confirmed by fetch
-- Working branch: `claude/handoff-item-1-2u2k20` — harness-assigned,
-  the recorded deviation. It revises
-  [m0017](matters/m0017-operator-authored-ratification.md) (the
-  step-by-step protocol; the operator's 2026-08-29 rulings applied)
-  and [m0024](matters/m0024-declared-sources.md), files
-  [m0025](matters/m0025-doctrine-enforcement-voice.md),
-  [m0026](matters/m0026-legibility-standard.md),
-  [m0027](matters/m0027-records-begin-at-the-gate.md),
-  [m0028](matters/m0028-challenged-state.md),
-  [m0029](matters/m0029-readme-dependency-model.md), and
-  [m0030](matters/m0030-error-log.md), revises
-  [m0008](matters/m0008-matter-tooling.md) (the commit-time index
-  check, e0001's guard), exports the session thread
-  ([threads/2026-08-29-complexity-escape-and-working-text.md](threads/2026-08-29-complexity-escape-and-working-text.md)),
-  and rewrites this file; per-commit `Matter:` trailers. Pull
-  request #16 is this branch's filing pull request, open at this
-  observation.
-- Observed at: `2026-08-29T17:06:10Z`
-- Closing actor: `claude-code/2026-08-29`
+- `main` observed at: `b8af6799aaf40d94339d937e3371228d744f0dc5`
+  (the merge of pull request #16), confirmed by fetch
+- Working branch: `claude/restate-readme-update-pwyeg2` —
+  harness-assigned, the recorded deviation. On operator direction of
+  2026-09-05 it rewrites `README.md` in full under the name Restate
+  to Ratify — the README working text of
+  [m0022](matters/m0022-rename-to-rtr.md), whose README and
+  repository bullets and plan steps 2 and 4 are revised to match
+  (working text; m0022 stays `proposed`) — and updates this
+  observation. Nothing else moves; no matter changes state;
+  `matters/index.md` regenerates unchanged. Per-commit `Matter:`
+  trailers.
+- Observed at: `2026-09-05T16:20:16Z`
+- Closing actor: `claude-code/2026-09-05`
 
 ## State
 
@@ -49,14 +42,20 @@
 
 ## Pending operator acts
 
-- Read pull request #16. The operator's chosen review channel is
-  §8's in-document review: `->[…]` comments committed to this
-  branch. A responding agent answers each comment, removes the
-  markers in its response commit, and exports the exchange as a
-  thread; the operator merges (merge commit) when satisfied.
-- Then the next action below. The 2026-08-29 session thread is
-  exported and cited from every matter it drove; no provenance gap
-  remains open on this branch.
+- Read the rewritten `README.md` on this branch, and m0022's revised
+  README bullet. The operator's chosen review channel is §8's
+  in-document review: `->[…]` comments committed to this branch. A
+  responding agent answers each comment, removes the markers in its
+  response commit, and exports the exchange as a thread; the
+  operator merges (merge commit) when satisfied. The README lands as
+  m0022's text when m0022 is ratified and executed; until then it is
+  working text. The operator also decides the disposition of
+  [m0021](matters/m0021-readme-naming-lineage.md) and
+  [m0029](matters/m0029-readme-dependency-model.md), whose sections
+  the rewrite carries in adapted form.
+- The 2026-09-05 session that directed the rewrite is not yet
+  exported; its export is the open provenance item on this branch.
+- Then the next action below.
 
 ## Next action
 

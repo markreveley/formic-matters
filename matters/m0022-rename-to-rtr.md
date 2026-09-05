@@ -37,16 +37,28 @@ What the rename touches:
   unchanged: a **matter** is still a matter, `matters/` is still
   `matters/`, and IDs and filenames do not move (doctrine §12,
   “Storage and format”).
-- **The agent instructions and README.** `CLAUDE.md` and `README.md`
-  carry the new name; the README's renames-and-split paragraph is
-  extended with this rename, stated and dated, per doctrine §9.4,
-  “Immutability.”
-- **The repository.** Renamed by the operator. Proposed slug:
-  `restate-to-ratify`; `rtr` is the acceptable short alternative — the
-  operator chooses at ratification. GitHub redirects a renamed
-  repository, so pinned absolute URLs at immutable commits keep
-  resolving; threads and runs are never rewritten, and their old-name
-  URLs stand as historical record.
+- **The agent instructions and README.** `CLAUDE.md` carries the new
+  name. `README.md` is rewritten in full under the new name, on
+  operator direction of 2026-09-05: it describes the framework as
+  Restate to Ratify, explains the restatement mechanism
+  ([m0017](m0017-operator-authored-ratification.md)) and the
+  lifecycle in plain language, states which mechanism is in force
+  and which matters are proposed, and extends the renames-and-split
+  record with this rename, stated and dated, per doctrine §9.4,
+  “Immutability.” The rewrite carries the sections
+  [m0021](m0021-readme-naming-lineage.md) and
+  [m0029](m0029-readme-dependency-model.md) propose, adapted to name
+  which mechanisms are proposed; both are coordination references,
+  not a basis, and their disposition is the operator's at
+  ratification. The rewritten README is working text on this
+  matter's branch until the operator's act.
+- **The repository.** Renamed by the operator to `rtr` on
+  2026-08-29, platform-side, ahead of this matter's ratification and
+  confirmed in session
+  ([thread](../threads/2026-08-29-complexity-escape-and-working-text.md)).
+  GitHub redirects a renamed repository, so pinned absolute URLs at
+  immutable commits keep resolving; threads and runs are never
+  rewritten, and their old-name URLs stand as historical record.
 - **The `formic-matters` tag.** Every matter carrying the tag is swept
   to `rtr` at execution — frontmatter edits, outside every ratified
   region (doctrine §6, “Vetting and ratification”), with the index
@@ -93,13 +105,13 @@ ratification.
 1. Amend the doctrine's title and header prose with the new name;
    change no rule text beyond the naming, except §12's container name
    if ratified with that choice.
-2. Sweep `CLAUDE.md` and `README.md`; extend the README's
-   renames-and-split paragraph with this rename, stated and dated.
+2. Sweep `CLAUDE.md`; land the rewritten `README.md` as it stands at
+   ratification, stated and dated in its renames record.
 3. Sweep the `formic-matters` tag to `rtr` across the collection and
    regenerate `matters/index.md`.
-4. The operator renames the repository — operator-authorized
-   mechanics, recorded with the date in this matter's execution
-   record.
+4. The repository rename — the operator's act of 2026-08-29, done
+   ahead of ratification — is recorded with its date in this
+   matter's execution record.
 5. Re-ratify m0001 over the doctrine amendment under the ratification
    mechanism then in force.
 6. Append this matter's execution record, note the consumer migration
